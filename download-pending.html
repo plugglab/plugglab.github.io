@@ -1,26 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
-  <meta name="description" content="Plugin status - PluggLAB pipeline processing.">
-  <meta name="theme-color" content="#07111b">
-  <meta property="og:title" content="Plugin Status | PluggLAB">
-  <meta property="og:description" content="Live plugin development and moderation status.">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Live status of all PluggLAB plugins and systems." />
+  <meta name="theme-color" content="#07080f" />
+
+  <meta property="og:title" content="Plugin Status | PluggLAB" />
+  <meta property="og:description" content="Track development progress of every PluggLAB plugin." />
+  <meta property="og:type" content="website" />
 
   <title>Plugin Status | PluggLAB</title>
 
-  <link rel="icon" href="assets/images/favicon.png" sizes="any">
+  <link rel="icon" href="assets/images/favicon.png" sizes="any" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/pages.css">
+  <link
+          href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+          rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+
+  <style>
+    .plugin-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .plugin-card {
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .plugin-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, rgba(123, 92, 255, 0.15), transparent 40%);
+      pointer-events: none;
+    }
+
+    .plugin-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .plugin-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .plugin-description {
+      opacity: 0.82;
+      line-height: 1.7;
+      margin-bottom: 26px;
+    }
+
+    .plugin-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .plugin-meta-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 0.95rem;
+    }
+
+    .plugin-meta-label {
+      opacity: 0.6;
+    }
+
+    .plugin-meta-value {
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .status-badge {
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .status-development {
+      background: rgba(255, 170, 0, 0.14);
+      color: #ffb648;
+      border-color: rgba(255, 170, 0, 0.28);
+    }
+
+    .status-review {
+      background: rgba(0, 170, 255, 0.14);
+      color: #59c7ff;
+      border-color: rgba(0, 170, 255, 0.28);
+    }
+
+    .status-ready {
+      background: rgba(0, 255, 140, 0.14);
+      color: #58ffb0;
+      border-color: rgba(0, 255, 140, 0.28);
+    }
+
+    .status-blocked {
+      background: rgba(255, 60, 60, 0.14);
+      color: #ff7a7a;
+      border-color: rgba(255, 60, 60, 0.28);
+    }
+
+    .plugin-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 700px) {
+      .plugin-card {
+        padding: 24px;
+      }
+
+      .plugin-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .plugin-meta-item {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .plugin-meta-value {
+        text-align: left;
+      }
+    }
+  </style>
 </head>
 
 <body class="page-status">
@@ -53,89 +185,175 @@
 
     <!-- HERO -->
     <section class="page-hero page-hero-purple">
-      <p class="section-label">System Status</p>
+      <p class="section-label">Plugin Monitoring</p>
 
-      <h1 class="project-title">Plugin Pipeline</h1>
+      <h1 class="project-title">PluggLAB Status Board</h1>
 
       <p class="section-copy">
-        Live development and moderation status for this plugin inside the PluggLAB pipeline.
+        Live development, moderation and release tracking for all plugins inside the PluggLAB ecosystem.
       </p>
     </section>
 
-    <!-- CONTENT -->
-    <section class="status-content">
+    <!-- PLUGIN GRID -->
+    <section class="plugin-grid">
 
-      <!-- MAIN STATUS CARD -->
-      <article class="glass-card status-panel">
+      <!-- CASINOCORE -->
+      <article class="glass-card plugin-card">
 
-        <div class="status-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M12 6v6l4 2"/>
-          </svg>
+        <div class="plugin-top">
+          <h2 class="plugin-name">CasinoCore</h2>
+
+          <div class="status-badge status-development">
+            In Development
+          </div>
         </div>
 
-        <h2>Current State</h2>
-
-        <p>
-          This plugin is currently moving through the PluggLAB development pipeline.
-          Status is updated as it progresses through testing and moderation.
+        <p class="plugin-description">
+          Core casino system for Minecraft servers with modular games, economy integration and scalable architecture.
         </p>
 
-        <!-- STATUS BADGE (CHANGE THIS) -->
-        <div class="status-badge in-development">
-          IN DEVELOPMENT
-          <!-- possible values:
-               IN DEVELOPMENT
-               UNDER REVIEW
-               READY FOR DOWNLOAD
-               BLOCKED
-          -->
-        </div>
+        <div class="plugin-meta">
 
-        <div class="status-details">
-
-          <div class="detail-item">
-            <span class="detail-label">State</span>
-            <span class="detail-value in-development">In Development</span>
+          <div class="plugin-meta-item">
+            <span class="plugin-meta-label">Pipeline Stage</span>
+            <span class="plugin-meta-value">Active Development</span>
           </div>
 
-          <div class="detail-item">
-            <span class="detail-label">Pipeline Stage</span>
-            <span class="detail-value">Internal Testing</span>
+          <div class="plugin-meta-item">
+            <span class="plugin-meta-label">Next Step</span>
+            <span class="plugin-meta-value">Testing Phase</span>
           </div>
 
-          <div class="detail-item">
-            <span class="detail-label">Next Step</span>
-            <span class="detail-value">Moderation Review</span>
+          <div class="plugin-meta-item">
+            <span class="plugin-meta-label">Version</span>
+            <span class="plugin-meta-value">v1.0</span>
           </div>
 
         </div>
 
-        <div class="action-buttons">
-          <a class="btn btn-primary" href="index.html#projects">Back to Projects</a>
-          <a class="btn btn-secondary" href="https://discord.gg/ZMje3neEmK" target="_blank">Join Discord</a>
-          <a class="btn btn-ghost" href="contact.html">Contact</a>
+        <div class="plugin-actions">
+          <a class="btn btn-primary" href="/casinocore.html">View Project</a>
         </div>
 
       </article>
 
-      <!-- INFO CARD -->
-      <article class="glass-card info-panel">
+      <!-- CASINOCORE DEMO -->
+      <article class="glass-card plugin-card">
 
-        <h3>Pipeline Stages</h3>
+        <div class="plugin-top">
+          <h2 class="plugin-name">CasinoCore Demo</h2>
 
-        <ul class="pending-reasons">
-          <li><strong>Development:</strong> Feature implementation and core logic creation</li>
-          <li><strong>Internal Testing:</strong> Stability and functionality verification</li>
-          <li><strong>Moderation Review:</strong> Security and quality validation</li>
-          <li><strong>Release Ready:</strong> Approved for public download</li>
-        </ul>
+          <div class="status-badge status-review">
+            Under Review
+          </div>
+        </div>
 
-        <p class="info-text">
-          PluggLAB ensures every plugin passes a structured pipeline to maintain quality,
-          stability, and security across all releases.
+        <p class="plugin-description">
+          Demo version used for moderation review and validation of CasinoCore features and stability.
         </p>
+
+        <div class="plugin-meta">
+
+          <div class="plugin-meta-item">
+            <span class="plugin-meta-label">Pipeline Stage</span>
+            <span class="plugin-meta-value">Moderation Review</span>
+          </div>
+
+          <div class="plugin-meta-item">
+            <span class="plugin-meta-label">Next Step</span>
+            <span class="plugin-meta-value">Approval Decision</span>
+          </div>
+
+          <div class="plugin-meta-item">
+            <span class="plugin-meta-label">Version</span>
+            <span class="plugin-meta-value">Demo</span>
+          </div>
+
+        </div>
+
+        <div class="plugin-actions">
+          <a class="btn btn-primary" href="#">View Details</a>
+        </div>
+
+      </article>
+
+      <!-- SAFETRADE -->
+      <article class="glass-card plugin-card">
+
+        <div class="plugin-top">
+          <h2 class="plugin-name">SafeTrade</h2>
+
+          <div class="status-badge status-development">
+            In Development
+          </div>
+        </div>
+
+        <p class="plugin-description">
+          Secure trading system with anti-scam protection, trade confirmations and safe item exchange flow.
+        </p>
+
+        <div class="plugin-meta">
+
+          <div class="plugin-meta-item">
+            <span class="plugin-meta-label">Pipeline Stage</span>
+            <span class="plugin-meta-value">Active Development</span>
+          </div>
+
+          <div class="plugin-meta-item">
+            <span class="plugin-meta-label">Next Step</span>
+            <span class="plugin-meta-value">Internal Testing</span>
+          </div>
+
+          <div class="plugin-meta-item">
+            <span class="plugin-meta-label">Version</span>
+            <span class="plugin-meta-value">v0.1</span>
+          </div>
+
+        </div>
+
+        <div class="plugin-actions">
+          <a class="btn btn-primary" href="/contact.html">View Project</a>
+        </div>
+
+      </article>
+
+      <!-- PULSEEVENTS -->
+      <article class="glass-card plugin-card">
+
+        <div class="plugin-top">
+          <h2 class="plugin-name">PulseEvents</h2>
+
+          <div class="status-badge status-ready">
+            Ready For Download
+          </div>
+        </div>
+
+        <p class="plugin-description">
+          Event framework for Minecraft servers with live UI (BossBar, ActionBar, Title), announcements and multi-world support.
+        </p>
+
+        <div class="plugin-meta">
+
+          <div class="plugin-meta-item">
+            <span class="plugin-meta-label">Pipeline Stage</span>
+            <span class="plugin-meta-value">Release Approved</span>
+          </div>
+
+          <div class="plugin-meta-item">
+            <span class="plugin-meta-label">Next Step</span>
+            <span class="plugin-meta-value">Distribution</span>
+          </div>
+
+          <div class="plugin-meta-item">
+            <span class="plugin-meta-label">Version</span>
+            <span class="plugin-meta-value">v1.0</span>
+          </div>
+
+        </div>
+
+        <div class="plugin-actions">
+          <a class="btn btn-primary" href="/pulseevents.html">Download</a>
+        </div>
 
       </article>
 
