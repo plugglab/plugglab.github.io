@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <meta name="description" content="Minecraft-Heads.com explorer website with categories, API access, custom heads and texture collections." />
+  <meta name="theme-color" content="#07080f" />
+
+  <meta property="og:title" content="Minecraft Heads Explorer" />
+  <meta property="og:description" content="Browse Minecraft-Heads.com collections, API tools and custom decorative heads." />
+  <meta property="og:type" content="website" />
+
+  <title>Minecraft Heads Explorer</title>
+
+  <link rel="icon" href="assets/images/favicon.png" sizes="any" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/base.css">
+
+  <style>
+    .page-heads {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding-bottom: 4rem;
+    }
+
+    .hero-banner {
+      position: relative;
+      overflow: hidden;
+      border-radius: 30px;
+      padding: 3rem;
+      border: 1px solid var(--border);
+      background:
+        radial-gradient(circle at top right, rgba(91,143,255,0.16), transparent 42%),
+        radial-gradient(circle at bottom left, rgba(45,232,184,0.12), transparent 45%),
+        rgba(255,255,255,0.03);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.06), transparent 45%);
+      pointer-events: none;
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-image {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 420px;
+      object-fit: contain;
+      filter: drop-shadow(0 16px 32px rgba(0,0,0,0.45));
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 8vw, 5rem);
+      line-height: 0.95;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      margin-bottom: 1.3rem;
+    }
+
+    .hero-title span {
+      background: var(--gradient-main);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-description {
+      color: var(--text-soft);
+      font-size: 1.04rem;
+      line-height: 1.8;
+      max-width: 60ch;
+    }
+
+    .hero-actions {
+      margin-top: 2rem;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .hero-stat {
+      padding: 1.2rem;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-stat span {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.4rem;
+    }
+
+    .feature-card {
+      position: relative;
+      overflow: hidden;
+      padding: 1.7rem;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.025);
+      transition:
+        transform 220ms var(--ease-spring),
+        border-color 220ms ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(91,143,255,0.24);
+    }
+
+    .feature-card svg {
+      width: 26px;
+      height: 26px;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+
+    .feature-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .feature-card p {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.3rem;
+    }
+
+    .preview-card {
+      overflow: hidden;
+      transition:
+        transform 220ms var(--ease-spring),
+        border-color 220ms ease;
+    }
+
+    .preview-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(45,232,184,0.24);
+    }
+
+    .preview-image {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+      border-radius: 18px;
+      margin-bottom: 1.4rem;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .preview-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 22px 22px;
+    }
+
+    .preview-image img {
+      width: 110px;
+      height: 110px;
+      image-rendering: pixelated;
+      position: relative;
+      z-index: 1;
+      filter: drop-shadow(0 12px 18px rgba(0,0,0,0.45));
+    }
+
+    .preview-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.12rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .preview-card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    .api-layout {
+      display: grid;
+      grid-template-columns: 1fr 0.8fr;
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+
+    .api-box {
+      margin-top: 1.4rem;
+      padding: 1rem;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+      overflow-x: auto;
+    }
+
+    .api-box code {
+      color: #82aaff;
+      font-size: 0.84rem;
+      white-space: nowrap;
+    }
+
+    .api-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .api-item {
+      padding: 1rem;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.025);
+    }
+
+    .api-item strong {
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .api-item span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-layout,
+      .api-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-banner {
+        padding: 2rem;
+      }
+
+      .hero-image {
+        min-height: 220px;
+      }
+
+      .hero-image img {
+        max-width: 280px;
+      }
+    }
+  </style>
+</head>
+
+<body class="page-project">
+<div class="site-shell">
+
+  <!-- NAV -->
+  <header class="navbar">
+    <nav class="nav-container">
+      <div class="nav-brandbar">
+        <a class="nav-logo" href="index.html">PluggLAB</a>
+        <p class="nav-status">Innovation lab for Minecraft plugins &amp; experiences</p>
+      </div>
+      <div class="nav-menu-row">
+        <div class="nav-links" id="site-nav-links">
+          <a href="index.html">Home</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="page-main">
+
+    <div class="page-heads">
+
+      <!-- HERO -->
+      <section class="hero-banner" id="overview">
+
+        <div class="hero-layout">
+
+          <div>
+
+            <p class="hero-kicker">Minecraft-Heads.com</p>
+
+            <h1 class="hero-title">
+              The Ultimate <span>Minecraft Heads</span> Database
+            </h1>
+
+            <p class="hero-description">
+              Minecraft-Heads.com provides one of the largest collections of custom Minecraft player heads,
+              decorative textures, mob heads and themed collections for builders, plugin developers and server owners.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://minecraft-heads.com/" target="_blank">
+                Visit Website
+              </a>
+
+              <a class="btn btn-secondary" href="#api">
+                Explore API
+              </a>
+            </div>
+
+            <div class="hero-stats">
+
+              <div class="hero-stat">
+                <strong>100K+</strong>
+                <span>Custom Heads</span>
+              </div>
+
+              <div class="hero-stat">
+                <strong>500+</strong>
+                <span>Collections</span>
+              </div>
+
+              <div class="hero-stat">
+                <strong>API</strong>
+                <span>Developer Access</span>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="hero-image">
+            <img src="assets/images/minecraft-heads_rectangle_180x150.png" alt="Minecraft Heads">
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- FEATURES -->
+      <section>
+
+        <div class="section-heading">
+          <p class="section-label">Platform Features</p>
+          <h2>Why Minecraft-Heads.com?</h2>
+
+          <p class="section-copy">
+            Built for builders, creators and developers looking for high-quality decorative heads and API integration.
+          </p>
+        </div>
+
+        <div class="info-grid">
+
+          <article class="feature-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="8"></circle>
+              <path d="M12 8v8"></path>
+              <path d="M8 12h8"></path>
+            </svg>
+
+            <h3>Massive Collection</h3>
+
+            <p>
+              Explore thousands of decorative heads including food, furniture, mobs,
+              fantasy props and modern themed textures.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M8 6h13"></path>
+              <path d="M8 12h13"></path>
+              <path d="M8 18h13"></path>
+              <path d="M3 6h.01"></path>
+              <path d="M3 12h.01"></path>
+              <path d="M3 18h.01"></path>
+            </svg>
+
+            <h3>Organized Categories</h3>
+
+            <p>
+              Quickly browse themed collections with intuitive filtering for easier discovery.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 18l6-6-6-6"></path>
+              <path d="M8 6l-6 6 6 6"></path>
+            </svg>
+
+            <h3>Developer API</h3>
+
+            <p>
+              Fetch textures directly inside websites, Minecraft plugins or custom server tools.
+            </p>
+          </article>
+
+        </div>
+
+      </section>
+
+      <!-- PREVIEW -->
+      <section id="collections">
+
+        <div class="section-heading">
+          <p class="section-label">Head Categories</p>
+          <h2>Popular Collections</h2>
+
+          <p class="section-copy">
+            Minecraft-Heads.com includes decorative assets for nearly every server style.
+          </p>
+        </div>
+
+        <div class="preview-grid">
+
+          <article class="glass-card preview-card">
+
+            <div class="preview-image">
+              <img src="https://mc-heads.net/avatar/MHF_Cake/256" alt="Cake Head">
+            </div>
+
+            <h4>Food & Drinks</h4>
+
+            <p>
+              Cakes, burgers, drinks, candies and decorative food textures for roleplay and cities.
+            </p>
+
+          </article>
+
+          <article class="glass-card preview-card">
+
+            <div class="preview-image">
+              <img src="https://mc-heads.net/avatar/Creeper/256" alt="Creeper Head">
+            </div>
+
+            <h4>Mobs & Creatures</h4>
+
+            <p>
+              Vanilla mobs, fantasy enemies and RPG creatures for adventure maps and PvP.
+            </p>
+
+          </article>
+
+          <article class="glass-card preview-card">
+
+            <div class="preview-image">
+              <img src="https://mc-heads.net/avatar/MHF_Present1/256" alt="Gift Head">
+            </div>
+
+            <h4>Seasonal Decorations</h4>
+
+            <p>
+              Christmas, Halloween, Easter and event-themed decorative heads.
+            </p>
+
+          </article>
+
+        </div>
+
+      </section>
+
+      <!-- API -->
+      <section id="api">
+
+        <div class="section-heading">
+          <p class="section-label">Developer Access</p>
+          <h2>Minecraft-Heads API</h2>
+
+          <p class="section-copy">
+            Integrate Minecraft head textures directly into your applications and plugins.
+          </p>
+        </div>
+
+        <div class="api-layout">
+
+          <article class="glass-card">
+
+            <h3 style="font-family: var(--font-display); font-size: 1.5rem;">
+              Example API Request
+            </h3>
+
+            <div class="api-box">
+              <code>
+                https://minecraft-heads.com/scripts/api.php?cat=food&tags=true
+              </code>
+            </div>
+
+            <div class="api-box">
+              <code>
+                https://minecraft-heads.com/scripts/api.php?search=creeper
+              </code>
+            </div>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://minecraft-heads.com/custom-heads/api" target="_blank">
+                API Documentation
+              </a>
+            </div>
+
+          </article>
+
+          <article class="glass-card">
+
+            <div class="api-list">
+
+              <div class="api-item">
+                <strong>JSON Responses</strong>
+                <span>Retrieve texture values, names and categories.</span>
+              </div>
+
+              <div class="api-item">
+                <strong>Plugin Integration</strong>
+                <span>Perfect for Bukkit, Paper and Spigot plugins.</span>
+              </div>
+
+              <div class="api-item">
+                <strong>Texture Delivery</strong>
+                <span>Direct access to custom Minecraft textures.</span>
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+      <!-- TEXTURES -->
+      <section id="textures" class="glass-card">
+
+        <div class="section-heading">
+          <p class="section-label">Texture Database</p>
+          <h2>Built For Minecraft Creators</h2>
+        </div>
+
+        <p class="section-copy">
+          Minecraft-Heads.com is widely used by Minecraft builders, server owners and plugin developers
+          to enhance builds with decorative textures and custom player heads.
+        </p>
+
+        <div class="hero-actions" style="margin-top: 2rem;">
+          <a class="btn btn-primary" href="https://minecraft-heads.com/" target="_blank">
+            Open Minecraft-Heads.com
+          </a>
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="footer-brand">
+      <h2>MCHeads</h2>
+      <p>Modern showcase page inspired by Minecraft-Heads.com.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="#overview">Overview</a>
+      <a href="#collections">Collections</a>
+      <a href="#api">API</a>
+      <a href="#textures">Textures</a>
+    </div>
+
+  </footer>
+
+</div>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/scroll.js"></script>
+<script src="assets/js/project.js"></script>
+
+</body>
+</html>
