@@ -131,6 +131,14 @@
 
 .feature-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,0.3); }
 
+.feature-card svg {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 0.9rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
 .feature-card h4 {
   font-family: var(--font-display);
   font-size: 0.95rem;
@@ -150,10 +158,21 @@
 
 .spotlight-card {
   padding: 1.4rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
   transition: transform 200ms ease;
 }
 
 .spotlight-card:hover { transform: translateY(-4px); }
+
+.spotlight-card svg {
+  width: 24px;
+  height: 24px;
+  color: var(--teal);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
 
 .spotlight-card h4 {
   font-family: var(--font-display);
@@ -348,6 +367,40 @@ code {
 
 .contact-card { padding: 1.8rem; }
 .contact-card.featured-card { border-color: rgba(91,143,255,0.22); background: rgba(91,143,255,0.04); }
+
+.card-icon-wrap {
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.card-icon-wrap svg {
+  width: 26px;
+  height: 26px;
+}
+
+.icon-cyan {
+  background: rgba(45,232,184,0.12);
+  color: var(--teal);
+  border: 1px solid rgba(45,232,184,0.18);
+}
+
+.icon-blue {
+  background: rgba(91,143,255,0.12);
+  color: var(--accent);
+  border: 1px solid rgba(91,143,255,0.18);
+}
+
+.icon-purple {
+  background: rgba(155,94,255,0.12);
+  color: var(--violet);
+  border: 1px solid rgba(155,94,255,0.18);
+}
 
 .contact-card h2 {
   font-family: var(--font-display);
