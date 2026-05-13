@@ -87,22 +87,10 @@
     0 0 60px rgba(139, 184, 255, 0.12);
 
   position: relative;
+  z-index: 2;
+  isolation: isolate;
 
   animation: heroGlow 6s ease-in-out infinite;
-}
-
-.hero-title::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background: inherit;
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  filter: blur(26px);
-  opacity: 0.22;
-  z-index: -1;
 }
 
 @keyframes heroGlow {
