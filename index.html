@@ -62,7 +62,52 @@
           <a class="btn btn-secondary" href="casinocore.html">Casino Core</a>
           <a class="btn btn-ghost" href="https://discord.gg/ZMje3neEmK" target="_blank">Discord</a>
         </div>
+        <div class="hero-metrics">
+          <div class="hero-metric">
+            <span class="hero-metric-value" data-count="5">0</span>
+            <span class="hero-metric-label">Live projects</span>
+          </div>
+          <div class="hero-metric">
+            <span class="hero-metric-value" data-count="2">0</span>
+            <span class="hero-metric-label">Premium systems</span>
+          </div>
+          <div class="hero-metric">
+            <span class="hero-metric-value" data-count="24">0</span>
+            <span class="hero-metric-label">Planned modules</span>
+          </div>
+        </div>
       </div>
+      <aside class="hero-panel glass-card" aria-label="PluggLAB overview">
+        <div class="hero-panel-header">
+          <span class="hero-panel-kicker">Control Surface</span>
+          <span class="hero-panel-status">Building now</span>
+        </div>
+        <div class="hero-panel-main">
+          <h2>MemoryChain drives the stack</h2>
+          <p>Track the current focus, jump into premium builds, and watch the ecosystem expand from one place.</p>
+        </div>
+        <div class="hero-stack">
+          <div class="stack-item">
+            <span class="stack-label">Primary</span>
+            <strong>MemoryChain</strong>
+            <span class="stack-note">Core architecture and data systems</span>
+          </div>
+          <div class="stack-item">
+            <span class="stack-label">Next release</span>
+            <strong>Casino Core</strong>
+            <span class="stack-note">Economy, slots, reward flow</span>
+          </div>
+          <div class="stack-item">
+            <span class="stack-label">Utility</span>
+            <strong>PulseEvents</strong>
+            <span class="stack-note">Automated server events and hooks</span>
+          </div>
+        </div>
+        <div class="hero-panel-actions">
+          <a class="btn btn-primary" href="#projects">Browse Stack</a>
+          <button class="btn btn-secondary" type="button" id="copy-discord">Copy Discord</button>
+        </div>
+      </aside>
     </section>
 
     <!-- FEATURED -->
@@ -90,6 +135,20 @@
             </div>
           </div>
         </article>
+        <div class="featured-side">
+          <article class="glass-card feature-brief">
+            <span class="project-tag">Current Objectives</span>
+            <ul class="brief-list">
+              <li>Define stable plugin core contracts</li>
+              <li>Connect premium modules into one ecosystem</li>
+              <li>Ship clearer admin and player workflows</li>
+            </ul>
+          </article>
+          <article class="glass-card feature-brief">
+            <span class="project-tag">Operator Notes</span>
+            <p>Use the project controls below to filter by type and status, then jump directly into the pages that matter.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -100,11 +159,28 @@
         <h2>All Systems</h2>
         <p class="section-copy">Active PluggLAB ecosystem projects.</p>
       </div>
+      <div class="project-toolbar glass-card">
+        <div class="project-filters" role="tablist" aria-label="Project filters">
+          <button class="filter-chip is-active" type="button" data-filter="all">All</button>
+          <button class="filter-chip" type="button" data-filter="plugin">Plugins</button>
+          <button class="filter-chip" type="button" data-filter="pack">Packs</button>
+          <button class="filter-chip" type="button" data-filter="premium">Premium</button>
+          <button class="filter-chip" type="button" data-filter="wip">In Development</button>
+        </div>
+        <label class="project-search" for="project-search">
+          <span>Search</span>
+          <input id="project-search" type="search" placeholder="Search projects">
+        </label>
+      </div>
       <div class="projects-grid">
 
-        <article class="glass-card project-card">
+        <article class="glass-card project-card" data-tags="plugin premium core" data-name="MemoryChain">
           <div class="project-icon">
             <img src="assets/images/memorychain.n.png" alt="MemoryChain Icon">
+          </div>
+          <div class="project-meta-line">
+            <span class="project-mini-tag">Plugin</span>
+            <span class="project-mini-tag premium-tag">Premium</span>
           </div>
           <h3>MemoryChain</h3>
           <p>Main plugin system and core architecture. <strong>Premium plugin.</strong></p>
@@ -112,46 +188,66 @@
           <a class="btn btn-primary" href="memorychain.html">Open</a>
         </article>
 
-        <article class="glass-card project-card">
+        <article class="glass-card project-card" data-tags="plugin events utility" data-name="PulseEvents">
           <div class="project-icon">
             <img src="assets/images/pulseevents_n.png" alt="PulseEvents Icon">
+          </div>
+          <div class="project-meta-line">
+            <span class="project-mini-tag">Plugin</span>
+            <span class="project-mini-tag">Automation</span>
           </div>
           <h3>PulseEvents</h3>
           <p>Dynamic event system for Minecraft servers.</p>
           <a class="btn btn-primary" href="pulseevents.html">Learn More</a>
         </article>
 
-        <article class="glass-card project-card">
+        <article class="glass-card project-card" data-tags="pack pvp visual" data-name="NovaPixel">
           <div class="project-icon">
             <img src="assets/images/novapixel_n.png" alt="NovaPixel Icon">
+          </div>
+          <div class="project-meta-line">
+            <span class="project-mini-tag">Pack</span>
+            <span class="project-mini-tag">PvP</span>
           </div>
           <h3>NovaPixel</h3>
           <p>Competitive PvP texture pack (modern style).</p>
           <a class="btn btn-primary" href="novapixel.html">Learn More</a>
         </article>
 
-        <article class="glass-card project-card">
+        <article class="glass-card project-card" data-tags="plugin premium economy" data-name="Casino Core">
           <div class="project-icon project-icon-casino"><span>CC</span></div>
+          <div class="project-meta-line">
+            <span class="project-mini-tag">Plugin</span>
+            <span class="project-mini-tag premium-tag">Premium</span>
+          </div>
           <h3>Casino Core</h3>
           <p>Modular casino engine with reward systems and slot mechanics. <strong>Premium plugin.</strong></p>
           <div class="project-pricing"><span class="price-tag">$10.00</span></div>
           <a class="btn btn-primary" href="casinocore.html">Open</a>
         </article>
 
-        <article class="glass-card project-card">
+        <article class="glass-card project-card" data-tags="pack pvp visual" data-name="PvPFlow">
           <div class="project-icon">
             <img src="assets/images/pvpflow_n.png" alt="PvPFlow Icon">
+          </div>
+          <div class="project-meta-line">
+            <span class="project-mini-tag">Pack</span>
+            <span class="project-mini-tag">PvP</span>
           </div>
           <h3>PvPFlow</h3>
           <p>1.8 PvP focused visual enhancement pack.</p>
           <a class="btn btn-primary" href="pvpflow.html">Learn More</a>
         </article>
 
-        <article class="glass-card project-card wip-card">
+        <article class="glass-card project-card wip-card" data-tags="wip plugin upcoming" data-name="Upcoming Project A">
           <div class="project-icon project-icon-wip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32">
               <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
             </svg>
+          </div>
+          <div class="project-meta-line">
+            <span class="project-mini-tag">Plugin</span>
+            <span class="project-mini-tag upcoming-tag">WIP</span>
           </div>
           <h3>...</h3>
           <p>... <strong>In Development</strong></p>
@@ -159,12 +255,16 @@
           <a class="btn btn-secondary" href="download-pending.html">Status</a>
         </article>
 
-        <article class="glass-card project-card wip-card">
+        <article class="glass-card project-card wip-card" data-tags="wip plugin upcoming" data-name="Upcoming Project B">
           <div class="project-icon project-icon-wip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32">
               <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
               <polyline points="3.27 6.96 12 12.5 20.73 6.96"/><line x1="12" y1="22.5" x2="12" y2="12"/>
             </svg>
+          </div>
+          <div class="project-meta-line">
+            <span class="project-mini-tag">Plugin</span>
+            <span class="project-mini-tag upcoming-tag">WIP</span>
           </div>
           <h3>...</h3>
           <p>.... <strong>In Development</strong></p>
@@ -172,6 +272,32 @@
           <a class="btn btn-secondary" href="download-pending.html">Status</a>
         </article>
 
+      </div>
+      <p class="project-empty" hidden>No projects match the current filter.</p>
+    </section>
+
+    <section class="roadmap-section" id="roadmap">
+      <div class="section-heading">
+        <p class="section-label">Roadmap</p>
+        <h2>Current Build Path</h2>
+        <p class="section-copy">A clearer view of what is shipping now, what is stabilizing, and what is being prepared.</p>
+      </div>
+      <div class="roadmap-grid">
+        <article class="glass-card roadmap-card">
+          <span class="roadmap-stage">Now</span>
+          <h3>Core Architecture</h3>
+          <p>MemoryChain is defining shared plugin structure, internal services, and future module hooks.</p>
+        </article>
+        <article class="glass-card roadmap-card">
+          <span class="roadmap-stage">Next</span>
+          <h3>Economy Gameplay</h3>
+          <p>Casino Core expands into monetized server gameplay with stronger reward and admin flows.</p>
+        </article>
+        <article class="glass-card roadmap-card">
+          <span class="roadmap-stage">Later</span>
+          <h3>Polished Ecosystem</h3>
+          <p>Visual packs, event utilities, and premium integrations settle into one consistent stack.</p>
+        </article>
       </div>
     </section>
 
