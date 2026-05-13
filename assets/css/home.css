@@ -9,7 +9,7 @@
   padding-top: calc(var(--nav-height) + 5rem);
   padding-bottom: 6rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   isolation: isolate;
   max-width: var(--max-width);
   margin: 0 auto;
@@ -52,6 +52,8 @@
   max-width: 680px;
   animation: fadeUp 0.9s ease-out both;
   padding: 2rem 0;
+  align-self: flex-start;
+  text-align: left;
 }
 
 @keyframes fadeUp {
@@ -82,28 +84,14 @@
 
   margin: 0.5rem 0 1.4rem;
 
-  text-shadow:
-    0 0 25px rgba(109, 124, 255, 0.18),
-    0 0 60px rgba(139, 184, 255, 0.12);
+  text-shadow: 0 0 25px rgba(109, 124, 255, 0.18);
 
   position: relative;
   z-index: 2;
   isolation: isolate;
 
-  animation: heroGlow 6s ease-in-out infinite;
-}
-
-@keyframes heroGlow {
-  0%,
-  100% {
-    filter: brightness(1);
-    transform: translateY(0px);
-  }
-
-  50% {
-    filter: brightness(1.12);
-    transform: translateY(-2px);
-  }
+  filter: none;
+  transform: none;
 }
 
 .hero-subtitle {
