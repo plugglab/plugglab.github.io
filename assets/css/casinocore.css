@@ -1,1 +1,161 @@
-/* Page-specific overrides — main styles in pages.css */
+/* ── CASINO CORE — themed overrides ── */
+
+/* Casino gold/red palette */
+:root {
+  --casino-gold: #d4af37;
+  --casino-gold-light: #f0d060;
+  --casino-red: #c0392b;
+  --casino-red-glow: rgba(192, 57, 43, 0.25);
+  --casino-gold-glow: rgba(212, 175, 55, 0.22);
+  --casino-dark: #0d0608;
+  --casino-felt: rgba(20, 60, 30, 0.18);
+  --gradient-casino: linear-gradient(135deg, #d4af37 0%, #f5e27a 50%, #c0922a 100%);
+}
+
+/* Casino page background — rich dark with felt-green tint */
+.page-casinocore body,
+body.page-casinocore {
+  background-color: #080608;
+  background-image:
+    radial-gradient(ellipse 55% 45% at 15% 5%, rgba(192, 57, 43, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 45% 35% at 85% 10%, rgba(212, 175, 55, 0.14) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 55% at 80% 80%, rgba(139, 90, 20, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 35% 40% at 5% 85%, rgba(192, 57, 43, 0.08) 0%, transparent 50%);
+}
+
+/* Casino heading font — Cinzel Decorative for titles */
+.page-casinocore .project-title,
+.page-casinocore .page-hero h1 {
+  font-family: var(--font-casino);
+  background: var(--gradient-casino);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+}
+
+/* Casino nav logo override */
+.page-casinocore .nav-logo {
+  font-family: var(--font-casino);
+}
+
+/* Section headings in casino page */
+.page-casinocore section h2,
+.page-casinocore .status-card h2,
+.page-casinocore .meta-card h3,
+.page-casinocore .notes-card h3,
+.page-casinocore .feature-card h4 {
+  font-family: var(--font-casino);
+  letter-spacing: 0.03em;
+}
+
+/* Gold accent for section labels */
+.page-casinocore .section-label {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: rgba(212, 175, 55, 0.35);
+  color: var(--casino-gold);
+}
+
+/* Gold price tag */
+.page-casinocore .price-tag {
+  background: var(--gradient-casino);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Red progress bar */
+.page-casinocore .progress-bar {
+  background: linear-gradient(90deg, var(--casino-red), var(--casino-gold));
+}
+
+/* Card border glow — gold/red */
+.page-casinocore .glass-card {
+  border-color: rgba(212, 175, 55, 0.15);
+  box-shadow:
+    0 4px 24px rgba(0,0,0,0.45),
+    0 0 0 1px rgba(212, 175, 55, 0.06);
+}
+
+.page-casinocore .glass-card::before {
+  background: linear-gradient(145deg, rgba(212,175,55,0.07) 0%, transparent 45%);
+}
+
+/* Casino primary button — gold */
+.page-casinocore .btn-primary {
+  background: linear-gradient(135deg, rgba(212,175,55,0.25), rgba(192,57,43,0.18));
+  border-color: rgba(212,175,55,0.45);
+  color: var(--casino-gold-light);
+  box-shadow: 0 4px 20px rgba(212,175,55,0.15);
+}
+.page-casinocore .btn-primary:hover {
+  border-color: rgba(212,175,55,0.7);
+  box-shadow: 0 8px 28px rgba(212,175,55,0.25);
+}
+
+/* Feature cards — casino glow */
+.page-casinocore .feature-card svg {
+  color: var(--casino-gold);
+}
+
+/* Signal pills */
+.page-casinocore .signal-pill.blue {
+  border-color: rgba(212,175,55,0.3);
+  color: var(--casino-gold);
+  background: rgba(212,175,55,0.07);
+}
+
+/* Spotlight cards */
+.page-casinocore .spotlight-card {
+  border-color: rgba(212,175,55,0.2);
+}
+.page-casinocore .spotlight-card svg {
+  color: var(--casino-gold);
+}
+
+/* Footer brand */
+.page-casinocore .footer-brand h2 {
+  font-family: var(--font-casino);
+  background: var(--gradient-casino);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Decorative casino chip border on hero */
+.page-casinocore .page-hero {
+  position: relative;
+}
+.page-casinocore .page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(212,175,55,0.15) 20%,
+    rgba(212,175,55,0.4) 50%,
+    rgba(212,175,55,0.15) 80%,
+    transparent 100%
+  );
+}
+
+/* project tag in casino theme */
+.page-casinocore .project-tag {
+  border-color: rgba(212,175,55,0.3);
+  color: var(--casino-gold);
+  background: rgba(212,175,55,0.07);
+}
+
+/* status-card color-red override to casino red */
+.page-casinocore .color-red {
+  border-color: rgba(192,57,43,0.3);
+  box-shadow:
+    0 4px 24px rgba(0,0,0,0.45),
+    0 0 0 1px rgba(192,57,43,0.1),
+    inset 0 0 40px rgba(192,57,43,0.04);
+}

@@ -1,7 +1,13 @@
 ﻿(() => {
   const STORAGE_KEY = "plugglab-language";
   const SUPPORTED_LANGUAGES = ["en", "pl"];
-  const page = window.location.pathname.split("/").pop() || "index.html";
+  const pathParts = window.location.pathname.split("/").filter(Boolean);
+  const lastPart = pathParts[pathParts.length - 1] || "index.html";
+  const parentDir = pathParts.length >= 2 ? pathParts[pathParts.length - 2] : "";
+  // Disambiguate sub-directory index/docs pages by prefixing with parent dir name
+  const page = (lastPart === "index.html" || lastPart === "docs.html") && parentDir
+    ? parentDir + "/" + lastPart
+    : lastPart;
 
   const detectLanguage = () => {
     const saved = window.localStorage.getItem(STORAGE_KEY);
@@ -537,6 +543,124 @@
             setManyText(".footer-links a", ["PulseEvents", "Home", "Contact"]);
             setText(".footer-brand p", "PulseEvents custom event reference for version 1.0.0.");
           }
+        },
+        "heads.html": {
+          title: "Minecraft Heads Explorer | PluggLAB",
+          metaDescription: "Browse Minecraft-Heads.com collections, API tools and custom decorative heads.",
+          ogTitle: "Minecraft Heads Explorer",
+          ogDescription: "Browse Minecraft-Heads.com collections, API tools and custom decorative heads.",
+          apply() {
+            setText(".nav-status", "Innovation lab for Minecraft plugins & experiences");
+            setManyText(".nav-links a", ["Home", "Projects", "Contact"]);
+            setText(".hero-kicker", "Minecraft-Heads.com");
+            setText(".footer-brand p", "Centralized development hub and community.");
+          }
+        },
+        "casinocore/index.html": {
+          title: "PluggLAB | Casino Core",
+          metaDescription: "Casino Core - modular casino plugin for Minecraft server economies.",
+          ogTitle: "Casino Core | PluggLAB",
+          ogDescription: "Modular casino engine and reward system built for Minecraft servers.",
+          apply() {
+            setText(".nav-status", "Project hub for plugins, packs, and experiments");
+            setManyText(".nav-links a", ["Home", "Featured", "Contact", "Docs"]);
+            setText(".page-hero .section-label", "New Plugin");
+            setHTML(".page-hero .section-copy", "A modular casino engine for Minecraft servers. Add slots, roulette, reward shops, and economy-backed mini-games. <strong>Premium plugin with lifetime updates and priority support.</strong>");
+            setManyText(".hero-actions a", ["Join Discord", "Download", "Pricing Info", "Docs"]);
+            setManyText(".spotlight-card h4", ["Ready Modules", "Secure Economy", "Premium Support"]);
+            setManyText(".spotlight-card p", [
+              "Rapidly deploy slot systems, roulette tables, and reward shops.",
+              "Balanced payouts with vault-safe reward handling.",
+              "Lifetime updates, priority Discord support, and custom integrations."
+            ]);
+            setHTML(".hero-extra", 'Casino Core links server economy and gameplay with a polished casino experience. <strong>Starting at $29.99 one-time purchase.</strong>');
+            setText(".status-card h2", "Current Status");
+            setText(".status-card p", "Casino Core is in active prototype development. Its modular architecture is ready to accept custom games, reward currency, and server-side configuration.");
+            setText(".progress-note", "Alpha prototype — casino features coming online.");
+            setManyText(".pricing-info .price-details span", ["One-time purchase", "Lifetime updates", "Priority support"]);
+            setText(".meta-card h3", "Project Snapshot");
+            setManyText(".meta-grid dt", ["Status", "Role", "Type", "Stage", "Release Type", "Priority", "Pricing", "Support"]);
+            setManyText(".meta-grid dd", ["Alpha preview", "Casino engine", "Minecraft plugin", "Modular integration", "Premium Plugin", "High", "$29.99 one-time", "Lifetime updates"]);
+            setManyText(".feature-card h4", ["Slot Machines", "Reward Economy", "Admin Control", "MemoryChain Ready", "Custom Games", "Anti-Cheat"]);
+            setManyText(".feature-card p", [
+              "Multiple casino games with adjustable odds and rewards. Customizable payout tables.",
+              "Integrated funds, tokens, and bonus distribution. Vault economy support.",
+              "Clean admin interface with permission support. Real-time monitoring.",
+              "Designed to integrate with the PluggLAB ecosystem and reward systems.",
+              "Build your own casino games with the modular API. Easy to extend.",
+              "Built-in protection against exploitation. Secure random number generation."
+            ]);
+            setManyText(".notes-card h3", ["Core Features", "Next Steps"]);
+            setManyHTML(".feature-list li", [
+              "Slot machines and roulette tables with configurable odds",
+              "Reward tokens, economy balances, and vault integration",
+              "Admin-configurable game rooms and permissions",
+              "Built to connect with MemoryChain and server-based reward systems",
+              "Player shops, prize crates, and bonus streak mechanics"
+            ]);
+            setManyHTML(".status-list li", [
+              "Finish server-side game engine and payout logic",
+              "Create admin controls and casino configuration UI",
+              "Integrate reward economy with MemoryChain wallet systems",
+              "Publish early access downloads and documentation",
+              "Test with live communities in demo hubs"
+            ]);
+            setText(".footer-brand p", "Casino Core expands the PluggLAB ecosystem into economy-driven mini-games.");
+            setManyText(".footer-links a", ["Home", "MemoryChain", "PulseEvents", "NovaPixel", "PvPFlow"]);
+          }
+        },
+        "casinocore/docs.html": {
+          title: "Casino Core Docs | PlaceholderAPI",
+          metaDescription: "CasinoCore PlaceholderAPI documentation and placeholders reference.",
+          ogTitle: "Casino Core Docs | PluggLAB",
+          ogDescription: "PlaceholderAPI integration reference for Casino Core plugin.",
+          apply() {
+            setText(".nav-status", "Project hub for plugins, packs, and experiments");
+            setManyText(".nav-links a", ["Home", "Casino Core", "Contact"]);
+            setText(".footer-brand p", "Casino Core documentation and PlaceholderAPI reference.");
+          }
+        },
+        "pulsevents/index.html": {
+          title: "PluggLAB | PulseEvents",
+          metaDescription: "PulseEvents - modular Minecraft event plugin for SMP, arcade, and minigame servers.",
+          ogTitle: "PulseEvents | Minecraft Event Plugin",
+          ogDescription: "Automated event system for Minecraft servers with modular design and live announcements.",
+          apply() {
+            setText(".nav-status", "Project hub for plugins, packs, and experiments");
+            setManyText(".nav-links a", ["Home", "Projects", "Featured", "Contact"]);
+            setText(".page-hero .section-label", "Minecraft Plugin");
+            setText(".section-copy", "A modular event system designed to automate and enhance gameplay on SMP, arcade, and minigame servers.");
+            setManyText(".hero-actions a", ["Download Plugin", "Join Discord", "Custom Events Docs"]);
+            setManyText(".hero-highlights .signal-pill", ["Live Release", "Modular Core", "Active Development"]);
+            setText(".micro-note", "Last updated: May 2026");
+            setText(".status-card h2", "Stable Core - Expanding");
+            setText(".status-card p", "PulseEvents is publicly available and already usable, with ongoing development focused on expanding features and improving usability.");
+            setText(".progress-note", "Core system ready - expansion in progress.");
+            setManyText(".action-row a", ["Spigot", "Modrinth"]);
+            setText(".footer-brand p", "PulseEvents — modular event system for Minecraft servers.");
+            setManyText(".footer-links a", ["Home", "MemoryChain", "NovaPixel", "PvPFlow", "Contact"]);
+          }
+        },
+        "pulsevents/docs.html": {
+          title: "PluggLAB | PulseEvents Custom Events",
+          metaDescription: "PulseEvents 1.0.0 custom events reference for configuring event definitions, action types, validation, and runtime behavior.",
+          ogTitle: "PulseEvents Custom Events | PluggLAB",
+          ogDescription: "Developer reference for PulseEvents custom event configuration in version 1.0.0.",
+          apply() {
+            setText(".nav-status", "Project hub for plugins, packs, and experiments");
+            setManyText(".nav-links a", ["Home", "Projects", "Contact"]);
+            setText(".page-hero .section-label", "Reference");
+            setText(".project-title", "Custom Events");
+            setText(".section-copy", "Technical reference for PulseEvents 1.0.0 custom event configuration, action execution, validation, and runtime behavior.");
+            setManyText(".hero-highlights .signal-pill", ["PulseEvents 1.0.0", "Config-Driven", "Developer Docs"]);
+            setManyText(".hero-actions a", ["Back to PulseEvents", "Download Plugin"]);
+            setManyText(".docs-layout .section-label", ["Overview", "Example", "Validation", "Runtime"]);
+            setManyText(".docs-layout h2", ["Runtime Integration", "Minimal YAML", "Events Are Skipped If", "Operational Notes"]);
+            setManyText(".docs-section .section-label", ["Reference", "Reference", "Action Types"]);
+            setManyText(".docs-section h2", ["Top-Level Event Fields", "Common Action Fields", "Supported Actions"]);
+            setManyText(".footer-links a", ["PulseEvents", "Home", "Contact"]);
+            setText(".footer-brand p", "PulseEvents custom event reference for version 1.0.0.");
+          }
         }
       }
     },
@@ -1006,6 +1130,124 @@
         },
         "events.html": {
           title: "PluggLAB | Custom Events PulseEvents",
+          metaDescription: "Referencja custom events dla PulseEvents 1.0.0: definicje eventow, typy akcji, walidacja i zachowanie runtime.",
+          ogTitle: "PulseEvents Custom Events | PluggLAB",
+          ogDescription: "Dokumentacja developerska konfiguracji custom events dla PulseEvents 1.0.0.",
+          apply() {
+            setText(".nav-status", "Centrum projektow pluginow, paczek i eksperymentow");
+            setManyText(".nav-links a", ["Start", "Projekty", "Kontakt"]);
+            setText(".page-hero .section-label", "Referencja");
+            setText(".project-title", "Custom Events");
+            setText(".section-copy", "Techniczna referencja konfiguracji custom events w PulseEvents 1.0.0, wykonywania akcji, walidacji i zachowania runtime.");
+            setManyText(".hero-highlights .signal-pill", ["PulseEvents 1.0.0", "Config-driven", "Dokumentacja dev"]);
+            setManyText(".hero-actions a", ["Wroc do PulseEvents", "Pobierz plugin"]);
+            setManyText(".docs-layout .section-label", ["Przeglad", "Przyklad", "Walidacja", "Runtime"]);
+            setManyText(".docs-layout h2", ["Integracja runtime", "Minimalny YAML", "Event jest pomijany, gdy", "Uwagi operacyjne"]);
+            setManyText(".docs-section .section-label", ["Referencja", "Referencja", "Typy akcji"]);
+            setManyText(".docs-section h2", ["Pola eventu najwyzszego poziomu", "Wspolne pola akcji", "Obslugiwane akcje"]);
+            setManyText(".footer-links a", ["PulseEvents", "Start", "Kontakt"]);
+            setText(".footer-brand p", "Referencja custom events PulseEvents dla wersji 1.0.0.");
+          }
+        },
+        "heads.html": {
+          title: "Minecraft Heads Explorer | PluggLAB",
+          metaDescription: "Przegladaj kolekcje Minecraft-Heads.com, narzedzia API i niestandardowe dekoracyjne glowy.",
+          ogTitle: "Minecraft Heads Explorer",
+          ogDescription: "Przegladaj kolekcje Minecraft-Heads.com, narzedzia API i niestandardowe dekoracyjne glowy.",
+          apply() {
+            setText(".nav-status", "Laboratorium pluginow i doswiadczen Minecraft");
+            setManyText(".nav-links a", ["Start", "Projekty", "Kontakt"]);
+            setText(".hero-kicker", "Minecraft-Heads.com");
+            setText(".footer-brand p", "Centralne centrum rozwoju i spolecznosc.");
+          }
+        },
+        "casinocore/index.html": {
+          title: "PluggLAB | Casino Core",
+          metaDescription: "Casino Core - modulowy plugin kasyna dla gospodarki serwerow Minecraft.",
+          ogTitle: "Casino Core | PluggLAB",
+          ogDescription: "Modulowy silnik kasyna i system nagrod dla serwerow Minecraft.",
+          apply() {
+            setText(".nav-status", "Centrum projektow pluginow, paczek i eksperymentow");
+            setManyText(".nav-links a", ["Start", "Wyroznione", "Kontakt", "Dokumentacja"]);
+            setText(".page-hero .section-label", "Nowy plugin");
+            setHTML(".page-hero .section-copy", "Modulowy silnik kasyna dla serwerow Minecraft. Dodawaj sloty, ruletke, sklepy nagrod i minigry oparte o ekonomie serwera. <strong>Plugin premium z dozywotnimi aktualizacjami i priorytetowym wsparciem.</strong>");
+            setManyText(".hero-actions a", ["Dolacz na Discord", "Pobierz", "Informacje o cenie", "Dokumentacja"]);
+            setManyText(".spotlight-card h4", ["Gotowe moduly", "Bezpieczna ekonomia", "Wsparcie premium"]);
+            setManyText(".spotlight-card p", [
+              "Szybkie wdrazanie systemow slotow, stolow ruletki i sklepow nagrod.",
+              "Zbalansowane wyplaty i bezpieczna obsluga nagrod zgodna z Vault.",
+              "Dozywotnie aktualizacje, priorytetowe wsparcie na Discordzie i integracje niestandardowe."
+            ]);
+            setHTML(".hero-extra", 'Casino Core laczy ekonomie serwera i gameplay w dopracowane doswiadczenie kasyna. <strong>Cena startowa: $29.99 jednorazowo.</strong>');
+            setText(".status-card h2", "Aktualny status");
+            setText(".status-card p", "Casino Core jest w aktywnym etapie prototypowania. Modulowa architektura jest gotowa na niestandardowe gry, waluty nagrod i konfiguracje po stronie serwera.");
+            setText(".progress-note", "Prototyp alfa - funkcje kasyna sa stopniowo uruchamiane.");
+            setManyText(".pricing-info .price-details span", ["Jednorazowy zakup", "Dozywotnie aktualizacje", "Priorytetowe wsparcie"]);
+            setText(".meta-card h3", "Szybki przeglad projektu");
+            setManyText(".meta-grid dt", ["Status", "Rola", "Typ", "Etap", "Typ wydania", "Priorytet", "Cena", "Wsparcie"]);
+            setManyText(".meta-grid dd", ["Podglad alfa", "Silnik kasyna", "Plugin Minecraft", "Integracja modularna", "Plugin premium", "Wysoki", "$29.99 jednorazowo", "Dozywotnie aktualizacje"]);
+            setManyText(".feature-card h4", ["Automaty slotowe", "Ekonomia nagrod", "Panel administracyjny", "Gotowy pod MemoryChain", "Wlasne gry", "Anti-cheat"]);
+            setManyText(".feature-card p", [
+              "Wiele gier kasynowych z regulowanymi szansami i nagrodami. Konfigurowalne tabele wyplat.",
+              "Zintegrowane fundusze, tokeny i bonusy. Wsparcie ekonomii Vault.",
+              "Przejrzysty panel administracyjny z uprawnieniami i monitoringiem na zywo.",
+              "Zaprojektowany do integracji z ekosystemem PluggLAB i systemami nagrod.",
+              "Mozliwosc tworzenia wlasnych gier kasynowych poprzez modularne API.",
+              "Wbudowana ochrona przed exploitami i bezpieczne generowanie losowosci."
+            ]);
+            setManyText(".notes-card h3", ["Glowne funkcje", "Nastepne kroki"]);
+            setManyHTML(".feature-list li", [
+              "Sloty i ruletki z konfigurowalnymi szansami",
+              "Tokeny nagrod, salda ekonomii i integracja z Vault",
+              "Pokoje gier i uprawnienia konfigurowane przez administratora",
+              "Budowany pod integracje z MemoryChain i systemami nagrod serwerowych",
+              "Sklepy graczy, skrzynki z nagrodami i mechaniki bonusowych serii"
+            ]);
+            setManyHTML(".status-list li", [
+              "Dopiac silnik gier po stronie serwera i logike wyplat",
+              "Stworzyc panel administracyjny i UI konfiguracji kasyna",
+              "Zintegrowac ekonomie nagrod z portfelami MemoryChain",
+              "Opublikowac wczesny dostep i dokumentacje",
+              "Przetestowac plugin z realnymi spolecznosciami na hubach demo"
+            ]);
+            setText(".footer-brand p", "Casino Core rozszerza ekosystem PluggLAB o minigry oparte na ekonomii.");
+            setManyText(".footer-links a", ["Start", "MemoryChain", "PulseEvents", "NovaPixel", "PvPFlow"]);
+          }
+        },
+        "casinocore/docs.html": {
+          title: "Casino Core Dokumentacja | PlaceholderAPI",
+          metaDescription: "Dokumentacja CasinoCore PlaceholderAPI i referencja placeholderow.",
+          ogTitle: "Casino Core Dokumentacja | PluggLAB",
+          ogDescription: "Referencja integracji PlaceholderAPI dla pluginu Casino Core.",
+          apply() {
+            setText(".nav-status", "Centrum projektow pluginow, paczek i eksperymentow");
+            setManyText(".nav-links a", ["Start", "Casino Core", "Kontakt"]);
+            setText(".footer-brand p", "Dokumentacja i referencja PlaceholderAPI dla Casino Core.");
+          }
+        },
+        "pulsevents/index.html": {
+          title: "PluggLAB | PulseEvents",
+          metaDescription: "PulseEvents - modulowy plugin eventowy Minecraft dla serwerow SMP, arcade i minigame.",
+          ogTitle: "PulseEvents | Plugin eventowy Minecraft",
+          ogDescription: "Zautomatyzowany system eventow dla serwerow Minecraft z modularna architektura i ogloszeniami na zywo.",
+          apply() {
+            setText(".nav-status", "Centrum projektow pluginow, paczek i eksperymentow");
+            setManyText(".nav-links a", ["Start", "Projekty", "Wyroznione", "Kontakt"]);
+            setText(".page-hero .section-label", "Plugin Minecraft");
+            setText(".section-copy", "Modulowy system eventow zaprojektowany do automatyzacji i wzmacniania gameplayu na serwerach SMP, arcade i minigame.");
+            setManyText(".hero-actions a", ["Pobierz plugin", "Dolacz na Discord", "Dokumentacja custom events"]);
+            setManyText(".hero-highlights .signal-pill", ["Wydanie live", "Modularny rdzen", "Aktywny rozwoj"]);
+            setText(".micro-note", "Ostatnia aktualizacja: maj 2026");
+            setText(".status-card h2", "Stabilny rdzen - dalsza rozbudowa");
+            setText(".status-card p", "PulseEvents jest publicznie dostepny i juz nadaje sie do uzycia, a dalszy rozwoj skupia sie na rozbudowie funkcji i wygodzie obslugi.");
+            setText(".progress-note", "Rdzen gotowy - trwaja kolejne rozszerzenia.");
+            setManyText(".action-row a", ["Spigot", "Modrinth"]);
+            setText(".footer-brand p", "PulseEvents — modulowy system eventow dla serwerow Minecraft.");
+            setManyText(".footer-links a", ["Start", "MemoryChain", "NovaPixel", "PvPFlow", "Kontakt"]);
+          }
+        },
+        "pulsevents/docs.html": {
+          title: "PluggLAB | PulseEvents Custom Events",
           metaDescription: "Referencja custom events dla PulseEvents 1.0.0: definicje eventow, typy akcji, walidacja i zachowanie runtime.",
           ogTitle: "PulseEvents Custom Events | PluggLAB",
           ogDescription: "Dokumentacja developerska konfiguracji custom events dla PulseEvents 1.0.0.",
