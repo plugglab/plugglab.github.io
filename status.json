@@ -1,29 +1,32 @@
 {
-  "plugins": {
-    "MemoryChain": {
+  "plugins": [
+    {
+      "name": "MemoryChain",
       "status": "down",
       "download": "None",
       "version": "1.0.0",
       "lastUpdate": "2026-04-20"
     },
-    "PulseEvents": {
+    {
+      "name": "PulseEvents",
       "status": "operational",
       "download": "https://modrinth.com/plugin/pulseevents",
       "version": "1.0.0",
       "lastUpdate": "2026-05-16"
     },
-    "CoreCasino": {
+    {
+      "name": "CoreCasino",
       "status": "testing",
       "download": "None",
       "version": "1.0.0",
       "lastUpdate": "2026-05-18"
     },
-    "CasinoCoreDemo": {
+    {
+      "name": "CasinoCoreDemo",
       "status": "operational",
       "download": "https://modrinth.com/plugin/casinocoredemo",
       "version": "1",
       "lastUpdate": "2026-05-07"
     }
-  }
+  ]
 }
-
