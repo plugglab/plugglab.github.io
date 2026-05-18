@@ -2,4 +2,6 @@ operational
 testing
 down
 maintenance
+degraded
+maintenance
 unknown
