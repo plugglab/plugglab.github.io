@@ -2,7 +2,7 @@
   "plugins": [
     {
       "name": "MemoryChain",
-      "status": "down",
+      "status": "unknown",
       "download": "None",
       "version": "1.0.0",
       "lastUpdate": "2026-04-20"
