@@ -407,6 +407,24 @@ section h2 {
 .footer-links a { font-size: 0.85rem; color: var(--muted); transition: color 150ms; }
 .footer-links a:hover { color: var(--text); }
 
+/* SUPPORT EMBED */
+.support-embed {
+  max-width: var(--max-width);
+  margin: 0 auto 2.5rem;
+}
+
+.support-embed .glass-card {
+  padding: 1rem;
+}
+
+.support-embed iframe {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 4px;
+  background: #f9f9f9;
+}
+
 /* ACTION ROWS */
 .hero-actions, .icon-link-row, .action-row, .cta-buttons, .signal-strip {
   display: flex;
