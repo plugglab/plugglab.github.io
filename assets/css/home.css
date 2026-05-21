@@ -467,66 +467,6 @@
   gap: 1.25rem;
 }
 
-.projects-layout {
-  display: grid;
-  grid-template-columns: minmax(240px, 280px) minmax(0, 1fr);
-  gap: 1.25rem;
-  align-items: start;
-}
-
-.projects-sidebar {
-  position: sticky;
-  top: calc(var(--nav-height) + 2rem);
-  padding: 1.25rem;
-}
-
-.projects-sidebar-head {
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-  margin-bottom: 1rem;
-}
-
-.projects-sidebar-head h3 {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  line-height: 1.1;
-}
-
-.sidebar-project-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-}
-
-.sidebar-project-link {
-  display: flex;
-  flex-direction: column;
-  gap: 0.18rem;
-  padding: 0.85rem 0.95rem;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  background: rgba(255,255,255,0.025);
-  transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
-}
-
-.sidebar-project-link:hover,
-.sidebar-project-link:focus-visible {
-  transform: translateY(-2px);
-  border-color: rgba(91,143,255,0.26);
-  background: rgba(91,143,255,0.08);
-}
-
-.sidebar-project-link strong {
-  font-family: var(--font-display);
-  font-size: 0.95rem;
-}
-
-.sidebar-project-link span {
-  color: var(--muted);
-  font-size: 0.82rem;
-}
-
 .project-card {
   position: relative;
   overflow: hidden;
@@ -912,17 +852,12 @@
 @media (max-width: 960px) {
   .hero-section,
   .featured-layout,
-  .roadmap-grid,
-  .projects-layout {
+  .roadmap-grid {
     grid-template-columns: 1fr;
   }
 
   .hero-panel {
     margin-top: 0;
-  }
-
-  .projects-sidebar {
-    position: static;
   }
 }
 
