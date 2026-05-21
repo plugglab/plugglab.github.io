@@ -4,6 +4,7 @@ const filterChips = [...document.querySelectorAll('.filter-chip')];
 const projectCards = [...document.querySelectorAll('.project-card[data-tags]')];
 const projectSearch = document.getElementById('project-search');
 const projectEmpty = document.querySelector('.project-empty');
+const projectResults = document.getElementById('project-results');
 const copyDiscordButton = document.getElementById('copy-discord');
 const counterElements = [...document.querySelectorAll('[data-count]')];
 
@@ -92,6 +93,13 @@ if (filterChips.length && projectCards.length) {
 
     if (projectEmpty) {
       projectEmpty.hidden = visibleCount !== 0;
+    }
+
+    if (projectResults) {
+      const filterLabel = activeFilter === 'all' ? 'projects' : `${activeFilter} projects`;
+      projectResults.textContent = searchTerm
+        ? `Showing ${visibleCount} result${visibleCount === 1 ? '' : 's'} for "${searchTerm}" in ${filterLabel}`
+        : `Showing ${visibleCount} ${filterLabel}`;
     }
   };
 

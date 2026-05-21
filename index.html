@@ -51,12 +51,26 @@
         <h1 class="hero-title">PluggLAB</h1>
         <p class="hero-subtitle">
           A focused development lab crafting Minecraft plugins and gaming experiences,
-          with one place to track releases, free plugins, pending approvals, and project progress.
+          with a cleaner way to browse releases, free plugins, approval status, and current project progress.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#projects">Projects</a>
           <a class="btn btn-secondary" href="download-pending.html">Approval Status</a>
           <a class="btn btn-ghost" href="https://discord.gg/ZMje3neEmK" target="_blank">Discord</a>
+        </div>
+        <div class="hero-shortcuts">
+          <a class="shortcut-card" href="memorychain.html">
+            <span class="shortcut-label">Free Plugin</span>
+            <strong>MemoryChain</strong>
+          </a>
+          <a class="shortcut-card" href="casinocore/">
+            <span class="shortcut-label">Free Plugin</span>
+            <strong>Casino Core</strong>
+          </a>
+          <a class="shortcut-card" href="download-pending.html">
+            <span class="shortcut-label">Release Queue</span>
+            <strong>Approval Board</strong>
+          </a>
         </div>
         <div class="hero-metrics">
           <div class="hero-metric">
@@ -79,8 +93,8 @@
           <span class="hero-panel-status">Live overview</span>
         </div>
         <div class="hero-panel-main">
-          <h2>Everything is organized by project</h2>
-          <p>Use the sidebar and project grid to jump between plugins, packs, free releases, and anything still waiting for approval.</p>
+          <h2>Fastest paths first</h2>
+          <p>Open free plugins, check what is pending approval, or jump straight into the full project list from one compact panel.</p>
         </div>
         <div class="hero-stack">
           <div class="stack-item">
@@ -141,7 +155,7 @@
           </article>
           <article class="glass-card feature-brief">
             <span class="project-tag">Navigation</span>
-            <p>Use the sidebar for direct project access, then use filters below when you want to narrow the list by type, free status, or work in progress.</p>
+            <p>Use the hero shortcuts for common actions, then use filters below when you want to narrow the list by type, free status, or work in progress.</p>
           </article>
         </div>
       </div>
@@ -154,17 +168,44 @@
         <p class="section-copy">Active PluggLAB ecosystem projects.</p>
       </div>
       <div class="project-toolbar glass-card">
-        <div class="project-filters" role="tablist" aria-label="Project filters">
-          <button class="filter-chip is-active" type="button" data-filter="all">All</button>
-          <button class="filter-chip" type="button" data-filter="plugin">Plugins</button>
-          <button class="filter-chip" type="button" data-filter="pack">Packs</button>
-          <button class="filter-chip" type="button" data-filter="free">Free</button>
-          <button class="filter-chip" type="button" data-filter="wip">In Development</button>
+        <div class="toolbar-main">
+          <div class="project-filters" role="tablist" aria-label="Project filters">
+            <button class="filter-chip is-active" type="button" data-filter="all">All</button>
+            <button class="filter-chip" type="button" data-filter="plugin">Plugins</button>
+            <button class="filter-chip" type="button" data-filter="pack">Packs</button>
+            <button class="filter-chip" type="button" data-filter="free">Free</button>
+            <button class="filter-chip" type="button" data-filter="wip">In Development</button>
+          </div>
+          <p class="project-results" id="project-results">Showing all projects</p>
         </div>
+        <div class="toolbar-actions">
+          <a class="toolbar-link" href="download-pending.html">Open Approval Board</a>
+          <a class="toolbar-link" href="contact.html">Request a Plugin</a>
+        </div>
+      </div>
+      <div class="project-summary-row">
+        <article class="glass-card summary-card">
+          <span class="project-tag">Free</span>
+          <strong>3 plugins</strong>
+          <p>MemoryChain, Casino Core, and SafeTrade are clearly marked for quick access.</p>
+        </article>
+        <article class="glass-card summary-card">
+          <span class="project-tag">Pending</span>
+          <strong>Approval workflow</strong>
+          <p>Any plugin waiting for release now routes through one shared approval board.</p>
+        </article>
+        <article class="glass-card summary-card">
+          <span class="project-tag">Browse</span>
+          <strong>Faster scanning</strong>
+          <p>Project cards now expose type, availability, and the primary next action at a glance.</p>
+        </article>
+      </div>
+      <div class="project-toolbar project-toolbar-search glass-card">
         <label class="project-search" for="project-search">
           <span>Search</span>
           <input id="project-search" type="search" placeholder="Search projects">
         </label>
+        <div class="search-hint">Search by project name, type, status, or description.</div>
       </div>
       <div class="projects-grid">
         <article class="glass-card project-card" data-tags="plugin free core" data-name="MemoryChain">
@@ -177,6 +218,10 @@
           </div>
           <h3>MemoryChain</h3>
           <p>Main plugin system and core architecture. <strong>Free plugin.</strong></p>
+          <div class="project-status-row">
+            <span class="signal-pill cyan">Free Access</span>
+            <span class="project-status-text">Core systems in progress</span>
+          </div>
           <div class="project-pricing"><span class="price-tag">Free</span></div>
           <a class="btn btn-primary" href="memorychain.html">Open</a>
         </article>
@@ -191,6 +236,10 @@
           </div>
           <h3>PulseEvents</h3>
           <p>Dynamic event system for Minecraft servers.</p>
+          <div class="project-status-row">
+            <span class="signal-pill blue">Plugin</span>
+            <span class="project-status-text">Event automation tools</span>
+          </div>
           <div class="project-pricing"><span class="price-tag">Plugin</span></div>
           <a class="btn btn-primary" href="pulsevents/">Learn More</a>
         </article>
@@ -205,6 +254,10 @@
           </div>
           <h3>NovaPixel</h3>
           <p>Competitive PvP texture pack (modern style).</p>
+          <div class="project-status-row">
+            <span class="signal-pill purple">Pack</span>
+            <span class="project-status-text">PvP visual setup</span>
+          </div>
           <div class="project-pricing"><span class="price-tag">Pack</span></div>
           <a class="btn btn-primary" href="novapixel.html">Learn More</a>
         </article>
@@ -217,6 +270,10 @@
           </div>
           <h3>Casino Core</h3>
           <p>Modular casino engine with reward systems and slot mechanics. <strong>Free plugin.</strong></p>
+          <div class="project-status-row">
+            <span class="signal-pill cyan">Free Access</span>
+            <span class="project-status-text">Economy gameplay systems</span>
+          </div>
           <div class="project-pricing"><span class="price-tag">Free</span></div>
           <a class="btn btn-primary" href="casinocore/">Open</a>
         </article>
@@ -229,6 +286,10 @@
           </div>
           <h3>SafeTrade</h3>
           <p>Protected player-to-player trading with confirmation flow, anti-scam checks, and clean inventory handoff.</p>
+          <div class="project-status-row">
+            <span class="signal-pill cyan">Free Access</span>
+            <span class="project-status-text">Utility and anti-scam flow</span>
+          </div>
           <div class="project-pricing"><span class="price-tag">Free</span></div>
           <a class="btn btn-primary" href="safetrade.html">Open</a>
         </article>
@@ -243,6 +304,10 @@
           </div>
           <h3>PvPFlow</h3>
           <p>1.8 PvP focused visual enhancement pack.</p>
+          <div class="project-status-row">
+            <span class="signal-pill purple">Pack</span>
+            <span class="project-status-text">Classic PvP visuals</span>
+          </div>
           <div class="project-pricing"><span class="price-tag">Pack</span></div>
           <a class="btn btn-primary" href="pvpflow.html">Learn More</a>
         </article>
@@ -259,6 +324,10 @@
           </div>
           <h3>...</h3>
           <p>General plugin release slot. <strong>Waiting for approval</strong></p>
+          <div class="project-status-row">
+            <span class="signal-pill yellow">Pending</span>
+            <span class="project-status-text">Waiting for release approval</span>
+          </div>
           <div class="status-badge">Approval Pending</div>
           <div class="project-pricing"><span class="price-tag">Pending</span></div>
           <a class="btn btn-secondary" href="download-pending.html">Approval Status</a>
@@ -277,6 +346,10 @@
           </div>
           <h3>...</h3>
           <p>General plugin release slot. <strong>Waiting for approval</strong></p>
+          <div class="project-status-row">
+            <span class="signal-pill yellow">Pending</span>
+            <span class="project-status-text">Waiting for release approval</span>
+          </div>
           <div class="status-badge">Approval Pending</div>
           <div class="project-pricing"><span class="price-tag">Pending</span></div>
           <a class="btn btn-secondary" href="download-pending.html">Approval Status</a>
