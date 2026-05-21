@@ -27,7 +27,7 @@
       <div class="nav-menu-row">
         <div class="nav-links" id="site-nav-links">
           <a href="#home">Home</a>
-          <a href="#featured">Featured</a>
+          <a href="#featured">Overview</a>
           <a href="#projects">Projects</a>
           <a href="#about">About</a>
           <a href="contact.html">Contact</a>
@@ -51,11 +51,11 @@
         <h1 class="hero-title">PluggLAB</h1>
         <p class="hero-subtitle">
           A focused development lab crafting Minecraft plugins and gaming experiences,
-          centered around MemoryChain, Casino Core, SafeTrade, and competitive PvP packs.
+          with one place to track releases, free plugins, pending approvals, and project progress.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="memorychain.html">Open MemoryChain</a>
-          <a class="btn btn-secondary" href="casinocore/">Casino Core</a>
+          <a class="btn btn-primary" href="#projects">Projects</a>
+          <a class="btn btn-secondary" href="download-pending.html">Approval Status</a>
           <a class="btn btn-ghost" href="https://discord.gg/ZMje3neEmK" target="_blank">Discord</a>
         </div>
         <div class="hero-metrics">
@@ -75,32 +75,32 @@
       </div>
       <aside class="hero-panel glass-card" aria-label="PluggLAB overview">
         <div class="hero-panel-header">
-          <span class="hero-panel-kicker">Control Surface</span>
-          <span class="hero-panel-status">Building now</span>
+          <span class="hero-panel-kicker">Project Access</span>
+          <span class="hero-panel-status">Live overview</span>
         </div>
         <div class="hero-panel-main">
-          <h2>MemoryChain drives the stack</h2>
-          <p>Track the current focus, jump into active builds, and watch the ecosystem expand from one place.</p>
+          <h2>Everything is organized by project</h2>
+          <p>Use the sidebar and project grid to jump between plugins, packs, free releases, and anything still waiting for approval.</p>
         </div>
         <div class="hero-stack">
           <div class="stack-item">
-            <span class="stack-label">Primary</span>
+            <span class="stack-label">Free plugins</span>
             <strong>MemoryChain</strong>
             <span class="stack-note">Core architecture and data systems</span>
           </div>
           <div class="stack-item">
-            <span class="stack-label">Next release</span>
+            <span class="stack-label">Free plugins</span>
             <strong>Casino Core</strong>
             <span class="stack-note">Economy, slots, reward flow</span>
           </div>
           <div class="stack-item">
-            <span class="stack-label">Utility</span>
+            <span class="stack-label">Free plugins</span>
             <strong>SafeTrade</strong>
             <span class="stack-note">Secure player trading and anti-scam flow</span>
           </div>
         </div>
         <div class="hero-panel-actions">
-          <a class="btn btn-primary" href="#projects">Browse Stack</a>
+          <a class="btn btn-primary" href="#projects">Browse Projects</a>
           <button class="btn btn-secondary" type="button" id="copy-discord">Copy Discord</button>
         </div>
       </aside>
@@ -108,40 +108,40 @@
 
     <section class="featured-section" id="featured">
       <div class="section-heading">
-        <p class="section-label">Main Focus</p>
-        <h2>MemoryChain</h2>
-        <p class="section-copy">The core project of PluggLAB. Everything revolves around this system.</p>
+        <p class="section-label">Project Overview</p>
+        <h2>General Project Status</h2>
+        <p class="section-copy">A broader view of the lab instead of one main focus. This keeps releases, free plugins, and pending approvals in one place.</p>
       </div>
       <div class="featured-layout">
         <article class="glass-card featured-main">
-          <span class="project-tag">Free Core Plugin</span>
-          <h3>MemoryChain</h3>
-          <p>Main system currently in early-stage development. <strong>Free plugin with lifetime updates.</strong></p>
+          <span class="project-tag">Lab Summary</span>
+          <h3>Plugins, packs, and approvals</h3>
+          <p>PluggLAB now highlights the whole project list. Free plugins stay clearly marked, packs keep their own category, and pending downloads route through the approval page.</p>
           <div class="progress-track">
-            <div class="progress-bar width-12"></div>
+            <div class="progress-bar width-60"></div>
           </div>
-          <p class="progress-note">Core systems in progress.</p>
+          <p class="progress-note">Project organization and release flow improved.</p>
           <div class="pricing-info">
-            <span class="price-tag">Free</span>
+            <span class="price-tag">3 Free</span>
             <div class="price-details">
-              <span>Free download</span>
-              <span>Lifetime updates</span>
-              <span>Community support</span>
+              <span>MemoryChain</span>
+              <span>Casino Core</span>
+              <span>SafeTrade</span>
             </div>
           </div>
         </article>
         <div class="featured-side">
           <article class="glass-card feature-brief">
-            <span class="project-tag">Current Objectives</span>
+            <span class="project-tag">Project Rules</span>
             <ul class="brief-list">
-              <li>Define stable plugin core contracts</li>
-              <li>Connect free modules into one ecosystem</li>
-              <li>Ship clearer admin and player workflows</li>
+              <li>Every free plugin is marked clearly</li>
+              <li>Pending downloads point to approval status</li>
+              <li>Plugins and packs stay separated by filters</li>
             </ul>
           </article>
           <article class="glass-card feature-brief">
-            <span class="project-tag">Operator Notes</span>
-            <p>Use the project controls below to filter by type and status, then jump directly into the pages that matter.</p>
+            <span class="project-tag">Navigation</span>
+            <p>Use the sidebar for direct project access, then use filters below when you want to narrow the list by type, free status, or work in progress.</p>
           </article>
         </div>
       </div>
@@ -166,7 +166,48 @@
           <input id="project-search" type="search" placeholder="Search projects">
         </label>
       </div>
-      <div class="projects-grid">
+      <div class="projects-layout">
+        <aside class="projects-sidebar glass-card" aria-label="Project sidebar">
+          <div class="projects-sidebar-head">
+            <span class="project-tag">Projects</span>
+            <h3>All project links</h3>
+          </div>
+          <div class="sidebar-project-list">
+            <a class="sidebar-project-link" href="memorychain.html">
+              <strong>MemoryChain</strong>
+              <span>Free plugin</span>
+            </a>
+            <a class="sidebar-project-link" href="pulsevents/">
+              <strong>PulseEvents</strong>
+              <span>Plugin</span>
+            </a>
+            <a class="sidebar-project-link" href="novapixel.html">
+              <strong>NovaPixel</strong>
+              <span>Pack</span>
+            </a>
+            <a class="sidebar-project-link" href="casinocore/">
+              <strong>Casino Core</strong>
+              <span>Free plugin</span>
+            </a>
+            <a class="sidebar-project-link" href="safetrade.html">
+              <strong>SafeTrade</strong>
+              <span>Free plugin</span>
+            </a>
+            <a class="sidebar-project-link" href="pvpflow.html">
+              <strong>PvPFlow</strong>
+              <span>Pack</span>
+            </a>
+            <a class="sidebar-project-link" href="download-pending.html">
+              <strong>Pending Plugin A</strong>
+              <span>Waiting for approval</span>
+            </a>
+            <a class="sidebar-project-link" href="download-pending.html">
+              <strong>Pending Plugin B</strong>
+              <span>Waiting for approval</span>
+            </a>
+          </div>
+        </aside>
+        <div class="projects-grid">
         <article class="glass-card project-card" data-tags="plugin free core" data-name="MemoryChain">
           <div class="project-icon">
             <img src="assets/images/memorychain.n.png" alt="MemoryChain Icon">
@@ -191,6 +232,7 @@
           </div>
           <h3>PulseEvents</h3>
           <p>Dynamic event system for Minecraft servers.</p>
+          <div class="project-pricing"><span class="price-tag">Plugin</span></div>
           <a class="btn btn-primary" href="pulsevents/">Learn More</a>
         </article>
 
@@ -204,6 +246,7 @@
           </div>
           <h3>NovaPixel</h3>
           <p>Competitive PvP texture pack (modern style).</p>
+          <div class="project-pricing"><span class="price-tag">Pack</span></div>
           <a class="btn btn-primary" href="novapixel.html">Learn More</a>
         </article>
 
@@ -241,6 +284,7 @@
           </div>
           <h3>PvPFlow</h3>
           <p>1.8 PvP focused visual enhancement pack.</p>
+          <div class="project-pricing"><span class="price-tag">Pack</span></div>
           <a class="btn btn-primary" href="pvpflow.html">Learn More</a>
         </article>
 
@@ -255,9 +299,10 @@
             <span class="project-mini-tag upcoming-tag">WIP</span>
           </div>
           <h3>...</h3>
-          <p>... <strong>In Development</strong></p>
-          <div class="status-badge">Coming Soon</div>
-          <a class="btn btn-secondary" href="download-pending.html">Status</a>
+          <p>General plugin release slot. <strong>Waiting for approval</strong></p>
+          <div class="status-badge">Approval Pending</div>
+          <div class="project-pricing"><span class="price-tag">Pending</span></div>
+          <a class="btn btn-secondary" href="download-pending.html">Approval Status</a>
         </article>
 
         <article class="glass-card project-card wip-card" data-tags="wip plugin upcoming" data-name="Upcoming Project B">
@@ -272,10 +317,12 @@
             <span class="project-mini-tag upcoming-tag">WIP</span>
           </div>
           <h3>...</h3>
-          <p>.... <strong>In Development</strong></p>
-          <div class="status-badge">Coming Soon</div>
-          <a class="btn btn-secondary" href="download-pending.html">Status</a>
+          <p>General plugin release slot. <strong>Waiting for approval</strong></p>
+          <div class="status-badge">Approval Pending</div>
+          <div class="project-pricing"><span class="price-tag">Pending</span></div>
+          <a class="btn btn-secondary" href="download-pending.html">Approval Status</a>
         </article>
+        </div>
       </div>
       <p class="project-empty" hidden>No projects match the current filter.</p>
     </section>
