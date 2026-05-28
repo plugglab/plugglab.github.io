@@ -4,10 +4,13 @@
   const pathParts = window.location.pathname.split("/").filter(Boolean);
   const lastPart = pathParts[pathParts.length - 1] || "index.html";
   const parentDir = pathParts.length >= 2 ? pathParts[pathParts.length - 2] : "";
-  // Disambiguate sub-directory index/docs pages by prefixing with parent dir name
-  const page = (lastPart === "index.html" || lastPart === "docs.html") && parentDir
-    ? parentDir + "/" + lastPart
-    : lastPart;
+  const page = lastPart === "index.html"
+    ? (parentDir ? parentDir + "/index.html" : "index.html")
+    : lastPart === "docs"
+      ? (parentDir ? parentDir + "/docs/index.html" : "docs/index.html")
+      : (!lastPart.includes(".") && parentDir
+        ? parentDir + "/" + lastPart + "/index.html"
+        : (!lastPart.includes(".") && !parentDir ? lastPart + "/index.html" : lastPart));
 
   const detectLanguage = () => {
     const saved = window.localStorage.getItem(STORAGE_KEY);
@@ -139,7 +142,7 @@
             setManyText(".footer-links a", ["MemoryChain", "PulseEvents", "NovaPixel", "Casino Core", "PvPFlow", "Contact"]);
           }
         },
-        "contact.html": {
+        "contact/": {
           title: "PluggLAB | Contact",
           metaDescription: "Contact PluggLAB through email, Discord, and Google Forms.",
           ogTitle: "PluggLAB | Contact",
@@ -186,7 +189,7 @@
             setManyText(".footer-links a", ["Home", "MemoryChain", "PulseEvents", "NovaPixel", "PvPFlow"]);
           }
         },
-        "memorychain.html": {
+        "memorychain/": {
           title: "PluggLAB | MemoryChain",
           metaDescription: "MemoryChain - main featured Minecraft plugin developed within PluggLAB.",
           ogTitle: "MemoryChain | PluggLAB",
@@ -240,7 +243,7 @@
             setManyText(".footer-links a", ["Home", "PulseEvents", "NovaPixel", "PvPFlow"]);
           }
         },
-        "casinocore.html": {
+        "casinocore/": {
           title: "PluggLAB | Casino Core",
           metaDescription: "Casino Core - modular casino plugin for Minecraft server economies.",
           ogTitle: "Casino Core | PluggLAB",
@@ -293,7 +296,7 @@
             setManyText(".footer-links a", ["Home", "MemoryChain", "PulseEvents", "NovaPixel", "PvPFlow"]);
           }
         },
-        "novapixel.html": {
+        "novapixel/": {
           title: "PluggLAB | NovaPixel",
           metaDescription: "NovaPixel - modern high-contrast PvP texture pack for Minecraft.",
           ogTitle: "NovaPixel | PvP Texture Pack",
@@ -353,7 +356,7 @@
             setManyText(".footer-links a", ["Home", "Contact"]);
           }
         },
-        "pulseevents.html": {
+        "pulseevents/docs/index.html": {
           title: "PluggLAB | PulseEvents",
           metaDescription: "PulseEvents - modular Minecraft event plugin for SMP, arcade, and minigame servers.",
           ogTitle: "PulseEvents | Minecraft Event Plugin",
@@ -434,7 +437,7 @@
             setManyText(".footer-links a", ["Home", "Contact"]);
           }
         },
-        "pvpflow.html": {
+        "pvpflow/": {
           title: "PluggLAB | PvPFlow",
           metaDescription: "PvPFlow - competitive Minecraft PvP texture pack for 1.8.9 with clean visuals and cosmic style.",
           ogTitle: "PvPFlow | PvP Texture Pack",
@@ -523,7 +526,7 @@
             setManyText(".footer-links a", ["Home", "Projects", "Contact", "Discord"]);
           }
         },
-        "events.html": {
+        "pulseevents/docs/": {
           title: "PluggLAB | PulseEvents Custom Events",
           metaDescription: "PulseEvents 1.0.0 custom events reference for configuring event definitions, action types, validation, and runtime behavior.",
           ogTitle: "PulseEvents Custom Events | PluggLAB",
@@ -544,7 +547,7 @@
             setText(".footer-brand p", "PulseEvents custom event reference for version 1.0.0.");
           }
         },
-        "heads.html": {
+        "heads/": {
           title: "Minecraft Heads Explorer | PluggLAB",
           metaDescription: "Browse Minecraft-Heads.com collections, API tools and custom decorative heads.",
           ogTitle: "Minecraft Heads Explorer",
@@ -556,7 +559,7 @@
             setText(".footer-brand p", "Centralized development hub and community.");
           }
         },
-        "casinocore/index.html": {
+        "casinoco../": {
           title: "PluggLAB | Casino Core",
           metaDescription: "Casino Core - modular casino plugin for Minecraft server economies.",
           ogTitle: "Casino Core | PluggLAB",
@@ -576,7 +579,7 @@
             setHTML(".hero-extra", 'Casino Core links server economy and gameplay with a polished casino experience. <strong>Starting at $29.99 one-time purchase.</strong>');
             setText(".status-card h2", "Current Status");
             setText(".status-card p", "Casino Core is in active prototype development. Its modular architecture is ready to accept custom games, reward currency, and server-side configuration.");
-            setText(".progress-note", "Alpha prototype — casino features coming online.");
+            setText(".progress-note", "Alpha prototype � casino features coming online.");
             setManyText(".pricing-info .price-details span", ["One-time purchase", "Lifetime updates", "Priority support"]);
             setText(".meta-card h3", "Project Snapshot");
             setManyText(".meta-grid dt", ["Status", "Role", "Type", "Stage", "Release Type", "Priority", "Pricing", "Support"]);
@@ -609,7 +612,7 @@
             setManyText(".footer-links a", ["Home", "MemoryChain", "PulseEvents", "NovaPixel", "PvPFlow"]);
           }
         },
-        "casinocore/docs.html": {
+        "casinocore/docs/index.html": {
           title: "Casino Core Docs | PlaceholderAPI",
           metaDescription: "CasinoCore PlaceholderAPI documentation and placeholders reference.",
           ogTitle: "Casino Core Docs | PluggLAB",
@@ -620,7 +623,7 @@
             setText(".footer-brand p", "Casino Core documentation and PlaceholderAPI reference.");
           }
         },
-        "pulsevents/index.html": {
+        "pulseven../": {
           title: "PluggLAB | PulseEvents",
           metaDescription: "PulseEvents - modular Minecraft event plugin for SMP, arcade, and minigame servers.",
           ogTitle: "PulseEvents | Minecraft Event Plugin",
@@ -637,11 +640,11 @@
             setText(".status-card p", "PulseEvents is publicly available and already usable, with ongoing development focused on expanding features and improving usability.");
             setText(".progress-note", "Core system ready - expansion in progress.");
             setManyText(".action-row a", ["Spigot", "Modrinth"]);
-            setText(".footer-brand p", "PulseEvents — modular event system for Minecraft servers.");
+            setText(".footer-brand p", "PulseEvents � modular event system for Minecraft servers.");
             setManyText(".footer-links a", ["Home", "MemoryChain", "NovaPixel", "PvPFlow", "Contact"]);
           }
         },
-        "pulsevents/docs.html": {
+        "pulseevents/docs/": {
           title: "PluggLAB | PulseEvents Custom Events",
           metaDescription: "PulseEvents 1.0.0 custom events reference for configuring event definitions, action types, validation, and runtime behavior.",
           ogTitle: "PulseEvents Custom Events | PluggLAB",
@@ -744,7 +747,7 @@
             setManyText(".footer-links a", ["MemoryChain", "PulseEvents", "NovaPixel", "Casino Core", "PvPFlow", "Kontakt"]);
           }
         },
-        "contact.html": {
+        "contact/": {
           title: "PluggLAB | Kontakt",
           metaDescription: "Skontaktuj sie z PluggLAB przez email, Discord i formularz Google.",
           ogTitle: "PluggLAB | Kontakt",
@@ -791,7 +794,7 @@
             setManyText(".footer-links a", ["Start", "MemoryChain", "PulseEvents", "NovaPixel", "PvPFlow"]);
           }
         },
-        "memorychain.html": {
+        "memorychain/": {
           title: "PluggLAB | MemoryChain",
           metaDescription: "MemoryChain - glowny plugin Minecraft rozwijany w PluggLAB.",
           ogTitle: "MemoryChain | PluggLAB",
@@ -845,7 +848,7 @@
             setManyText(".footer-links a", ["Start", "PulseEvents", "NovaPixel", "PvPFlow"]);
           }
         },
-        "casinocore.html": {
+        "casinocore/": {
           title: "PluggLAB | Casino Core",
           metaDescription: "Casino Core - modulowy plugin kasyna dla gospodarki serwerow Minecraft.",
           ogTitle: "Casino Core | PluggLAB",
@@ -898,7 +901,7 @@
             setManyText(".footer-links a", ["Start", "MemoryChain", "PulseEvents", "NovaPixel", "PvPFlow"]);
           }
         },
-        "novapixel.html": {
+        "novapixel/": {
           title: "PluggLAB | NovaPixel",
           metaDescription: "NovaPixel - nowoczesna paczka tekstur PvP o wysokim kontrascie do Minecrafta.",
           ogTitle: "NovaPixel | Paczka tekstur PvP",
@@ -958,7 +961,7 @@
             setManyText(".footer-links a", ["Start", "Kontakt"]);
           }
         },
-        "pulseevents.html": {
+        "pulseevents/docs/index.html": {
           title: "PluggLAB | PulseEvents",
           metaDescription: "PulseEvents - modulowy plugin eventowy Minecraft dla serwerow SMP, arcade i minigame.",
           ogTitle: "PulseEvents | Plugin eventowy Minecraft",
@@ -1039,7 +1042,7 @@
             setManyText(".footer-links a", ["Start", "Kontakt"]);
           }
         },
-        "pvpflow.html": {
+        "pvpflow/": {
           title: "PluggLAB | PvPFlow",
           metaDescription: "PvPFlow - konkurencyjna paczka PvP Minecraft 1.8.9 z czysta oprawa i kosmicznym stylem.",
           ogTitle: "PvPFlow | Paczka tekstur PvP",
@@ -1128,7 +1131,7 @@
             setManyText(".footer-links a", ["Start", "Projekty", "Kontakt", "Discord"]);
           }
         },
-        "events.html": {
+        "pulseevents/docs/": {
           title: "PluggLAB | Custom Events PulseEvents",
           metaDescription: "Referencja custom events dla PulseEvents 1.0.0: definicje eventow, typy akcji, walidacja i zachowanie runtime.",
           ogTitle: "PulseEvents Custom Events | PluggLAB",
@@ -1149,7 +1152,7 @@
             setText(".footer-brand p", "Referencja custom events PulseEvents dla wersji 1.0.0.");
           }
         },
-        "heads.html": {
+        "heads/": {
           title: "Minecraft Heads Explorer | PluggLAB",
           metaDescription: "Przegladaj kolekcje Minecraft-Heads.com, narzedzia API i niestandardowe dekoracyjne glowy.",
           ogTitle: "Minecraft Heads Explorer",
@@ -1161,7 +1164,7 @@
             setText(".footer-brand p", "Centralne centrum rozwoju i spolecznosc.");
           }
         },
-        "casinocore/index.html": {
+        "casinoco../": {
           title: "PluggLAB | Casino Core",
           metaDescription: "Casino Core - modulowy plugin kasyna dla gospodarki serwerow Minecraft.",
           ogTitle: "Casino Core | PluggLAB",
@@ -1214,7 +1217,7 @@
             setManyText(".footer-links a", ["Start", "MemoryChain", "PulseEvents", "NovaPixel", "PvPFlow"]);
           }
         },
-        "casinocore/docs.html": {
+        "casinocore/docs/index.html": {
           title: "Casino Core Dokumentacja | PlaceholderAPI",
           metaDescription: "Dokumentacja CasinoCore PlaceholderAPI i referencja placeholderow.",
           ogTitle: "Casino Core Dokumentacja | PluggLAB",
@@ -1225,7 +1228,7 @@
             setText(".footer-brand p", "Dokumentacja i referencja PlaceholderAPI dla Casino Core.");
           }
         },
-        "pulsevents/index.html": {
+        "pulseven../": {
           title: "PluggLAB | PulseEvents",
           metaDescription: "PulseEvents - modulowy plugin eventowy Minecraft dla serwerow SMP, arcade i minigame.",
           ogTitle: "PulseEvents | Plugin eventowy Minecraft",
@@ -1242,11 +1245,11 @@
             setText(".status-card p", "PulseEvents jest publicznie dostepny i juz nadaje sie do uzycia, a dalszy rozwoj skupia sie na rozbudowie funkcji i wygodzie obslugi.");
             setText(".progress-note", "Rdzen gotowy - trwaja kolejne rozszerzenia.");
             setManyText(".action-row a", ["Spigot", "Modrinth"]);
-            setText(".footer-brand p", "PulseEvents — modulowy system eventow dla serwerow Minecraft.");
+            setText(".footer-brand p", "PulseEvents � modulowy system eventow dla serwerow Minecraft.");
             setManyText(".footer-links a", ["Start", "MemoryChain", "NovaPixel", "PvPFlow", "Kontakt"]);
           }
         },
-        "pulsevents/docs.html": {
+        "pulseevents/docs/": {
           title: "PluggLAB | PulseEvents Custom Events",
           metaDescription: "Referencja custom events dla PulseEvents 1.0.0: definicje eventow, typy akcji, walidacja i zachowanie runtime.",
           ogTitle: "PulseEvents Custom Events | PluggLAB",

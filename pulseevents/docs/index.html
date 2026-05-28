@@ -11,15 +11,15 @@
 
   <title>PluggLAB | PulseEvents Custom Events</title>
 
-  <link rel="icon" href="../assets/images/pulseevents_n.png" sizes="any">
+  <link rel="icon" href="../../assets/images/pulseevents_n.png" sizes="any">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../assets/css/base.css">
-  <link rel="stylesheet" href="../assets/css/pages.css">
-  <link rel="stylesheet" href="../assets/css/events.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <link rel="stylesheet" href="../../assets/css/events.css">
 </head>
 
 <body class="page-project page-events">
@@ -28,15 +28,15 @@
   <header class="navbar">
     <nav class="nav-container">
       <div class="nav-brandbar">
-        <a class="nav-logo" href="../index.html">PluggLAB</a>
+        <a class="nav-logo" href="../../">PluggLAB</a>
         <p class="nav-status">Project hub for plugins, packs, and experiments</p>
       </div>
 
       <div class="nav-menu-row">
         <div class="nav-links" id="site-nav-links">
-          <a href="../index.html">Home</a>
-          <a href="../index.html#projects">Projects</a>
-          <a href="../contact.html">Contact</a>
+          <a href="../../">Home</a>
+          <a href="../../#projects">Projects</a>
+          <a href="../../contact/">Contact</a>
         </div>
         <button class="nav-toggle" type="button">
           <span></span><span></span><span></span>
@@ -60,7 +60,7 @@
       </div>
 
       <div class="hero-actions">
-        <a class="btn btn-primary" href="pulseevents.html">Back to PulseEvents</a>
+        <a class="btn btn-primary" href="../">Back to PulseEvents</a>
         <a class="btn btn-secondary" href="https://www.spigotmc.org/resources/pulseevents.134140/" target="_blank">Download Plugin</a>
       </div>
     </section>
@@ -73,7 +73,7 @@
         </div>
 
         <ul class="feature-list">
-          <li>Custom events live under <code>custom-events</code> in <code>config.yml</code>.</li>
+          <li>Custom events live as separate <code>.yml</code> files in the plugin <code>events/</code> folder.</li>
           <li>They are registered on startup and on <code>/pe reload</code>.</li>
           <li>GUI chance editing, queueing, bossbar, announcements, and placeholders all support custom events as first-class entries.</li>
         </ul>
@@ -85,33 +85,33 @@
           <h2>Minimal YAML</h2>
         </div>
 
-        <pre class="code-block"><code>custom-events:
-  meteor-shower:
-    enabled: true
-    name: "Meteor Shower"
-    chance: 100
-    duration: 45
-    icon: MAGMA_BLOCK
-    min-players: 2
-    allowed-worlds: []
-    start-message: "&amp;c%event% has started."
-    end-message: "&7%event% has ended."
-    bossbar-title: "&6%event%"
-    actions:
-      opening-title:
-        type: title
-        target: all-players
-        title: "&6%event%"
-        subtitle: "&7Take cover."
-      impact-wave:
-        type: spawn-tnt
-        target: random-players
-        target-count: 2
-        chance: 70
-        delay-seconds: 4
-        amount: 2
-        fuse-ticks: 50
-        explosion-power: 3.0</code></pre>
+        <pre class="code-block"><code>event:
+  key: meteor-shower
+  enabled: true
+  name: "Meteor Shower"
+  chance: 100
+  duration: 45
+  icon: MAGMA_BLOCK
+  min-players: 2
+  allowed-worlds: []
+  start-message: "&amp;c%event% has started."
+  end-message: "&7%event% has ended."
+  bossbar-title: "&6%event%"
+  actions:
+    opening-title:
+      type: title
+      target: all-players
+      title: "&6%event%"
+      subtitle: "&7Take cover."
+    impact-wave:
+      type: spawn-tnt
+      target: random-players
+      target-count: 2
+      chance: 70
+      delay-seconds: 4
+      amount: 2
+      fuse-ticks: 50
+      explosion-power: 3.0</code></pre>
       </article>
     </section>
 
@@ -374,17 +374,17 @@
     </div>
 
     <div class="footer-links">
-      <a href="pulseevents.html">PulseEvents</a>
-      <a href="../index.html">Home</a>
-      <a href="../contact.html">Contact</a>
+      <a href="../">PulseEvents</a>
+      <a href="../../">Home</a>
+      <a href="../../contact/">Contact</a>
     </div>
   </footer>
 
 </div>
 
-<script src="../assets/js/i18n.js"></script>
-<script src="../assets/js/nav.js"></script>
-<script src="../assets/js/scroll.js"></script>
-<script src="../assets/js/project.js"></script>
+<script src="../../assets/js/i18n.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/scroll.js"></script>
+<script src="../../assets/js/project.js"></script>
 </body>
 </html>
