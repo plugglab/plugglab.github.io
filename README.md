@@ -1,25 +1,64 @@
-# PluggLab
+# PluggLAB
 
-Welcome to **PluggLab** — a collection of experimental tools, plugins, and systems built for modern web and game development.
+A collection of free, polished Minecraft plugins, packs, and tools. Built with attention to detail, performance, and the player experience.
 
-## About
+## What is PluggLAB?
 
-PluggLab focuses on building lightweight, modular, and scalable solutions for developers.  
-This site serves as the central hub for all PluggLab projects and releases.
+We're building quality plugins and resources for Minecraft servers. Everything here is designed to work well, stay maintained, and integrate cleanly with your server.
 
-## Projects
+## Projects — All Free
 
-- CasinoCore — Minecraft casino system
-- More projects coming soon...
+**MemoryChain** — Shared plugin infrastructure  
+Data systems, player tracking, and server analytics. The foundation for PluggLAB integrations.
 
-## Download
+**Casino Core** — Economy-driven mini-games  
+Slot machines, roulette, reward shops, and balanced payouts. Vault-safe and modular.
 
-All plugins are available on Modrinth:
+**SafeTrade** — Secure player trading  
+Two-sided trade confirmations, anti-scam checks, and clean item exchanges.
 
-- [Modrinth: PluggLab Projects](https://modrinth.com/user/PlugLAB)
+**PulseEvents** — Event automation system  
+Automate server events, broadcasts, and gameplay triggers. Modular and expanding.
 
-- or here -> https://plugglab.github.io/
+**NovaPixel** — Competitive PvP texture pack  
+Clean, high-contrast visuals for fast reactions and clear gameplay.
 
-## Purpose
+**PvPFlow** — 1.8 PvP pack  
+16x competitive animations with a polished, battle-ready aesthetic.
 
-To provide a central place for PluggLab tools, documentation, and downloads.
+**VoidSpire** — (Coming soon)
+
+## Where to Get Them
+
+- **Downloads**: https://plugglab.github.io/
+- **Release updates**: Check the [approval board](https://plugglab.github.io/download-pending.html)
+- **Support & feedback**: [Discord](https://discord.gg/ZMje3neEmK) or [contact form](https://plugglab.github.io/contact/)
+
+## Development
+
+All plugins are actively developed and updated. New features, fixes, and improvements roll out regularly.
+
+**Current work**: Full ecosystem refresh and polish (rolling out 1-2 weeks from June 4, 2026).
+
+## Community
+
+Join the Discord for:
+
+- Direct support and questions
+- Feature requests and feedback
+- Beta testing new plugins
+- Server setup help
+
+**Discord**: https://discord.gg/ZMje3neEmK
+
+## Contributing
+
+Found a bug? Have an idea? Reach out on Discord or use the [contact form](https://plugglab.github.io/contact/).
+
+## License
+
+All free plugins are released under standard server use. Check individual project pages for details.
+
+---
+
+_Built with care by Wilczek. PluggLAB is focused on quality over quantity—every project gets the attention it deserves._
