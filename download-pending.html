@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
-  <meta name="description" content="Approval and release status for PluggLAB plugins waiting to be published." />
+  <meta name="description" content="General release workflow for PluggLAB plugins and packs. See the approval pipeline, download readiness, and next steps for every project.">
   <meta name="theme-color" content="#07080f" />
 
-  <meta property="og:title" content="Plugin Approval Status | PluggLAB" />
-  <meta property="og:description" content="Track approval and release status of every PluggLAB plugin." />
+  <meta property="og:title" content="Plugin Release Workflow | PluggLAB" />
+  <meta property="og:description" content="General release workflow for PluggLAB plugins and packs. Approval queue, download readiness, and release stages in one place."> 
   <meta property="og:type" content="website" />
 
-  <title>Plugin Approval Status | PluggLAB</title>
+  <title>Plugin Release Workflow | PluggLAB</title>
 
   <link rel="icon" href="assets/images/favicon.png" sizes="any" />
 
@@ -185,176 +185,126 @@
 
     <!-- HERO -->
     <section class="page-hero page-hero-purple">
-      <p class="section-label">Plugin Monitoring</p>
+      <p class="section-label">Release Workflow</p>
 
-      <h1 class="project-title">PluggLAB Approval Board</h1>
+      <h1 class="project-title">PluggLAB Release Queue</h1>
 
       <p class="section-copy">
-        General approval and release tracking for any plugin that is still waiting to be published inside the PluggLAB ecosystem.
+        This page now shows the general release pipeline for all PluggLAB plugins and packs.
+        Approved builds move automatically toward downloads, while pending entries remain in review.
+      </p>
+      <p class="section-copy">
+        Updates are being rolled out across the lab over the next 1-2 weeks. This page reflects the shared process for every plugin release.
       </p>
     </section>
 
     <!-- PLUGIN GRID -->
     <section class="plugin-grid">
 
-      <!-- CASINOCORE -->
       <article class="glass-card plugin-card">
-
         <div class="plugin-top">
-          <h2 class="plugin-name">Casino Core</h2>
-
-          <div class="status-badge Approval-pending">
-            Approval Pending
-          </div>
+          <h2 class="plugin-name">General Pipeline</h2>
+          <div class="status-badge status-review">Workflow Overview</div>
         </div>
-
         <p class="plugin-description">
-          Modular casino plugin for Minecraft servers. This entry represents a plugin build that is waiting for approval before download is enabled.
+          Every pending project follows the same approval path. No manual status cards are needed here;
+          all releases flow through review, verification, and download activation stages automatically.
         </p>
-
         <div class="plugin-meta">
-
           <div class="plugin-meta-item">
-            <span class="plugin-meta-label">Pipeline Stage</span>
-            <span class="plugin-meta-value">Approval Queue</span>
+            <span class="plugin-meta-label">Stage</span>
+            <span class="plugin-meta-value">Review & approval</span>
           </div>
-
           <div class="plugin-meta-item">
             <span class="plugin-meta-label">Next Step</span>
-            <span class="plugin-meta-value">Approval Decision</span>
+            <span class="plugin-meta-value">Publish stable builds</span>
           </div>
-
           <div class="plugin-meta-item">
-            <span class="plugin-meta-label">Version</span>
-            <span class="plugin-meta-value">1.0</span>
+            <span class="plugin-meta-label">Scope</span>
+            <span class="plugin-meta-value">All plugins and packs</span>
           </div>
-
+          <div class="plugin-meta-item">
+            <span class="plugin-meta-label">Update Window</span>
+            <span class="plugin-meta-value">1-2 weeks</span>
+          </div>
         </div>
-
         <div class="plugin-actions">
-          <a class="btn btn-primary" href="casinocore/">View Project</a>
+          <a class="btn btn-primary" href="./">Go Home</a>
+          <a class="btn btn-secondary" href="contact/">Contact</a>
         </div>
-
       </article>
 
-      <!-- GENERIC APPROVAL SLOT -->
       <article class="glass-card plugin-card">
-
         <div class="plugin-top">
-          <h2 class="plugin-name">Pending Plugin Slot</h2>
-
-          <div class="status-badge status-development">
-            IN DEVELOPMENT
-          </div>
+          <h2 class="plugin-name">Approval Queue</h2>
+          <div class="status-badge status-development">Pending</div>
         </div>
-
         <p class="plugin-description">
-          Use this slot for any plugin page that is not approved yet. It works as a general pending-download state instead of being tied to one specific plugin.
+          New plugin builds enter a shared review queue. This page reflects general pending status across the lab,
+          rather than requiring a separate manual entry for each project.
         </p>
-
         <div class="plugin-meta">
-
           <div class="plugin-meta-item">
-            <span class="plugin-meta-label">Pipeline Stage</span>
-            <span class="plugin-meta-value">Moderation Review</span>
+            <span class="plugin-meta-label">Tracked</span>
+            <span class="plugin-meta-value">Automatically</span>
           </div>
-
           <div class="plugin-meta-item">
-            <span class="plugin-meta-label">Next Step</span>
-            <span class="plugin-meta-value">Manual Approval</span>
+            <span class="plugin-meta-label">Visible</span>
+            <span class="plugin-meta-value">All pending releases</span>
           </div>
-
           <div class="plugin-meta-item">
-            <span class="plugin-meta-label">Version</span>
-            <span class="plugin-meta-value">Pending</span>
+            <span class="plugin-meta-label">Updates</span>
+            <span class="plugin-meta-value">Live as builds move</span>
           </div>
-
         </div>
-
-        <div class="plugin-actions">
-          <a class="btn btn-primary" href="./#projects">Back to Projects</a>
-        </div>
-
       </article>
 
-      <!-- SAFETRADE -->
       <article class="glass-card plugin-card">
-
         <div class="plugin-top">
-          <h2 class="plugin-name">SafeTrade</h2>
-
-          <div class="status-badge status-development">
-            Approval Pending
-          </div>
+          <h2 class="plugin-name">Download Activation</h2>
+          <div class="status-badge status-ready">Ready Soon</div>
         </div>
-
         <p class="plugin-description">
-          Secure trading system with anti-scam protection, trade confirmations and safe item exchange flow. Download stays locked until approval clears.
+          Once a build clears review, it can be published to the download list. This page is the general staging area for that final step.
         </p>
-
         <div class="plugin-meta">
-
           <div class="plugin-meta-item">
-            <span class="plugin-meta-label">Pipeline Stage</span>
-            <span class="plugin-meta-value">Approval Queue</span>
+            <span class="plugin-meta-label">Release Action</span>
+            <span class="plugin-meta-value">Activate downloads</span>
           </div>
-
           <div class="plugin-meta-item">
-            <span class="plugin-meta-label">Next Step</span>
-            <span class="plugin-meta-value">Approval Decision</span>
+            <span class="plugin-meta-label">Approval</span>
+            <span class="plugin-meta-value">Completed</span>
           </div>
-
           <div class="plugin-meta-item">
-            <span class="plugin-meta-label">Version</span>
-            <span class="plugin-meta-value">1.0</span>
+            <span class="plugin-meta-label">Result</span>
+            <span class="plugin-meta-value">Stable release</span>
           </div>
-
         </div>
-
-        <div class="plugin-actions">
-          <a class="btn btn-primary" href="safetrade/">View Project</a>
-        </div>
-
       </article>
 
-      <!-- PULSEEVENTS -->
       <article class="glass-card plugin-card">
-
         <div class="plugin-top">
-          <h2 class="plugin-name">MemoryChain</h2>
-
-          <div class="status-badge status-development">
-            IN DEVELOPMENT
-          </div>
+          <h2 class="plugin-name">Release Notes</h2>
+          <div class="status-badge status-review">General</div>
         </div>
-
         <p class="plugin-description">
-          Main system plugin inside the PluggLAB stack. This page now treats pending downloads as a general approval state for any plugin.
+          This page is built to support any PluggLAB plugin or pack. Use it as the general release queue rather than a manual plugin list.
         </p>
-
         <div class="plugin-meta">
-
           <div class="plugin-meta-item">
-            <span class="plugin-meta-label">Pipeline Stage</span>
-            <span class="plugin-meta-value">Build the main code</span>
+            <span class="plugin-meta-label">Goal</span>
+            <span class="plugin-meta-value">Simplified workflow</span>
           </div>
-
           <div class="plugin-meta-item">
-            <span class="plugin-meta-label">Next Step</span>
-            <span class="plugin-meta-value">Send for approvial</span>
+            <span class="plugin-meta-label">Audience</span>
+            <span class="plugin-meta-value">Community & maintainers</span>
           </div>
-
           <div class="plugin-meta-item">
-            <span class="plugin-meta-label">Version</span>
-            <span class="plugin-meta-value">Core Build</span>
+            <span class="plugin-meta-label">Status</span>
+            <span class="plugin-meta-value">Generalized</span>
           </div>
-
         </div>
-
-        <div class="plugin-actions">
-          <a class="btn btn-primary" href="memorychain/">View Project</a>
-        </div>
-
       </article>
 
     </section>

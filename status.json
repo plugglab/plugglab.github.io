@@ -4,22 +4,22 @@
       "name": "MemoryChain",
       "status": "unknown",
       "download": "None",
-      "version": "1.0.0",
-      "lastUpdate": "2026-04-20"
+      "version": "0.0.0",
+      "lastUpdate": "0000-00-00"
     },
     {
       "name": "PulseEvents",
       "status": "operational",
       "download": "https://modrinth.com/plugin/pulseevents",
-      "version": "1.0.0",
-      "lastUpdate": "2026-05-16"
+      "version": "2.0",
+      "lastUpdate": "2026-05-27"
     },
     {
       "name": "CoreCasino",
-      "status": "review",
-      "download": "None",
-      "version": "1.0.0",
-      "lastUpdate": "2026-05-18"
+      "status": "operational",
+      "download": "https://modrinth.com/plugin/casinocore",
+      "version": "2.0",
+      "lastUpdate": "2026-05-31"
     },
     {
       "name": "CasinoCoreDemo",
@@ -27,6 +27,13 @@
       "download": "https://modrinth.com/plugin/casinocoredemo",
       "version": "1",
       "lastUpdate": "2026-05-07"
-    }
+    },
+      {
+        "name": "SafeTrade",
+        "status": "operational",
+        "download": "https://modrinth.com/plugin/safetrade",
+        "version": "2.0",
+        "lastUpdate": "2026-05-24"
+      }
   ]
 }
