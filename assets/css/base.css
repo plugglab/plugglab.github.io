@@ -30,6 +30,9 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html, body, button, a, input, textarea, select, summary {
+  cursor: url('../images/plugglab_cursor.cur'), auto;
+}
 
 body {
   min-height: 100vh;
@@ -45,6 +48,7 @@ body {
     radial-gradient(ellipse 50% 40% at 85% 10%, rgba(45,232,184,0.09) 0%, transparent 55%),
     radial-gradient(ellipse 40% 60% at 80% 80%, rgba(155,94,255,0.08) 0%, transparent 55%),
     radial-gradient(ellipse 35% 40% at 5% 85%, rgba(45,232,184,0.06) 0%, transparent 50%);
+  background-attachment: fixed;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
 }
@@ -62,9 +66,22 @@ body::before {
   z-index: 0;
 }
 
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url('../images/plugglab_background.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+
 a { color: inherit; text-decoration: none; }
 img, svg { display: block; }
-button { cursor: pointer; font: inherit; }
+button { cursor: url('../images/plugglab_cursor.cur'), pointer; font: inherit; }
 
 .site-shell { position: relative; z-index: 1; }
 .navbar, main, .site-footer { position: relative; z-index: 1; }
@@ -469,4 +486,10 @@ section h2 {
   .hero-actions, .action-row, .cta-buttons { flex-direction: column; align-items: stretch; }
   .btn { width: 100%; }
   .site-footer { flex-direction: column; align-items: flex-start; }
+}
+
+.project-version {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-top: 4px;
 }

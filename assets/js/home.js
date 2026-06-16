@@ -138,3 +138,41 @@ if (copyDiscordButton) {
     }, 1400);
   });
 }
+
+async function loadModrinthVersions() {
+  const cards = document.querySelectorAll(".project-card");
+
+  cards.forEach(async (card) => {
+    const projectId = card.dataset.name; // nazwa = id
+    if (!projectId) return;
+
+    try {
+      const res = await fetch(
+        `https://api.modrinth.com/v2/project/${projectId}/version`
+      );
+
+      if (!res.ok) return;
+
+      const versions = await res.json();
+      if (!versions.length) return;
+
+      const latest = versions[0];
+
+      // tworzymy element wersji
+      const versionEl = document.createElement("div");
+      versionEl.className = "project-version";
+      versionEl.textContent = `Version: ${latest.version_number}`;
+
+      // dodajemy pod tytuł
+      const title = card.querySelector("h3");
+      if (title) {
+        title.after(versionEl);
+      }
+
+    } catch (err) {
+      console.error(`Modrinth error for ${projectId}`, err);
+    }
+  });
+}
+
+loadModrinthVersions();

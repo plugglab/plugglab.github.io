@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="PulseEvents 1.0.0 custom events reference for configuring event definitions, action types, validation, and runtime behavior.">
+  <meta name="description" content="PulseEvents 1.0.0 reference for custom events, action types, placeholders, validation, and runtime behavior.">
   <meta name="theme-color" content="#07080f">
   <meta property="og:title" content="PulseEvents Custom Events | PluggLAB">
-  <meta property="og:description" content="Developer reference for PulseEvents custom event configuration in version 1.0.0.">
+  <meta property="og:description" content="Developer reference for PulseEvents custom event configuration, placeholders, and runtime behavior in version 1.0.0.">
 
   <title>PluggLAB | PulseEvents Custom Events</title>
 
@@ -50,7 +50,7 @@
       <p class="section-label">Reference</p>
       <h1 class="project-title">Custom Events</h1>
       <p class="section-copy">
-        Technical reference for PulseEvents 1.0.0 custom event configuration, action execution, validation, and runtime behavior.
+        Technical reference for PulseEvents 1.0.0 custom event configuration, action execution, placeholders, validation, and runtime behavior.
       </p>
 
       <div class="hero-highlights">
@@ -74,15 +74,15 @@
 
         <ul class="feature-list">
           <li>Custom events live as separate <code>.yml</code> files in the plugin <code>events/</code> folder.</li>
-          <li>They are registered on startup and on <code>/pe reload</code>.</li>
-          <li>GUI chance editing, queueing, bossbar, announcements, and placeholders all support custom events as first-class entries.</li>
+          <li>They are loaded on startup and refreshed on <code>/pe reload</code>.</li>
+          <li>GUI chance editing, queueing, bossbar, announcements, and placeholders all treat custom events as first-class entries.</li>
         </ul>
       </article>
 
       <article class="glass-card docs-card">
         <div class="section-heading">
           <p class="section-label">Example</p>
-          <h2>Minimal YAML</h2>
+          <h2>Minimal Event File</h2>
         </div>
 
         <pre class="code-block"><code>event:
@@ -119,6 +119,7 @@
       <div class="section-heading">
         <p class="section-label">Reference</p>
         <h2>Top-Level Event Fields</h2>
+        <p class="section-copy">These fields define how an event is displayed, selected, and gated before any actions run.</p>
       </div>
 
       <div class="table-wrap glass-card">
@@ -195,6 +196,7 @@
       <div class="section-heading">
         <p class="section-label">Reference</p>
         <h2>Common Action Fields</h2>
+        <p class="section-copy">Every action supports the same execution controls, then adds fields specific to its type.</p>
       </div>
 
       <div class="table-wrap glass-card">
@@ -251,6 +253,7 @@
       <div class="section-heading">
         <p class="section-label">Action Types</p>
         <h2>Supported Actions</h2>
+        <p class="section-copy">Action cards below list the required inputs and the fields most often used in production configs.</p>
       </div>
 
       <div class="action-grid">
@@ -322,6 +325,83 @@
       </div>
     </section>
 
+    <section class="docs-section">
+      <div class="section-heading">
+        <p class="section-label">Placeholders</p>
+        <h2>Runtime Variables</h2>
+        <p class="section-copy">Use these placeholders in messages, bossbars, GUIs, and other text fields that render live event state.</p>
+      </div>
+
+      <div class="table-wrap glass-card">
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Placeholder</th>
+              <th>Returns</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>%pulseevents_current_event%</code></td>
+              <td>Current event name or <code>none</code></td>
+              <td>Returns <code>none</code> when no event is running.</td>
+            </tr>
+            <tr>
+              <td><code>%pulseevents_current_event_time_remaining%</code></td>
+              <td>Time remaining</td>
+              <td>Updates while an event is active.</td>
+            </tr>
+            <tr>
+              <td><code>%pulseevents_leading_event%</code></td>
+              <td>Leading event or <code>none</code></td>
+              <td>Returns <code>none</code> when no votes are active.</td>
+            </tr>
+            <tr>
+              <td><code>%pulseevents_leading_event_votes%</code></td>
+              <td>Vote count</td>
+              <td>Shows the current vote total for the leading event.</td>
+            </tr>
+            <tr>
+              <td><code>%pulseevents_event_active%</code></td>
+              <td>Active state</td>
+              <td>Use for conditional displays or status text.</td>
+            </tr>
+            <tr>
+              <td><code>%pulseevents_events_enabled%</code></td>
+              <td>Enabled state</td>
+              <td>Reflects whether the event system is enabled.</td>
+            </tr>
+            <tr>
+              <td><code>%pulseevents_queue_size%</code></td>
+              <td>Queue size</td>
+              <td>Returns <code>0</code> when the queue is empty.</td>
+            </tr>
+            <tr>
+              <td><code>%pulseevents_registered_events%</code></td>
+              <td>Registered count</td>
+              <td>Returns <code>0</code> when no events are registered.</td>
+            </tr>
+            <tr>
+              <td><code>%pulseevents_player_streak%</code></td>
+              <td>Player streak</td>
+              <td>Returns <code>0</code> when the player has no streak.</td>
+            </tr>
+            <tr>
+              <td><code>%pulseevents_top_streak%</code></td>
+              <td>Top streak</td>
+              <td>Returns <code>0</code> when no streak has been recorded.</td>
+            </tr>
+            <tr>
+              <td><code>%pulseevents_next_streak_milestone%</code></td>
+              <td>Next milestone</td>
+              <td>Returns <code>0</code> when no milestone is defined.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
     <section class="docs-layout">
       <article class="glass-card docs-card">
         <div class="section-heading">
@@ -353,6 +433,7 @@
           <li>GUI queue input supports middle click, <code>Q</code>, and <code>Ctrl+Q</code>.</li>
           <li><code>min-players</code> counts players eligible under both global and event-specific world rules.</li>
           <li><code>random-players</code> picks unique players up to <code>target-count</code>.</li>
+          <li>Chance rolls apply per action, so a single event can mix guaranteed and optional effects.</li>
         </ul>
 
         <h3 class="subheading">Shipped Presets</h3>
@@ -370,7 +451,7 @@
   <footer class="site-footer">
     <div class="footer-brand">
       <h2>PluggLAB</h2>
-      <p>PulseEvents custom event reference for version 1.0.0.</p>
+      <p>PulseEvents custom event and placeholder reference for version 1.0.0.</p>
     </div>
 
     <div class="footer-links">
