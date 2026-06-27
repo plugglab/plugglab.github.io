@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "version": 1,
+    "last_updated": "2026-06-27",
+    "announcement": "🚀 VoidSpire pack coming soon — stay tuned on Discord!"
+  },
+  "plans": [
+    {
+      "id": "free",
+      "name": "Free Plugins",
+      "price": "Free",
+      "description": "All PluggLAB plugins are completely free and community-ready.",
+      "features": [
+        "MemoryChain — shared plugin architecture",
+        "PulseEvents — dynamic event system",
+        "Casino Core — modular casino engine",
+        "SafeTrade — anti-scam trading system",
+        "NovaPixel — competitive PvP texture pack",
+        "PvPFlow — 1.8 PvP visual enhancement pack"
+      ],
+      "badge": "FREE",
+      "link": "https://plugglab.github.io/#projects"
+    }
+  ],
+  "projects": [
+    {
+      "id": "memorychain",
+      "name": "MemoryChain",
+      "type": "plugin",
+      "description": "Shared plugin architecture and update foundation. The backbone of the PluggLAB ecosystem.",
+      "status": "live",
+      "free": true,
+      "icon_url": "https://plugglab.github.io/assets/images/memorychain.n.png",
+      "tags": ["infrastructure", "core"],
+      "link": "https://plugglab.github.io/memorychain/"
+    },
+    {
+      "id": "pulseevents",
+      "name": "PulseEvents",
+      "type": "plugin",
+      "description": "Dynamic event system for Minecraft servers. Automate server-wide events with ease.",
+      "status": "live",
+      "free": true,
+      "icon_url": "https://plugglab.github.io/assets/images/pulseevents_n.png",
+      "tags": ["events", "automation"],
+      "link": "https://plugglab.github.io/pulseevents/"
+    },
+    {
+      "id": "casinocore",
+      "name": "Casino Core",
+      "type": "plugin",
+      "description": "Modular casino engine with reward systems and slot mechanics.",
+      "status": "live",
+      "free": true,
+      "tags": ["economy", "gameplay"],
+      "link": "https://plugglab.github.io/casinocore/"
+    },
+    {
+      "id": "safetrade",
+      "name": "SafeTrade",
+      "type": "plugin",
+      "description": "Protected player-to-player trading with confirmation flow, anti-scam checks, and clean inventory handoff.",
+      "status": "live",
+      "free": true,
+      "tags": ["utility", "anti-scam"],
+      "link": "https://plugglab.github.io/safetrade/"
+    },
+    {
+      "id": "novapixel",
+      "name": "NovaPixel",
+      "type": "pack",
+      "description": "Competitive PvP texture pack with a modern style. Designed for performance and clarity.",
+      "status": "live",
+      "free": true,
+      "icon_url": "https://plugglab.github.io/assets/images/novapixel_n.png",
+      "tags": ["pvp", "texture"],
+      "link": "https://plugglab.github.io/novapixel/"
+    },
+    {
+      "id": "pvpflow",
+      "name": "PvPFlow",
+      "type": "pack",
+      "description": "1.8 PvP focused visual enhancement pack for classic competitive play.",
+      "status": "live",
+      "free": true,
+      "icon_url": "https://plugglab.github.io/assets/images/pvpflow_n.png",
+      "tags": ["pvp", "1.8", "texture"],
+      "link": "https://plugglab.github.io/pvpflow/"
+    }
+  ],
+  "posts": [
+    {
+      "id": "post-1",
+      "title": "PluggLAB App is Live!",
+      "summary": "The official PluggLAB Android app is now available. Get all plugin info, updates, and events in one place.",
+      "content": "We're excited to launch the PluggLAB Android app. From now on, you can track plugin releases, read updates, and stay on top of events — all without opening a browser. The app fetches live data from our website so it's always up to date.",
+      "date": "2026-06-27",
+      "tag": "ANNOUNCEMENT",
+      "link": "https://plugglab.github.io/"
+    }
+  ],
+  "events": [
+    {
+      "id": "event-None",
+      "title": "Null",
+      "description": "Null",
+      "date": "Null",
+      "time": null,
+      "location": "Null",
+      "link": "Null"
+    }
+  ],
+  "roadmap": [
+    {
+      "phase": "now",
+      "title": "Shared Infrastructure",
+      "description": "MemoryChain shapes a shared plugin architecture to support multiple PluggLAB releases and planned integrations."
+    },
+    {
+      "phase": "next",
+      "title": "Economy Gameplay",
+      "description": "Casino Core expands into server gameplay with stronger reward and admin flows."
+    },
+    {
+      "phase": "later",
+      "title": "Polished Ecosystem",
+      "description": "Visual packs, event utilities, and shared integrations settle into one consistent stack."
+    }
+  ],
+  "about": {
+    "tagline": "A focused Minecraft plugin lab delivering stable releases, free tools, and clear project progress.",
+    "description": "PluggLAB is a polished Minecraft hub for stable plugins, free tools, and clear project updates. Everything here is designed to feel more professional, approachable, and ready for actual use.",
+    "creator_name": "Wilczek",
+    "creator_role": "Full-Stack Minecraft Developer",
+    "creator_bio": "Passionate Minecraft developer with years of experience in plugin development, server optimization, and community management. Specializing in scalable plugin architecture and modular systems design. Founded PluggLAB to create a focused hub for high-quality Minecraft projects.",
+    "discord_url": "https://discord.gg/ZMje3neEmK",
+    "contact_url": "https://plugglab.github.io/contact/"
+  }
+}
