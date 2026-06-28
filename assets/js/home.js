@@ -8,28 +8,6 @@ const projectResults = document.getElementById('project-results');
 const copyDiscordButton = document.getElementById('copy-discord');
 const counterElements = [...document.querySelectorAll('[data-count]')];
 
-// Dodaję lekką animację wejścia dla nowych elementów
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: "0px 0px -50px 0px"
-};
-
-const appearanceObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = "1";
-      entry.target.style.transform = "translateY(0)";
-    }
-  });
-}, observerOptions);
-
-document.querySelectorAll('.glass-card').forEach(card => {
-  card.style.opacity = "0";
-  card.style.transform = "translateY(20px)";
-  card.style.transition = "all 0.6s ease-out";
-  appearanceObserver.observe(card);
-});
-
 if (projectLinks.length && sections.length) {
   const setActive = () => {
     const scrollBottom = window.scrollY + window.innerHeight;
@@ -70,9 +48,9 @@ if (counterElements.length) {
       element.textContent = String(Math.round(target * eased));
 
       if (progress < 1) {
-    requestAnimationFrame(tick);
+        requestAnimationFrame(tick);
       }
-  };
+    };
 
     requestAnimationFrame(tick);
   };
@@ -124,6 +102,7 @@ if (filterChips.length && projectCards.length) {
         : `Showing ${visibleCount} ${filterLabel}`;
     }
   };
+
   filterChips.forEach((chip) => {
     chip.addEventListener('click', () => {
       activeFilter = chip.dataset.filter || 'all';

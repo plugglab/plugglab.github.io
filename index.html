@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PluggLAB is a Minecraft plugin hub for stable, community-ready releases, free tools, and a streamlined approval workflow.">
-  <meta name="theme-color" content="#5b8fff">
-  <meta property="og:title" content="PluggLAB | Minecraft Plugin Hub">
-  <meta property="og:description" content="Discover stable Minecraft plugins, free content, and progress updates from PluggLAB.">
+  <meta name="description" content="PluggLab is an indie studio building games, apps, mods and tools across Android, Roblox, Minecraft and Discord.">
+  <meta name="theme-color" content="#060009">
+  <meta property="og:title" content="PluggLab Studio">
+  <meta property="og:description" content="Indie studio. Games, apps, mods, and tools.">
   <meta property="og:type" content="website">
-  <title>PluggLAB | Minecraft Plugin Hub</title>
+  <title>PluggLab Studio</title>
   <link rel="icon" href="assets/images/favicon.png" sizes="any">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/index.css">
 </head>
@@ -20,20 +20,18 @@
 <div class="site-shell">
   <header class="navbar">
     <nav class="nav-container">
-      <div class="nav-brandbar">
-        <a class="nav-logo" href="./">PluggLAB</a>
-        <p class="nav-status">Innovation lab for Minecraft plugins &amp; experiences</p>
+      <a class="nav-logo" href="./">PluggLab</a>
+      <div class="nav-links" id="site-nav-links">
+        <a href="#home">Home</a>
+        <a href="#download">App</a>
+        <a href="#featured">Overview</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="contact/">Contact</a>
+        <a href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener">Discord</a>
       </div>
-      <div class="nav-menu-row">
-        <div class="nav-links" id="site-nav-links">
-          <a href="#home">Home</a>
-          <a href="#featured">Overview</a>
-          <a href="#projects">Projects</a>
-          <a href="#about">About</a>
-          <a href="contact/">Contact</a>
-          <a href="https://discord.gg/ZMje3neEmK" target="_blank">Discord</a>
-          <a href="heads/" target="_blank">Head API</a>
-        </div>
+      <div class="nav-right">
+        <a class="nav-cta" href="https://plugglabstudio.itch.io/plugglabapp" target="_blank" rel="noopener">↓ Get the App</a>
         <button class="nav-toggle" type="button" aria-label="Toggle navigation">
           <span></span><span></span><span></span>
         </button>
@@ -42,31 +40,36 @@
   </header>
 
   <main class="page-main">
+
+    <!-- HERO -->
     <section class="hero-section" id="home">
       <div class="hero-grid"></div>
       <div class="hero-glow hero-glow-left"></div>
       <div class="hero-glow hero-glow-right"></div>
+
       <div class="hero-content">
-        <p class="hero-kicker">Minecraft Development Hub</p>
-        <h1 class="hero-title">PluggLAB</h1>
+        <p class="hero-kicker">
+          <span class="dot-live"></span>
+          Indie Studio · Active Development
+        </p>
+        <h1 class="hero-title">PluggLab</h1>
         <p class="hero-subtitle">
-          A focused Minecraft plugin lab delivering stable releases, free tools, and clear project progress.
-          Browse live plugins, the shared release queue, and the latest updates in one polished view.
-          Updates are rolling out across the lab over the next 1-2 weeks.
+          Games, apps, mods, and tools built across Android, Roblox, Minecraft, and Discord.
+          Dark aesthetics. Deliberate craft. Everything free.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">Projects</a>
-          <a class="btn btn-secondary" href="download-pending.html">Approval Status</a>
-          <a class="btn btn-ghost" href="https://discord.gg/ZMje3neEmK" target="_blank">Discord</a>
+          <a class="btn btn-primary" href="https://plugglabstudio.itch.io/plugglabapp" target="_blank" rel="noopener">↓ Download App</a>
+          <a class="btn btn-secondary" href="#projects">Browse Projects</a>
+          <a class="btn btn-ghost" href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener">Discord</a>
         </div>
         <div class="hero-shortcuts">
+          <a class="shortcut-card" href="https://plugglabstudio.itch.io/plugglabapp" target="_blank" rel="noopener">
+            <span class="shortcut-label">Android App</span>
+            <strong>itch.io</strong>
+          </a>
           <a class="shortcut-card" href="#projects">
             <span class="shortcut-label">Project Hub</span>
-            <strong>All Plugins</strong>
-          </a>
-          <a class="shortcut-card" href="download-pending.html">
-            <span class="shortcut-label">Release Queue</span>
-            <strong>Approval Board</strong>
+            <strong>All Projects</strong>
           </a>
           <a class="shortcut-card" href="contact/">
             <span class="shortcut-label">Community</span>
@@ -79,34 +82,38 @@
             <span class="hero-metric-label">Live projects</span>
           </div>
           <div class="hero-metric">
-            <span class="hero-metric-value" data-count="3">0</span>
-            <span class="hero-metric-label">Free plugins</span>
+            <span class="hero-metric-value" data-count="4">0</span>
+            <span class="hero-metric-label">Platforms</span>
           </div>
           <div class="hero-metric">
-            <span class="hero-metric-value" data-count="18">0</span>
-            <span class="hero-metric-label">Planned modules</span>
+            <span class="hero-metric-value" data-count="100">0</span>
+            <span class="hero-metric-label">% Free</span>
           </div>
         </div>
       </div>
-      <aside class="hero-panel glass-card" aria-label="PluggLAB overview">
+
+      <!-- PANEL -->
+      <aside class="hero-panel glass-card" aria-label="PluggLab overview">
         <div class="hero-panel-header">
-          <span class="hero-panel-kicker">Project Access</span>
-          <span class="hero-panel-status">Live overview</span>
+          <span class="hero-panel-kicker">Quick Access</span>
+          <span class="hero-panel-status">
+            <span class="dot-live"></span> Live
+          </span>
         </div>
         <div class="hero-panel-main">
-          <h2>Fastest paths first</h2>
-          <p>Open free plugins, check what is pending approval, or jump straight into the full project list from one compact panel.</p>
+          <h2>Start here</h2>
+          <p>Download the Android app, explore Minecraft plugins, or jump into the full project list — all in one place.</p>
         </div>
         <div class="hero-stack">
-            <div class="stack-item">
-            <span class="stack-label">Free plugins</span>
-            <strong>All Releases</strong>
-            <span class="stack-note">Shared update campaign across the lab</span>
+          <div class="stack-item">
+            <span class="stack-label">Android App</span>
+            <strong>PluggLab App</strong>
+            <span class="stack-note">Sparring counter & more — free on itch.io</span>
           </div>
           <div class="stack-item">
-            <span class="stack-label">Release workflow</span>
-            <strong>Approval Board</strong>
-            <span class="stack-note">One queue for pending builds</span>
+            <span class="stack-label">Minecraft Plugins</span>
+            <strong>Free Releases</strong>
+            <span class="stack-note">MemoryChain, PulseEvents, SafeTrade & more</span>
           </div>
           <div class="stack-item">
             <span class="stack-label">Community</span>
@@ -115,58 +122,105 @@
           </div>
         </div>
         <div class="hero-panel-actions">
-          <a class="btn btn-primary" href="#projects">Browse Projects</a>
+          <a class="btn btn-primary" href="https://plugglabstudio.itch.io/plugglabapp" target="_blank" rel="noopener">Get the App</a>
           <button class="btn btn-secondary" type="button" id="copy-discord">Copy Discord</button>
         </div>
       </aside>
     </section>
 
+    <!-- AD SLOT -->
+    <div class="ad-slot" style="padding: 1rem 2rem;">
+      <script async="async" data-cfasync="false" src="https://pl30098233.effectivecpmnetwork.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
+      <div id="container-3d7be051cf59b23d51d6dded9a6578da"></div>
+    </div>
+
+    <!-- DOWNLOAD SECTION -->
+    <section class="download-section" id="download">
+      <div class="section-heading">
+        <p class="section-label">Android App</p>
+        <h2>PluggLab App</h2>
+        <p class="section-copy">The PluggLab companion app — built in Kotlin with Jetpack Compose. Free to download, always.</p>
+      </div>
+      <div class="download-hero glass-card fade-up">
+        <div>
+          <div class="dl-tag">
+            <span class="dot-live"></span>
+            Available Now · Android · Free
+          </div>
+          <h2 class="dl-title">PluggLab App</h2>
+          <p class="dl-desc">
+            Built with Kotlin and Jetpack Compose, the PluggLab App is the Android home for PluggLab tools.
+            Currently featuring <strong>Sparing Counter</strong> — a dark-themed match scoring app for sparring sessions.
+            Download free on itch.io.
+          </p>
+          <div class="dl-buttons">
+            <a class="btn btn-primary" href="https://plugglabstudio.itch.io/plugglabapp" target="_blank" rel="noopener">↓ Download on itch.io</a>
+            <a class="btn btn-ghost" href="https://plugglabstudio.itch.io/plugglabapp" target="_blank" rel="noopener">View itch.io page →</a>
+          </div>
+        </div>
+        <div class="dl-visual">
+          <div class="dl-icon">
+            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+              <rect x="5" y="2" width="14" height="20" rx="2"/>
+              <line x1="12" y1="18" x2="12.01" y2="18" stroke-linecap="round" stroke-width="2"/>
+            </svg>
+          </div>
+          <p class="dl-platform-note">Android · APK</p>
+          <p class="dl-platform-note" style="margin-top:0.35rem; color:#2dff8a;">Free Download</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED / OVERVIEW -->
     <section class="featured-section" id="featured">
       <div class="section-heading">
         <p class="section-label">Project Overview</p>
         <h2>General Project Status</h2>
-          <p class="section-copy">A broader view of the lab with stable releases, free plugins, and a shared release queue for all pending builds.</p>
+        <p class="section-copy">A broader view of the lab — Android apps, Minecraft plugins, Roblox scripts, and Discord bots.</p>
       </div>
       <div class="featured-layout">
         <article class="glass-card featured-main">
           <span class="project-tag">Lab Summary</span>
-          <h3>Plugins, packs, and approvals</h3>
-          <p>PluggLAB now presents the full plugin ecosystem with a shared release queue, clear free-access labels, and a faster path from development to download.</p>
+          <h3>Multi-platform studio</h3>
+          <p>PluggLab now spans Android, Minecraft, Roblox and Discord — with a shared release queue, clear free-access labels, and a faster path from development to download.</p>
           <div class="progress-track">
             <div class="progress-bar width-60"></div>
           </div>
-          <p class="progress-note">A wider site refresh is underway to make every plugin easier to find and every release easier to follow.</p>
+          <p class="progress-note">Site and app updates rolling out over the next 1–2 weeks.</p>
           <div class="pricing-info">
-            <span class="price-tag">3 Free Plugins</span>
+            <span class="price-tag">Always Free</span>
             <div class="price-details">
               <span>MemoryChain</span>
               <span>Casino Core</span>
               <span>SafeTrade</span>
+              <span>PluggLab App</span>
             </div>
           </div>
         </article>
         <div class="featured-side">
           <article class="glass-card feature-brief">
-            <span class="project-tag">Project Rules</span>
+            <span class="project-tag">Studio Rules</span>
             <ul class="brief-list">
-              <li>Every free plugin is marked clearly</li>
-            <li>Pending builds now use one shared release queue</li>
-              <li>Plugins and packs stay separated by filters</li>
+              <li>Every project is free — always</li>
+              <li>Android, Minecraft, Roblox &amp; Discord</li>
+              <li>Pending builds use one shared release workflow</li>
+              <li>Dark aesthetics throughout</li>
             </ul>
           </article>
           <article class="glass-card feature-brief">
             <span class="project-tag">Navigation</span>
-            <p>Use the hero shortcuts for common actions, then use filters below when you want to narrow the list by type, free status, or work in progress.</p>
+            <p>Use the hero shortcuts for quick access, filter projects below by platform or type, or grab the Android app direct from itch.io.</p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- PROJECTS -->
     <section class="projects-section" id="projects">
       <div class="section-heading">
         <p class="section-label">Projects</p>
         <h2>All Systems</h2>
-        <p class="section-copy">Active PluggLAB ecosystem projects.</p>
+        <p class="section-copy">Active PluggLab ecosystem projects across every platform.</p>
       </div>
       <div class="project-toolbar glass-card">
         <div class="toolbar-main">
@@ -174,13 +228,15 @@
             <button class="filter-chip is-active" type="button" data-filter="all">All</button>
             <button class="filter-chip" type="button" data-filter="plugin">Plugins</button>
             <button class="filter-chip" type="button" data-filter="pack">Packs</button>
+            <button class="filter-chip" type="button" data-filter="android">Android</button>
             <button class="filter-chip" type="button" data-filter="free">Free</button>
             <button class="filter-chip" type="button" data-filter="wip">In Development</button>
           </div>
           <p class="project-results" id="project-results">Showing all projects</p>
         </div>
         <div class="toolbar-actions">
-          <a class="toolbar-link" href="download-pending.html">Open Approval Board</a>
+          <a class="toolbar-link" href="https://plugglabstudio.itch.io/plugglabapp" target="_blank" rel="noopener">itch.io App</a>
+          <a class="toolbar-link" href="download-pending.html">Approval Board</a>
           <a class="toolbar-link" href="contact/">Request a Plugin</a>
         </div>
       </div>
@@ -188,17 +244,17 @@
         <article class="glass-card summary-card">
           <span class="project-tag">Free</span>
           <strong>All projects</strong>
-          <p>Every plugin and pack in PluggLAB is free and actively developed.</p>
+          <p>Every plugin, app, and pack in PluggLab is free and actively developed.</p>
         </article>
         <article class="glass-card summary-card">
-          <span class="project-tag">Pending</span>
-          <strong>Release queue</strong>
-          <p>Any plugin waiting for release now routes through one shared release workflow instead of manual status entries.</p>
+          <span class="project-tag">Multi-platform</span>
+          <strong>4 Platforms</strong>
+          <p>Android, Minecraft, Roblox, and Discord — one studio, every layer.</p>
         </article>
         <article class="glass-card summary-card">
-          <span class="project-tag">Browse</span>
-          <strong>Faster scanning</strong>
-          <p>Project cards now expose type, availability, and the primary next action at a glance.</p>
+          <span class="project-tag">App</span>
+          <strong>Now on itch.io</strong>
+          <p>The PluggLab Android app is live on itch.io — download free, no sign-up needed.</p>
         </article>
       </div>
       <div class="project-toolbar project-toolbar-search glass-card">
@@ -206,9 +262,26 @@
           <span>Search</span>
           <input id="project-search" type="search" placeholder="Search projects">
         </label>
-        <div class="search-hint">Search by project name, type, status, or description.</div>
+        <div class="search-hint">Search by project name, platform, or description.</div>
       </div>
       <div class="projects-grid">
+
+        <!-- ANDROID APP -->
+        <article class="glass-card project-card" data-tags="android app free" data-name="PluggLab App">
+          <div class="project-icon project-icon-casino"><span>PL</span></div>
+          <div class="project-meta-line">
+            <span class="project-mini-tag">Android</span>
+            <span class="project-mini-tag free-tag">Free</span>
+          </div>
+          <h3>PluggLab App</h3>
+          <p>Android companion app built in Kotlin + Jetpack Compose. Features Sparing Counter for match scoring. Dark-themed, polished, free.</p>
+          <div class="project-status-row">
+            <span class="signal-pill crimson">Live on itch.io</span>
+          </div>
+          <div class="project-pricing"><span class="price-tag">Free</span></div>
+          <a class="btn btn-primary" href="https://plugglabstudio.itch.io/plugglabapp" target="_blank" rel="noopener">↓ Download</a>
+        </article>
+
         <article class="glass-card project-card" data-tags="plugin free core" data-name="MemoryChain">
           <div class="project-icon">
             <img src="assets/images/memorychain.n.png" alt="MemoryChain Icon">
@@ -221,10 +294,10 @@
           <p>Shared plugin architecture and update foundation. <strong>Free plugin.</strong></p>
           <div class="project-status-row">
             <span class="signal-pill cyan">Free Access</span>
-            <span class="project-status-text">Shared infrastructure updates</span>
+            <span class="project-status-text">Shared infrastructure</span>
           </div>
           <div class="project-pricing"><span class="price-tag">Free</span></div>
-          <a class="btn btn-primary" href="memorychain/">Open</a>
+          <a class="btn btn-secondary" href="memorychain/">Open</a>
         </article>
 
         <article class="glass-card project-card" data-tags="plugin events utility free" data-name="PulseEvents">
@@ -239,10 +312,10 @@
           <p>Dynamic event system for Minecraft servers. <strong>Free plugin.</strong></p>
           <div class="project-status-row">
             <span class="signal-pill cyan">Free Access</span>
-            <span class="project-status-text">Event automation tools</span>
+            <span class="project-status-text">Event automation</span>
           </div>
           <div class="project-pricing"><span class="price-tag">Free</span></div>
-          <a class="btn btn-primary" href="pulseevents/">Learn More</a>
+          <a class="btn btn-secondary" href="pulseevents/">Learn More</a>
         </article>
 
         <article class="glass-card project-card" data-tags="pack pvp visual free" data-name="NovaPixel">
@@ -260,7 +333,7 @@
             <span class="project-status-text">PvP visual setup</span>
           </div>
           <div class="project-pricing"><span class="price-tag">Free</span></div>
-          <a class="btn btn-primary" href="novapixel/">Learn More</a>
+          <a class="btn btn-secondary" href="novapixel/">Learn More</a>
         </article>
 
         <article class="glass-card project-card" data-tags="plugin free economy" data-name="Casino Core">
@@ -273,10 +346,10 @@
           <p>Modular casino engine with reward systems and slot mechanics. <strong>Free plugin.</strong></p>
           <div class="project-status-row">
             <span class="signal-pill cyan">Free Access</span>
-            <span class="project-status-text">Economy gameplay systems</span>
+            <span class="project-status-text">Economy gameplay</span>
           </div>
           <div class="project-pricing"><span class="price-tag">Free</span></div>
-          <a class="btn btn-primary" href="casinocore/">Open</a>
+          <a class="btn btn-secondary" href="casinocore/">Open</a>
         </article>
 
         <article class="glass-card project-card" data-tags="plugin free utility trade" data-name="SafeTrade">
@@ -289,10 +362,10 @@
           <p>Protected player-to-player trading with confirmation flow, anti-scam checks, and clean inventory handoff.</p>
           <div class="project-status-row">
             <span class="signal-pill cyan">Free Access</span>
-            <span class="project-status-text">Utility and anti-scam flow</span>
+            <span class="project-status-text">Anti-scam trade</span>
           </div>
           <div class="project-pricing"><span class="price-tag">Free</span></div>
-          <a class="btn btn-primary" href="safetrade/">Open</a>
+          <a class="btn btn-secondary" href="safetrade/">Open</a>
         </article>
 
         <article class="glass-card project-card" data-tags="pack pvp visual free" data-name="PvPFlow">
@@ -310,30 +383,27 @@
             <span class="project-status-text">Classic PvP visuals</span>
           </div>
           <div class="project-pricing"><span class="price-tag">Free</span></div>
-          <a class="btn btn-primary" href="pvpflow/">Learn More</a>
+          <a class="btn btn-secondary" href="pvpflow/">Learn More</a>
         </article>
 
-        <article class="glass-card project-card wip-card" data-tags="pack voidspire coming free" data-name="VoidSpire">
-          <div class="project-icon project-icon-wip">
-            <span>VS</span>
-          </div>
+        <article class="glass-card project-card wip-card" data-tags="pack voidspire coming free wip" data-name="VoidSpire">
+          <div class="project-icon project-icon-wip"><span>VS</span></div>
           <div class="project-meta-line">
             <span class="project-mini-tag">Pack</span>
             <span class="project-mini-tag free-tag">Free</span>
           </div>
           <h3>VoidSpire</h3>
-          <p>A space-themed texture pack designed for exploration and wonder. <strong>Free pack (coming soon).</strong></p>
+          <p>A space-themed texture pack built for exploration and void aesthetics. <strong>Free (coming soon).</strong></p>
           <div class="project-status-row">
-            <span class="signal-pill cyan">Free Access</span>
-            <span class="project-status-text">Coming soon</span>
+            <span class="signal-pill yellow">Coming Soon</span>
           </div>
           <div class="project-pricing"><span class="price-tag">Free</span></div>
-          <a class="btn btn-secondary" href="#">Coming Soon</a>
+          <a class="btn btn-ghost" href="#">Coming Soon</a>
         </article>
 
         <article class="glass-card project-card wip-card" data-tags="wip plugin upcoming" data-name="Upcoming Project">
           <div class="project-icon project-icon-wip">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
               <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
             </svg>
           </div>
@@ -342,167 +412,198 @@
             <span class="project-mini-tag upcoming-tag">WIP</span>
           </div>
           <h3>...</h3>
-          <p>General plugin release slot. <strong>Waiting for approval</strong></p>
+          <p>General plugin release slot. <strong>Waiting for approval.</strong></p>
           <div class="project-status-row">
             <span class="signal-pill yellow">Pending</span>
-            <span class="project-status-text">Waiting for release approval</span>
+            <span class="project-status-text">Awaiting release approval</span>
           </div>
           <div class="status-badge">Approval Pending</div>
           <div class="project-pricing"><span class="price-tag">Pending</span></div>
-          <a class="btn btn-secondary" href="download-pending.html">Approval Status</a>
+          <a class="btn btn-ghost" href="download-pending.html">Approval Status</a>
+        </article>
+
       </div>
       <p class="project-empty" hidden>No projects match the current filter.</p>
     </section>
 
+    <!-- ROADMAP -->
     <section class="roadmap-section" id="roadmap">
       <div class="section-heading">
         <p class="section-label">Roadmap</p>
         <h2>Current Build Path</h2>
-        <p class="section-copy">A clearer view of what is shipping now, what is stabilizing, and what is being prepared.</p>
+        <p class="section-copy">What is shipping now, what is stabilizing, and what is being prepared across every platform.</p>
       </div>
       <div class="roadmap-grid">
         <article class="glass-card roadmap-card">
           <span class="roadmap-stage">Now</span>
-          <h3>Shared Infrastructure</h3>
-          <p>A shared plugin architecture is being shaped to support multiple PluggLAB releases and planned integrations.</p>
+          <h3>Android App</h3>
+          <p>PluggLab App live on itch.io with Sparing Counter. Keystore set up, APK signed, icons configured.</p>
         </article>
         <article class="glass-card roadmap-card">
           <span class="roadmap-stage">Next</span>
-          <h3>Economy Gameplay</h3>
-          <p>Casino Core expands into server gameplay with stronger reward and admin flows.</p>
+          <h3>Minecraft Mod</h3>
+          <p>Soul Reaper mod with 153-cube Blockbench model, tattered robes, scythe, lantern, and Lost Soul wraith entity.</p>
         </article>
         <article class="glass-card roadmap-card">
           <span class="roadmap-stage">Later</span>
-          <h3>Polished Ecosystem</h3>
-          <p>Visual packs, event utilities, and shared integrations settle into one consistent stack.</p>
+          <h3>Ecosystem Polish</h3>
+          <p>Plugin updates, DevNex Discord bot features, and VoidSpire texture pack — all converging into one consistent stack.</p>
         </article>
       </div>
     </section>
 
+    <!-- ABOUT -->
     <section class="about-section" id="about">
       <div class="section-heading">
         <p class="section-label">About</p>
-        <h2>What is PluggLAB</h2>
+        <h2>What is PluggLab</h2>
         <p class="section-copy">
-          PluggLAB is a polished Minecraft hub for stable plugins, free tools, and clear project updates.
-          Everything here is designed to feel more professional, approachable, and ready for actual use.
+          An indie studio building games, mods, apps, and tools across multiple platforms.
+          Dark aesthetics. Deliberate design. Everything free.
         </p>
       </div>
       <div class="about-grid">
         <article class="glass-card feature-card">
           <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
               <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
             </svg>
           </div>
-          <h3>Quality First</h3>
-          <p>Every project is built with attention to detail, performance, and user experience. No rushed releases.</p>
+          <h3>Multi-Platform</h3>
+          <p>Android apps, Minecraft plugins and mods, Roblox scripts, Discord bots — one studio spanning every layer of the stack.</p>
         </article>
         <article class="glass-card feature-card">
           <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
               <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
             </svg>
           </div>
           <h3>Active Development</h3>
-          <p>Regular updates, community feedback integration, and continuous improvement across all projects.</p>
+          <p>Regular updates, community feedback integration, and continuous improvement across every project on every platform.</p>
         </article>
         <article class="glass-card feature-card">
           <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
               <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
             </svg>
           </div>
           <h3>Long-term Vision</h3>
-          <p>Projects are designed to evolve and scale. A shared plugin architecture guides updates across the full ecosystem.</p>
+          <p>Projects are built to evolve. A shared architecture guides updates across the full ecosystem so nothing gets left behind.</p>
         </article>
         <article class="glass-card feature-card">
           <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
               <circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
             </svg>
           </div>
           <h3>Community Driven</h3>
-          <p>Join Discord for updates, support, and direct feedback. Your input shapes future development.</p>
+          <p>Join Discord for updates and support. Ko-fi helps keep everything free. Your feedback shapes what gets built next.</p>
         </article>
       </div>
     </section>
-    <script async="async" data-cfasync="false" src="https://pl30098233.effectivecpmnetwork.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
-    <div id="container-3d7be051cf59b23d51d6dded9a6578da"></div>
 
+    <!-- AD SLOT -->
+    <div class="ad-slot" style="padding: 0 2rem 2rem;">
+      <script>
+        atOptions = {
+          'key' : '608d5fb4ea1e6fae9a4d53911ea925b3',
+          'format' : 'iframe',
+          'height' : 50,
+          'width' : 320,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/608d5fb4ea1e6fae9a4d53911ea925b3/invoke.js"></script>
+    </div>
+
+    <!-- CREATOR -->
     <section class="creator-section">
       <div class="section-heading">
-        <p class="section-label">Behind PluggLAB</p>
+        <p class="section-label">Behind PluggLab</p>
         <h2>About the Creator</h2>
-        <p class="section-copy">Meet the developer building the PluggLAB ecosystem.</p>
+        <p class="section-copy">The developer building the PluggLab ecosystem.</p>
       </div>
       <article class="glass-card creator-card">
         <div class="creator-header">
           <div class="creator-avatar">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26">
               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
             </svg>
           </div>
           <div>
             <h3>Wilczek</h3>
-            <p class="creator-role">Full-Stack Minecraft Developer</p>
+            <p class="creator-role">Indie Developer · PluggLab Studio</p>
           </div>
         </div>
         <div class="creator-bio">
-          <p>Wilczek is a passionate Minecraft developer with years of experience in plugin development, server optimization, and community management. Specializing in scalable plugin architecture and modular systems design.</p>
-          <p>Founded PluggLAB to create a focused hub for high-quality Minecraft projects that set new standards for the community. Every project is built with attention to detail, performance, and user experience.</p>
+          <p>Wilczek is an indie developer building across Android, Minecraft, Roblox, and Discord. Specialising in dark-themed tools, plugin architecture, and apps that actually ship.</p>
+          <p>Founded PluggLab to have one focused home for all releases — every project built with attention to craft, performance, and the right aesthetic. Everything released under PluggLab stays free.</p>
         </div>
         <div class="creator-details">
           <div class="detail-group">
-            <span class="detail-label">Specialization</span>
+            <span class="detail-label">Stack</span>
             <ul class="detail-list">
-              <li>Plugin Development</li>
-              <li>Server Architecture</li>
-              <li>API Design</li>
-              <li>Performance Optimization</li>
+              <li>Kotlin · Jetpack Compose</li>
+              <li>Java · Minecraft Modding</li>
+              <li>Lua · Roblox Studio</li>
+              <li>Node.js · Discord.js</li>
             </ul>
           </div>
           <div class="detail-group">
-            <span class="detail-label">Experience</span>
+            <span class="detail-label">Tools</span>
             <ul class="detail-list">
-              <li>4+ years Minecraft dev</li>
-            <li>Multiple community releases</li>
-            <li>Active plugin maintainer</li>
-            <li>Continuous improvement</li>
+              <li>MCreator · Blockbench</li>
+              <li>Android Studio</li>
+              <li>Git · GitHub Pages</li>
+              <li>Active plugin maintainer</li>
             </ul>
           </div>
         </div>
         <div class="creator-cta">
-          <p>Interested in collaborating or learning more?</p>
+          <p>Want to collaborate, suggest a feature, or just say hello?</p>
           <div class="cta-buttons">
-            <a class="btn btn-primary" href="https://discord.gg/ZMje3neEmK" target="_blank">Join Discord</a>
-            <a class="btn btn-secondary" href="contact/">Get in Touch</a>
+            <a class="btn btn-primary" href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener">Join Discord</a>
+            <a class="btn btn-secondary" href="https://ko-fi.com/wilczek016" target="_blank" rel="noopener">Support on Ko-fi</a>
+            <a class="btn btn-ghost" href="contact/">Get in Touch</a>
           </div>
         </div>
       </article>
     </section>
+
+    <!-- KO-FI EMBED -->
+    <section class="support-embed" aria-label="Support Wilczek on Ko-fi">
+      <div class="glass-card">
+        <iframe id="kofiframe" src="https://ko-fi.com/wilczek016/?hidefeed=true&widget=true&embed=true&preview=true"
+          style="border:none;width:100%;padding:4px;background:transparent;"
+          height="712" title="wilczek016"></iframe>
+      </div>
+    </section>
+
   </main>
 
-  <section class="support-embed" aria-label="Support Wilczek on Ko-fi">
-    <div class="glass-card">
-      <iframe id="kofiframe" src="https://ko-fi.com/wilczek016/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none;width:100%;padding:4px;background:#f9f9f9;" height="712" title="wilczek016"></iframe>
-    </div>
-  </section>
-
   <footer class="site-footer">
-    <div class="footer-brand">
-      <h2>PluggLAB</h2>
-      <p>Centralized development hub for free plugins, packs, and community updates.</p>
-    </div>
-    <div class="footer-links">
-      <a href="memorychain/">MemoryChain</a>
-      <a href="pulseevents/">PulseEvents</a>
-      <a href="safetrade/">SafeTrade</a>
-      <a href="novapixel/">NovaPixel</a>
-      <a href="casinocore/">Casino Core</a>
-      <a href="pvpflow/">PvPFlow</a>
-      <a href="contact/">Contact</a>
+    <div>
+      <div class="footer-brand">
+        <h2>PluggLab</h2>
+        <p>Indie studio · Games, apps, mods &amp; tools</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://plugglabstudio.itch.io/plugglabapp" target="_blank" rel="noopener">App</a>
+        <a href="memorychain/">MemoryChain</a>
+        <a href="pulseevents/">PulseEvents</a>
+        <a href="safetrade/">SafeTrade</a>
+        <a href="novapixel/">NovaPixel</a>
+        <a href="casinocore/">Casino Core</a>
+        <a href="pvpflow/">PvPFlow</a>
+        <a href="contact/">Contact</a>
+        <a href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener">Discord</a>
+        <a href="https://ko-fi.com/wilczek016" target="_blank" rel="noopener">Ko-fi</a>
+      </div>
+      <div class="footer-copy">
+        <p>© 2025 PluggLab</p>
+        <p>by Wilczek</p>
+      </div>
     </div>
   </footer>
 </div>
@@ -510,15 +611,32 @@
 <script src="assets/js/nav.js"></script>
 <script src="assets/js/scroll.js"></script>
 <script src="assets/js/home.js"></script>
+
+<!-- KO-FI FLOATING WIDGET -->
+<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
 <script>
-  atOptions = {
-    'key' : '608d5fb4ea1e6fae9a4d53911ea925b3',
-    'format' : 'iframe',
-    'height' : 50,
-    'width' : 320,
-    'params' : {}
-  };
+  kofiWidgetOverlay.draw('wilczek016', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': 'Support Us',
+    'floating-chat.donateButton.background-color': '#794bc4',
+    'floating-chat.donateButton.text-color': '#fff'
+  });
 </script>
-<script src="https://www.highperformanceformat.com/608d5fb4ea1e6fae9a4d53911ea925b3/invoke.js"></script>
+
+<!-- FADE-UP SCROLL OBSERVER -->
+<script>
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        fadeObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach((el, i) => {
+    el.style.transitionDelay = (i % 4) * 0.07 + 's';
+    fadeObserver.observe(el);
+  });
+</script>
 </body>
 </html>
