@@ -3,319 +3,237 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO -->
-  <meta name="description" content="PulseEvents - modular Minecraft event plugin for SMP, arcade, and minigame servers.">
-  <meta name="theme-color" content="#07080f">
-  <meta property="og:title" content="PulseEvents | Minecraft Event Plugin">
-  <meta property="og:description" content="Automated event system for Minecraft servers with modular design and live announcements.">
-
+  <meta name="description" content="PulseEvents is a dynamic, config-driven event system for automating Minecraft server events.">
+  <meta name="theme-color" content="#060009">
+  <meta property="og:title" content="PluggLAB | PulseEvents">
+  <meta property="og:description" content="PulseEvents is a dynamic, config-driven event system for automating Minecraft server events.">
+  <meta property="og:image" content="https://plugglab.github.io/assets/images/og-image.png">
   <title>PluggLAB | PulseEvents</title>
-
-  <link rel="icon" href="../assets/images/pulseevents_n.png" sizes="any">
-
-  <!-- Fonts -->
+  <link rel="canonical" href="https://plugglab.github.io/pulseevents/">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/images/favicon-32.png" sizes="32x32">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="../assets/css/base.css">
-  <link rel="stylesheet" href="../assets/css/pages.css">
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/project.css">
-  <link rel="stylesheet" href="../assets/css/pulseevents.css">
 </head>
-
 <body class="page-project page-pulseevents">
+<a class="skip-link" href="#main-content">Skip to content</a>
 <div class="site-shell">
-
-  <!-- NAV -->
   <header class="navbar">
-    <nav class="nav-container">
+    <nav class="nav-container" aria-label="Primary">
       <div class="nav-brandbar">
-        <a class="nav-logo" href="../">PluggLab</a>
-        <p class="nav-status">Project hub for plugins, packs, and experiments</p>
+        <a class="nav-logo" href="../">PluggLAB</a>
+        <p class="nav-status" data-i18n="nav.statusShort">Project hub for plugins, packs, and experiments</p>
       </div>
-
       <div class="nav-menu-row">
         <div class="nav-links" id="site-nav-links">
-          <a href="../">Home</a>
-          <a href="../#projects">Projects</a>
-          <a href="../#featured">Featured</a>
-          <a href="../contact/">Contact</a>
+          <a href="../" data-i18n="nav.home">Home</a>
+          <a href="../#projects" data-i18n="nav.projects">Projects</a>
+          <a href="./" aria-current="page">PulseEvents</a>
+          <a href="docs/">Docs</a>
+          <a href="../changelog/" data-i18n="nav.changelog">Changelog</a>
+          <a href="../contact/" data-i18n="nav.contact">Contact</a>
         </div>
-        <div class="nav-right"><a class="nav-cta" href="https://plugglabstudio.itch.io/plugglabapp" target="_blank" rel="noopener">↓ App</a><button class="nav-toggle" type="button">
-          <span></span><span></span><span></span>
-        </button></div>
+        <div class="nav-right">
+          <button class="nav-search-btn" type="button" data-open-command aria-label="Quick jump">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <span class="kbd-label">Jump</span><kbd>⌘K</kbd>
+          </button>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
     </nav>
   </header>
-<script async="async" data-cfasync="false" src="https://consciousdunkvastly.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
-<div id="container-3d7be051cf59b23d51d6dded9a6578da"></div>
 
-  <main class="page-main">
+  <script async="async" data-cfasync="false" src="https://pl30098233.effectivecpmnetwork.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
+  <div id="container-3d7be051cf59b23d51d6dded9a6578da" class="ad-slot"></div>
 
-    <!-- HERO -->
-    <section class="page-hero page-hero-blue">
-      <p class="section-label">Minecraft Plugin</p>
-
-      <h1>PulseEvents</h1>
-
-      <p class="section-copy">
-        A modular event system designed to automate and enhance gameplay on SMP,
-        arcade, and minigame servers, with a stable core and expanding feature set.
-      </p>
-      <p class="hero-extra">PulseEvents is part of the current PluggLAB update cycle, receiving new polish and event improvements.</p>
-
-      <!-- CTA -->
-      <div class="hero-actions">
-        <a class="btn btn-primary"
-           href="https://www.spigotmc.org/resources/pulseevents.134140/"
-           target="_blank">
-          Download Plugin
-        </a>
-
-        <a class="btn btn-secondary"
-           href="https://discord.gg/ZMje3neEmK"
-           target="_blank">
-          Join Discord
-        </a>
-
-        <a class="btn btn-ghost"
-           href="docs/">
-          Custom Events Docs
-        </a>
+  <main class="page-main" id="main-content">
+    <section class="project-hero">
+      <div class="project-hero-icon"><img src="../assets/images/pulseevents_n.png" alt="PulseEvents icon"></div>
+      <div class="project-hero-meta">
+        <div class="project-hero-tags">
+          <span class="project-tag">Plugin · Events</span>
+          <span class="signal-pill green">Stable</span>
+          <span class="price-tag" style="font-size:1rem;">Free</span>
+        </div>
+        <h1>PulseEvents</h1>
+        <p class="section-copy">Automate server-wide events — drops, boss spawns, PvP windows, and announcements — from simple config triggers instead of custom code.</p>
+        <div class="project-hero-actions">
+          <a class="btn btn-primary" href="https://modrinth.com/plugin/pulseevents" target="_blank" rel="noopener">Download on Modrinth</a>
+          <a class="btn btn-secondary" href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener">Discord Support</a>
+        </div>
       </div>
-
-      <div class="hero-highlights">
-        <span class="signal-pill blue">Live Release</span>
-        <span class="signal-pill cyan">Modular Core</span>
-        <span class="signal-pill purple">Active Development</span>
-      </div>
-
-      <p class="micro-note">Last updated: May 2026</p>
     </section>
 
-    <!-- PREVIEW (DODAJ TO) -->
-    <section class="preview-section">
+    <section class="reveal">
+      <div class="section-heading">
+        <p class="section-label">Capabilities</p>
+        <h2>What PulseEvents does</h2>
+        <p class="section-copy">PulseEvents turns recurring server moments into reusable, schedulable event definitions.</p>
+      </div>
+      <div class="feature-grid">
+        
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
+          <h3>Scheduled Events</h3>
+          <p>Run timed or cron-style events — double-drop hours, night raids, or PvP tournaments — without a separate scheduler plugin.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M4 4.5A2.5 2.5 0 016.5 2H20v17H6.5A2.5 2.5 0 004 16.5v-12z"/><path d="M4 16.5A2.5 2.5 0 016.5 19H20"/></svg></div>
+          <h3>Custom Event Actions</h3>
+          <p>Chain broadcasts, item drops, command execution, and world effects into a single reusable event definition.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></div>
+          <h3>Condition Checks</h3>
+          <p>Trigger events only when player count, world, or time-of-day conditions are met, so events feel intentional instead of spammy.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <h3>Config-First Design</h3>
+          <p>Every event lives in a readable YAML block — no Java required to add, disable, or tweak an event.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <h3>Cooldowns &amp; Limits</h3>
+          <p>Per-event cooldowns and daily caps stop any single event from overwhelming the server or the players.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <h3>Live Reload</h3>
+          <p>Reload event configs on the fly with a single command — no restart needed to test changes.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="rune-divider" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 22 12 12 22 2 12 12 2Z"/><circle cx="12" cy="12" r="2.4"/></svg>
+    </div>
+
+    <section class="reveal">
+      <div class="section-heading">
+        <p class="section-label">Details</p>
+        <h2>Requirements &amp; Links</h2>
+      </div>
+      <div class="meta-grid">
+        
+        <article class="glass-card meta-card">
+          <span class="meta-label">Minecraft Version</span>
+          <strong>1.20 – 1.21</strong>
+        </article>
+        <article class="glass-card meta-card">
+          <span class="meta-label">Server Software</span>
+          <strong>Paper / Spigot</strong>
+        </article>
+        <article class="glass-card meta-card">
+          <span class="meta-label">Dependencies</span>
+          <strong>MemoryChain</strong>
+        </article>
+        <article class="glass-card meta-card">
+          <span class="meta-label">License</span>
+          <strong>Free &amp; Open</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="reveal">
       <div class="section-heading">
         <p class="section-label">Preview</p>
-        <h2>In-Game System</h2>
+        <h2>In-game look</h2>
+        <p class="section-copy">Screenshots are added as each build is captured on the live test server — join Discord to see the newest previews first.</p>
       </div>
-
-      <div class="preview-grid">
-        <div class="preview-card glass-card">BossBar countdown display</div>
-        <div class="preview-card glass-card">Event announcement flow</div>
-        <div class="preview-card glass-card">Live server UI preview</div>
+      <div class="media-strip">
+        <div class="media-frame">Event broadcast preview</div><div class="media-frame">Config editor sample</div><div class="media-frame">Live event countdown</div>
       </div>
     </section>
 
-    <!-- META -->
-    <section class="meta-layout">
-
-      <article class="glass-card status-card color-blue">
-        <span class="project-tag">Live Plugin</span>
-
-        <h2>Stable Core — Expanding</h2>
-
-        <p>
-          PulseEvents is publicly available and already usable, with ongoing development
-          focused on expanding features and improving usability.
-        </p>
-
-        <div class="progress-track">
-          <div class="progress-bar progress-blue width-30"></div>
+    
+    <div class="rune-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 22 12 12 22 2 12 12 2Z"/><circle cx="12" cy="12" r="2.4"/></svg></div>
+    <section class="reveal">
+      <article class="glass-card cta-band">
+        <div>
+          <h3>Building a custom event?</h3>
+          <p>The full config reference, trigger list, and action catalogue live in the PulseEvents docs.</p>
         </div>
-
-        <p class="progress-note">Stable core is live — more features are being added now.</p>
-
-        <div class="action-row">
-          <a class="btn btn-primary"
-             href="https://www.spigotmc.org/resources/pulseevents.134140/"
-             target="_blank">
-            Spigot
-          </a>
-
-          <a class="btn btn-secondary"
-             href="https://modrinth.com/plugin/pulseevents/version/0.0.4"
-             target="_blank">
-            Modrinth
-          </a>
-        </div>
+        <div class="cta-band-actions"><a class="btn btn-primary" href="docs/">Open Docs</a></div>
       </article>
-
-      <article class="glass-card meta-card">
-        <h3>Details</h3>
-
-        <dl class="meta-grid">
-          <dt>Status</dt>
-          <dd>Live + evolving</dd>
-
-          <dt>Version</dt>
-          <dd>1.0.0</dd>
-
-          <dt>MC Support</dt>
-          <dd>1.20.x – 1.21.x</dd>
-
-          <dt>Type</dt>
-          <dd>Server plugin</dd>
-
-          <dt>Release</dt>
-          <dd>May 2026</dd>
-
-          <dt>Language</dt>
-          <dd>PL / EN (planned)</dd>
-        </dl>
-      </article>
-
     </section>
 
-    <!-- FEATURES -->
-    <section class="wip-layout">
-
-      <article class="glass-card notes-card">
-        <h3>Why PulseEvents</h3>
-
-        <ul class="feature-list">
-          <li>Automates server events without manual setup</li>
-          <li>Improves player engagement on SMP and arcade servers</li>
-          <li>Modular system allows easy expansion</li>
-          <li>Lightweight and easy to configure via YAML</li>
-          <li>Built-in BossBar countdown and announcements</li>
-          <li>Supports custom event types and durations</li>
-          <li>Permission-based admin controls</li>
-        </ul>
+    <section class="reveal">
+      <article class="glass-card cta-band">
+        <div>
+          <h3>Ready to add PulseEvents to your server?</h3>
+          <p>PulseEvents pairs with MemoryChain for shared player state across every triggered event.</p>
+        </div>
+        <div class="cta-band-actions">
+          <a class="btn btn-primary" href="https://modrinth.com/plugin/pulseevents" target="_blank" rel="noopener">Download on Modrinth</a>
+          <a class="btn btn-secondary" href="../contact/">Ask a Question</a>
+        </div>
       </article>
-
-      <article class="glass-card notes-card">
-        <h3>Planned Features</h3>
-
-        <ul class="status-list">
-          <li>Advanced GUI event manager for in-game configuration</li>
-          <li>More event types (PvP arenas, parkour, mining challenges)</li>
-          <li>Player stats tracking and global leaderboards</li>
-          <li>MySQL/SQLite database support</li>
-          <li>Vault economy integration and rewards system</li>
-          <li>PlaceholderAPI support for custom variables</li>
-        </ul>
-      </article>
-
     </section>
 
-    <!-- CHANGELOG -->
-    <section class="release-section">
+    <section class="reveal">
       <div class="section-heading">
-        <p class="section-label">Changelog</p>
-        <h2>Latest Release</h2>
-        <p class="section-copy">Release notes for the newest PulseEvents update, listed above older versions.</p>
+        <p class="section-label">More from PluggLAB</p>
+        <h2>Related Projects</h2>
       </div>
+      <div class="related-grid">
+        
+        <a class="glass-card related-card" href="../memorychain/">
+          <div class="related-icon"><img src="../assets/images/memorychain.n.png" alt="MemoryChain icon" loading="lazy"></div>
+          <div><strong>MemoryChain</strong><br><span>Plugin · Infrastructure</span></div>
+        </a>
 
-      <article class="glass-card release-card">
-        <div class="release-header">
-          <div>
-            <h3>Version 1.0.0</h3>
-            <p class="release-meta">Released 2026-05-03 - Major version bump from 0.0.4 to 1.0.0</p>
-          </div>
-          <span class="signal-pill blue">Latest</span>
-        </div>
+        <a class="glass-card related-card" href="../casinocore/">
+          <div class="related-icon icon-pad"><img src="../assets/images/icons/icon-casinocore.svg" alt="Casino Core icon" loading="lazy"></div>
+          <div><strong>Casino Core</strong><br><span>Plugin · Economy</span></div>
+        </a>
 
-        <div class="release-grid">
-          <div>
-            <h4>Added</h4>
-            <ul class="feature-list">
-              <li>Custom event system with data-driven events defined in <code>config.yml</code> under <code>custom-events</code></li>
-              <li>13 configurable action types: <code>message</code>, <code>sound</code>, <code>potion</code>, <code>teleport</code>, <code>spawn-mob</code>, <code>strike-lightning</code>, <code>spawn-tnt</code>, <code>velocity</code>, <code>ignite</code>, <code>economy-reward</code>, <code>title</code>, <code>console-command</code>, <code>player-command</code></li>
-              <li>9 configurable event metadata fields: <code>name</code>, <code>chance</code>, <code>duration</code>, <code>icon</code>, <code>min-players</code>, <code>allowed-worlds</code>, <code>start-message</code>, <code>end-message</code>, <code>bossbar-title</code></li>
-              <li>6 new action fields: <code>target-count</code>, <code>chance</code>, <code>fade-in-ticks</code>, <code>stay-ticks</code>, <code>fade-out-ticks</code>, <code>command</code></li>
-              <li>5 preset events included: <code>meteor-shower</code>, <code>gravity-well</code>, <code>hot-potato</code>, <code>jackpot-rush</code>, <code>blink-surge</code></li>
-              <li>Startup and reload validation for custom events</li>
-              <li><code>CUSTOM_EVENTS.md</code> reference documentation</li>
-              <li>GUI now shows event duration and minimum player requirements</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4>Changed</h4>
-            <ul class="status-list">
-              <li>Event registration now reloads built-in and custom events together</li>
-              <li>Event icons now resolve through the shared event contract, so built-in and custom events use the same UI flow</li>
-              <li>Queue, announcements, bossbar, placeholders, and GUI chance editing now work with custom events</li>
-              <li>GUI queue now supports middle-click, <code>Q</code>, and <code>Ctrl+Q</code> shortcuts</li>
-              <li>Config presets now include examples covering all new features</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <!-- QUICK START -->
-    <section class="guide-section">
-      <div class="section-heading">
-        <p class="section-label">Quick Start</p>
-        <h2>Installation Guide</h2>
-        <p class="section-copy">Get PulseEvents running on your server in minutes.</p>
-      </div>
-
-      <div class="guide-steps">
-        <article class="glass-card step-card">
-          <div class="step-number">1</div>
-          <h3>Download Plugin</h3>
-          <p>Download the latest .jar file from Spigot or Modrinth.</p>
-        </article>
-
-        <article class="glass-card step-card">
-          <div class="step-number">2</div>
-          <h3>Install to Server</h3>
-          <p>Place the .jar file in your server's <code>plugins/</code> folder.</p>
-        </article>
-
-        <article class="glass-card step-card">
-          <div class="step-number">3</div>
-          <h3>Restart Server</h3>
-          <p>Restart your server to load PulseEvents and generate config files.</p>
-        </article>
-
-        <article class="glass-card step-card">
-          <div class="step-number">4</div>
-          <h3>Configure Events</h3>
-          <p>Edit <code>config.yml</code> to customize event types, durations, and messages.</p>
-        </article>
-      </div>
-
-      <div class="guide-note glass-card">
-        <h4>Requirements</h4>
-        <ul class="feature-list">
-          <li>Minecraft 1.20.x - 1.21.x</li>
-          <li>Paper, Spigot, or compatible server software</li>
-          <li>Java 17 or higher</li>
-          <li>Permissions plugin (optional, for role-based access)</li>
-        </ul>
+        <a class="glass-card related-card" href="../novapixel/">
+          <div class="related-icon"><img src="../assets/images/novapixel_n.png" alt="NovaPixel icon" loading="lazy"></div>
+          <div><strong>NovaPixel</strong><br><span>Pack · PvP</span></div>
+        </a>
       </div>
     </section>
-
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="footer-brand">
-      <h2>PluggLab</h2>
-      <p>PulseEvents is live and actively evolving.</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h2>PluggLAB</h2>
+        <p data-i18n="footer.tagline">A focused Minecraft plugin lab — free releases, clear updates, and a shared architecture behind every project.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.ecosystemHeading">Ecosystem</h4>
+        <a href="../memorychain/">MemoryChain</a>
+        <a href="../pulseevents/">PulseEvents</a>
+        <a href="../casinocore/">Casino Core</a>
+        <a href="../safetrade/">SafeTrade</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.resourcesHeading">Resources</h4>
+        <a href="../changelog/" data-i18n="nav.changelog">Changelog</a>
+        <a href="../download-pending.html" data-i18n="nav.releaseQueue">Release Queue</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.connectHeading">Connect</h4>
+        <a href="../contact/" data-i18n="nav.contact">Contact</a>
+        <a href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener" data-i18n="nav.discord">Discord</a>
+      </div>
     </div>
-
-    <div class="footer-links">
-      <a href="../">Home</a>
-      <a href="../../contact/">Contact</a>
+    <div class="footer-bottom">
+      <span class="footer-copy" data-i18n="footer.copy">PluggLAB · built by Wilczek</span>
     </div>
   </footer>
-
 </div>
 
+<script src="../assets/js/main.js"></script>
 <script src="../assets/js/i18n.js"></script>
-<script src="../assets/js/nav.js"></script>
-<script src="../assets/js/scroll.js"></script>
-<script src="../assets/js/project.js"></script>
-<script async="async" data-cfasync="false" src="https://consciousdunkvastly.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
-<div id="container-3d7be051cf59b23d51d6dded9a6578da"></div>
-
 </body>
 </html>

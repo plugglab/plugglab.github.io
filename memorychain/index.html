@@ -3,259 +3,227 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="MemoryChain is a key PluggLAB plugin receiving updates as part of the broader ecosystem refresh.">
-  <meta name="theme-color" content="#07080f">
-  <meta property="og:title" content="MemoryChain | PluggLAB">
-  <meta property="og:description" content="MemoryChain is one of several PluggLAB plugins being improved across the ecosystem update campaign.">
-  <meta property="og:type" content="website">
+  <meta name="description" content="MemoryChain is the shared plugin architecture and update foundation behind every PluggLAB release.">
+  <meta name="theme-color" content="#060009">
+  <meta property="og:title" content="PluggLAB | MemoryChain">
+  <meta property="og:description" content="MemoryChain is the shared plugin architecture and update foundation behind every PluggLAB release.">
+  <meta property="og:image" content="https://plugglab.github.io/assets/images/og-image.png">
   <title>PluggLAB | MemoryChain</title>
-  <link rel="icon" href="../assets/images/memorychain.n.png" sizes="any">
+  <link rel="canonical" href="https://plugglab.github.io/memorychain/">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/images/favicon-32.png" sizes="32x32">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/base.css">
-  <link rel="stylesheet" href="../assets/css/pages.css">
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/project.css">
-  <link rel="stylesheet" href="../assets/css/memorychain.css">
 </head>
 <body class="page-project page-memorychain">
+<a class="skip-link" href="#main-content">Skip to content</a>
 <div class="site-shell">
   <header class="navbar">
-    <nav class="nav-container">
+    <nav class="nav-container" aria-label="Primary">
       <div class="nav-brandbar">
-        <a class="nav-logo" href="../">PluggLab</a>
-        <p class="nav-status">Project hub for plugins, packs, and experiments</p>
+        <a class="nav-logo" href="../">PluggLAB</a>
+        <p class="nav-status" data-i18n="nav.statusShort">Project hub for plugins, packs, and experiments</p>
       </div>
       <div class="nav-menu-row">
         <div class="nav-links" id="site-nav-links">
-          <a href="../">Home</a>
-          <a href="../#featured">Featured</a>
-          <a href="../#projects">Projects</a>
-          <a href="../contact/">Contact</a>
+          <a href="../" data-i18n="nav.home">Home</a>
+          <a href="../#projects" data-i18n="nav.projects">Projects</a>
+          <a href="./" aria-current="page">MemoryChain</a>
+          
+          <a href="../changelog/" data-i18n="nav.changelog">Changelog</a>
+          <a href="../contact/" data-i18n="nav.contact">Contact</a>
         </div>
-        <div class="nav-right"><a class="nav-cta" href="https://plugglabstudio.itch.io/plugglabapp" target="_blank" rel="noopener">↓ App</a><button class="nav-toggle" type="button">
-          <span></span><span></span><span></span>
-        </button></div>
+        <div class="nav-right">
+          <button class="nav-search-btn" type="button" data-open-command aria-label="Quick jump">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <span class="kbd-label">Jump</span><kbd>⌘K</kbd>
+          </button>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
     </nav>
   </header>
-<script async="async" data-cfasync="false" src="https://consciousdunkvastly.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
-<div id="container-3d7be051cf59b23d51d6dded9a6578da"></div>
 
-  <main class="page-main">
-    <section class="page-hero page-hero-blue">
-      <p class="section-label">Plugin Update</p>
-      <h1 class="project-title">MemoryChain</h1>
-      <p class="section-copy">
-        One of several PluggLAB plugins currently receiving updates as part of a broader ecosystem refresh.
-        <strong>Free plugin built for modular server management and future integrations.</strong>
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="https://discord.gg/ZMje3neEmK" target="_blank">Follow Development</a>
-        <a class="btn btn-secondary" href="../download-pending.html">Download</a>
-        <a class="btn btn-ghost" href="../">Support</a>
-      </div>
-      <div class="hero-spotlight">
-        <div class="spotlight-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M9 12l2 2 4-4"/>
-            <path d="M21 12.79A9 9 0 1111.21 3"/>
-            <path d="M22 12h-4"/>
-          </svg>
-          <div>
-            <h4>Server Management</h4>
-            <p>Advanced player tracking, data persistence, and server analytics.</p>
-          </div>
-        </div>
-        <div class="spotlight-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M4 20h16"/>
-            <path d="M6 20V6a2 2 0 012-2h8a2 2 0 012 2v14"/>
-          </svg>
-          <div>
-            <h4>Shared Update</h4>
-            <p>Part of a broader set of PluggLAB plugin improvements rolling out together.</p>
-          </div>
-        </div>
-        <div class="spotlight-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M9 12l2 2 4-4"/>
-          </svg>
-          <div>
-            <h4>Community Support</h4>
-            <p>Free access, lifetime updates, and feedback-driven improvements through Discord.</p>
-          </div>
-        </div>
-      </div>
-      <p class="hero-extra">MemoryChain is part of the PluggLAB update wave. <strong>Free to use while the ecosystem grows.</strong></p>
-    </section>
+  <script async="async" data-cfasync="false" src="https://pl30098233.effectivecpmnetwork.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
+  <div id="container-3d7be051cf59b23d51d6dded9a6578da" class="ad-slot"></div>
 
-    <section class="meta-layout">
-      <article class="glass-card status-card color-blue">
-        <span class="project-tag">Free Plugin</span>
-        <h2>Development State</h2>
-        <p>
-          MemoryChain is currently in early-stage development. Shared plugin systems and integration structure
-          are being defined before moving into full implementation.
-        </p>
-        <div class="progress-track">
-          <div class="progress-bar progress-blue width-12"></div>
+  <main class="page-main" id="main-content">
+    <section class="project-hero">
+      <div class="project-hero-icon"><img src="../assets/images/memorychain.n.png" alt="MemoryChain icon"></div>
+      <div class="project-hero-meta">
+        <div class="project-hero-tags">
+          <span class="project-tag">Plugin · Infrastructure</span>
+          <span class="signal-pill green">Stable</span>
+          <span class="price-tag" style="font-size:1rem;">Free</span>
         </div>
-        <p class="progress-note">Shared plugin architecture is being refined as part of a wider PluggLAB release wave.</p>
-        <div class="pricing-info">
-          <div class="price-tag">Free</div>
-          <div class="price-details">
-            <span>Free download</span>
-            <span>Lifetime updates</span>
-            <span>Community support</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="glass-card meta-card">
-        <h3>Project Snapshot</h3>
-        <dl class="meta-grid">
-          <dt>Status</dt>
-          <dd>Active development</dd>
-          <dt>Role</dt>
-          <dd>Active plugin</dd>
-          <dt>Type</dt>
-          <dd>Minecraft plugin</dd>
-          <dt>Stage</dt>
-          <dd>Update & polish</dd>
-          <dt>Release Type</dt>
-          <dd>Free Plugin</dd>
-          <dt>Priority</dt>
-          <dd>High</dd>
-          <dt>Pricing</dt>
-          <dd>Free</dd>
-          <dt>Support</dt>
-          <dd>Community + updates</dd>
-        </dl>
-      </article>
-    </section>
-
-    <section class="feature-grid">
-      <div class="feature-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 12l2 2 4-4"/>
-          <path d="M21 12.79A9 9 0 1111.21 3"/>
-          <path d="M22 12h-4"/>
-        </svg>
-        <div>
-          <h4>Player Tracking</h4>
-          <p>Advanced player data persistence and analytics. Track gameplay patterns and server activity.</p>
-        </div>
-      </div>
-      <div class="feature-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M4 20h16"/>
-          <path d="M6 20V6a2 2 0 012-2h8a2 2 0 012 2v14"/>
-        </svg>
-        <div>
-          <h4>Ecosystem Integration</h4>
-          <p>Central hub for all PluggLAB plugins. Unified data management and cross-plugin features.</p>
-        </div>
-      </div>
-      <div class="feature-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
-          <path d="M14 2v6h6"/>
-          <path d="M16 13H8"/>
-          <path d="M16 17H8"/>
-          <path d="M10 9H8"/>
-        </svg>
-        <div>
-          <h4>Server Analytics</h4>
-          <p>Comprehensive server monitoring and performance metrics. Real-time data visualization.</p>
-        </div>
-      </div>
-      <div class="feature-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z"/>
-          <path d="M8 11h8"/>
-        </svg>
-        <div>
-          <h4>Admin Dashboard</h4>
-          <p>Powerful web-based admin interface. Manage players, view statistics, and configure settings.</p>
-        </div>
-      </div>
-      <div class="feature-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="3"/>
-          <path d="M12 2v2"/>
-          <path d="M12 20v2"/>
-          <path d="M2 12h2"/>
-          <path d="M20 12h2"/>
-        </svg>
-        <div>
-          <h4>Custom Events</h4>
-          <p>Create and manage custom server events. Automated triggers and reward systems.</p>
-        </div>
-      </div>
-      <div class="feature-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 12.79A9 9 0 1111.21 3"/>
-          <path d="M22 12h-4"/>
-        </svg>
-        <div>
-          <h4>API Integration</h4>
-          <p>RESTful API for external integrations. Connect with web services and third-party tools.</p>
+        <h1>MemoryChain</h1>
+        <p class="section-copy">The backbone of the PluggLAB ecosystem — shared player data, config syncing, and a single update channel for every other plugin.</p>
+        <div class="project-hero-actions">
+          <a class="btn btn-primary" href="https://modrinth.com/plugin/memorychain" target="_blank" rel="noopener">Download on Modrinth</a>
+          <a class="btn btn-secondary" href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener">Discord Support</a>
         </div>
       </div>
     </section>
 
-    <section class="wip-layout">
-      <article class="glass-card notes-card">
-        <h3>Ecosystem Direction</h3>
-        <ul class="feature-list">
-          <li>Part of the broader PluggLAB plugin update wave</li>
-          <li>Supports shared integrations and future project expansion</li>
-          <li>Built with scalability and modularity in mind</li>
-          <li>Designed for Paper/Spigot 1.21+ servers</li>
-          <li>Will expand with future systems and integrations</li>
-          <li>Modern Java-based architecture with clean API design</li>
-        </ul>
+    <section class="reveal">
+      <div class="section-heading">
+        <p class="section-label">Capabilities</p>
+        <h2>What MemoryChain does</h2>
+        <p class="section-copy">MemoryChain doesn't add gameplay features on its own — it gives every other PluggLAB plugin a shared foundation to build on.</p>
+      </div>
+      <div class="feature-grid">
+        
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div>
+          <h3>Persistent Player Memory</h3>
+          <p>Player data, preferences, and cross-plugin flags persist reliably across restarts and reloads.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M9 17H7a5 5 0 010-10h2"/><path d="M15 7h2a5 5 0 010 10h-2"/><path d="M8 12h8"/></svg></div>
+          <h3>Cross-Plugin Data Sharing</h3>
+          <p>Casino Core, SafeTrade, and PulseEvents all read and write through the same MemoryChain layer instead of duplicating storage logic.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 12a9 9 0 11-6.2-8.56"/><path d="M12 7v5l3 2"/></svg></div>
+          <h3>Optimized Storage</h3>
+          <p>Batched writes and in-memory caching keep disk I/O low even on busy servers with hundreds of concurrent players.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
+          <h3>One Update Channel</h3>
+          <p>Every PluggLAB plugin checks MemoryChain for shared config versions, so update rollouts stay consistent across the whole stack.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 9 4.6-.3 8-4 8-9V5l-8-3z"/></svg></div>
+          <h3>Safe Migrations</h3>
+          <p>Schema changes migrate existing player data automatically — no manual re-entry needed after an update.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+          <h3>Developer API</h3>
+          <p>A lightweight API lets future PluggLAB plugins hook into shared player memory without redefining their own storage layer.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="rune-divider" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 22 12 12 22 2 12 12 2Z"/><circle cx="12" cy="12" r="2.4"/></svg>
+    </div>
+
+    <section class="reveal">
+      <div class="section-heading">
+        <p class="section-label">Details</p>
+        <h2>Requirements &amp; Links</h2>
+      </div>
+      <div class="meta-grid">
+        
+        <article class="glass-card meta-card">
+          <span class="meta-label">Minecraft Version</span>
+          <strong>1.20 – 1.21</strong>
+        </article>
+        <article class="glass-card meta-card">
+          <span class="meta-label">Server Software</span>
+          <strong>Paper / Spigot</strong>
+        </article>
+        <article class="glass-card meta-card">
+          <span class="meta-label">Dependencies</span>
+          <strong>None</strong>
+        </article>
+        <article class="glass-card meta-card">
+          <span class="meta-label">License</span>
+          <strong>Free &amp; Open</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="section-heading">
+        <p class="section-label">Preview</p>
+        <h2>In-game look</h2>
+        <p class="section-copy">Screenshots are added as each build is captured on the live test server — join Discord to see the newest previews first.</p>
+      </div>
+      <div class="media-strip">
+        <div class="media-frame">Player memory panel</div><div class="media-frame">Cross-plugin sync log</div><div class="media-frame">Admin config viewer</div>
+      </div>
+    </section>
+
+    
+
+    <section class="reveal">
+      <article class="glass-card cta-band">
+        <div>
+          <h3>Ready to add MemoryChain to your server?</h3>
+          <p>MemoryChain installs first — every other PluggLAB plugin builds on top of it automatically.</p>
+        </div>
+        <div class="cta-band-actions">
+          <a class="btn btn-primary" href="https://modrinth.com/plugin/memorychain" target="_blank" rel="noopener">Download on Modrinth</a>
+          <a class="btn btn-secondary" href="../contact/">Ask a Question</a>
+        </div>
       </article>
-      <article class="glass-card notes-card">
-        <h3>Next Phase</h3>
-        <ul class="status-list">
-          <li>Finalize plugin identity and architecture</li>
-          <li>Define first gameplay / system loop</li>
-          <li>Prepare initial showcase and demo server</li>
-          <li>Prepare public access and release notes</li>
-          <li>Expand documentation and roadmap</li>
-        </ul>
-      </article>
+    </section>
+
+    <section class="reveal">
+      <div class="section-heading">
+        <p class="section-label">More from PluggLAB</p>
+        <h2>Related Projects</h2>
+      </div>
+      <div class="related-grid">
+        
+        <a class="glass-card related-card" href="../pulseevents/">
+          <div class="related-icon"><img src="../assets/images/pulseevents_n.png" alt="PulseEvents icon" loading="lazy"></div>
+          <div><strong>PulseEvents</strong><br><span>Plugin · Events</span></div>
+        </a>
+
+        <a class="glass-card related-card" href="../casinocore/">
+          <div class="related-icon icon-pad"><img src="../assets/images/icons/icon-casinocore.svg" alt="Casino Core icon" loading="lazy"></div>
+          <div><strong>Casino Core</strong><br><span>Plugin · Economy</span></div>
+        </a>
+
+        <a class="glass-card related-card" href="../safetrade/">
+          <div class="related-icon icon-pad"><img src="../assets/images/icons/icon-safetrade.svg" alt="SafeTrade icon" loading="lazy"></div>
+          <div><strong>SafeTrade</strong><br><span>Plugin · Utility</span></div>
+        </a>
+      </div>
     </section>
   </main>
 
-  <section class="support-embed" aria-label="Support Wilczek on Ko-fi">
-    <div class="glass-card">
-      <iframe id="kofiframe" src="https://ko-fi.com/wilczek016/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none;width:100%;padding:4px;background:#f9f9f9;" height="712" title="wilczek016"></iframe>
-    </div>
-  </section>
-
   <footer class="site-footer">
-    <div class="footer-brand">
-      <h2>PluggLab</h2>
-      <p>Shared infrastructure updates are moving the entire ecosystem forward.</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h2>PluggLAB</h2>
+        <p data-i18n="footer.tagline">A focused Minecraft plugin lab — free releases, clear updates, and a shared architecture behind every project.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.ecosystemHeading">Ecosystem</h4>
+        <a href="../memorychain/">MemoryChain</a>
+        <a href="../pulseevents/">PulseEvents</a>
+        <a href="../casinocore/">Casino Core</a>
+        <a href="../safetrade/">SafeTrade</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.resourcesHeading">Resources</h4>
+        <a href="../changelog/" data-i18n="nav.changelog">Changelog</a>
+        <a href="../download-pending.html" data-i18n="nav.releaseQueue">Release Queue</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.connectHeading">Connect</h4>
+        <a href="../contact/" data-i18n="nav.contact">Contact</a>
+        <a href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener" data-i18n="nav.discord">Discord</a>
+      </div>
     </div>
-    <div class="footer-links">
-      <a href="../">Home</a>
-      <a href="pulseevents/">PulseEvents</a>
-      <a href="novapixel/">NovaPixel</a>
-      <a href="pvpflow/">PvPFlow</a>
+    <div class="footer-bottom">
+      <span class="footer-copy" data-i18n="footer.copy">PluggLAB · built by Wilczek</span>
     </div>
   </footer>
 </div>
 
-<script src="../assets/js/nav.js"></script>
-<script src="../assets/js/scroll.js"></script>
-<script src="../assets/js/project.js"></script>
-<script async="async" data-cfasync="false" src="https://consciousdunkvastly.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
-<div id="container-3d7be051cf59b23d51d6dded9a6578da"></div>
-
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/i18n.js"></script>
 </body>
 </html>

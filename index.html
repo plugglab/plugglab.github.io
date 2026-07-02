@@ -3,141 +3,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PluggLAB is a Minecraft plugin hub for stable, community-ready releases, free tools, and a streamlined approval workflow.">
-  <meta name="theme-color" content="#5b8fff">
-  <meta property="og:title" content="PluggLAB | Minecraft Plugin Hub">
-  <meta property="og:description" content="Discover stable Minecraft plugins, free content, and progress updates from PluggLAB.">
+  <meta name="description" content="PluggLAB is a Minecraft plugin lab for stable, free releases, community tools, and a transparent release queue." data-i18n-attr="content:meta.homeDescription">
+  <meta name="theme-color" content="#060009">
+  <meta property="og:title" content="PluggLAB | Minecraft Plugin Hub" data-i18n-attr="content:meta.homeOgTitle">
+  <meta property="og:description" content="Discover free, actively developed Minecraft plugins and packs from PluggLAB — MemoryChain, PulseEvents, Casino Core, and more." data-i18n-attr="content:meta.homeOgDescription">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://plugglab.github.io/assets/images/og-image.png">
+  <meta property="og:url" content="https://plugglab.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
   <title>PluggLAB | Minecraft Plugin Hub</title>
-  <link rel="icon" href="assets/images/favicon.png" sizes="any">
+  <link rel="canonical" href="https://plugglab.github.io/">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/images/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/images/favicon-180.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/home.css">
 </head>
 <body class="page-home">
+<a class="skip-link" href="#main-content">Skip to content</a>
 <div class="site-shell">
   <header class="navbar">
-    <nav class="nav-container">
+    <nav class="nav-container" aria-label="Primary">
       <div class="nav-brandbar">
-        <a class="nav-logo" href="./">PluggLAB</a>
-        <p class="nav-status">Innovation lab for Minecraft plugins &amp; experiences</p>
+        <a class="nav-logo" href="./">
+          <svg viewBox="0 0 64 64" fill="none"><path d="M32 4 58 32 32 60 6 32 32 4Z" stroke="url(#navg)" stroke-width="3"/><path d="M32 16c-7.2 0-12 5.4-12 12.4 0 5 2.7 8.4 6 10.6V44h4v-3h4v3h4v-4.9c3.3-2.2 6-5.7 6-10.7C44 21.4 39.2 16 32 16z" fill="url(#navg2)"/><circle cx="27.5" cy="27.5" r="2.3" fill="#060009"/><circle cx="36.5" cy="27.5" r="2.3" fill="#060009"/><defs><linearGradient id="navg" x1="0" y1="0" x2="64" y2="64"><stop offset="0%" stop-color="#e8dff5"/><stop offset="50%" stop-color="#c084fc"/><stop offset="100%" stop-color="#4dc9ff"/></linearGradient><linearGradient id="navg2" x1="0" y1="0" x2="64" y2="64"><stop offset="0%" stop-color="#f6c143"/><stop offset="60%" stop-color="#e0263f"/><stop offset="100%" stop-color="#8b2be2"/></linearGradient></defs></svg>
+          PluggLAB
+        </a>
+        <p class="nav-status" data-i18n="nav.statusShort">Innovation lab for Minecraft plugins &amp; experiences</p>
       </div>
       <div class="nav-menu-row">
         <div class="nav-links" id="site-nav-links">
-          <a href="#home">Home</a>
-          <a href="#featured">Overview</a>
-          <a href="#projects">Projects</a>
-          <a href="#about">About</a>
-          <a href="contact/">Contact</a>
-          <a href="https://discord.gg/ZMje3neEmK" target="_blank">Discord</a>
-          <a href="heads/" target="_blank">Head API</a>
+          <a href="#home" data-i18n="nav.home">Home</a>
+          <a href="#featured" data-i18n="nav.overview">Overview</a>
+          <a href="#projects" data-i18n="nav.projects">Projects</a>
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="changelog/" data-i18n="nav.changelog">Changelog</a>
+          <a href="contact/" data-i18n="nav.contact">Contact</a>
+          <a href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener" data-i18n="nav.discord">Discord</a>
         </div>
-        <button class="nav-toggle" type="button" aria-label="Toggle navigation">
-          <span></span><span></span><span></span>
-        </button>
+        <div class="nav-right">
+          <button class="nav-search-btn" type="button" data-open-command aria-label="Quick jump">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <span class="kbd-label">Jump</span>
+            <kbd>⌘K</kbd>
+          </button>
+          <a class="nav-cta" href="https://plugglabstudio.itch.io/plugglabapp" target="_blank" rel="noopener">↓ <span data-i18n="nav.app">App</span></a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links" aria-label="Toggle navigation" data-i18n-attr="aria-label:nav.toggle">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
     </nav>
   </header>
 
-  <main class="page-main">
+  <script async="async" data-cfasync="false" src="https://pl30098233.effectivecpmnetwork.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
+  <div id="container-3d7be051cf59b23d51d6dded9a6578da" class="ad-slot"></div>
+
+  <main class="page-main" id="main-content">
     <section class="hero-section" id="home">
-      <div class="hero-grid"></div>
       <div class="hero-glow hero-glow-left"></div>
       <div class="hero-glow hero-glow-right"></div>
       <div class="hero-content">
-        <p class="hero-kicker">Minecraft Development Hub</p>
+        <p class="hero-kicker" data-i18n="home.heroKicker">Minecraft Development Hub</p>
         <h1 class="hero-title">PluggLAB</h1>
-        <p class="hero-subtitle">
+        <p class="hero-subtitle" data-i18n="home.heroSubtitle">
           A focused Minecraft plugin lab delivering stable releases, free tools, and clear project progress.
           Browse live plugins, the shared release queue, and the latest updates in one polished view.
-          Updates are rolling out across the lab over the next 1-2 weeks.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">Projects</a>
-          <a class="btn btn-secondary" href="download-pending.html">Approval Status</a>
-          <a class="btn btn-ghost" href="https://discord.gg/ZMje3neEmK" target="_blank">Discord</a>
+          <a class="btn btn-primary" href="#projects" data-i18n="home.heroBtnProjects">Projects</a>
+          <a class="btn btn-secondary" href="download-pending.html" data-i18n="home.heroBtnQueue">Release Queue</a>
+          <a class="btn btn-ghost" href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener" data-i18n="home.heroBtnDiscord">Discord</a>
         </div>
         <div class="hero-shortcuts">
           <a class="shortcut-card" href="#projects">
-            <span class="shortcut-label">Project Hub</span>
-            <strong>All Plugins</strong>
+            <span class="shortcut-label" data-i18n="home.shortcutHubLabel">Project Hub</span>
+            <strong data-i18n="home.shortcutHubValue">All Plugins</strong>
           </a>
           <a class="shortcut-card" href="download-pending.html">
-            <span class="shortcut-label">Release Queue</span>
-            <strong>Approval Board</strong>
+            <span class="shortcut-label" data-i18n="home.shortcutQueueLabel">Release Queue</span>
+            <strong data-i18n="home.shortcutQueueValue">Approval Board</strong>
           </a>
           <a class="shortcut-card" href="contact/">
-            <span class="shortcut-label">Community</span>
-            <strong>Support</strong>
+            <span class="shortcut-label" data-i18n="home.shortcutCommunityLabel">Community</span>
+            <strong data-i18n="home.shortcutCommunityValue">Support</strong>
           </a>
         </div>
         <div class="hero-metrics">
           <div class="hero-metric">
             <span class="hero-metric-value" data-count="7">0</span>
-            <span class="hero-metric-label">Live projects</span>
+            <span class="hero-metric-label" data-i18n="home.metricProjects">Live projects</span>
           </div>
           <div class="hero-metric">
-            <span class="hero-metric-value" data-count="3">0</span>
-            <span class="hero-metric-label">Free plugins</span>
+            <span class="hero-metric-value" data-count="7">0</span>
+            <span class="hero-metric-label" data-i18n="home.metricFree">Free plugins</span>
           </div>
           <div class="hero-metric">
             <span class="hero-metric-value" data-count="18">0</span>
-            <span class="hero-metric-label">Planned modules</span>
+            <span class="hero-metric-label" data-i18n="home.metricModules">Planned modules</span>
           </div>
         </div>
       </div>
       <aside class="hero-panel glass-card" aria-label="PluggLAB overview">
         <div class="hero-panel-header">
-          <span class="hero-panel-kicker">Project Access</span>
-          <span class="hero-panel-status">Live overview</span>
+          <span class="hero-panel-kicker" data-i18n="home.panelKicker">Project Access</span>
+          <span class="hero-panel-status" data-i18n="home.panelStatus">Live overview</span>
         </div>
         <div class="hero-panel-main">
-          <h2>Fastest paths first</h2>
-          <p>Open free plugins, check what is pending approval, or jump straight into the full project list from one compact panel.</p>
+          <h2 data-i18n="home.panelTitle">Fastest paths first</h2>
+          <p data-i18n="home.panelBody">Open free plugins, check what is pending approval, or jump straight into the full project list from one compact panel.</p>
         </div>
         <div class="hero-stack">
-            <div class="stack-item">
-            <span class="stack-label">Free plugins</span>
-            <strong>All Releases</strong>
-            <span class="stack-note">Shared update campaign across the lab</span>
+          <div class="stack-item">
+            <span class="stack-label" data-i18n="home.stackFreeLabel">Free plugins</span>
+            <strong data-i18n="home.stackFreeValue">All Releases</strong>
+            <span class="stack-note" data-i18n="home.stackFreeNote">Shared update campaign across the lab</span>
           </div>
           <div class="stack-item">
-            <span class="stack-label">Release workflow</span>
-            <strong>Approval Board</strong>
-            <span class="stack-note">One queue for pending builds</span>
+            <span class="stack-label" data-i18n="home.stackQueueLabel">Release workflow</span>
+            <strong data-i18n="home.stackQueueValue">Approval Board</strong>
+            <span class="stack-note" data-i18n="home.stackQueueNote">One queue for pending builds</span>
           </div>
           <div class="stack-item">
-            <span class="stack-label">Community</span>
-            <strong>Discord</strong>
-            <span class="stack-note">Feedback and support for every project</span>
+            <span class="stack-label" data-i18n="home.stackCommunityLabel">Community</span>
+            <strong data-i18n="home.stackCommunityValue">Discord</strong>
+            <span class="stack-note" data-i18n="home.stackCommunityNote">Feedback and support for every project</span>
           </div>
         </div>
         <div class="hero-panel-actions">
-          <a class="btn btn-primary" href="#projects">Browse Projects</a>
-          <button class="btn btn-secondary" type="button" id="copy-discord">Copy Discord</button>
+          <a class="btn btn-primary" href="#projects" data-i18n="home.panelBrowse">Browse Projects</a>
+          <button class="btn btn-secondary" type="button" id="copy-discord" data-i18n="home.panelCopy">Copy Discord</button>
         </div>
       </aside>
     </section>
 
-    <section class="featured-section" id="featured">
+    <div class="rune-divider" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 22 12 12 22 2 12 12 2Z"/><circle cx="12" cy="12" r="2.4"/></svg>
+    </div>
+
+    <section class="featured-section reveal" id="featured">
       <div class="section-heading">
-        <p class="section-label">Project Overview</p>
-        <h2>General Project Status</h2>
-          <p class="section-copy">A broader view of the lab with stable releases, free plugins, and a shared release queue for all pending builds.</p>
+        <p class="section-label" data-i18n="home.featuredLabel">Project Overview</p>
+        <h2 data-i18n="home.featuredTitle">General Project Status</h2>
+        <p class="section-copy" data-i18n="home.featuredCopy">A broader view of the lab with stable releases, free plugins, and a shared release queue for all pending builds.</p>
       </div>
       <div class="featured-layout">
         <article class="glass-card featured-main">
-          <span class="project-tag">Lab Summary</span>
-          <h3>Plugins, packs, and approvals</h3>
-          <p>PluggLAB now presents the full plugin ecosystem with a shared release queue, clear free-access labels, and a faster path from development to download.</p>
+          <span class="project-tag" data-i18n="home.featuredMainTag">Lab Summary</span>
+          <h3 data-i18n="home.featuredMainTitle">Plugins, packs, and approvals</h3>
+          <p data-i18n="home.featuredMainBody">PluggLAB now presents the full plugin ecosystem with a shared release queue, clear free-access labels, and a faster path from development to download.</p>
           <div class="progress-track">
-            <div class="progress-bar width-60"></div>
+            <div class="progress-bar" style="width:60%"></div>
           </div>
-          <p class="progress-note">A wider site refresh is underway to make every plugin easier to find and every release easier to follow.</p>
+          <p class="progress-note" data-i18n="home.featuredMainNote">A wider site refresh is underway to make every plugin easier to find and every release easier to follow.</p>
           <div class="pricing-info">
-            <span class="price-tag">3 Free Plugins</span>
+            <span class="price-tag" data-i18n="common.free">Free</span>
             <div class="price-details">
               <span>MemoryChain</span>
               <span>Casino Core</span>
@@ -147,337 +171,315 @@
         </article>
         <div class="featured-side">
           <article class="glass-card feature-brief">
-            <span class="project-tag">Project Rules</span>
+            <span class="project-tag" data-i18n="home.featuredRulesTag">Project Rules</span>
             <ul class="brief-list">
-              <li>Every free plugin is marked clearly</li>
-            <li>Pending builds now use one shared release queue</li>
-              <li>Plugins and packs stay separated by filters</li>
+              <li data-i18n="home.featuredRule1">Every free plugin is marked clearly</li>
+              <li data-i18n="home.featuredRule2">Pending builds now use one shared release queue</li>
+              <li data-i18n="home.featuredRule3">Plugins and packs stay separated by filters</li>
             </ul>
           </article>
           <article class="glass-card feature-brief">
-            <span class="project-tag">Navigation</span>
-            <p>Use the hero shortcuts for common actions, then use filters below when you want to narrow the list by type, free status, or work in progress.</p>
+            <span class="project-tag" data-i18n="home.featuredNavTag">Navigation</span>
+            <p data-i18n="home.featuredNavBody">Use the hero shortcuts for common actions, then use filters below when you want to narrow the list by type, free status, or work in progress.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="projects-section" id="projects">
+    <section class="projects-section reveal" id="projects">
       <div class="section-heading">
-        <p class="section-label">Projects</p>
-        <h2>All Systems</h2>
-        <p class="section-copy">Active PluggLAB ecosystem projects.</p>
+        <p class="section-label" data-i18n="home.projectsLabel">Projects</p>
+        <h2 data-i18n="home.projectsTitle">All Systems</h2>
+        <p class="section-copy" data-i18n="home.projectsCopy">Active PluggLAB ecosystem projects.</p>
       </div>
+
       <div class="project-toolbar glass-card">
         <div class="toolbar-main">
           <div class="project-filters" role="tablist" aria-label="Project filters">
-            <button class="filter-chip is-active" type="button" data-filter="all">All</button>
-            <button class="filter-chip" type="button" data-filter="plugin">Plugins</button>
-            <button class="filter-chip" type="button" data-filter="pack">Packs</button>
-            <button class="filter-chip" type="button" data-filter="free">Free</button>
-            <button class="filter-chip" type="button" data-filter="wip">In Development</button>
+            <button class="filter-chip is-active" type="button" data-filter="all" data-i18n="home.filterAll">All</button>
+            <button class="filter-chip" type="button" data-filter="plugin" data-i18n="home.filterPlugin">Plugins</button>
+            <button class="filter-chip" type="button" data-filter="pack" data-i18n="home.filterPack">Packs</button>
+            <button class="filter-chip" type="button" data-filter="free" data-i18n="home.filterFree">Free</button>
+            <button class="filter-chip" type="button" data-filter="wip" data-i18n="home.filterWip">In Development</button>
           </div>
-          <p class="project-results" id="project-results">Showing all projects</p>
+          <p class="project-results" id="project-results" data-i18n="home.resultsAll">Showing all projects</p>
         </div>
         <div class="toolbar-actions">
-          <a class="toolbar-link" href="download-pending.html">Open Approval Board</a>
-          <a class="toolbar-link" href="contact/">Request a Plugin</a>
+          <a class="toolbar-link" href="download-pending.html" data-i18n="home.toolbarQueue">Open Approval Board</a>
+          <a class="toolbar-link" href="contact/" data-i18n="home.toolbarRequest">Request a Plugin</a>
         </div>
       </div>
+
       <div class="project-summary-row">
         <article class="glass-card summary-card">
-          <span class="project-tag">Free</span>
-          <strong>All projects</strong>
-          <p>Every plugin and pack in PluggLAB is free and actively developed.</p>
+          <span class="project-tag" data-i18n="home.summaryFreeTag">Free</span>
+          <strong data-i18n="home.summaryFreeTitle">All projects</strong>
+          <p data-i18n="home.summaryFreeBody">Every plugin and pack in PluggLAB is free and actively developed.</p>
         </article>
         <article class="glass-card summary-card">
-          <span class="project-tag">Pending</span>
-          <strong>Release queue</strong>
-          <p>Any plugin waiting for release now routes through one shared release workflow instead of manual status entries.</p>
+          <span class="project-tag" data-i18n="home.summaryPendingTag">Pending</span>
+          <strong data-i18n="home.summaryPendingTitle">Release queue</strong>
+          <p data-i18n="home.summaryPendingBody">Any plugin waiting for release now routes through one shared release workflow instead of manual status entries.</p>
         </article>
         <article class="glass-card summary-card">
-          <span class="project-tag">Browse</span>
-          <strong>Faster scanning</strong>
-          <p>Project cards now expose type, availability, and the primary next action at a glance.</p>
+          <span class="project-tag" data-i18n="home.summaryBrowseTag">Browse</span>
+          <strong data-i18n="home.summaryBrowseTitle">Faster scanning</strong>
+          <p data-i18n="home.summaryBrowseBody">Project cards now expose type, availability, and the primary next action at a glance.</p>
         </article>
       </div>
+
       <div class="project-toolbar project-toolbar-search glass-card">
         <label class="project-search" for="project-search">
-          <span>Search</span>
-          <input id="project-search" type="search" placeholder="Search projects">
+          <span data-i18n="home.searchLabel">Search</span>
+          <input id="project-search" type="search" placeholder="Search projects" data-i18n-attr="placeholder:home.searchPlaceholder">
         </label>
-        <div class="search-hint">Search by project name, type, status, or description.</div>
+        <div class="search-hint" data-i18n="home.searchHint">Search by project name, type, status, or description.</div>
       </div>
+
       <div class="projects-grid">
-        <article class="glass-card project-card" data-tags="plugin free core" data-name="MemoryChain">
-          <div class="project-icon">
-            <img src="assets/images/memorychain.n.png" alt="MemoryChain Icon">
-          </div>
+        <article class="glass-card project-card" data-tags="plugin free core" data-name="MemoryChain" data-modrinth="memorychain">
+          <div class="project-icon"><img src="assets/images/memorychain.n.png" alt="MemoryChain icon" loading="lazy"></div>
           <div class="project-meta-line">
-            <span class="project-mini-tag">Plugin</span>
-            <span class="project-mini-tag free-tag">Free</span>
+            <span class="project-mini-tag" data-i18n="home.filterPlugin">Plugin</span>
+            <span class="project-mini-tag free-tag" data-i18n="common.free">Free</span>
           </div>
           <h3>MemoryChain</h3>
-          <p>Shared plugin architecture and update foundation. <strong>Free plugin.</strong></p>
+          <p data-i18n="projectCard.memorychainDesc">Shared plugin architecture and update foundation.</p>
           <div class="project-status-row">
-            <span class="signal-pill cyan">Free Access</span>
-            <span class="project-status-text">Shared infrastructure updates</span>
+            <span class="signal-pill cyan" data-i18n="projectCard.freeAccess">Free Access</span>
+            <span class="project-status-text" data-i18n="projectCard.statusInfra">Shared infrastructure updates</span>
           </div>
-          <div class="project-pricing"><span class="price-tag">Free</span></div>
-          <a class="btn btn-primary" href="memorychain/">Open</a>
+          <div class="project-pricing"><span class="price-tag" data-i18n="common.free">Free</span></div>
+          <a class="btn btn-primary" href="memorychain/" data-i18n="common.btnOpen">Open</a>
         </article>
 
-        <article class="glass-card project-card" data-tags="plugin events utility free" data-name="PulseEvents">
-          <div class="project-icon">
-            <img src="assets/images/pulseevents_n.png" alt="PulseEvents Icon">
-          </div>
+        <article class="glass-card project-card" data-tags="plugin events utility free" data-name="PulseEvents" data-modrinth="pulseevents">
+          <div class="project-icon"><img src="assets/images/pulseevents_n.png" alt="PulseEvents icon" loading="lazy"></div>
           <div class="project-meta-line">
-            <span class="project-mini-tag">Plugin</span>
-            <span class="project-mini-tag free-tag">Free</span>
+            <span class="project-mini-tag" data-i18n="home.filterPlugin">Plugin</span>
+            <span class="project-mini-tag free-tag" data-i18n="common.free">Free</span>
           </div>
           <h3>PulseEvents</h3>
-          <p>Dynamic event system for Minecraft servers. <strong>Free plugin.</strong></p>
+          <p data-i18n="projectCard.pulseeventsDesc">Dynamic event system for Minecraft servers.</p>
           <div class="project-status-row">
-            <span class="signal-pill cyan">Free Access</span>
-            <span class="project-status-text">Event automation tools</span>
+            <span class="signal-pill cyan" data-i18n="projectCard.freeAccess">Free Access</span>
+            <span class="project-status-text" data-i18n="projectCard.statusEvents">Event automation tools</span>
           </div>
-          <div class="project-pricing"><span class="price-tag">Free</span></div>
-          <a class="btn btn-primary" href="pulseevents/">Learn More</a>
+          <div class="project-pricing"><span class="price-tag" data-i18n="common.free">Free</span></div>
+          <a class="btn btn-primary" href="pulseevents/" data-i18n="common.btnLearnMore">Learn More</a>
         </article>
 
         <article class="glass-card project-card" data-tags="pack pvp visual free" data-name="NovaPixel">
-          <div class="project-icon">
-            <img src="assets/images/novapixel_n.png" alt="NovaPixel Icon">
-          </div>
+          <div class="project-icon"><img src="assets/images/novapixel_n.png" alt="NovaPixel icon" loading="lazy"></div>
           <div class="project-meta-line">
-            <span class="project-mini-tag">Pack</span>
-            <span class="project-mini-tag free-tag">Free</span>
+            <span class="project-mini-tag" data-i18n="home.filterPack">Pack</span>
+            <span class="project-mini-tag free-tag" data-i18n="common.free">Free</span>
           </div>
           <h3>NovaPixel</h3>
-          <p>Competitive PvP texture pack (modern style). <strong>Free pack.</strong></p>
+          <p data-i18n="projectCard.novapixelDesc">Competitive PvP texture pack (modern style).</p>
           <div class="project-status-row">
-            <span class="signal-pill cyan">Free Access</span>
-            <span class="project-status-text">PvP visual setup</span>
+            <span class="signal-pill cyan" data-i18n="projectCard.freeAccess">Free Access</span>
+            <span class="project-status-text" data-i18n="projectCard.statusPvp">PvP visual setup</span>
           </div>
-          <div class="project-pricing"><span class="price-tag">Free</span></div>
-          <a class="btn btn-primary" href="novapixel/">Learn More</a>
+          <div class="project-pricing"><span class="price-tag" data-i18n="common.free">Free</span></div>
+          <a class="btn btn-primary" href="novapixel/" data-i18n="common.btnLearnMore">Learn More</a>
         </article>
 
-        <article class="glass-card project-card" data-tags="plugin free economy" data-name="Casino Core">
-          <div class="project-icon project-icon-casino"><span>CC</span></div>
+        <article class="glass-card project-card" data-tags="plugin free economy" data-name="Casino Core" data-modrinth="casinocore">
+          <div class="project-icon project-icon-casino"><img src="assets/images/icons/icon-casinocore.svg" alt="Casino Core icon" loading="lazy"></div>
           <div class="project-meta-line">
-            <span class="project-mini-tag">Plugin</span>
-            <span class="project-mini-tag free-tag">Free</span>
+            <span class="project-mini-tag" data-i18n="home.filterPlugin">Plugin</span>
+            <span class="project-mini-tag free-tag" data-i18n="common.free">Free</span>
           </div>
           <h3>Casino Core</h3>
-          <p>Modular casino engine with reward systems and slot mechanics. <strong>Free plugin.</strong></p>
+          <p data-i18n="projectCard.casinocoreDesc">Modular casino engine with reward systems and slot mechanics.</p>
           <div class="project-status-row">
-            <span class="signal-pill cyan">Free Access</span>
-            <span class="project-status-text">Economy gameplay systems</span>
+            <span class="signal-pill cyan" data-i18n="projectCard.freeAccess">Free Access</span>
+            <span class="project-status-text" data-i18n="projectCard.statusEconomy">Economy gameplay systems</span>
           </div>
-          <div class="project-pricing"><span class="price-tag">Free</span></div>
-          <a class="btn btn-primary" href="casinocore/">Open</a>
+          <div class="project-pricing"><span class="price-tag" data-i18n="common.free">Free</span></div>
+          <a class="btn btn-primary" href="casinocore/" data-i18n="common.btnOpen">Open</a>
         </article>
 
-        <article class="glass-card project-card" data-tags="plugin free utility trade" data-name="SafeTrade">
-          <div class="project-icon project-icon-safetrade"><span>ST</span></div>
+        <article class="glass-card project-card" data-tags="plugin free utility trade" data-name="SafeTrade" data-modrinth="safetrade">
+          <div class="project-icon project-icon-safetrade"><img src="assets/images/icons/icon-safetrade.svg" alt="SafeTrade icon" loading="lazy"></div>
           <div class="project-meta-line">
-            <span class="project-mini-tag">Plugin</span>
-            <span class="project-mini-tag free-tag">Free</span>
+            <span class="project-mini-tag" data-i18n="home.filterPlugin">Plugin</span>
+            <span class="project-mini-tag free-tag" data-i18n="common.free">Free</span>
           </div>
           <h3>SafeTrade</h3>
-          <p>Protected player-to-player trading with confirmation flow, anti-scam checks, and clean inventory handoff.</p>
+          <p data-i18n="projectCard.safetradeDesc">Protected player-to-player trading with confirmation flow and anti-scam checks.</p>
           <div class="project-status-row">
-            <span class="signal-pill cyan">Free Access</span>
-            <span class="project-status-text">Utility and anti-scam flow</span>
+            <span class="signal-pill cyan" data-i18n="projectCard.freeAccess">Free Access</span>
+            <span class="project-status-text" data-i18n="projectCard.statusUtility">Utility and anti-scam flow</span>
           </div>
-          <div class="project-pricing"><span class="price-tag">Free</span></div>
-          <a class="btn btn-primary" href="safetrade/">Open</a>
+          <div class="project-pricing"><span class="price-tag" data-i18n="common.free">Free</span></div>
+          <a class="btn btn-primary" href="safetrade/" data-i18n="common.btnOpen">Open</a>
         </article>
 
         <article class="glass-card project-card" data-tags="pack pvp visual free" data-name="PvPFlow">
-          <div class="project-icon">
-            <img src="assets/images/pvpflow_n.png" alt="PvPFlow Icon">
-          </div>
+          <div class="project-icon"><img src="assets/images/pvpflow_n.png" alt="PvPFlow icon" loading="lazy"></div>
           <div class="project-meta-line">
-            <span class="project-mini-tag">Pack</span>
-            <span class="project-mini-tag free-tag">Free</span>
+            <span class="project-mini-tag" data-i18n="home.filterPack">Pack</span>
+            <span class="project-mini-tag free-tag" data-i18n="common.free">Free</span>
           </div>
           <h3>PvPFlow</h3>
-          <p>1.8 PvP focused visual enhancement pack. <strong>Free pack.</strong></p>
+          <p data-i18n="projectCard.pvpflowDesc">1.8 PvP focused visual enhancement pack.</p>
           <div class="project-status-row">
-            <span class="signal-pill cyan">Free Access</span>
-            <span class="project-status-text">Classic PvP visuals</span>
+            <span class="signal-pill cyan" data-i18n="projectCard.freeAccess">Free Access</span>
+            <span class="project-status-text" data-i18n="projectCard.statusClassic">Classic PvP visuals</span>
           </div>
-          <div class="project-pricing"><span class="price-tag">Free</span></div>
-          <a class="btn btn-primary" href="pvpflow/">Learn More</a>
+          <div class="project-pricing"><span class="price-tag" data-i18n="common.free">Free</span></div>
+          <a class="btn btn-primary" href="pvpflow/" data-i18n="common.btnLearnMore">Learn More</a>
         </article>
 
         <article class="glass-card project-card wip-card" data-tags="pack voidspire coming free" data-name="VoidSpire">
-          <div class="project-icon project-icon-wip">
-            <span>VS</span>
-          </div>
+          <div class="project-icon project-icon-voidspire"><img src="assets/images/icons/icon-voidspire.svg" alt="VoidSpire icon" loading="lazy"></div>
           <div class="project-meta-line">
-            <span class="project-mini-tag">Pack</span>
-            <span class="project-mini-tag free-tag">Free</span>
+            <span class="project-mini-tag" data-i18n="home.filterPack">Pack</span>
+            <span class="project-mini-tag free-tag" data-i18n="common.free">Free</span>
           </div>
           <h3>VoidSpire</h3>
-          <p>A space-themed texture pack designed for exploration and wonder. <strong>Free pack (coming soon).</strong></p>
+          <p data-i18n="projectCard.voidspireDesc">A space-themed texture pack designed for exploration and wonder.</p>
           <div class="project-status-row">
-            <span class="signal-pill cyan">Free Access</span>
-            <span class="project-status-text">Coming soon</span>
+            <span class="signal-pill cyan" data-i18n="projectCard.freeAccess">Free Access</span>
+            <span class="project-status-text" data-i18n="projectCard.statusComingSoon">Coming soon</span>
           </div>
-          <div class="project-pricing"><span class="price-tag">Free</span></div>
-          <a class="btn btn-secondary" href="#">Coming Soon</a>
+          <div class="project-pricing"><span class="price-tag" data-i18n="common.free">Free</span></div>
+          <a class="btn btn-secondary" href="#" data-i18n="common.comingSoon">Coming Soon</a>
         </article>
 
         <article class="glass-card project-card wip-card" data-tags="wip plugin upcoming" data-name="Upcoming Project">
           <div class="project-icon project-icon-wip">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32">
-              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
           </div>
           <div class="project-meta-line">
-            <span class="project-mini-tag">Plugin</span>
-            <span class="project-mini-tag upcoming-tag">WIP</span>
+            <span class="project-mini-tag" data-i18n="home.filterPlugin">Plugin</span>
+            <span class="project-mini-tag upcoming-tag" data-i18n="common.wip">WIP</span>
           </div>
           <h3>...</h3>
-          <p>General plugin release slot. <strong>Waiting for approval</strong></p>
+          <p data-i18n="projectCard.upcomingDesc">General plugin release slot.</p>
           <div class="project-status-row">
-            <span class="signal-pill yellow">Pending</span>
-            <span class="project-status-text">Waiting for release approval</span>
+            <span class="signal-pill yellow" data-i18n="projectCard.pending">Pending</span>
+            <span class="project-status-text" data-i18n="projectCard.statusWaiting">Waiting for release approval</span>
           </div>
-          <div class="status-badge">Approval Pending</div>
-          <div class="project-pricing"><span class="price-tag">Pending</span></div>
-          <a class="btn btn-secondary" href="download-pending.html">Approval Status</a>
+          <div class="status-badge" data-i18n="projectCard.approvalPending">Approval Pending</div>
+          <a class="btn btn-secondary" href="download-pending.html" data-i18n="nav.releaseQueue">Approval Status</a>
+        </article>
       </div>
-      <p class="project-empty" hidden>No projects match the current filter.</p>
+      <p class="project-empty" hidden data-i18n="home.emptyState">No projects match the current filter.</p>
     </section>
 
-    <section class="roadmap-section" id="roadmap">
+    <div class="rune-divider" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 22 12 12 22 2 12 12 2Z"/><circle cx="12" cy="12" r="2.4"/></svg>
+    </div>
+
+    <section class="roadmap-section reveal" id="roadmap">
       <div class="section-heading">
-        <p class="section-label">Roadmap</p>
-        <h2>Current Build Path</h2>
-        <p class="section-copy">A clearer view of what is shipping now, what is stabilizing, and what is being prepared.</p>
+        <p class="section-label" data-i18n="home.roadmapLabel">Roadmap</p>
+        <h2 data-i18n="home.roadmapTitle">Current Build Path</h2>
+        <p class="section-copy" data-i18n="home.roadmapCopy">A clearer view of what is shipping now, what is stabilizing, and what is being prepared.</p>
       </div>
       <div class="roadmap-grid">
         <article class="glass-card roadmap-card">
-          <span class="roadmap-stage">Now</span>
-          <h3>Shared Infrastructure</h3>
-          <p>A shared plugin architecture is being shaped to support multiple PluggLAB releases and planned integrations.</p>
+          <span class="roadmap-stage" data-i18n="home.roadmapNowStage">Now</span>
+          <h3 data-i18n="home.roadmapNowTitle">Shared Infrastructure</h3>
+          <p data-i18n="home.roadmapNowBody">A shared plugin architecture is being shaped to support multiple PluggLAB releases and planned integrations.</p>
         </article>
         <article class="glass-card roadmap-card">
-          <span class="roadmap-stage">Next</span>
-          <h3>Economy Gameplay</h3>
-          <p>Casino Core expands into server gameplay with stronger reward and admin flows.</p>
+          <span class="roadmap-stage" data-i18n="home.roadmapNextStage">Next</span>
+          <h3 data-i18n="home.roadmapNextTitle">Economy Gameplay</h3>
+          <p data-i18n="home.roadmapNextBody">Casino Core expands into server gameplay with stronger reward and admin flows.</p>
         </article>
         <article class="glass-card roadmap-card">
-          <span class="roadmap-stage">Later</span>
-          <h3>Polished Ecosystem</h3>
-          <p>Visual packs, event utilities, and shared integrations settle into one consistent stack.</p>
+          <span class="roadmap-stage" data-i18n="home.roadmapLaterStage">Later</span>
+          <h3 data-i18n="home.roadmapLaterTitle">Polished Ecosystem</h3>
+          <p data-i18n="home.roadmapLaterBody">Visual packs, event utilities, and shared integrations settle into one consistent stack.</p>
         </article>
       </div>
     </section>
 
-    <section class="about-section" id="about">
+    <section class="about-section reveal" id="about">
       <div class="section-heading">
-        <p class="section-label">About</p>
-        <h2>What is PluggLAB</h2>
-        <p class="section-copy">
+        <p class="section-label" data-i18n="home.aboutLabel">About</p>
+        <h2 data-i18n="home.aboutTitle">What is PluggLAB</h2>
+        <p class="section-copy" data-i18n="home.aboutCopy">
           PluggLAB is a polished Minecraft hub for stable plugins, free tools, and clear project updates.
           Everything here is designed to feel more professional, approachable, and ready for actual use.
         </p>
       </div>
       <div class="about-grid">
         <article class="glass-card feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
-            </svg>
-          </div>
-          <h3>Quality First</h3>
-          <p>Every project is built with attention to detail, performance, and user experience. No rushed releases.</p>
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <h3 data-i18n="home.feature1Title">Quality First</h3>
+          <p data-i18n="home.feature1Body">Every project is built with attention to detail, performance, and user experience. No rushed releases.</p>
         </article>
         <article class="glass-card feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-            </svg>
-          </div>
-          <h3>Active Development</h3>
-          <p>Regular updates, community feedback integration, and continuous improvement across all projects.</p>
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <h3 data-i18n="home.feature2Title">Active Development</h3>
+          <p data-i18n="home.feature2Body">Regular updates, community feedback integration, and continuous improvement across all projects.</p>
         </article>
         <article class="glass-card feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26">
-              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
-            </svg>
-          </div>
-          <h3>Long-term Vision</h3>
-          <p>Projects are designed to evolve and scale. A shared plugin architecture guides updates across the full ecosystem.</p>
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <h3 data-i18n="home.feature3Title">Long-term Vision</h3>
+          <p data-i18n="home.feature3Body">Projects are designed to evolve and scale. A shared plugin architecture guides updates across the full ecosystem.</p>
         </article>
         <article class="glass-card feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-          </div>
-          <h3>Community Driven</h3>
-          <p>Join Discord for updates, support, and direct feedback. Your input shapes future development.</p>
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3 data-i18n="home.feature4Title">Community Driven</h3>
+          <p data-i18n="home.feature4Body">Join Discord for updates, support, and direct feedback. Your input shapes future development.</p>
         </article>
       </div>
     </section>
-    <script async="async" data-cfasync="false" src="https://pl30098233.effectivecpmnetwork.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
-    <div id="container-3d7be051cf59b23d51d6dded9a6578da"></div>
 
-    <section class="creator-section">
+    <script async="async" data-cfasync="false" src="https://pl30098233.effectivecpmnetwork.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
+    <div id="container-3d7be051cf59b23d51d6dded9a6578da2" class="ad-slot"></div>
+
+    <section class="creator-section reveal">
       <div class="section-heading">
-        <p class="section-label">Behind PluggLAB</p>
-        <h2>About the Creator</h2>
-        <p class="section-copy">Meet the developer building the PluggLAB ecosystem.</p>
+        <p class="section-label" data-i18n="home.creatorLabel">Behind PluggLAB</p>
+        <h2 data-i18n="home.creatorTitle">About the Creator</h2>
+        <p class="section-copy" data-i18n="home.creatorCopy">Meet the developer building the PluggLAB ecosystem.</p>
       </div>
       <article class="glass-card creator-card">
         <div class="creator-header">
           <div class="creator-avatar">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
           <div>
-            <h3>Wilczek</h3>
-            <p class="creator-role">Full-Stack Minecraft Developer</p>
+            <h3 data-i18n="home.creatorName">Wilczek</h3>
+            <p class="creator-role" data-i18n="home.creatorRole">Full-Stack Minecraft Developer</p>
           </div>
         </div>
         <div class="creator-bio">
-          <p>Wilczek is a passionate Minecraft developer with years of experience in plugin development, server optimization, and community management. Specializing in scalable plugin architecture and modular systems design.</p>
-          <p>Founded PluggLAB to create a focused hub for high-quality Minecraft projects that set new standards for the community. Every project is built with attention to detail, performance, and user experience.</p>
+          <p data-i18n="home.creatorBio1">Wilczek is a passionate Minecraft developer with years of experience in plugin development, server optimization, and community management. Specializing in scalable plugin architecture and modular systems design.</p>
+          <p data-i18n="home.creatorBio2">Founded PluggLAB to create a focused hub for high-quality Minecraft projects that set new standards for the community. Every project is built with attention to detail, performance, and user experience.</p>
         </div>
         <div class="creator-details">
           <div class="detail-group">
-            <span class="detail-label">Specialization</span>
+            <span class="detail-label" data-i18n="home.specLabel">Specialization</span>
             <ul class="detail-list">
-              <li>Plugin Development</li>
-              <li>Server Architecture</li>
-              <li>API Design</li>
-              <li>Performance Optimization</li>
+              <li data-i18n="home.spec1">Plugin Development</li>
+              <li data-i18n="home.spec2">Server Architecture</li>
+              <li data-i18n="home.spec3">API Design</li>
+              <li data-i18n="home.spec4">Performance Optimization</li>
             </ul>
           </div>
           <div class="detail-group">
-            <span class="detail-label">Experience</span>
+            <span class="detail-label" data-i18n="home.expLabel">Experience</span>
             <ul class="detail-list">
-              <li>4+ years Minecraft dev</li>
-            <li>Multiple community releases</li>
-            <li>Active plugin maintainer</li>
-            <li>Continuous improvement</li>
+              <li data-i18n="home.exp1">4+ years Minecraft dev</li>
+              <li data-i18n="home.exp2">Multiple community releases</li>
+              <li data-i18n="home.exp3">Active plugin maintainer</li>
+              <li data-i18n="home.exp4">Continuous improvement</li>
             </ul>
           </div>
         </div>
         <div class="creator-cta">
-          <p>Interested in collaborating or learning more?</p>
+          <p data-i18n="home.creatorCtaText">Interested in collaborating or learning more?</p>
           <div class="cta-buttons">
-            <a class="btn btn-primary" href="https://discord.gg/ZMje3neEmK" target="_blank">Join Discord</a>
-            <a class="btn btn-secondary" href="contact/">Get in Touch</a>
+            <a class="btn btn-primary" href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener" data-i18n="home.creatorCtaDiscord">Join Discord</a>
+            <a class="btn btn-secondary" href="contact/" data-i18n="home.creatorCtaContact">Get in Touch</a>
           </div>
         </div>
       </article>
@@ -486,38 +488,63 @@
 
   <section class="support-embed" aria-label="Support Wilczek on Ko-fi">
     <div class="glass-card">
-      <iframe id="kofiframe" src="https://ko-fi.com/wilczek016/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none;width:100%;padding:4px;background:#f9f9f9;" height="712" title="wilczek016"></iframe>
+      <div class="support-embed-head">
+        <span class="project-tag" data-i18n="home.supportHeading">Support the lab</span>
+        <p data-i18n="home.supportBody">PluggLAB stays free thanks to community support on Ko-fi.</p>
+      </div>
+      <iframe id="kofiframe" src="https://ko-fi.com/wilczek016/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none;width:100%;padding:4px;background:#f9f9f9;" height="712" title="wilczek016" loading="lazy"></iframe>
     </div>
   </section>
 
   <footer class="site-footer">
-    <div class="footer-brand">
-      <h2>PluggLAB</h2>
-      <p>Centralized development hub for free plugins, packs, and community updates.</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h2>
+          <svg viewBox="0 0 64 64" fill="none"><path d="M32 4 58 32 32 60 6 32 32 4Z" stroke="url(#fg)" stroke-width="3"/><path d="M32 16c-7.2 0-12 5.4-12 12.4 0 5 2.7 8.4 6 10.6V44h4v-3h4v3h4v-4.9c3.3-2.2 6-5.7 6-10.7C44 21.4 39.2 16 32 16z" fill="url(#fg2)"/><defs><linearGradient id="fg" x1="0" y1="0" x2="64" y2="64"><stop offset="0%" stop-color="#e8dff5"/><stop offset="50%" stop-color="#c084fc"/><stop offset="100%" stop-color="#4dc9ff"/></linearGradient><linearGradient id="fg2" x1="0" y1="0" x2="64" y2="64"><stop offset="0%" stop-color="#f6c143"/><stop offset="60%" stop-color="#e0263f"/><stop offset="100%" stop-color="#8b2be2"/></linearGradient></defs></svg>
+          PluggLAB
+        </h2>
+        <p data-i18n="footer.tagline">A focused Minecraft plugin lab — free releases, clear updates, and a shared architecture behind every project.</p>
+        <div class="footer-social">
+          <a href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener" aria-label="Discord"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 0H4C1.79 0 0 1.79 0 4v16c0 2.21 1.79 4 4 4h13.17l-.78-2.7 1.89 1.75 1.78 1.65L24 24V4c0-2.21-1.79-4-4-4Z"/></svg></a>
+          <a href="https://ko-fi.com/wilczek016" target="_blank" rel="noopener" aria-label="Ko-fi"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 4h16v3a5 5 0 0 1 0 10v1a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4Zm16 3v6a3 3 0 0 0 0-6Z"/></svg></a>
+          <a href="https://plugglabstudio.itch.io/" target="_blank" rel="noopener" aria-label="itch.io"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 5 5 2h14l3 3-2 4-3-1-1 3H8l-1-3-3 1-2-4Zm2.3 8H7l1 6H6l-1.7-6ZM17 13h2.7L18 19h-2l1-6Zm-8 .3h6v6H9v-6Z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.ecosystemHeading">Ecosystem</h4>
+        <a href="memorychain/">MemoryChain</a>
+        <a href="pulseevents/">PulseEvents</a>
+        <a href="casinocore/">Casino Core</a>
+        <a href="safetrade/">SafeTrade</a>
+        <a href="novapixel/">NovaPixel</a>
+        <a href="pvpflow/">PvPFlow</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.resourcesHeading">Resources</h4>
+        <a href="changelog/" data-i18n="nav.changelog">Changelog</a>
+        <a href="download-pending.html" data-i18n="nav.releaseQueue">Release Queue</a>
+        <a href="pulseevents/docs/">PulseEvents Docs</a>
+        <a href="casinocore/docs/">Casino Core Docs</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.connectHeading">Connect</h4>
+        <a href="contact/" data-i18n="nav.contact">Contact</a>
+        <a href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener" data-i18n="nav.discord">Discord</a>
+        <a href="https://plugglabstudio.itch.io/plugglabapp" target="_blank" rel="noopener" data-i18n="nav.app">App</a>
+      </div>
     </div>
-    <div class="footer-links">
-      <a href="memorychain/">MemoryChain</a>
-      <a href="pulseevents/">PulseEvents</a>
-      <a href="safetrade/">SafeTrade</a>
-      <a href="novapixel/">NovaPixel</a>
-      <a href="casinocore/">Casino Core</a>
-      <a href="pvpflow/">PvPFlow</a>
-      <a href="contact/">Contact</a>
+    <div class="footer-bottom">
+      <span class="footer-copy" data-i18n="footer.copy">PluggLAB · built by Wilczek</span>
+      <span class="footer-status"><span class="dot-live"></span> <span data-i18n="footer.statusLive">All systems reporting</span></span>
     </div>
   </footer>
 </div>
 
-<script src="assets/js/nav.js"></script>
-<script src="assets/js/scroll.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/home.js"></script>
 <script>
-  atOptions = {
-    'key' : '608d5fb4ea1e6fae9a4d53911ea925b3',
-    'format' : 'iframe',
-    'height' : 50,
-    'width' : 320,
-    'params' : {}
-  };
+  atOptions = { 'key': '608d5fb4ea1e6fae9a4d53911ea925b3', 'format': 'iframe', 'height': 50, 'width': 320, 'params': {} };
 </script>
 <script src="https://www.highperformanceformat.com/608d5fb4ea1e6fae9a4d53911ea925b3/invoke.js"></script>
 </body>

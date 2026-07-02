@@ -3,266 +3,227 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO -->
-  <meta name="description" content="PvPFlow is a ready-to-use competitive Minecraft PvP pack for 1.8.9 with clean visuals and improved readability.">
-  <meta name="theme-color" content="#07080f">
-  <meta property="og:title" content="PvPFlow | PvP Texture Pack">
-  <meta property="og:description" content="PvPFlow is a competitive 1.8.9 pack with polished combat visuals and smooth performance.">
-
+  <meta name="description" content="PvPFlow is a 1.8-style PvP visual enhancement pack for classic competitive combat.">
+  <meta name="theme-color" content="#060009">
+  <meta property="og:title" content="PluggLAB | PvPFlow">
+  <meta property="og:description" content="PvPFlow is a 1.8-style PvP visual enhancement pack for classic competitive combat.">
+  <meta property="og:image" content="https://plugglab.github.io/assets/images/og-image.png">
   <title>PluggLAB | PvPFlow</title>
-
-  <link rel="icon" href="../assets/images/pvpflow_n.png" sizes="any">
-
-  <!-- Fonts -->
+  <link rel="canonical" href="https://plugglab.github.io/pvpflow/">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/images/favicon-32.png" sizes="32x32">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="../assets/css/base.css">
-  <link rel="stylesheet" href="../assets/css/pages.css">
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/project.css">
-  <link rel="stylesheet" href="../assets/css/pvpflow.css">
 </head>
-
 <body class="page-project page-pvpflow">
+<a class="skip-link" href="#main-content">Skip to content</a>
 <div class="site-shell">
-
-  <!-- NAV -->
   <header class="navbar">
-    <nav class="nav-container">
+    <nav class="nav-container" aria-label="Primary">
       <div class="nav-brandbar">
-        <a class="nav-logo" href="../">PluggLab</a>
-        <p class="nav-status">Project hub for plugins, packs, and experiments</p>
+        <a class="nav-logo" href="../">PluggLAB</a>
+        <p class="nav-status" data-i18n="nav.statusShort">Project hub for plugins, packs, and experiments</p>
       </div>
-
       <div class="nav-menu-row">
         <div class="nav-links" id="site-nav-links">
-          <a href="../">Home</a>
-          <a href="../#projects">Projects</a>
-          <a href="../#featured">Featured</a>
-          <a href="../contact/">Contact</a>
+          <a href="../" data-i18n="nav.home">Home</a>
+          <a href="../#projects" data-i18n="nav.projects">Projects</a>
+          <a href="./" aria-current="page">PvPFlow</a>
+          
+          <a href="../changelog/" data-i18n="nav.changelog">Changelog</a>
+          <a href="../contact/" data-i18n="nav.contact">Contact</a>
         </div>
-        <div class="nav-right"><a class="nav-cta" href="https://plugglabstudio.itch.io/plugglabapp" target="_blank" rel="noopener">↓ App</a><button class="nav-toggle" type="button">
-          <span></span><span></span><span></span>
-        </button></div>
+        <div class="nav-right">
+          <button class="nav-search-btn" type="button" data-open-command aria-label="Quick jump">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <span class="kbd-label">Jump</span><kbd>⌘K</kbd>
+          </button>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
     </nav>
   </header>
-<script async="async" data-cfasync="false" src="https://consciousdunkvastly.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
-<div id="container-3d7be051cf59b23d51d6dded9a6578da"></div>
 
-  <main class="page-main">
+  <script async="async" data-cfasync="false" src="https://pl30098233.effectivecpmnetwork.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
+  <div id="container-3d7be051cf59b23d51d6dded9a6578da" class="ad-slot"></div>
 
-    <!-- HERO -->
-    <section class="page-hero page-hero-red">
-      <p class="section-label">PvP Texture Pack</p>
-
-      <h1>PvPFlow</h1>
-
-      <p class="section-copy">
-        A competitive 1.8 PvP pack designed for fast reactions, clean visuals,
-        and improved combat clarity with a polished competitive theme.
-      </p>
-
-      <!-- CTA -->
-      <div class="hero-actions">
-        <a class="btn btn-primary"
-           href="https://www.curseforge.com/minecraft/texture-packs/pvpflow"
-           target="_blank">
-          Download Pack
-        </a>
-
-        <a class="btn btn-secondary"
-           href="https://discord.gg/ZMje3neEmK"
-           target="_blank">
-          Join Discord
-        </a>
+  <main class="page-main" id="main-content">
+    <section class="project-hero">
+      <div class="project-hero-icon"><img src="../assets/images/pvpflow_n.png" alt="PvPFlow icon"></div>
+      <div class="project-hero-meta">
+        <div class="project-hero-tags">
+          <span class="project-tag">Pack · PvP · 1.8 Style</span>
+          <span class="signal-pill green">Stable</span>
+          <span class="price-tag" style="font-size:1rem;">Free</span>
+        </div>
+        <h1>PvPFlow</h1>
+        <p class="section-copy">Bring back 1.8-era combat feel — no swing cooldown visuals, classic sword models, and crisp low-latency-feeling animations.</p>
+        <div class="project-hero-actions">
+          <a class="btn btn-primary" href="https://plugglab.github.io/pvpflow/PvPFlow.zip">Download Pack</a>
+          <a class="btn btn-secondary" href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener">Discord Support</a>
+        </div>
       </div>
-
-      <div class="hero-highlights">
-        <span class="signal-pill red">1.8.9</span>
-        <span class="signal-pill blue">16x Competitive</span>
-        <span class="signal-pill purple">Animated</span>
-      </div>
-
-      <p class="hero-extra">PvPFlow is being refreshed along with the rest of the PluggLAB lineup for improved visuals and performance.</p>
-      <p class="micro-note">Last updated: April 2026</p>
     </section>
 
-    <!-- PREVIEW (KLUCZOWE) -->
-    <section class="preview-section">
+    <section class="reveal">
+      <div class="section-heading">
+        <p class="section-label">Capabilities</p>
+        <h2>What PvPFlow does</h2>
+        <p class="section-copy">PvPFlow is built for servers running classic 1.8 combat mechanics and the players who grew up on them.</p>
+      </div>
+      <div class="feature-grid">
+        
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
+          <h3>Classic Swing Feel</h3>
+          <p>Sword and axe animations are tuned to match the snappy rhythm of 1.8-era PvP.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></div>
+          <h3>No-Cooldown Visuals</h3>
+          <p>Attack indicator bar is hidden by default so it never gets in the way on cooldown-disabled servers.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+          <h3>Sharpened Weapon Models</h3>
+          <p>Redrawn sword and bow textures stay readable at a glance during fast combos.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <h3>Reduced Particle Clutter</h3>
+          <p>Combat particles are toned down so hits and misses stay easy to track in group fights.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M4 4.5A2.5 2.5 0 016.5 2H20v17H6.5A2.5 2.5 0 004 16.5v-12z"/><path d="M4 16.5A2.5 2.5 0 016.5 19H20"/></svg></div>
+          <h3>Minimal HUD</h3>
+          <p>Health, hunger, and armor icons shrink slightly to keep more of the screen focused on the fight.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 9 4.6-.3 8-4 8-9V5l-8-3z"/></svg></div>
+          <h3>Tournament Ready</h3>
+          <p>Used as the default pack in community PvPFlow test tournaments — balanced for fairness, not flash.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="rune-divider" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 22 12 12 22 2 12 12 2Z"/><circle cx="12" cy="12" r="2.4"/></svg>
+    </div>
+
+    <section class="reveal">
+      <div class="section-heading">
+        <p class="section-label">Details</p>
+        <h2>Requirements &amp; Links</h2>
+      </div>
+      <div class="meta-grid">
+        
+        <article class="glass-card meta-card">
+          <span class="meta-label">Minecraft Version</span>
+          <strong>1.8 – 1.21</strong>
+        </article>
+        <article class="glass-card meta-card">
+          <span class="meta-label">Resolution</span>
+          <strong>16x</strong>
+        </article>
+        <article class="glass-card meta-card">
+          <span class="meta-label">Pack Type</span>
+          <strong>PvP / Combat</strong>
+        </article>
+        <article class="glass-card meta-card">
+          <span class="meta-label">License</span>
+          <strong>Free &amp; Open</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="reveal">
       <div class="section-heading">
         <p class="section-label">Preview</p>
-        <h2>In-Game Look</h2>
+        <h2>In-game look</h2>
+        <p class="section-copy">Screenshots are added as each build is captured on the live test server — join Discord to see the newest previews first.</p>
       </div>
-
-      <div class="preview-grid">
-        <div class="preview-card glass-card">Combat scene clarity</div>
-        <div class="preview-card glass-card">Custom skybox look</div>
-        <div class="preview-card glass-card">Weapon and armor visibility</div>
+      <div class="media-strip">
+        <div class="media-frame">Classic sword model</div><div class="media-frame">Combat HUD</div><div class="media-frame">Tournament lobby preview</div>
       </div>
     </section>
 
-    <!-- META -->
-    <section class="meta-layout">
+    
 
-      <article class="glass-card status-card color-red">
-        <span class="project-tag">Live Pack</span>
-
-        <h2>Ready for Combat</h2>
-
-        <p>
-          PvPFlow is designed for competitive gameplay with improved readability,
-          reduced clutter, and a strong visual identity.
-        </p>
-
-        <div class="progress-track">
-          <div class="progress-bar progress-red width-52"></div>
+    <section class="reveal">
+      <article class="glass-card cta-band">
+        <div>
+          <h3>Ready to add PvPFlow to your server?</h3>
+          <p>PvPFlow works as a client resource pack or a forced server pack — no plugin dependency.</p>
         </div>
-
-        <div class="action-row">
-          <a class="btn btn-primary"
-             href="https://www.curseforge.com/minecraft/texture-packs/pvpflow"
-             target="_blank">
-            Open CurseForge
-          </a>
-
-          <a class="btn btn-secondary"
-             href="https://www.curseforge.com/minecraft/texture-packs/pvpflow/files"
-             target="_blank">
-            Latest Version
-          </a>
+        <div class="cta-band-actions">
+          <a class="btn btn-primary" href="https://plugglab.github.io/pvpflow/PvPFlow.zip">Download Pack</a>
+          <a class="btn btn-secondary" href="../contact/">Ask a Question</a>
         </div>
       </article>
-
-      <article class="glass-card meta-card">
-        <h3>Details</h3>
-
-        <dl class="meta-grid">
-          <dt>Status</dt>
-          <dd>Live</dd>
-
-          <dt>Version</dt>
-          <dd>v0.2</dd>
-
-          <dt>MC Version</dt>
-          <dd>1.8.9</dd>
-
-          <dt>Type</dt>
-          <dd>16x PvP Pack</dd>
-
-          <dt>Updated</dt>
-          <dd>April 2026</dd>
-
-          <dt>Style</dt>
-          <dd>Cosmic / Competitive</dd>
-        </dl>
-      </article>
-
     </section>
 
-    <!-- FEATURES -->
-    <section class="wip-layout">
-
-      <article class="glass-card notes-card">
-        <h3>Why PvPFlow</h3>
-
-        <ul class="feature-list">
-          <li>Cleaner visuals for faster combat decisions</li>
-          <li>Improved weapon and armor recognition</li>
-          <li>Reduced UI and environmental clutter</li>
-          <li>Custom cosmic-themed skybox for immersive atmosphere</li>
-          <li>16x resolution for smooth performance</li>
-          <li>Animated textures for visual feedback</li>
-          <li>Low-fire overlay for unobstructed view</li>
-        </ul>
-      </article>
-
-      <article class="glass-card notes-card">
-        <h3>Focus</h3>
-
-        <ul class="status-list">
-          <li>Optimized for BedWars, SkyWars, and practice servers</li>
-          <li>Designed specifically for 1.8.9 PvP mechanics</li>
-          <li>Regular updates with community feedback</li>
-          <li>Performance-friendly with minimal resource usage</li>
-          <li>Compatible with Lunar Client and Badlion</li>
-          <li>Custom animations for swords and tools</li>
-        </ul>
-      </article>
-
-    </section>
-
-    <!-- QUICK START -->
-    <section class="guide-section">
+    <section class="reveal">
       <div class="section-heading">
-        <p class="section-label">Installation</p>
-        <h2>How to Install</h2>
-        <p class="section-copy">Get PvPFlow running on 1.8.9 in just a few steps.</p>
+        <p class="section-label">More from PluggLAB</p>
+        <h2>Related Projects</h2>
       </div>
+      <div class="related-grid">
+        
+        <a class="glass-card related-card" href="../novapixel/">
+          <div class="related-icon"><img src="../assets/images/novapixel_n.png" alt="NovaPixel icon" loading="lazy"></div>
+          <div><strong>NovaPixel</strong><br><span>Pack · PvP</span></div>
+        </a>
 
-      <div class="guide-steps">
-        <article class="glass-card step-card">
-          <div class="step-number">1</div>
-          <h3>Download Pack</h3>
-          <p>Download the latest .zip from CurseForge (1.8.9 version).</p>
-        </article>
+        <a class="glass-card related-card" href="../safetrade/">
+          <div class="related-icon icon-pad"><img src="../assets/images/icons/icon-safetrade.svg" alt="SafeTrade icon" loading="lazy"></div>
+          <div><strong>SafeTrade</strong><br><span>Plugin · Utility</span></div>
+        </a>
 
-        <article class="glass-card step-card">
-          <div class="step-number">2</div>
-          <h3>Open Resource Packs</h3>
-          <p>Launch Minecraft 1.8.9 → Options → Resource Packs.</p>
-        </article>
-
-        <article class="glass-card step-card">
-          <div class="step-number">3</div>
-          <h3>Add to Folder</h3>
-          <p>Click "Open Pack Folder" and move PvPFlow.zip into it.</p>
-        </article>
-
-        <article class="glass-card step-card">
-          <div class="step-number">4</div>
-          <h3>Enable Pack</h3>
-          <p>Select PvPFlow from available packs and activate it.</p>
-        </article>
-      </div>
-
-      <div class="guide-note glass-card">
-        <h4>Best Experience</h4>
-        <ul class="feature-list">
-          <li>Designed specifically for Minecraft 1.8.9 combat</li>
-          <li>Works with Optifine for animations and custom skybox</li>
-          <li>Compatible with Lunar Client, Badlion, and Feather</li>
-          <li>Optimized for BedWars, SkyWars, and duels</li>
-        </ul>
+        <a class="glass-card related-card" href="../pulseevents/">
+          <div class="related-icon"><img src="../assets/images/pulseevents_n.png" alt="PulseEvents icon" loading="lazy"></div>
+          <div><strong>PulseEvents</strong><br><span>Plugin · Events</span></div>
+        </a>
       </div>
     </section>
-
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="footer-brand">
-      <h2>PluggLab</h2>
-      <p>PvPFlow is live and ready for competitive gameplay.</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h2>PluggLAB</h2>
+        <p data-i18n="footer.tagline">A focused Minecraft plugin lab — free releases, clear updates, and a shared architecture behind every project.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.ecosystemHeading">Ecosystem</h4>
+        <a href="../memorychain/">MemoryChain</a>
+        <a href="../pulseevents/">PulseEvents</a>
+        <a href="../casinocore/">Casino Core</a>
+        <a href="../safetrade/">SafeTrade</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.resourcesHeading">Resources</h4>
+        <a href="../changelog/" data-i18n="nav.changelog">Changelog</a>
+        <a href="../download-pending.html" data-i18n="nav.releaseQueue">Release Queue</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.connectHeading">Connect</h4>
+        <a href="../contact/" data-i18n="nav.contact">Contact</a>
+        <a href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener" data-i18n="nav.discord">Discord</a>
+      </div>
     </div>
-
-    <div class="footer-links">
-      <a href="../">Home</a>
-      <a href="../contact/">Contact</a>
+    <div class="footer-bottom">
+      <span class="footer-copy" data-i18n="footer.copy">PluggLAB · built by Wilczek</span>
     </div>
   </footer>
-
 </div>
 
+<script src="../assets/js/main.js"></script>
 <script src="../assets/js/i18n.js"></script>
-<script src="../assets/js/nav.js"></script>
-<script src="../assets/js/scroll.js"></script>
-<script src="../assets/js/project.js"></script>
-<script async="async" data-cfasync="false" src="https://consciousdunkvastly.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
-<div id="container-3d7be051cf59b23d51d6dded9a6578da"></div>
-
 </body>
 </html>

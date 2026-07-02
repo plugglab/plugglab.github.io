@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://plugglab.github.io/</loc><priority>1.0</priority></url>
+  <url><loc>https://plugglab.github.io/contact/</loc><priority>0.7</priority></url>
+  <url><loc>https://plugglab.github.io/changelog/</loc><priority>0.7</priority></url>
+  <url><loc>https://plugglab.github.io/download-pending.html</loc><priority>0.6</priority></url>
+  <url><loc>https://plugglab.github.io/memorychain/</loc><priority>0.8</priority></url>
+  <url><loc>https://plugglab.github.io/pulseevents/</loc><priority>0.8</priority></url>
+  <url><loc>https://plugglab.github.io/pulseevents/docs/</loc><priority>0.6</priority></url>
+  <url><loc>https://plugglab.github.io/novapixel/</loc><priority>0.7</priority></url>
+  <url><loc>https://plugglab.github.io/casinocore/</loc><priority>0.8</priority></url>
+  <url><loc>https://plugglab.github.io/casinocore/docs/</loc><priority>0.6</priority></url>
+  <url><loc>https://plugglab.github.io/pvpflow/</loc><priority>0.7</priority></url>
+  <url><loc>https://plugglab.github.io/safetrade/</loc><priority>0.8</priority></url>
+</urlset>

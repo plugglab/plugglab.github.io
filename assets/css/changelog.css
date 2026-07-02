@@ -1,0 +1,18 @@
+/* =========================================================
+   PluggLAB — Changelog / Status page
+   ========================================================= */
+.status-board { padding: 0; overflow: hidden; }
+.status-table { width: 100%; border-collapse: collapse; }
+.status-table th, .status-table td { text-align: left; padding: 0.95rem 1.3rem; border-bottom: 1px solid var(--border); font-size: 0.86rem; }
+.status-table th { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); background: var(--panel-mid); }
+.status-table tr:last-child td { border-bottom: none; }
+.status-table td.st-name { font-weight: 600; }
+.status-table td.st-status { display: flex; align-items: center; gap: 0.55rem; text-transform: capitalize; }
+.status-table td.st-version { font-family: var(--font-mono); color: var(--text-soft); }
+.status-table td.st-updated { color: var(--muted); font-family: var(--font-mono); font-size: 0.78rem; }
+.status-table td.st-download a { color: var(--ice); font-weight: 600; }
+.status-table td.st-download a:hover { text-decoration: underline; }
+.status-loading, .status-error { padding: 2.5rem; text-align: center; color: var(--muted); font-size: 0.88rem; }
+@media (max-width: 720px) {
+  .status-table { display: block; overflow-x: auto; white-space: nowrap; }
+}

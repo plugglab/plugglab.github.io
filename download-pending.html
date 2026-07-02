@@ -1,325 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO -->
-  <meta name="description" content="General release workflow for PluggLAB plugins and packs. See the approval pipeline, download readiness, and next steps for every project.">
-  <meta name="theme-color" content="#07080f" />
-
-  <meta property="og:title" content="Plugin Release Workflow | PluggLAB" />
-  <meta property="og:description" content="General release workflow for PluggLAB plugins and packs. Approval queue, download readiness, and release stages in one place."> 
-  <meta property="og:type" content="website" />
-
-  <title>Plugin Release Workflow | PluggLAB</title>
-
-  <link rel="icon" href="assets/images/favicon.png" sizes="any" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <link
-          href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap"
-          rel="stylesheet"
-  />
-
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/css/pages.css" />
-
-  <style>
-    .plugin-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 24px;
-      margin-top: 40px;
-    }
-
-    .plugin-card {
-      padding: 32px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .plugin-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at top right, rgba(123, 92, 255, 0.15), transparent 40%);
-      pointer-events: none;
-    }
-
-    .plugin-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 18px;
-    }
-
-    .plugin-name {
-      font-size: 1.4rem;
-      font-weight: 700;
-    }
-
-    .plugin-description {
-      opacity: 0.82;
-      line-height: 1.7;
-      margin-bottom: 26px;
-    }
-
-    .plugin-meta {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      margin-bottom: 28px;
-    }
-
-    .plugin-meta-item {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      font-size: 0.95rem;
-    }
-
-    .plugin-meta-label {
-      opacity: 0.6;
-    }
-
-    .plugin-meta-value {
-      font-weight: 600;
-      text-align: right;
-    }
-
-    .status-badge {
-      padding: 10px 16px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      border: 1px solid transparent;
-      white-space: nowrap;
-    }
-
-    .status-development {
-      background: rgba(255, 170, 0, 0.14);
-      color: #ffb648;
-      border-color: rgba(255, 170, 0, 0.28);
-    }
-
-    .status-review {
-      background: rgba(0, 170, 255, 0.14);
-      color: #59c7ff;
-      border-color: rgba(0, 170, 255, 0.28);
-    }
-
-    .status-ready {
-      background: rgba(0, 255, 140, 0.14);
-      color: #58ffb0;
-      border-color: rgba(0, 255, 140, 0.28);
-    }
-
-    .status-blocked {
-      background: rgba(255, 60, 60, 0.14);
-      color: #ff7a7a;
-      border-color: rgba(255, 60, 60, 0.28);
-    }
-
-    .plugin-actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 700px) {
-      .plugin-card {
-        padding: 24px;
-      }
-
-      .plugin-top {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .plugin-meta-item {
-        flex-direction: column;
-        gap: 4px;
-      }
-
-      .plugin-meta-value {
-        text-align: left;
-      }
-    }
-  </style>
-  <script src="https://consciousdunkvastly.com/10/53/2e/10532ee71d61d2bb046e33c2f9c7d6b0.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Track every plugin currently waiting for review, testing, or public release." data-i18n-attr="content:meta.downloadPendingDescription">
+  <meta name="theme-color" content="#060009">
+  <meta property="og:title" content="PluggLAB | Release Queue">
+  <meta property="og:image" content="assets/images/og-image.png">
+  <title>PluggLAB | Release Queue</title>
+  <link rel="canonical" href="https://plugglab.github.io/download-pending.html">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/images/favicon-32.png" sizes="32x32">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/project.css">
 </head>
-
-<body class="page-status">
+<body class="page-download-pending">
+<a class="skip-link" href="#main-content">Skip to content</a>
 <div class="site-shell">
-
-  <!-- NAV -->
   <header class="navbar">
-    <nav class="nav-container">
+    <nav class="nav-container" aria-label="Primary">
       <div class="nav-brandbar">
-        <a class="nav-logo" href="./">PluggLab</a>
-        <p class="nav-status">Plugins, systems & experiments hub</p>
+        <a class="nav-logo" href="./">PluggLAB</a>
+        <p class="nav-status" data-i18n="nav.statusShort">Project hub for plugins, packs, and experiments</p>
       </div>
-
       <div class="nav-menu-row">
         <div class="nav-links" id="site-nav-links">
-          <a href="./">Home</a>
-          <a href="./#projects">Projects</a>
-          <a href="contact/">Contact</a>
+          <a href="./" data-i18n="nav.home">Home</a>
+          <a href="./#projects" data-i18n="nav.projects">Projects</a>
+          <a href="changelog/" data-i18n="nav.changelog">Changelog</a>
+          <a href="download-pending.html" aria-current="page" data-i18n="nav.releaseQueue">Release Queue</a>
+          <a href="contact/" data-i18n="nav.contact">Contact</a>
         </div>
-
-        <div class="nav-right"><a class="nav-cta" href="https://plugglabstudio.itch.io/plugglabapp" target="_blank" rel="noopener">↓ App</a><button class="nav-toggle" type="button">
-          <span></span><span></span><span></span>
-        </button></div>
+        <div class="nav-right">
+          <button class="nav-search-btn" type="button" data-open-command aria-label="Quick jump">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <span class="kbd-label">Jump</span><kbd>⌘K</kbd>
+          </button>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
     </nav>
   </header>
 
-  <!-- MAIN -->
-  <main class="page-main">
-
-    <section class="page-hero page-hero-purple">
-      <p class="section-label">Release Queue</p>
-
-      <h1 class="project-title">What's Shipping</h1>
-
-      <p class="section-copy">
-        All the PluggLAB plugins are getting updates over the next week or two. This page tracks the release queue and lets you see what's in progress, ready to download, or waiting for final touches.
-      </p>
+  <main class="page-main" id="main-content">
+    <section class="page-hero">
+      <p class="section-label" data-i18n="downloadPending.heroLabel">Release Queue</p>
+      <h1 data-i18n="downloadPending.heroTitle">Approval &amp; Release Status</h1>
+      <p class="section-copy" data-i18n="downloadPending.heroCopy">Every plugin not yet publicly released routes through one shared queue — no more guessing what's next.</p>
     </section>
 
-    <!-- PLUGIN GRID -->
-    <section class="plugin-grid">
-
-      <article class="glass-card plugin-card">
-        <div class="plugin-top">
-          <h2 class="plugin-name">How it Works</h2>
-          <div class="status-badge status-review">The Process</div>
-        </div>
-        <p class="plugin-description">
-          Each plugin gets tested, polished, and pushed live. Once a build is ready it shows up here before going to download. No complicated approval chains—just real updates rolling out.
-        </p>
-        <div class="plugin-meta">
-          <div class="plugin-meta-item">
-            <span class="plugin-meta-label">Timeline</span>
-            <span class="plugin-meta-value">1-2 weeks</span>
-          </div>
-          <div class="plugin-meta-item">
-            <span class="plugin-meta-label">What's updating</span>
-            <span class="plugin-meta-value">All plugins & packs</span>
-          </div>
-          <div class="plugin-meta-item">
-            <span class="plugin-meta-label">Status</span>
-            <span class="plugin-meta-value">In progress</span>
-          </div>
-        </div>
-        <div class="plugin-actions">
-          <a class="btn btn-primary" href="./">Back Home</a>
-          <a class="btn btn-secondary" href="contact/">Questions?</a>
-        </div>
-      </article>
-
-      <article class="glass-card plugin-card">
-        <div class="plugin-top">
-          <h2 class="plugin-name">Approval Queue</h2>
-          <div class="status-badge status-development">Pending</div>
-        </div>
-        <p class="plugin-description">
-          New plugin builds enter a shared review queue. Each project that's waiting for release now routes through one shared workflow.
-        </p>
-        <div class="plugin-meta">
-          <div class="plugin-meta-item">
-            <span class="plugin-meta-label">Tracked</span>
-            <span class="plugin-meta-value">Automatically</span>
-          </div>
-          <div class="plugin-meta-item">
-            <span class="plugin-meta-label">Visible</span>
-            <span class="plugin-meta-value">All pending releases</span>
-          </div>
-          <div class="plugin-meta-item">
-            <span class="plugin-meta-label">Updates</span>
-            <span class="plugin-meta-value">Live as builds move</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="glass-card plugin-card">
-        <div class="plugin-top">
-          <h2 class="plugin-name">Download Activation</h2>
-          <div class="status-badge status-ready">Ready Soon</div>
-        </div>
-        <p class="plugin-description">
-          Once a build clears review, it can be published to the download list. This page is the general staging area for that final step.
-        </p>
-        <div class="plugin-meta">
-          <div class="plugin-meta-item">
-            <span class="plugin-meta-label">Release Action</span>
-            <span class="plugin-meta-value">Activate downloads</span>
-          </div>
-          <div class="plugin-meta-item">
-            <span class="plugin-meta-label">Approval</span>
-            <span class="plugin-meta-value">Completed</span>
-          </div>
-          <div class="plugin-meta-item">
-            <span class="plugin-meta-label">Result</span>
-            <span class="plugin-meta-value">Stable release</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="glass-card plugin-card">
-        <div class="plugin-top">
-          <h2 class="plugin-name">Release Notes</h2>
-          <div class="status-badge status-review">General</div>
-        </div>
-        <p class="plugin-description">
-          This page is built to support any PluggLAB plugin or pack. Use it as the general release queue rather than a manual plugin list.
-        </p>
-        <div class="plugin-meta">
-          <div class="plugin-meta-item">
-            <span class="plugin-meta-label">Goal</span>
-            <span class="plugin-meta-value">Simplified workflow</span>
-          </div>
-          <div class="plugin-meta-item">
-            <span class="plugin-meta-label">Audience</span>
-            <span class="plugin-meta-value">Community & maintainers</span>
-          </div>
-          <div class="plugin-meta-item">
-            <span class="plugin-meta-label">Status</span>
-            <span class="plugin-meta-value">Generalized</span>
-          </div>
-        </div>
-      </article>
-
+    <section class="reveal">
+      <div class="section-heading">
+        <p class="section-label" data-i18n="downloadPending.stagesLabel">How releases move</p>
+        <h2 data-i18n="downloadPending.stagesTitle">From build to Discord to download</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <h3 data-i18n="downloadPending.stage1Title">In Development</h3>
+          <p data-i18n="downloadPending.stage1Body">Core systems are being built and tested internally before anything is shared.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M8 9c.5 3 3.5 3 4 3s3.5 0 4-3M6 17c-3 0-4-3-4-6 0-4 2-8 4-8 1 0 1.5 1 2 2M18 17c3 0 4-3 4-6 0-4-2-8-4-8-1 0-1.5 1-2 2"/></svg></div>
+          <h3 data-i18n="downloadPending.stage2Title">Community Preview</h3>
+          <p data-i18n="downloadPending.stage2Body">Early builds are shared on Discord for feedback before a wider release.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></div>
+          <h3 data-i18n="downloadPending.stage3Title">Approved &amp; Live</h3>
+          <p data-i18n="downloadPending.stage3Body">Once stable, the plugin moves onto Modrinth or Spigot and into the main project grid.</p>
+        </article>
+      </div>
     </section>
 
+    <div class="rune-divider" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 22 12 12 22 2 12 12 2Z"/><circle cx="12" cy="12" r="2.4"/></svg>
+    </div>
+
+    <section class="reveal">
+      <div class="section-heading">
+        <p class="section-label" data-i18n="downloadPending.queueLabel">Queue</p>
+        <h2 data-i18n="downloadPending.queueTitle">Currently Waiting</h2>
+        <p class="section-copy" data-i18n="downloadPending.queueCopy">General release slots reserved for the next PluggLAB drops.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="glass-card">
+          <span class="status-badge" data-i18n="projectCard.approvalPending">Approval Pending</span>
+          <h3 style="margin-top:0.8rem;">VoidSpire</h3>
+          <p data-i18n="projectCard.voidspireDesc">A space-themed texture pack designed for exploration and wonder.</p>
+        </article>
+        <article class="glass-card">
+          <span class="status-badge" data-i18n="projectCard.approvalPending">Approval Pending</span>
+          <h3 style="margin-top:0.8rem;">Slot #2</h3>
+          <p data-i18n="projectCard.upcomingDesc">General plugin release slot.</p>
+        </article>
+        <article class="glass-card">
+          <span class="status-badge" data-i18n="projectCard.approvalPending">Approval Pending</span>
+          <h3 style="margin-top:0.8rem;">Slot #3</h3>
+          <p data-i18n="projectCard.upcomingDesc">General plugin release slot.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <article class="glass-card cta-band">
+        <div>
+          <h3 data-i18n="downloadPending.notifyTitle">Want a heads-up when something ships?</h3>
+          <p data-i18n="downloadPending.notifyBody">Discord is the fastest way to hear about new releases the moment they go live.</p>
+        </div>
+        <div class="cta-band-actions">
+          <a class="btn btn-primary" href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener" data-i18n="downloadPending.notifyBtn">Join Discord</a>
+          <a class="btn btn-secondary" href="changelog/" data-i18n="nav.changelog">Changelog</a>
+        </div>
+      </article>
+    </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="footer-brand">
-      <h2>PluggLab</h2>
-      <p>High-quality Minecraft plugin ecosystem.</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h2>PluggLAB</h2>
+        <p data-i18n="footer.tagline">A focused Minecraft plugin lab — free releases, clear updates, and a shared architecture behind every project.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.ecosystemHeading">Ecosystem</h4>
+        <a href="memorychain/">MemoryChain</a>
+        <a href="casinocore/">Casino Core</a>
+        <a href="safetrade/">SafeTrade</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.resourcesHeading">Resources</h4>
+        <a href="changelog/" data-i18n="nav.changelog">Changelog</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.connectHeading">Connect</h4>
+        <a href="contact/" data-i18n="nav.contact">Contact</a>
+        <a href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener" data-i18n="nav.discord">Discord</a>
+      </div>
     </div>
-
-    <div class="footer-links">
-      <a href="./">Home</a>
-      <a href="./#projects">Projects</a>
-      <a href="contact/">Contact</a>
-      <a href="https://discord.gg/ZMje3neEmK" target="_blank">Discord</a>
+    <div class="footer-bottom">
+      <span class="footer-copy" data-i18n="footer.copy">PluggLAB · built by Wilczek</span>
     </div>
   </footer>
-
 </div>
 
+<script src="assets/js/main.js"></script>
 <script src="assets/js/i18n.js"></script>
-<script src="assets/js/nav.js"></script>
-<script src="assets/js/scroll.js"></script>
 </body>
 </html>

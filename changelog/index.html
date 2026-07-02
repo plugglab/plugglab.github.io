@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Live plugin status, current versions, and release history for every PluggLAB project." data-i18n-attr="content:meta.changelogDescription">
+  <meta name="theme-color" content="#060009">
+  <meta property="og:title" content="PluggLAB | Changelog &amp; Status">
+  <meta property="og:description" content="Live plugin status, current versions, and release history for every PluggLAB project.">
+  <meta property="og:image" content="https://plugglab.github.io/assets/images/og-image.png">
+  <title>PluggLAB | Changelog &amp; Status</title>
+  <link rel="canonical" href="https://plugglab.github.io/changelog/">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/images/favicon-32.png" sizes="32x32">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/project.css">
+  <link rel="stylesheet" href="../assets/css/changelog.css">
+</head>
+<body class="page-changelog">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<div class="site-shell">
+  <header class="navbar">
+    <nav class="nav-container" aria-label="Primary">
+      <div class="nav-brandbar">
+        <a class="nav-logo" href="../">PluggLAB</a>
+        <p class="nav-status" data-i18n="nav.statusShort">Project hub for plugins, packs, and experiments</p>
+      </div>
+      <div class="nav-menu-row">
+        <div class="nav-links" id="site-nav-links">
+          <a href="../" data-i18n="nav.home">Home</a>
+          <a href="../#projects" data-i18n="nav.projects">Projects</a>
+          <a href="./" aria-current="page" data-i18n="nav.changelog">Changelog</a>
+          <a href="../contact/" data-i18n="nav.contact">Contact</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-search-btn" type="button" data-open-command aria-label="Quick jump">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <span class="kbd-label">Jump</span><kbd>⌘K</kbd>
+          </button>
+          <a class="nav-cta" href="https://plugglabstudio.itch.io/plugglabapp" target="_blank" rel="noopener">↓ <span data-i18n="nav.app">App</span></a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-main" id="main-content">
+    <section class="page-hero page-hero-blue">
+      <p class="section-label" data-i18n="changelog.heroLabel">Live Status</p>
+      <h1 data-i18n="changelog.heroTitle">Changelog &amp; Status</h1>
+      <p class="section-copy" data-i18n="changelog.heroCopy">A transparent look at what is live right now, current versions, and what shipped recently across the PluggLAB ecosystem.</p>
+      <div class="hero-highlights">
+        <span class="signal-pill green"><span class="dot-live"></span> Live feed</span>
+        <span class="signal-pill cyan">Synced with the app</span>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="section-heading">
+        <p class="section-label" data-i18n="changelog.statusSectionLabel">Right Now</p>
+        <h2 data-i18n="changelog.statusSectionTitle">Plugin Status Board</h2>
+        <p class="section-copy" data-i18n="changelog.statusSectionCopy">Pulled from the same status feed the PluggLAB Android app uses — this page and the app are always in sync.</p>
+      </div>
+
+      <div id="stable-callout" class="glass-card" style="padding:1rem 1.4rem; margin-bottom:1.25rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;" hidden>
+        <span style="font-size:0.86rem; color:var(--text-soft);">Latest stable Casino Core build: <strong class="stable-version" style="color:var(--text);"></strong></span>
+        <a class="btn btn-secondary btn-sm stable-link" href="#" target="_blank" rel="noopener">Download</a>
+      </div>
+
+      <article class="glass-card status-board">
+        <p class="status-loading" id="status-loading" data-i18n="changelog.loadingStatus">Loading live status…</p>
+        <p class="status-error" id="status-error" hidden data-i18n="changelog.loadErrorStatus">Could not load live status right now — try refreshing.</p>
+        <table class="status-table">
+          <thead>
+            <tr>
+              <th data-i18n="changelog.colName">Plugin</th>
+              <th data-i18n="changelog.colStatus">Status</th>
+              <th data-i18n="changelog.colVersion">Version</th>
+              <th data-i18n="changelog.colUpdated">Last Update</th>
+              <th data-i18n="changelog.colDownload">Download</th>
+            </tr>
+          </thead>
+          <tbody id="status-table-body"></tbody>
+        </table>
+      </article>
+    </section>
+
+    <div class="rune-divider" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 22 12 12 22 2 12 12 2Z"/><circle cx="12" cy="12" r="2.4"/></svg>
+    </div>
+
+    <section class="reveal">
+      <div class="section-heading">
+        <p class="section-label" data-i18n="changelog.historyLabel">History</p>
+        <h2 data-i18n="changelog.historyTitle">Recent Changes</h2>
+        <p class="section-copy" data-i18n="changelog.historyCopy">A running log of what shipped, what changed, and what is coming next.</p>
+      </div>
+      <article class="glass-card" style="padding: 2rem;">
+        <ol class="timeline">
+          <li class="timeline-item is-live">
+            <span class="timeline-date">2026-06-27</span>
+            <h4>VoidSpire announced</h4>
+            <p>A space-themed texture pack is in early production — first previews will land on Discord.</p>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-date">2026-06-21</span>
+            <h4>Casino Core 3.0</h4>
+            <p>Reworked reward tokens, Vault economy sync, and a more stable roulette payout loop.</p>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-date">2026-06-16</span>
+            <h4>PulseEvents 3.0</h4>
+            <p>Custom event actions expanded, config validation tightened, runtime crashes fixed.</p>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-date">2026-05-24</span>
+            <h4>SafeTrade 2.0</h4>
+            <p>Rebuilt confirmation flow and inventory validation to close remaining scam vectors.</p>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-date">2026-05-07</span>
+            <h4>Casino Core Demo published</h4>
+            <p>A stripped-down demo build made available for server owners to trial before adopting the full plugin.</p>
+          </li>
+        </ol>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h2>PluggLAB</h2>
+        <p data-i18n="footer.tagline">A focused Minecraft plugin lab — free releases, clear updates, and a shared architecture behind every project.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.ecosystemHeading">Ecosystem</h4>
+        <a href="../memorychain/">MemoryChain</a>
+        <a href="../pulseevents/">PulseEvents</a>
+        <a href="../casinocore/">Casino Core</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.resourcesHeading">Resources</h4>
+        <a href="../download-pending.html" data-i18n="nav.releaseQueue">Release Queue</a>
+        <a href="../pulseevents/docs/">PulseEvents Docs</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.connectHeading">Connect</h4>
+        <a href="../contact/" data-i18n="nav.contact">Contact</a>
+        <a href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener" data-i18n="nav.discord">Discord</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy" data-i18n="footer.copy">PluggLAB · built by Wilczek</span>
+    </div>
+  </footer>
+</div>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/status.js"></script>
+</body>
+</html>

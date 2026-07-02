@@ -1,479 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>CasinoCore Docs | Placeholders</title>
-
-    <meta name="description" content="CasinoCore PlaceholderAPI documentation and placeholders reference." />
-    <meta name="theme-color" content="#07080f" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="../../assets/css/base.css">
-    <link rel="stylesheet" href="../../assets/css/project.css">
-    <link rel="stylesheet" href="../../assets/css/casinocore.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Casino Core reference: PlaceholderAPI placeholders, admin commands, and config options.">
+  <meta name="theme-color" content="#060009">
+  <title>PluggLAB | Casino Core Docs</title>
+  <link rel="canonical" href="https://plugglab.github.io/casinocore/docs/">
+  <link rel="icon" href="../../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/theme.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/project.css">
 </head>
-
-<body class="page-project page-casinocore">
+<body class="page-docs">
+<a class="skip-link" href="#main-content">Skip to content</a>
 <div class="site-shell">
-
-    <!-- NAV -->
-    <header class="navbar">
-        <nav class="nav-container">
-
-            <div class="nav-brandbar">
-                <a class="nav-logo" href="../">PluggLAB</a>
-                <p class="nav-status">Project hub for plugins, packs, and experiments</p>
-            </div>
-
-            <div class="nav-menu-row">
-
-                <div class="nav-links" id="site-nav-links">
-                    <a href="../">Home</a>
-                    <a href="../../">Casino Core</a>
-                    <a href="#overview">Overview</a>
-                    <a href="#economy">Economy</a>
-                    <a href="#stats">Stats</a>
-                    <a href="#time">Time</a>
-                    <a href="#bets">Bets</a>
-                </div>
-
-                <button class="nav-toggle" type="button">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-
-            </div>
-
+  <header class="navbar">
+    <nav class="nav-container" aria-label="Primary">
+      <div class="nav-brandbar"><a class="nav-logo" href="../../">PluggLAB</a></div>
+      <div class="nav-menu-row">
+        <div class="nav-links" id="site-nav-links">
+          <a href="../../">Home</a>
+          <a href="../">Casino Core</a>
+          <a href="./" aria-current="page">Docs</a>
+          <a href="../../contact/">Contact</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-search-btn" type="button" data-open-command aria-label="Quick jump">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <span class="kbd-label">Jump</span><kbd>⌘K</kbd>
+          </button>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="page-main" id="main-content">
+    <section class="page-hero">
+      <p class="section-label">Documentation</p>
+      <h1>Casino Core Docs</h1>
+      <p class="section-copy">PlaceholderAPI reference, admin commands, and config options.</p>
+    </section>
+    <section class="reveal">
+      <div class="docs-layout">
+        <nav class="docs-toc" aria-label="Docs sections">
+          <a href="#setup">Setup</a>
+          <a href="#placeholders">Placeholders</a>
+          <a href="#commands">Commands</a>
+          <a href="#config">Config Reference</a>
+          <a href="#permissions">Permissions</a>
         </nav>
-    </header>
-<script async="async" data-cfasync="false" src="https://consciousdunkvastly.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
-<div id="container-3d7be051cf59b23d51d6dded9a6578da"></div>
-
-    <!-- MAIN -->
-    <main class="page-main">
-
-        <div class="docs-layout">
-
-            <!-- SIDEBAR -->
-            <aside class="docs-sidebar">
-
-                <div class="glass-card sidebar-card">
-
-                    <div class="sidebar-title">
-                        Documentation
-                    </div>
-
-                    <div class="sidebar-links">
-                        <a href="#overview">Introduction</a>
-                        <a href="#economy">Player Economy</a>
-                        <a href="#lifetime">Lifetime Stats</a>
-                        <a href="#weekly">Weekly Stats</a>
-                        <a href="#monthly">Monthly Stats</a>
-                        <a href="#daily">Daily Rewards</a>
-                        <a href="#general">General Info</a>
-                        <a href="#time">Time Placeholders</a>
-                        <a href="#bets">Last Bet Snapshot</a>
-                    </div>
-
-                </div>
-
-            </aside>
-
-            <!-- MAIN -->
-            <div class="docs-main">
-
-                <!-- HERO -->
-                <section class="docs-hero" id="overview">
-
-                    <p class="hero-kicker">CasinoCore Documentation</p>
-
-                    <h1 class="docs-title">
-                        PlaceholderAPI <span>Reference</span>
-                    </h1>
-
-                    <p class="docs-description">
-                        Complete list of PlaceholderAPI placeholders available in CasinoCore.
-                        Use these placeholders inside scoreboards, TAB, chat formats, holograms,
-                        menus and custom integrations.
-                    </p>
-
-                    <div class="search-bar">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.3-4.3"></path>
-                        </svg>
-
-                        <input type="text" placeholder="Search placeholders..." />
-                    </div>
-
-                    <div class="docs-stats">
-
-                        <div class="docs-stat">
-                            <strong>36+</strong>
-                            <span>Available Placeholders</span>
-                        </div>
-
-                        <div class="docs-stat">
-                            <strong>PAPI</strong>
-                            <span>PlaceholderAPI Support</span>
-                        </div>
-
-                        <div class="docs-stat">
-                            <strong>Live</strong>
-                            <span>Realtime Statistics</span>
-                        </div>
-
-                    </div>
-
-                </section>
-
-                <!-- PLAYER ECONOMY -->
-                <section class="glass-card docs-section" id="economy">
-
-                    <p class="section-label">Economy</p>
-
-                    <h2>Player Economy Placeholders</h2>
-
-                    <p class="docs-section-copy">
-                        Economy placeholders provide access to balances and hooked economy provider information.
-                    </p>
-
-                    <div class="placeholder-grid">
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_balance%</div>
-                            <p>Formatted player balance.</p>
-
-                            <div class="example-box">
-                                <span>Example Output</span>
-                                <code>$12,500</code>
-                            </div>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_balance_raw%</div>
-                            <p>Raw player balance with 2 decimal places.</p>
-
-                            <div class="example-box">
-                                <span>Example Output</span>
-                                <code>12500.42</code>
-                            </div>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_economy%</div>
-                            <p>Current hooked economy provider name.</p>
-
-                            <div class="example-box">
-                                <span>Example Output</span>
-                                <code>Vault</code>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </section>
-
-                <!-- LIFETIME -->
-                <section class="glass-card docs-section" id="lifetime">
-
-                    <p class="section-label">Statistics</p>
-
-                    <h2>Lifetime Player Stats</h2>
-
-                    <div class="placeholder-grid">
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_wins%</div>
-                            <p>Total wins.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_losses%</div>
-                            <p>Total losses.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_games_played%</div>
-                            <p>Total games played.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_streak%</div>
-                            <p>Current win streak.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_best_streak%</div>
-                            <p>Best recorded win streak.</p>
-                        </div>
-
-                    </div>
-
-                </section>
-
-                <!-- WEEKLY -->
-                <section class="glass-card docs-section" id="weekly">
-
-                    <p class="section-label">Weekly Statistics</p>
-
-                    <h2>Weekly Stats</h2>
-
-                    <div class="placeholder-grid">
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_wins_w%</div>
-                            <p>Current week wins.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_wins_week%</div>
-                            <p>Alias of %casino_wins_w%.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_losses_w%</div>
-                            <p>Current week losses.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_losses_week%</div>
-                            <p>Alias of %casino_losses_w%.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_games_played_w%</div>
-                            <p>Current week games played.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_games_played_week%</div>
-                            <p>Alias of %casino_games_played_w%.</p>
-                        </div>
-
-                    </div>
-
-                </section>
-
-                <!-- MONTHLY -->
-                <section class="glass-card docs-section" id="monthly">
-
-                    <p class="section-label">Monthly Statistics</p>
-
-                    <h2>Monthly & Last Month Stats</h2>
-
-                    <div class="placeholder-grid">
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_wins_m%</div>
-                            <p>Current month wins.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_losses_m%</div>
-                            <p>Current month losses.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_games_played_m%</div>
-                            <p>Current month games played.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_wins_lm%</div>
-                            <p>Last month wins.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_losses_lm%</div>
-                            <p>Last month losses.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_games_played_lm%</div>
-                            <p>Last month games played.</p>
-                        </div>
-
-                    </div>
-
-                </section>
-
-                <!-- DAILY -->
-                <section class="glass-card docs-section" id="daily">
-
-                    <p class="section-label">Daily Rewards</p>
-
-                    <h2>Reward Placeholders</h2>
-
-                    <div class="placeholder-grid">
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_daily_ready%</div>
-                            <p>Returns true if daily reward can be claimed.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_next_daily%</div>
-                            <p>Displays remaining time until next daily claim.</p>
-                        </div>
-
-                    </div>
-
-                </section>
-
-                <!-- GENERAL -->
-                <section class="glass-card docs-section" id="general">
-
-                    <p class="section-label">General</p>
-
-                    <h2>General Plugin Info</h2>
-
-                    <div class="placeholder-grid">
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_available_games%</div>
-                            <p>Returns enabled casino game count.</p>
-                        </div>
-
-                    </div>
-
-                </section>
-
-                <!-- TIME -->
-                <section class="glass-card docs-section" id="time">
-
-                    <p class="section-label">Time System</p>
-
-                    <h2>Time Placeholders</h2>
-
-                    <div class="placeholder-grid">
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_time_year%</div>
-                            <p>Current year.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_time_month%</div>
-                            <p>Current month number.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_time_month_name%</div>
-                            <p>Current month name in English.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_time_week%</div>
-                            <p>Current ISO week number.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_time_day%</div>
-                            <p>Current day of month.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_time_day_name%</div>
-                            <p>Current day name in English.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_time_date%</div>
-                            <p>Current date formatted as yyyy-MM-dd.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_time_clock%</div>
-                            <p>Current time formatted as HH:mm:ss.</p>
-                        </div>
-
-                    </div>
-
-                </section>
-
-                <!-- BETS -->
-                <section class="glass-card docs-section" id="bets">
-
-                    <p class="section-label">Bet Tracking</p>
-
-                    <h2>Last Bet Snapshot</h2>
-
-                    <div class="placeholder-grid">
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_last_bet_game%</div>
-                            <p>Last logged game name.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_last_bet_section%</div>
-                            <p>Last logged section name.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_last_bet_amount%</div>
-                            <p>Last logged amount detail.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_last_bet_status%</div>
-                            <p>Last logged result or status detail.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_last_bet_payout%</div>
-                            <p>Last logged payout detail.</p>
-                        </div>
-
-                        <div class="placeholder-card">
-                            <div class="placeholder-code">%casino_last_bet_profit%</div>
-                            <p>Last logged profit detail.</p>
-                        </div>
-
-                    </div>
-
-                </section>
-
-            </div>
-
+        <div class="docs-content">
+          <div class="docs-section" id="setup">
+            <h2>Setup</h2>
+            <p>Install <code>Vault</code>, an economy provider, and <code>MemoryChain</code> before Casino Core. On first boot, Casino Core generates a default <code>config.yml</code> with one slot machine table and one roulette table.</p>
+          </div>
+          <div class="docs-section" id="placeholders">
+            <h2>Placeholders</h2>
+            <table class="docs-table">
+              <thead><tr><th>Placeholder</th><th>Returns</th></tr></thead>
+              <tbody>
+                <tr><td><code>%casinocore_balance%</code></td><td>Player's current casino token balance.</td></tr>
+                <tr><td><code>%casinocore_jackpot%</code></td><td>Current slot machine jackpot pool.</td></tr>
+                <tr><td><code>%casinocore_winstreak%</code></td><td>Player's current consecutive win count.</td></tr>
+                <tr><td><code>%casinocore_lastwin%</code></td><td>Amount won on the player's most recent spin.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="docs-section" id="commands">
+            <h2>Commands</h2>
+            <table class="docs-table">
+              <thead><tr><th>Command</th><th>Permission</th><th>Description</th></tr></thead>
+              <tbody>
+                <tr><td><code>/casino open</code></td><td>casinocore.use</td><td>Opens the main casino GUI.</td></tr>
+                <tr><td><code>/casino admin reload</code></td><td>casinocore.admin</td><td>Reloads config without restarting.</td></tr>
+                <tr><td><code>/casino admin setlimit &lt;amount&gt;</code></td><td>casinocore.admin</td><td>Sets the max wager per spin.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="docs-section" id="config">
+            <h2>Config Reference</h2>
+            <pre>slots:
+  jackpot-seed: 500
+  reel-odds:
+    cherry: 0.35
+    bell: 0.25
+    star: 0.15
+    jackpot: 0.02
+roulette:
+  min-bet: 10
+  max-bet: 5000
+  house-edge: 0.027</pre>
+          </div>
+          <div class="docs-section" id="permissions">
+            <h2>Permissions</h2>
+            <table class="docs-table">
+              <thead><tr><th>Node</th><th>Description</th></tr></thead>
+              <tbody>
+                <tr><td><code>casinocore.use</code></td><td>Access to all casino games.</td></tr>
+                <tr><td><code>casinocore.admin</code></td><td>Access to admin subcommands and config reload.</td></tr>
+                <tr><td><code>casinocore.vip</code></td><td>Raises per-player wager limits (configurable).</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-
-        <div class="footer-brand">
-            <h2>PluggLAB</h2>
-            <p>Casino Core documentation and PlaceholderAPI reference.</p>
-        </div>
-
-        <div class="footer-links">
-            <a href="#overview">Overview</a>
-            <a href="#economy">Economy</a>
-            <a href="#stats">Stats</a>
-            <a href="#time">Time</a>
-            <a href="#bets">Bets</a>
-        </div>
-
-    </footer>
-
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-bottom" style="max-width:var(--max-width); margin:0 auto;">
+      <span class="footer-copy">PluggLAB · built by Wilczek</span>
+    </div>
+  </footer>
 </div>
-
+<script src="../../assets/js/main.js"></script>
 <script src="../../assets/js/i18n.js"></script>
-<script src="../../assets/js/nav.js"></script>
-<script src="../../assets/js/scroll.js"></script>
-<script src="../../assets/js/project.js"></script>
-<script async="async" data-cfasync="false" src="https://consciousdunkvastly.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
-<div id="container-3d7be051cf59b23d51d6dded9a6578da"></div>
-
 </body>
 </html>

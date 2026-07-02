@@ -3,495 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="PulseEvents 1.0.0 reference for custom events, action types, placeholders, validation, and runtime behavior.">
-  <meta name="theme-color" content="#07080f">
-  <meta property="og:title" content="PulseEvents Custom Events | PluggLAB">
-  <meta property="og:description" content="Developer reference for PulseEvents custom event configuration, placeholders, and runtime behavior in version 1.0.0.">
-
-  <title>PluggLAB | PulseEvents Custom Events</title>
-
-  <link rel="icon" href="../../assets/images/pulseevents_n.png" sizes="any">
-
+  <meta name="description" content="PulseEvents configuration reference: triggers, actions, conditions, and command syntax.">
+  <meta name="theme-color" content="#060009">
+  <title>PluggLAB | PulseEvents Docs</title>
+  <link rel="canonical" href="https://plugglab.github.io/pulseevents/docs/">
+  <link rel="icon" href="../../assets/images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="../../assets/css/base.css">
-  <link rel="stylesheet" href="../../assets/css/pages.css">
-  <link rel="stylesheet" href="../../assets/css/events.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/theme.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/project.css">
 </head>
-
-<body class="page-project page-events">
+<body class="page-docs">
+<a class="skip-link" href="#main-content">Skip to content</a>
 <div class="site-shell">
-
   <header class="navbar">
-    <nav class="nav-container">
-      <div class="nav-brandbar">
-        <a class="nav-logo" href="../../">PluggLAB</a>
-        <p class="nav-status">Project hub for plugins, packs, and experiments</p>
-      </div>
-
+    <nav class="nav-container" aria-label="Primary">
+      <div class="nav-brandbar"><a class="nav-logo" href="../../">PluggLAB</a></div>
       <div class="nav-menu-row">
         <div class="nav-links" id="site-nav-links">
           <a href="../../">Home</a>
-          <a href="../../#projects">Projects</a>
+          <a href="../">PulseEvents</a>
+          <a href="./" aria-current="page">Docs</a>
           <a href="../../contact/">Contact</a>
         </div>
-        <button class="nav-toggle" type="button">
-          <span></span><span></span><span></span>
-        </button>
+        <div class="nav-right">
+          <button class="nav-search-btn" type="button" data-open-command aria-label="Quick jump">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <span class="kbd-label">Jump</span><kbd>⌘K</kbd>
+          </button>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+        </div>
       </div>
     </nav>
   </header>
-<script>
-  atOptions = {
-    'key' : '608d5fb4ea1e6fae9a4d53911ea925b3',
-    'format' : 'iframe',
-    'height' : 50,
-    'width' : 320,
-    'params' : {}
-  };
-</script>
-<script src="https://consciousdunkvastly.com/608d5fb4ea1e6fae9a4d53911ea925b3/invoke.js"></script>
-  <main class="page-main">
-    <section class="page-hero page-hero-blue">
-      <p class="section-label">Reference</p>
-      <h1 class="project-title">Custom Events</h1>
-      <p class="section-copy">
-        Technical reference for PulseEvents 1.0.0 custom event configuration, action execution, placeholders, validation, and runtime behavior.
-      </p>
-
-      <div class="hero-highlights">
-        <span class="signal-pill blue">PulseEvents 1.0.0</span>
-        <span class="signal-pill cyan">Config-Driven</span>
-        <span class="signal-pill purple">Developer Docs</span>
-      </div>
-
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="../">Back to PulseEvents</a>
-        <a class="btn btn-secondary" href="https://www.spigotmc.org/resources/pulseevents.134140/" target="_blank">Download Plugin</a>
-      </div>
+  <main class="page-main" id="main-content">
+    <section class="page-hero">
+      <p class="section-label">Documentation</p>
+      <h1>PulseEvents Docs</h1>
+      <p class="section-copy">Configuration reference for triggers, actions, conditions, and commands.</p>
     </section>
-
-    <section class="docs-section ad-slot" aria-label="Advertisement">
-      <script src="https://pl30098231.effectivecpmnetwork.com/10/53/2e/10532ee71d61d2bb046e33c2f9c7d6b0.js"></script>
-    </section>
-
-    <section class="docs-layout">
-      <article class="glass-card docs-card">
-        <div class="section-heading">
-          <p class="section-label">Overview</p>
-          <h2>Runtime Integration</h2>
+    <section class="reveal">
+      <div class="docs-layout">
+        <nav class="docs-toc" aria-label="Docs sections">
+          <a href="#getting-started">Getting Started</a>
+          <a href="#triggers">Triggers</a>
+          <a href="#actions">Actions</a>
+          <a href="#conditions">Conditions</a>
+          <a href="#commands">Commands</a>
+          <a href="#example">Full Example</a>
+        </nav>
+        <div class="docs-content">
+          <div class="docs-section" id="getting-started">
+            <h2>Getting Started</h2>
+            <p>PulseEvents loads every file in <code>plugins/PulseEvents/events/</code> as an independent event definition. Each file defines a <code>trigger</code>, one or more <code>actions</code>, and optional <code>conditions</code>.</p>
+            <pre>events:
+  double-drops:
+    trigger:
+      type: schedule
+      cron: "0 20 * * FRI"
+    actions:
+      - broadcast: "&amp;6Double drops are now active!"
+      - effect: drop-multiplier
+        value: 2.0
+        duration: 3600</pre>
+          </div>
+          <div class="docs-section" id="triggers">
+            <h2>Triggers</h2>
+            <table class="docs-table">
+              <thead><tr><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+                <tr><td><code>schedule</code></td><td>Cron-style recurring trigger.</td></tr>
+                <tr><td><code>interval</code></td><td>Repeats every N seconds while the server is online.</td></tr>
+                <tr><td><code>playerCount</code></td><td>Fires once a player count threshold is crossed.</td></tr>
+                <tr><td><code>command</code></td><td>Fires when an operator runs <code>/pulse trigger &lt;id&gt;</code>.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="docs-section" id="actions">
+            <h2>Actions</h2>
+            <table class="docs-table">
+              <thead><tr><th>Action</th><th>Description</th></tr></thead>
+              <tbody>
+                <tr><td><code>broadcast</code></td><td>Sends a formatted message to every online player.</td></tr>
+                <tr><td><code>command</code></td><td>Runs a console or player command.</td></tr>
+                <tr><td><code>effect</code></td><td>Applies a temporary server-wide effect (drop multiplier, spawn rate, etc.).</td></tr>
+                <tr><td><code>spawn</code></td><td>Spawns a mob or boss at a configured location.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="docs-section" id="conditions">
+            <h2>Conditions</h2>
+            <p>Conditions are optional and stack with AND logic. An event only fires when every listed condition passes.</p>
+            <pre>conditions:
+  - minPlayers: 5
+  - world: "survival"
+  - timeOfDay: "night"</pre>
+          </div>
+          <div class="docs-section" id="commands">
+            <h2>Commands</h2>
+            <table class="docs-table">
+              <thead><tr><th>Command</th><th>Description</th></tr></thead>
+              <tbody>
+                <tr><td><code>/pulse reload</code></td><td>Reloads every event config without a restart.</td></tr>
+                <tr><td><code>/pulse list</code></td><td>Lists all loaded events and their next run time.</td></tr>
+                <tr><td><code>/pulse trigger &lt;id&gt;</code></td><td>Manually fires an event immediately.</td></tr>
+                <tr><td><code>/pulse info &lt;id&gt;</code></td><td>Shows the parsed trigger, actions, and conditions for one event.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="docs-section" id="example">
+            <h2>Full Example</h2>
+            <pre>events:
+  night-raid:
+    trigger:
+      type: schedule
+      cron: "0 22 * * *"
+    conditions:
+      - minPlayers: 3
+      - world: "survival"
+    actions:
+      - broadcast: "&amp;cSomething stirs in the dark..."
+      - spawn:
+          mob: WITHER_SKELETON
+          count: 4
+          location: "raid-arena"
+      - effect: mob-spawn-boost
+        value: 1.5
+        duration: 900</pre>
+          </div>
         </div>
-
-        <ul class="feature-list">
-          <li>Custom events live as separate <code>.yml</code> files in the plugin <code>events/</code> folder.</li>
-          <li>They are loaded on startup and refreshed on <code>/pe reload</code>.</li>
-          <li>GUI chance editing, queueing, bossbar, announcements, and placeholders all treat custom events as first-class entries.</li>
-        </ul>
-      </article>
-
-      <article class="glass-card docs-card">
-        <div class="section-heading">
-          <p class="section-label">Example</p>
-          <h2>Minimal Event File</h2>
-        </div>
-
-        <pre class="code-block"><code>event:
-  key: meteor-shower
-  enabled: true
-  name: "Meteor Shower"
-  chance: 100
-  duration: 45
-  icon: MAGMA_BLOCK
-  min-players: 2
-  allowed-worlds: []
-  start-message: "&amp;c%event% has started."
-  end-message: "&7%event% has ended."
-  bossbar-title: "&6%event%"
-  actions:
-    opening-title:
-      type: title
-      target: all-players
-      title: "&6%event%"
-      subtitle: "&7Take cover."
-    impact-wave:
-      type: spawn-tnt
-      target: random-players
-      target-count: 2
-      chance: 70
-      delay-seconds: 4
-      amount: 2
-      fuse-ticks: 50
-      explosion-power: 3.0</code></pre>
-      </article>
-    </section>
-
-    <section class="docs-section">
-      <div class="section-heading">
-        <p class="section-label">Reference</p>
-        <h2>Top-Level Event Fields</h2>
-        <p class="section-copy">These fields define how an event is displayed, selected, and gated before any actions run.</p>
-      </div>
-
-      <div class="table-wrap glass-card">
-        <table class="docs-table">
-          <thead>
-            <tr>
-              <th>Field</th>
-              <th>Type / Default</th>
-              <th>Behavior</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>enabled</code></td>
-              <td><code>boolean</code> / <code>true</code></td>
-              <td><code>false</code> skips the event on load.</td>
-            </tr>
-            <tr>
-              <td><code>name</code></td>
-              <td><code>string</code></td>
-              <td>Used in GUI, queue, broadcasts, and placeholders.</td>
-            </tr>
-            <tr>
-              <td><code>chance</code></td>
-              <td><code>integer</code> / <code>100</code></td>
-              <td>Selection weight. <code>0</code> makes the event manual or queue only.</td>
-            </tr>
-            <tr>
-              <td><code>duration</code></td>
-              <td><code>integer</code> / required</td>
-              <td>Must be greater than <code>0</code>. Controls bossbar timer and auto-stop.</td>
-            </tr>
-            <tr>
-              <td><code>icon</code></td>
-              <td><code>Material</code></td>
-              <td>Bukkit material such as <code>NETHER_STAR</code>, <code>MAGMA_BLOCK</code>, or <code>EMERALD</code>.</td>
-            </tr>
-            <tr>
-              <td><code>min-players</code></td>
-              <td><code>integer</code> / <code>1</code></td>
-              <td>Counts only eligible players.</td>
-            </tr>
-            <tr>
-              <td><code>allowed-worlds</code></td>
-              <td>list / <code>[]</code></td>
-              <td>Empty list allows any world permitted by global multiworld rules.</td>
-            </tr>
-            <tr>
-              <td><code>start-message</code></td>
-              <td><code>string</code> / optional</td>
-              <td>Overrides the default start broadcast. Supports <code>%event%</code>.</td>
-            </tr>
-            <tr>
-              <td><code>end-message</code></td>
-              <td><code>string</code> / optional</td>
-              <td>Overrides the default end broadcast. Supports <code>%event%</code>.</td>
-            </tr>
-            <tr>
-              <td><code>bossbar-title</code></td>
-              <td><code>string</code> / optional</td>
-              <td>Overrides the default bossbar title. Supports <code>%event%</code>.</td>
-            </tr>
-            <tr>
-              <td><code>actions</code></td>
-              <td>config section / required</td>
-              <td>Contains named action entries.</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </section>
-<script async="async" data-cfasync="false" src="https://consciousdunkvastly.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
-<div id="container-3d7be051cf59b23d51d6dded9a6578da"></div>
-
-    <section class="docs-section">
-      <div class="section-heading">
-        <p class="section-label">Reference</p>
-        <h2>Common Action Fields</h2>
-        <p class="section-copy">Every action supports the same execution controls, then adds fields specific to its type.</p>
-      </div>
-
-      <div class="table-wrap glass-card">
-        <table class="docs-table">
-          <thead>
-            <tr>
-              <th>Field</th>
-              <th>Type / Default</th>
-              <th>Behavior</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>type</code></td>
-              <td>required</td>
-              <td>Action type selector.</td>
-            </tr>
-            <tr>
-              <td><code>target</code></td>
-              <td><code>all-players</code></td>
-              <td>Options: <code>all-players</code>, <code>all</code>, <code>random-player</code>, <code>random-players</code>.</td>
-            </tr>
-            <tr>
-              <td><code>target-count</code></td>
-              <td><code>integer</code> / <code>1</code></td>
-              <td>Used with <code>random-players</code>. Clamped to online player count.</td>
-            </tr>
-            <tr>
-              <td><code>chance</code></td>
-              <td><code>integer</code> / <code>100</code></td>
-              <td>Per-action chance gate from <code>0</code> to <code>100</code>. Rolled on each execution.</td>
-            </tr>
-            <tr>
-              <td><code>delay-seconds</code></td>
-              <td><code>integer</code> / <code>0</code></td>
-              <td>Delays the first run.</td>
-            </tr>
-            <tr>
-              <td><code>repeat-every-seconds</code></td>
-              <td><code>integer</code> / <code>0</code></td>
-              <td><code>0</code> means no repeat.</td>
-            </tr>
-            <tr>
-              <td><code>repeat-times</code></td>
-              <td><code>integer</code> / <code>1</code></td>
-              <td>Total executions when repeating.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="docs-section">
-      <div class="section-heading">
-        <p class="section-label">Action Types</p>
-        <h2>Supported Actions</h2>
-        <p class="section-copy">Action cards below list the required inputs and the fields most often used in production configs.</p>
-      </div>
-
-      <div class="action-grid">
-        <article class="glass-card action-card">
-          <h3>1. <code>message</code></h3>
-          <p>Sends chat text.</p>
-          <p><strong>Fields:</strong> <code>message</code>. Supports <code>%event%</code>.</p>
-        </article>
-        <article class="glass-card action-card">
-          <h3>2. <code>sound</code></h3>
-          <p>Plays a Bukkit sound.</p>
-          <p><strong>Fields:</strong> <code>sound</code>, <code>volume</code> (default <code>1.0</code>), <code>pitch</code> (default <code>1.0</code>).</p>
-        </article>
-        <article class="glass-card action-card">
-          <h3>3. <code>potion</code></h3>
-          <p>Applies a potion effect.</p>
-          <p><strong>Fields:</strong> <code>effect</code>, <code>effect-duration-seconds</code> (default <code>5</code>), <code>amplifier</code> (default <code>0</code>).</p>
-        </article>
-        <article class="glass-card action-card">
-          <h3>4. <code>teleport</code></h3>
-          <p>Applies a random offset teleport.</p>
-          <p><strong>Fields:</strong> <code>random-offset.x.min</code>/<code>max</code>, <code>random-offset.y.min</code>/<code>max</code>, <code>random-offset.z.min</code>/<code>max</code>.</p>
-        </article>
-        <article class="glass-card action-card">
-          <h3>5. <code>spawn-mob</code></h3>
-          <p>Spawns entities.</p>
-          <p><strong>Fields:</strong> <code>entity</code> (default <code>ZOMBIE</code>), <code>amount</code> (default <code>1</code>), <code>offset.x</code>, <code>offset.y</code>, <code>offset.z</code>.</p>
-        </article>
-        <article class="glass-card action-card">
-          <h3>6. <code>strike-lightning</code></h3>
-          <p>Triggers lightning.</p>
-          <p><strong>Fields:</strong> <code>effect-only</code> (default <code>false</code>), <code>offset.x</code>, <code>offset.y</code>, <code>offset.z</code>.</p>
-        </article>
-        <article class="glass-card action-card">
-          <h3>7. <code>spawn-tnt</code></h3>
-          <p>Spawns primed TNT.</p>
-          <p><strong>Fields:</strong> <code>amount</code>, <code>fuse-ticks</code> (default <code>40</code>), <code>explosion-power</code> (default <code>4.0</code>), <code>offset.x</code>, <code>offset.y</code>, <code>offset.z</code>.</p>
-        </article>
-        <article class="glass-card action-card">
-          <h3>8. <code>velocity</code></h3>
-          <p>Sets player velocity.</p>
-          <p><strong>Fields:</strong> <code>velocity.x</code>, <code>velocity.y</code>, <code>velocity.z</code>.</p>
-        </article>
-        <article class="glass-card action-card">
-          <h3>9. <code>ignite</code></h3>
-          <p>Sets the target on fire.</p>
-          <p><strong>Fields:</strong> <code>fire-ticks</code> (default <code>60</code>).</p>
-        </article>
-        <article class="glass-card action-card">
-          <h3>10. <code>economy-reward</code></h3>
-          <p>Runs a Vault payout.</p>
-          <p><strong>Fields:</strong> <code>money.min</code>, <code>money.max</code>. Requires Vault.</p>
-        </article>
-        <article class="glass-card action-card">
-          <h3>11. <code>title</code></h3>
-          <p>Shows title and subtitle.</p>
-          <p><strong>Fields:</strong> <code>title</code>, <code>subtitle</code>, <code>fade-in-ticks</code> (<code>10</code>), <code>stay-ticks</code> (<code>40</code>), <code>fade-out-ticks</code> (<code>10</code>). Supports <code>%event%</code>.</p>
-        </article>
-        <article class="glass-card action-card">
-          <h3>12. <code>console-command</code></h3>
-          <p>Runs a command as console per target.</p>
-          <p><strong>Fields:</strong> <code>command</code>. Supports <code>%event%</code>, <code>%player%</code>, <code>%world%</code>.</p>
-        </article>
-        <article class="glass-card action-card">
-          <h3>13. <code>player-command</code></h3>
-          <p>Runs a command as player.</p>
-          <p><strong>Fields:</strong> <code>command</code>. Supports <code>%event%</code>, <code>%player%</code>, <code>%world%</code>.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="docs-section">
-      <div class="section-heading">
-        <p class="section-label">Placeholders</p>
-        <h2>Runtime Variables</h2>
-        <p class="section-copy">Use these placeholders in messages, bossbars, GUIs, and other text fields that render live event state.</p>
-      </div>
-
-      <div class="table-wrap glass-card">
-        <table class="docs-table">
-          <thead>
-            <tr>
-              <th>Placeholder</th>
-              <th>Returns</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>%pulseevents_current_event%</code></td>
-              <td>Current event name or <code>none</code></td>
-              <td>Returns <code>none</code> when no event is running.</td>
-            </tr>
-            <tr>
-              <td><code>%pulseevents_current_event_time_remaining%</code></td>
-              <td>Time remaining</td>
-              <td>Updates while an event is active.</td>
-            </tr>
-            <tr>
-              <td><code>%pulseevents_leading_event%</code></td>
-              <td>Leading event or <code>none</code></td>
-              <td>Returns <code>none</code> when no votes are active.</td>
-            </tr>
-            <tr>
-              <td><code>%pulseevents_leading_event_votes%</code></td>
-              <td>Vote count</td>
-              <td>Shows the current vote total for the leading event.</td>
-            </tr>
-            <tr>
-              <td><code>%pulseevents_event_active%</code></td>
-              <td>Active state</td>
-              <td>Use for conditional displays or status text.</td>
-            </tr>
-            <tr>
-              <td><code>%pulseevents_events_enabled%</code></td>
-              <td>Enabled state</td>
-              <td>Reflects whether the event system is enabled.</td>
-            </tr>
-            <tr>
-              <td><code>%pulseevents_queue_size%</code></td>
-              <td>Queue size</td>
-              <td>Returns <code>0</code> when the queue is empty.</td>
-            </tr>
-            <tr>
-              <td><code>%pulseevents_registered_events%</code></td>
-              <td>Registered count</td>
-              <td>Returns <code>0</code> when no events are registered.</td>
-            </tr>
-            <tr>
-              <td><code>%pulseevents_player_streak%</code></td>
-              <td>Player streak</td>
-              <td>Returns <code>0</code> when the player has no streak.</td>
-            </tr>
-            <tr>
-              <td><code>%pulseevents_top_streak%</code></td>
-              <td>Top streak</td>
-              <td>Returns <code>0</code> when no streak has been recorded.</td>
-            </tr>
-            <tr>
-              <td><code>%pulseevents_next_streak_milestone%</code></td>
-              <td>Next milestone</td>
-              <td>Returns <code>0</code> when no milestone is defined.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="docs-layout">
-      <article class="glass-card docs-card">
-        <div class="section-heading">
-          <p class="section-label">Validation</p>
-          <h2>Events Are Skipped If</h2>
-        </div>
-
-        <ul class="status-list">
-          <li><code>duration &lt;= 0</code></li>
-          <li><code>icon</code> is not a valid <code>Material</code></li>
-          <li>No <code>actions</code> section exists</li>
-          <li>An action has no <code>type</code></li>
-          <li><code>sound</code> uses an invalid <code>Sound</code> value</li>
-          <li><code>potion</code> uses an invalid <code>PotionEffectType</code></li>
-          <li><code>spawn-mob</code> uses an invalid <code>EntityType</code></li>
-          <li><code>console-command</code> or <code>player-command</code> has an empty <code>command</code></li>
-          <li><code>economy-reward</code> has no Vault provider</li>
-          <li>An action uses an unsupported <code>type</code></li>
-        </ul>
-      </article>
-
-      <article class="glass-card docs-card">
-        <div class="section-heading">
-          <p class="section-label">Runtime</p>
-          <h2>Operational Notes</h2>
-        </div>
-
-        <ul class="feature-list">
-          <li>GUI queue input supports middle click, <code>Q</code>, and <code>Ctrl+Q</code>.</li>
-          <li><code>min-players</code> counts players eligible under both global and event-specific world rules.</li>
-          <li><code>random-players</code> picks unique players up to <code>target-count</code>.</li>
-          <li>Chance rolls apply per action, so a single event can mix guaranteed and optional effects.</li>
-        </ul>
-
-        <h3 class="subheading">Shipped Presets</h3>
-        <div class="hero-highlights">
-          <span class="signal-pill blue">meteor-shower</span>
-          <span class="signal-pill cyan">gravity-well</span>
-          <span class="signal-pill purple">hot-potato</span>
-          <span class="signal-pill red">jackpot-rush</span>
-          <span class="signal-pill yellow">blink-surge</span>
-        </div>
-      </article>
-    </section>
-
   </main>
-
   <footer class="site-footer">
-    <div class="footer-brand">
-      <h2>PluggLAB</h2>
-      <p>PulseEvents custom event and placeholder reference for version 1.0.0.</p>
-    </div>
-
-    <div class="footer-links">
-      <a href="../">PulseEvents</a>
-      <a href="../../">Home</a>
-      <a href="../../contact/">Contact</a>
+    <div class="footer-bottom" style="max-width:var(--max-width); margin:0 auto;">
+      <span class="footer-copy">PluggLAB · built by Wilczek</span>
     </div>
   </footer>
-
 </div>
-
+<script src="../../assets/js/main.js"></script>
 <script src="../../assets/js/i18n.js"></script>
-<script src="../../assets/js/nav.js"></script>
-<script src="../../assets/js/scroll.js"></script>
-<script src="../../assets/js/project.js"></script>
-<script>
-  atOptions = {
-    'key' : '608d5fb4ea1e6fae9a4d53911ea925b3',
-    'format' : 'iframe',
-    'height' : 50,
-    'width' : 320,
-    'params' : {}
-  };
-</script>
-<script src="https://consciousdunkvastly.com/608d5fb4ea1e6fae9a4d53911ea925b3/invoke.js"></script>
 </body>
 </html>

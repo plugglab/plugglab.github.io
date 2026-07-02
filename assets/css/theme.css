@@ -1,0 +1,242 @@
+/* =========================================================
+   PluggLAB — Theme
+   Void / gothic palette. Cinzel display, Space Grotesk body.
+   ========================================================= */
+
+:root {
+  /* VOID PALETTE */
+  --bg: #060009;
+  --bg-deep: #030005;
+  --panel: rgba(180, 50, 255, 0.035);
+  --panel-mid: rgba(180, 50, 255, 0.07);
+  --panel-strong: rgba(180, 50, 255, 0.12);
+  --border: rgba(180, 50, 255, 0.11);
+  --border-bright: rgba(180, 50, 255, 0.28);
+  --text: #e8dff5;
+  --text-soft: rgba(232, 223, 245, 0.7);
+  --muted: #6b5a80;
+
+  /* ACCENTS */
+  --accent: #7c3aed;
+  --accent-glow: rgba(124, 58, 237, 0.22);
+  --violet: #8b2be2;
+  --violet-bright: #a855f7;
+  --violet-glow: rgba(139, 43, 226, 0.18);
+  --crimson: #c0192f;
+  --crimson-bright: #e0263f;
+  --crimson-glow: rgba(192, 25, 47, 0.22);
+  --ice: #4dc9ff;
+  --ice-glow: rgba(77, 201, 255, 0.14);
+  --gold: #f6c143;
+  --gold-glow: rgba(246, 193, 67, 0.16);
+  --soul: #2dff8a;
+  --soul-glow: rgba(45, 255, 138, 0.35);
+
+  /* GRADIENTS */
+  --gradient-main: linear-gradient(135deg, #e8dff5 0%, #c084fc 40%, #4dc9ff 100%);
+  --gradient-ember: linear-gradient(135deg, #f6c143 0%, #e0263f 60%, #8b2be2 100%);
+  --gradient-subtle: linear-gradient(135deg, rgba(139, 43, 226, 0.1) 0%, rgba(77, 201, 255, 0.06) 100%);
+  --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.55);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4), 0 1px 4px rgba(0, 0, 0, 0.25);
+
+  /* SHAPE */
+  --radius-card: 18px;
+  --radius-sm: 10px;
+  --radius-btn: 10px;
+  --max-width: 1160px;
+  --nav-height: 72px;
+
+  /* FONTS */
+  --font-display: 'Cinzel', 'Cinzel Decorative', serif;
+  --font-body: 'Space Grotesk', 'Inter', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- RESET ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html, body, button, a, input, textarea, select, summary {
+  cursor: url('../images/plugglab_cursor.cur'), auto;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+  color: var(--text);
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 65% 55% at 12% 0%, rgba(139, 43, 226, 0.18) 0%, transparent 58%),
+    radial-gradient(ellipse 50% 45% at 88% 5%, rgba(192, 25, 47, 0.12) 0%, transparent 52%),
+    radial-gradient(ellipse 45% 55% at 82% 88%, rgba(77, 201, 255, 0.07) 0%, transparent 50%),
+    radial-gradient(ellipse 35% 40% at 5% 82%, rgba(139, 43, 226, 0.07) 0%, transparent 48%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(180, 50, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(180, 50, 255, 0.022) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(180deg, rgba(255, 255, 255, 0.28) 0%, transparent 68%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url('../images/plugglab_background.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+}
+
+a { color: inherit; text-decoration: none; }
+img, svg { display: block; max-width: 100%; }
+button { cursor: url('../images/plugglab_cursor.cur'), pointer; font: inherit; background: none; border: none; color: inherit; }
+ul { list-style: none; }
+::selection { background: var(--violet); color: #fff; }
+
+/* Visible keyboard focus everywhere */
+:focus-visible {
+  outline: 2px solid var(--ice);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: var(--panel-strong); border-radius: 8px; border: 2px solid var(--bg-deep); }
+::-webkit-scrollbar-thumb:hover { background: var(--violet-glow); }
+html { scrollbar-color: rgba(139,43,226,0.35) var(--bg-deep); scrollbar-width: thin; }
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -60px;
+  background: var(--crimson);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 700;
+  z-index: 10000;
+  transition: top 0.2s ease;
+}
+.skip-link:focus { top: 1rem; }
+
+.site-shell { position: relative; z-index: 1; }
+.navbar, main, .site-footer { position: relative; z-index: 1; }
+
+/* Ambient soul-drift canvas (signature element) */
+#soul-drift {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+/* ---------- TYPE UTILITIES ---------- */
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--violet-bright);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.section-label::before {
+  content: '';
+  width: 18px;
+  height: 1px;
+  background: var(--violet-bright);
+  display: inline-block;
+}
+
+.section-heading { max-width: 640px; margin: 0 auto 2.75rem; text-align: left; }
+.section-heading h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-weight: 700;
+  margin: 0.6rem 0 0.75rem;
+  letter-spacing: -0.01em;
+}
+.section-copy { color: var(--text-soft); font-size: 1rem; }
+
+.gradient-text {
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- LAYOUT UTILITIES ---------- */
+.wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 2rem; }
+.page-main > section { max-width: var(--max-width); margin: 0 auto; padding: 0 2rem 5.5rem; }
+.page-main > section:first-child { padding-top: calc(var(--nav-height) + 2.5rem); }
+
+@media (max-width: 720px) {
+  .page-main > section { padding-left: 1.25rem; padding-right: 1.25rem; padding-bottom: 4rem; }
+}
+
+/* FADE-UP SCROLL REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s var(--ease-spring), transform 0.6s var(--ease-spring);
+}
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+.reveal-stagger > * { transition-delay: calc(var(--stagger-i, 0) * 60ms); }
+
+/* Section rune divider — signature motif */
+.rune-divider {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 2rem;
+  color: var(--border-bright);
+}
+.rune-divider::before,
+.rune-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-bright), transparent);
+}
+.rune-divider svg { width: 22px; height: 22px; flex-shrink: 0; opacity: 0.7; }
+
+@media (max-width: 720px) {
+  .rune-divider { padding: 0 1.25rem; }
+}

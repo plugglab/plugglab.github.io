@@ -3,259 +3,237 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Casino Core - modular casino plugin for Minecraft server economies.">
-  <meta name="theme-color" content="#07080f">
-  <meta property="og:title" content="Casino Core | PluggLAB">
-  <meta property="og:description" content="Modular casino engine and reward system built for Minecraft servers.">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Casino Core is a modular casino engine for Minecraft with slots, roulette, and a full reward economy.">
+  <meta name="theme-color" content="#060009">
+  <meta property="og:title" content="PluggLAB | Casino Core">
+  <meta property="og:description" content="Casino Core is a modular casino engine for Minecraft with slots, roulette, and a full reward economy.">
+  <meta property="og:image" content="https://plugglab.github.io/assets/images/og-image.png">
   <title>PluggLAB | Casino Core</title>
-  <link rel="icon" href="../assets/images/favicon.png" sizes="any">
+  <link rel="canonical" href="https://plugglab.github.io/casinocore/">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/images/favicon-32.png" sizes="32x32">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/base.css">
-  <link rel="stylesheet" href="../assets/css/pages.css">
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/project.css">
-  <link rel="stylesheet" href="../assets/css/casinocore.css">
 </head>
 <body class="page-project page-casinocore">
+<a class="skip-link" href="#main-content">Skip to content</a>
 <div class="site-shell">
   <header class="navbar">
-    <nav class="nav-container">
+    <nav class="nav-container" aria-label="Primary">
       <div class="nav-brandbar">
-        <a class="nav-logo" href="../">PluggLab</a>
-        <p class="nav-status">Project hub for plugins, packs, and experiments</p>
+        <a class="nav-logo" href="../">PluggLAB</a>
+        <p class="nav-status" data-i18n="nav.statusShort">Project hub for plugins, packs, and experiments</p>
       </div>
       <div class="nav-menu-row">
         <div class="nav-links" id="site-nav-links">
-          <a href="../">Home</a>
-          <a href="../#featured">Featured</a>
-          <a href="../contact/">Contact</a>
-          <a href="docs/index.html">Docs</a>
+          <a href="../" data-i18n="nav.home">Home</a>
+          <a href="../#projects" data-i18n="nav.projects">Projects</a>
+          <a href="./" aria-current="page">Casino Core</a>
+          <a href="docs/">Docs</a>
+          <a href="../changelog/" data-i18n="nav.changelog">Changelog</a>
+          <a href="../contact/" data-i18n="nav.contact">Contact</a>
         </div>
-        <div class="nav-right"><a class="nav-cta" href="https://plugglabstudio.itch.io/plugglabapp" target="_blank" rel="noopener">↓ App</a><button class="nav-toggle" type="button">
-          <span></span><span></span><span></span>
-        </button></div>
+        <div class="nav-right">
+          <button class="nav-search-btn" type="button" data-open-command aria-label="Quick jump">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <span class="kbd-label">Jump</span><kbd>⌘K</kbd>
+          </button>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
     </nav>
   </header>
-<script async="async" data-cfasync="false" src="https://consciousdunkvastly.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
-<div id="container-3d7be051cf59b23d51d6dded9a6578da"></div>
 
-  <main class="page-main">
-    <section class="page-hero page-hero-red">
-      <p class="section-label">New Plugin</p>
-      <h1 class="project-title">Casino Core</h1>
-      <p class="section-copy">
-        A modular casino engine for Minecraft servers. Add slots, roulette, reward shops, and economy-backed mini-games.
-        <strong>Free plugin with lifetime updates and community support.</strong>
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="https://discord.gg/ZMje3neEmK" target="_blank">Join Discord</a>
-        <a class="btn btn-secondary" href="../download-pending.html">Download</a>
-        <a class="btn btn-ghost" href="../contact/">Support</a>
-        <a class="btn btn-ghost" href="docs/index.html">Docs</a>
-      </div>
-      <div class="hero-spotlight">
-        <div class="spotlight-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M11 4H5a2 2 0 00-2 2v12a2 2 0 002 2h14a2 2 0 002-2V9l-6-5z"/>
-            <path d="M11 4v5h5"/>
-          </svg>
-          <div>
-            <h4>Ready Modules</h4>
-            <p>Rapidly deploy slot systems, roulette tables, and reward shops.</p>
-          </div>
-        </div>
-        <div class="spotlight-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 20l9-16H3l9 16z"/>
-            <circle cx="12" cy="9" r="2"/>
-          </svg>
-          <div>
-            <h4>Secure Economy</h4>
-            <p>Balanced payouts with vault-safe reward handling.</p>
-          </div>
-        </div>
-        <div class="spotlight-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M9 12l2 2 4-4"/>
-          </svg>
-          <div>
-            <h4>Community Support</h4>
-            <p>Free access, lifetime updates, and direct feedback loops through Discord.</p>
-          </div>
-        </div>
-      </div>
-      <p class="hero-extra">Casino Core links server economy and gameplay with a polished casino experience. <strong>Part of the current PluggLAB update wave.</strong></p>
-    </section>
+  <script async="async" data-cfasync="false" src="https://pl30098233.effectivecpmnetwork.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
+  <div id="container-3d7be051cf59b23d51d6dded9a6578da" class="ad-slot"></div>
 
-    <section class="meta-layout">
-      <article class="glass-card status-card color-red">
-        <span class="project-tag">Free Plugin</span>
-        <h2>Current Status</h2>
-        <p>
-          Casino Core is in active prototype development. Its modular architecture is ready to accept
-          custom games, reward currency, and server-side configuration.
-        </p>
-        <div class="progress-track">
-          <div class="progress-bar progress-red width-36"></div>
+  <main class="page-main" id="main-content">
+    <section class="project-hero">
+      <div class="project-hero-icon icon-pad"><img src="../assets/images/icons/icon-casinocore.svg" alt="Casino Core icon"></div>
+      <div class="project-hero-meta">
+        <div class="project-hero-tags">
+          <span class="project-tag">Plugin · Economy</span>
+          <span class="signal-pill green">Stable</span>
+          <span class="price-tag" style="font-size:1rem;">Free</span>
         </div>
-        <p class="progress-note">Alpha prototype - casino features coming online.</p>
-        <div class="pricing-info">
-          <div class="price-tag">Free</div>
-          <div class="price-details">
-            <span>Free download</span>
-            <span>Lifetime updates</span>
-            <span>Community support</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="glass-card meta-card">
-        <h3>Project Snapshot</h3>
-        <dl class="meta-grid">
-          <dt>Status</dt>
-          <dd>Alpha preview</dd>
-          <dt>Role</dt>
-          <dd>Casino engine</dd>
-          <dt>Type</dt>
-          <dd>Minecraft plugin</dd>
-          <dt>Stage</dt>
-          <dd>Modular integration</dd>
-          <dt>Release Type</dt>
-          <dd>Free Plugin</dd>
-          <dt>Priority</dt>
-          <dd>High</dd>
-          <dt>Pricing</dt>
-          <dd>Free</dd>
-          <dt>Support</dt>
-          <dd>Community + updates</dd>
-        </dl>
-      </article>
-    </section>
-
-    <section class="feature-grid">
-      <div class="feature-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="3"/>
-          <path d="M12 2v2"/>
-          <path d="M12 20v2"/>
-          <path d="M2 12h2"/>
-          <path d="M20 12h2"/>
-        </svg>
-        <div>
-          <h4>Slot Machines</h4>
-          <p>Multiple casino games with adjustable odds and rewards. Customizable payout tables.</p>
-        </div>
-      </div>
-      <div class="feature-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 12.79A9 9 0 1111.21 3"/>
-          <path d="M22 12h-4"/>
-        </svg>
-        <div>
-          <h4>Reward Economy</h4>
-          <p>Integrated funds, tokens, and bonus distribution. Vault economy support.</p>
-        </div>
-      </div>
-      <div class="feature-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z"/>
-          <path d="M8 11h8"/>
-        </svg>
-        <div>
-          <h4>Admin Control</h4>
-          <p>Clean admin interface with permission support. Real-time monitoring.</p>
-        </div>
-      </div>
-      <div class="feature-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M4 20h16"/>
-          <path d="M6 20V6a2 2 0 012-2h8a2 2 0 012 2v14"/>
-        </svg>
-        <div>
-          <h4>Ecosystem Ready</h4>
-          <p>Designed to integrate with the PluggLAB ecosystem and reward systems.</p>
-        </div>
-      </div>
-      <div class="feature-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
-          <path d="M14 2v6h6"/>
-          <path d="M16 13H8"/>
-          <path d="M16 17H8"/>
-          <path d="M10 9H8"/>
-        </svg>
-        <div>
-          <h4>Custom Games</h4>
-          <p>Build your own casino games with the modular API. Easy to extend.</p>
-        </div>
-      </div>
-      <div class="feature-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 12l2 2 4-4"/>
-          <path d="M21 12.79A9 9 0 1111.21 3"/>
-          <path d="M22 12h-4"/>
-        </svg>
-        <div>
-          <h4>Anti-Cheat</h4>
-          <p>Built-in protection against exploitation. Secure random number generation.</p>
+        <h1>Casino Core</h1>
+        <p class="section-copy">Slot machines, roulette tables, and a configurable reward shop — a full casino economy layer that plugs into Vault.</p>
+        <div class="project-hero-actions">
+          <a class="btn btn-primary" href="https://modrinth.com/plugin/casinocore" target="_blank" rel="noopener">Download on Modrinth</a>
+          <a class="btn btn-secondary" href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener">Discord Support</a>
         </div>
       </div>
     </section>
 
-    <section class="wip-layout">
-      <article class="glass-card notes-card">
-        <h3>Core Features</h3>
-        <ul class="feature-list">
-          <li>Slot machines and roulette tables with configurable odds</li>
-          <li>Reward tokens, economy balances, and vault integration</li>
-          <li>Admin-configurable game rooms and permissions</li>
-          <li>Built to connect with the PluggLAB plugin ecosystem and server-based reward systems</li>
-          <li>Player shops, prize crates, and bonus streak mechanics</li>
-        </ul>
+    <section class="reveal">
+      <div class="section-heading">
+        <p class="section-label">Capabilities</p>
+        <h2>What Casino Core does</h2>
+        <p class="section-copy">Casino Core gives economy servers a ready-made gambling layer without hand-rolling GUI menus or payout math.</p>
+      </div>
+      <div class="feature-grid">
+        
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="12" cy="12" r="9"/><path d="M9 12h6M12 9v6"/></svg></div>
+          <h3>Slot Machines</h3>
+          <p>Configurable reel odds, jackpot pools, and animated GUI slot machines players can place on their own claims.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div>
+          <h3>Roulette Tables</h3>
+          <p>Full roulette with configurable bet types, payout multipliers, and a shared table state for multiple players.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M20 12V8H6a2 2 0 010-4h12v4"/><path d="M4 6v12a2 2 0 002 2h14v-4"/><path d="M18 12a2 2 0 100 4 2 2 0 000-4z"/></svg></div>
+          <h3>Vault Economy Sync</h3>
+          <p>Every wager and payout runs through Vault, so Casino Core works with whatever economy plugin your server already uses.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M20 7h-9M14 17H5M17 4l3 3-3 3M7 14l-3 3 3 3"/></svg></div>
+          <h3>Reward Shop</h3>
+          <p>A configurable token shop lets players redeem casino winnings for cosmetics, kits, or custom commands.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 9 4.6-.3 8-4 8-9V5l-8-3z"/></svg></div>
+          <h3>Admin Controls</h3>
+          <p>Set table limits, house edge, and daily wager caps per-world or per-permission group.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+          <h3>PlaceholderAPI Support</h3>
+          <p>Show live balances, win streaks, and jackpot totals in scoreboards, tab lists, or chat via placeholders.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="rune-divider" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 22 12 12 22 2 12 12 2Z"/><circle cx="12" cy="12" r="2.4"/></svg>
+    </div>
+
+    <section class="reveal">
+      <div class="section-heading">
+        <p class="section-label">Details</p>
+        <h2>Requirements &amp; Links</h2>
+      </div>
+      <div class="meta-grid">
+        
+        <article class="glass-card meta-card">
+          <span class="meta-label">Minecraft Version</span>
+          <strong>1.20 – 1.21</strong>
+        </article>
+        <article class="glass-card meta-card">
+          <span class="meta-label">Server Software</span>
+          <strong>Paper / Spigot</strong>
+        </article>
+        <article class="glass-card meta-card">
+          <span class="meta-label">Dependencies</span>
+          <strong>Vault, MemoryChain</strong>
+        </article>
+        <article class="glass-card meta-card">
+          <span class="meta-label">License</span>
+          <strong>Free &amp; Open</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="section-heading">
+        <p class="section-label">Preview</p>
+        <h2>In-game look</h2>
+        <p class="section-copy">Screenshots are added as each build is captured on the live test server — join Discord to see the newest previews first.</p>
+      </div>
+      <div class="media-strip">
+        <div class="media-frame">Slot machine GUI</div><div class="media-frame">Roulette table view</div><div class="media-frame">Reward shop menu</div>
+      </div>
+    </section>
+
+    
+    <div class="rune-divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 22 12 12 22 2 12 12 2Z"/><circle cx="12" cy="12" r="2.4"/></svg></div>
+    <section class="reveal">
+      <article class="glass-card cta-band">
+        <div>
+          <h3>Need the PlaceholderAPI reference?</h3>
+          <p>Every available placeholder, admin command, and config option is documented in the Casino Core docs.</p>
+        </div>
+        <div class="cta-band-actions"><a class="btn btn-primary" href="docs/">Open Docs</a></div>
       </article>
-      <article class="glass-card notes-card">
-        <h3>Next Steps</h3>
-        <ul class="status-list">
-          <li>Finish server-side game engine and payout logic</li>
-          <li>Create admin controls and casino configuration UI</li>
-          <li>Integrate reward economy with shared PluggLAB wallet systems</li>
-          <li>Publish early access downloads and documentation</li>
-          <li>Test with live communities in demo hubs</li>
-        </ul>
+    </section>
+
+    <section class="reveal">
+      <article class="glass-card cta-band">
+        <div>
+          <h3>Ready to add Casino Core to your server?</h3>
+          <p>Casino Core needs Vault installed — MemoryChain handles the shared player data underneath it.</p>
+        </div>
+        <div class="cta-band-actions">
+          <a class="btn btn-primary" href="https://modrinth.com/plugin/casinocore" target="_blank" rel="noopener">Download on Modrinth</a>
+          <a class="btn btn-secondary" href="../contact/">Ask a Question</a>
+        </div>
       </article>
+    </section>
+
+    <section class="reveal">
+      <div class="section-heading">
+        <p class="section-label">More from PluggLAB</p>
+        <h2>Related Projects</h2>
+      </div>
+      <div class="related-grid">
+        
+        <a class="glass-card related-card" href="../memorychain/">
+          <div class="related-icon"><img src="../assets/images/memorychain.n.png" alt="MemoryChain icon" loading="lazy"></div>
+          <div><strong>MemoryChain</strong><br><span>Plugin · Infrastructure</span></div>
+        </a>
+
+        <a class="glass-card related-card" href="../safetrade/">
+          <div class="related-icon icon-pad"><img src="../assets/images/icons/icon-safetrade.svg" alt="SafeTrade icon" loading="lazy"></div>
+          <div><strong>SafeTrade</strong><br><span>Plugin · Utility</span></div>
+        </a>
+
+        <a class="glass-card related-card" href="../pulseevents/">
+          <div class="related-icon"><img src="../assets/images/pulseevents_n.png" alt="PulseEvents icon" loading="lazy"></div>
+          <div><strong>PulseEvents</strong><br><span>Plugin · Events</span></div>
+        </a>
+      </div>
     </section>
   </main>
 
-  <section class="support-embed" aria-label="Support Wilczek on Ko-fi">
-    <div class="glass-card">
-      <iframe id="kofiframe" src="https://ko-fi.com/wilczek016/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none;width:100%;padding:4px;background:#f9f9f9;" height="712" title="wilczek016"></iframe>
-    </div>
-  </section>
-
   <footer class="site-footer">
-    <div class="footer-brand">
-      <h2>PluggLab</h2>
-      <p>Casino Core expands the PluggLAB ecosystem into economy-driven mini-games.</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h2>PluggLAB</h2>
+        <p data-i18n="footer.tagline">A focused Minecraft plugin lab — free releases, clear updates, and a shared architecture behind every project.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.ecosystemHeading">Ecosystem</h4>
+        <a href="../memorychain/">MemoryChain</a>
+        <a href="../pulseevents/">PulseEvents</a>
+        <a href="../casinocore/">Casino Core</a>
+        <a href="../safetrade/">SafeTrade</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.resourcesHeading">Resources</h4>
+        <a href="../changelog/" data-i18n="nav.changelog">Changelog</a>
+        <a href="../download-pending.html" data-i18n="nav.releaseQueue">Release Queue</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.connectHeading">Connect</h4>
+        <a href="../contact/" data-i18n="nav.contact">Contact</a>
+        <a href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener" data-i18n="nav.discord">Discord</a>
+      </div>
     </div>
-    <div class="footer-links">
-      <a href="../">Home</a>
-      <a href="../memorychain/">MemoryChain</a>
-      <a href="../pulseevents/">PulseEvents</a>
-      <a href="../novapixel/">NovaPixel</a>
-      <a href="../pvpflow/">PvPFlow</a>
+    <div class="footer-bottom">
+      <span class="footer-copy" data-i18n="footer.copy">PluggLAB · built by Wilczek</span>
     </div>
   </footer>
 </div>
 
-<script src="../assets/js/nav.js"></script>
-<script src="../assets/js/scroll.js"></script>
-<script src="../assets/js/project.js"></script>
-<script async="async" data-cfasync="false" src="https://consciousdunkvastly.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
-<div id="container-3d7be051cf59b23d51d6dded9a6578da"></div>
-
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/i18n.js"></script>
 </body>
 </html>

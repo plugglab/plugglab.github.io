@@ -3,243 +3,221 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO -->
-  <meta name="description" content="Contact PluggLAB for plugin support, release questions, or new project requests.">
-  <meta name="theme-color" content="#07080f">
+  <meta name="description" content="Contact PluggLAB for plugin support, release questions, or new project requests." data-i18n-attr="content:meta.contactDescription">
+  <meta name="theme-color" content="#060009">
   <meta property="og:title" content="PluggLAB | Contact">
   <meta property="og:description" content="Reach PluggLAB for support, release status, or new Minecraft plugin ideas.">
-
+  <meta property="og:image" content="https://plugglab.github.io/assets/images/og-image.png">
   <title>PluggLAB | Contact</title>
-
-  <link rel="icon" href="../assets/images/favicon.png" sizes="any">
-
-  <!-- Fonts -->
+  <link rel="canonical" href="https://plugglab.github.io/contact/">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/images/favicon-32.png" sizes="32x32">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="../assets/css/base.css">
-  <link rel="stylesheet" href="../assets/css/pages.css">
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/project.css">
   <link rel="stylesheet" href="../assets/css/contact.css">
 </head>
-
 <body class="page-contact">
+<a class="skip-link" href="#main-content">Skip to content</a>
 <div class="site-shell">
-
-  <!-- NAV -->
   <header class="navbar">
     <nav class="nav-container" aria-label="Primary">
       <div class="nav-brandbar">
-        <a class="nav-logo" href="../">PluggLab</a>
-        <p class="nav-status">Project hub for plugins, packs, and experiments</p>
+        <a class="nav-logo" href="../">PluggLAB</a>
+        <p class="nav-status" data-i18n="nav.statusShort">Project hub for plugins, packs, and experiments</p>
       </div>
-
       <div class="nav-menu-row">
         <div class="nav-links" id="site-nav-links">
-          <a href="../">Home</a>
-          <a href="../#projects">Projects</a>
-          <a href="../#featured">Featured</a>
-          <a href="./">Contact</a>
+          <a href="../" data-i18n="nav.home">Home</a>
+          <a href="../#projects" data-i18n="nav.projects">Projects</a>
+          <a href="../changelog/" data-i18n="nav.changelog">Changelog</a>
+          <a href="./" aria-current="page" data-i18n="nav.contact">Contact</a>
         </div>
-
-        <div class="nav-right"><a class="nav-cta" href="https://plugglabstudio.itch.io/plugglabapp" target="_blank" rel="noopener">↓ App</a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div class="nav-right">
+          <button class="nav-search-btn" type="button" data-open-command aria-label="Quick jump">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <span class="kbd-label">Jump</span><kbd>⌘K</kbd>
+          </button>
+          <a class="nav-cta" href="https://plugglabstudio.itch.io/plugglabapp" target="_blank" rel="noopener">↓ <span data-i18n="nav.app">App</span></a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
     </nav>
   </header>
-<script async="async" data-cfasync="false" src="https://consciousdunkvastly.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
-<div id="container-3d7be051cf59b23d51d6dded9a6578da"></div>
 
-  <!-- MAIN -->
-  <main class="page-main">
+  <script async="async" data-cfasync="false" src="https://pl30098233.effectivecpmnetwork.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
+  <div id="container-3d7be051cf59b23d51d6dded9a6578da" class="ad-slot"></div>
 
-    <!-- HERO -->
+  <main class="page-main" id="main-content">
     <section class="page-hero page-hero-contact">
-      <p class="section-label">Get in Touch</p>
-      <h1>Contact PluggLAB</h1>
-      <p class="section-copy">
-        Reach out for plugin support, release questions, or new development ideas across the entire PluggLAB ecosystem.
-      </p>
-      <p class="cta-note">
-        Email for direct requests, Discord for community support, or the form for structured feature and collaboration requests.
-      </p>
+      <p class="section-label" data-i18n="contact.heroLabel">Get in Touch</p>
+      <h1 data-i18n="contact.heroTitle">Contact PluggLAB</h1>
+      <p class="section-copy" data-i18n="contact.heroCopy">Reach out for plugin support, release questions, or new development ideas across the entire PluggLAB ecosystem.</p>
+      <p class="cta-note" data-i18n="contact.heroNote">Email for direct requests, Discord for community support, or the form for structured feature and collaboration requests.</p>
     </section>
 
-    <!-- PRICING INFO -->
-    <section class="pricing-section">
+    <section class="pricing-section reveal">
       <div class="section-heading">
-        <p class="section-label">Free Plugins</p>
-        <h2>Availability & Access</h2>
-        <p class="section-copy">
-          PluggLAB free plugins are available now, and ongoing updates are being released across the full suite of projects.
-        </p>
+        <p class="section-label" data-i18n="contact.pricingLabel">Free Plugins</p>
+        <h2 data-i18n="contact.pricingTitle">Availability &amp; Access</h2>
+        <p class="section-copy" data-i18n="contact.pricingCopy">PluggLAB free plugins are available now, and ongoing updates are being released across the full suite of projects.</p>
       </div>
-
       <div class="pricing-grid">
         <article class="glass-card pricing-card featured-card">
-          <span class="project-tag">Free Plugin</span>
+          <span class="project-tag" data-i18n="common.free">Free Plugin</span>
           <h3>MemoryChain</h3>
-          <div class="price-display">
-            <span class="price-amount">Free</span>
-            <span class="price-period">public access</span>
-          </div>
+          <div class="price-display"><span class="price-amount" data-i18n="common.free">Free</span><span class="price-period">public access</span></div>
           <ul class="pricing-features">
             <li>Lifetime updates</li>
             <li>Community Discord support</li>
             <li>Server analytics dashboard</li>
             <li>Player tracking system</li>
-            <li>Custom event triggers</li>
-            <li>API integration ready</li>
           </ul>
-          <a class="btn btn-primary" href="memorychain/">Learn More</a>
+          <a class="btn btn-primary" href="../memorychain/" data-i18n="common.btnLearnMore">Learn More</a>
         </article>
-
         <article class="glass-card pricing-card">
-          <span class="project-tag">Free Plugin</span>
+          <span class="project-tag" data-i18n="common.free">Free Plugin</span>
           <h3>Casino Core</h3>
-          <div class="price-display">
-            <span class="price-amount">Free</span>
-            <span class="price-period">public access</span>
-          </div>
+          <div class="price-display"><span class="price-amount" data-i18n="common.free">Free</span><span class="price-period">public access</span></div>
           <ul class="pricing-features">
-            <li>Lifetime updates</li>
-            <li>Community Discord support</li>
             <li>Slot machine systems</li>
             <li>Roulette tables</li>
             <li>Reward shop integration</li>
-            <li>Anti-cheat protection</li>
+            <li>Vault economy support</li>
           </ul>
-          <a class="btn btn-primary" href="casinocore/">Learn More</a>
+          <a class="btn btn-primary" href="../casinocore/" data-i18n="common.btnLearnMore">Learn More</a>
         </article>
-
         <article class="glass-card pricing-card">
-          <span class="project-tag">Free Plugin</span>
+          <span class="project-tag" data-i18n="common.free">Free Plugin</span>
           <h3>SafeTrade</h3>
-          <div class="price-display">
-            <span class="price-amount">Free</span>
-            <span class="price-period">public access</span>
-          </div>
+          <div class="price-display"><span class="price-amount" data-i18n="common.free">Free</span><span class="price-period">public access</span></div>
           <ul class="pricing-features">
             <li>Secure trade confirmations</li>
             <li>Inventory validation</li>
             <li>Anti-scam trade flow</li>
-            <li>Free community support</li>
-            <li>Lifetime updates</li>
             <li>Simple setup</li>
           </ul>
-          <a class="btn btn-primary" href="../safetrade/">Learn More</a>
+          <a class="btn btn-primary" href="../safetrade/" data-i18n="common.btnLearnMore">Learn More</a>
         </article>
       </div>
-
-      <div class="pricing-note">
-        <p><strong>All free releases include:</strong> ongoing updates, Discord-based support, and access to future improvements. Use the contact channels for setup help or collaboration.</p>
+      <div class="pricing-note" data-i18n="contact.pricingNote">
+        All free releases include ongoing updates, Discord-based support, and access to future improvements. Use the contact channels below for setup help or collaboration.
       </div>
     </section>
 
-    <!-- CONTACT GRID -->
-    <section class="contact-grid">
-
-      <!-- EMAIL -->
+    <section class="contact-grid reveal">
       <article class="glass-card contact-card featured-card">
-        <div class="card-icon-wrap icon-cyan">
-          <svg viewBox="0 0 24 24"><path d="M3 5.25A2.25 2.25 0 0 1 5.25 3h13.5A2.25 2.25 0 0 1 21 5.25v13.5A2.25 2.25 0 0 1 18.75 21H5.25A2.25 2.25 0 0 1 3 18.75V5.25Zm2.47.75L12 10.51 18.53 6H5.47Zm13.03 1.43-6.06 4.18a.75.75 0 0 1-.88 0L5.5 7.43v11.32c0 .41.34.75.75.75h11.5c.41 0 .75-.34.75-.75V7.43Z"/></svg>
-        </div>
-
-        <span class="project-tag">Email</span>
-
-        <h2>
-          <a href="mailto:voidspire.contact@gmail.com">
-            voidspire.contact@gmail.com
-          </a>
-        </h2>
-
-        <p>Best for direct communication and collaboration requests.</p>
-        <p class="contact-meta">Average response time: 12–24h</p>
-
-        <a class="btn btn-primary"
-           href="mailto:voidspire.contact@gmail.com"
-           aria-label="Send email to PluggLAB">
-          Send Email
-        </a>
+        <div class="card-icon-wrap icon-cyan"><svg viewBox="0 0 24 24"><path d="M3 5.25A2.25 2.25 0 0 1 5.25 3h13.5A2.25 2.25 0 0 1 21 5.25v13.5A2.25 2.25 0 0 1 18.75 21H5.25A2.25 2.25 0 0 1 3 18.75V5.25Zm2.47.75L12 10.51 18.53 6H5.47Zm13.03 1.43-6.06 4.18a.75.75 0 0 1-.88 0L5.5 7.43v11.32c0 .41.34.75.75.75h11.5c.41 0 .75-.34.75-.75V7.43Z"/></svg></div>
+        <span class="project-tag" data-i18n="contact.emailTag">Email</span>
+        <h2><a href="mailto:voidspire.contact@gmail.com">voidspire.contact@gmail.com</a></h2>
+        <p data-i18n="contact.emailBody">Best for direct communication and collaboration requests.</p>
+        <p class="contact-meta" data-i18n="contact.emailMeta">Average response time: 12–24h</p>
+        <a class="btn btn-primary" href="mailto:voidspire.contact@gmail.com" aria-label="Send email to PluggLAB" data-i18n="contact.emailBtn">Send Email</a>
       </article>
 
-      <!-- DISCORD -->
       <article class="glass-card contact-card">
-        <div class="card-icon-wrap icon-blue">
-          <svg viewBox="0 0 24 24"><path d="M20 0H4C1.79 0 0 1.79 0 4v16c0 2.21 1.79 4 4 4h13.17l-.78-2.7 1.89 1.75 1.78 1.65L24 24V4c0-2.21-1.79-4-4-4ZM16.8 17s-.6-.72-1.1-1.35c2.2-.62 3.03-2 3.03-2-0-4.53-2.03-8.2-2.03-8.2-2.03-1.52-3.97-1.48-3.97-1.48l-.2.23c2.4.73 3.5 1.8 3.5 1.8-1.47-.8-2.9-1.1-4.28-1.1-1.4 0-2.85.3-4.3 1.1 0 0 1.1-1.07 3.5-1.8l-.2-.23s-1.94-.04-3.97 1.48c0 0-2.03 3.67-2.03 8.2 0 0 .85 1.38 3.05 2-.5.63-1.12 1.38-1.12 1.38-3.7-.12-5.1-2.55-5.1-2.55 0-5.4 2.42-9.77 2.42-9.77 2.42-1.82 4.73-1.77 4.73-1.77l.17.2c-3.03.87-4.42 2.17-4.42 2.17s.37-.2 1-.5c1.82-.8 3.27-1.02 4.07-1.08.13-.02.25-.03.38-.03 1.35-.17 2.87-.22 4.47.08 2.1.4 4.35 1.35 4.35 1.35s-1.33-1.23-4.2-2.1l.25-.28s2.3-.05 4.72 1.77c0 0 2.42 4.37 2.42 9.77 0 0-1.42 2.43-5.12 2.55Z"/></svg>
-        </div>
-
-        <span class="project-tag">Discord</span>
-        <h2>Join Community</h2>
-        <p>Best for quick help, discussions, and community interaction.</p>
-
-        <a class="btn btn-primary"
-           href="https://discord.gg/ZMje3neEmK"
-           target="_blank"
-           rel="noreferrer"
-           aria-label="Join PluggLAB Discord">
-          Join Discord
-        </a>
+        <div class="card-icon-wrap icon-blue"><svg viewBox="0 0 24 24"><path d="M20 0H4C1.79 0 0 1.79 0 4v16c0 2.21 1.79 4 4 4h13.17l-.78-2.7 1.89 1.75 1.78 1.65L24 24V4c0-2.21-1.79-4-4-4Z"/></svg></div>
+        <span class="project-tag" data-i18n="contact.discordTag">Discord</span>
+        <h2 data-i18n="contact.discordTitle">Join Community</h2>
+        <p data-i18n="contact.discordBody">Best for quick help, discussions, and community interaction.</p>
+        <a class="btn btn-primary" href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noreferrer" aria-label="Join PluggLAB Discord" data-i18n="contact.discordBtn">Join Discord</a>
       </article>
 
-      <!-- FORM -->
       <article class="glass-card contact-card">
-        <div class="card-icon-wrap icon-purple">
-          <svg viewBox="0 0 24 24"><path d="M19.5 3h-15A1.5 1.5 0 0 0 3 4.5v15A1.5 1.5 0 0 0 4.5 21h15a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 19.5 3ZM7 7.25h10a.75.75 0 0 1 0 1.5H7a.75.75 0 0 1 0-1.5Zm0 4h10a.75.75 0 0 1 0 1.5H7a.75.75 0 0 1 0-1.5Zm0 4h6a.75.75 0 0 1 0 1.5H7a.75.75 0 0 1 0-1.5Z"/></svg>
-        </div>
-
-        <span class="project-tag">Google Form</span>
-        <h2>Structured Inquiry</h2>
-        <p>Use this for detailed requests, commissions, or structured ideas.</p>
-
-        <a class="btn btn-secondary"
-           href="https://docs.google.com/forms/d/e/1FAIpQLSeaqvYroscgCERb_7_lZNUIQ5FnYxGriVGeRl4xDgfF8V3geQ/viewform?usp=header"
-           target="_blank"
-           rel="noreferrer"
-           aria-label="Open PluggLAB contact form">
-          Open Form
-        </a>
+        <div class="card-icon-wrap icon-purple"><svg viewBox="0 0 24 24"><path d="M19.5 3h-15A1.5 1.5 0 0 0 3 4.5v15A1.5 1.5 0 0 0 4.5 21h15a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 19.5 3ZM7 7.25h10a.75.75 0 0 1 0 1.5H7a.75.75 0 0 1 0-1.5Zm0 4h10a.75.75 0 0 1 0 1.5H7a.75.75 0 0 1 0-1.5Zm0 4h6a.75.75 0 0 1 0 1.5H7a.75.75 0 0 1 0-1.5Z"/></svg></div>
+        <span class="project-tag" data-i18n="contact.formTag">Google Form</span>
+        <h2 data-i18n="contact.formTitle">Structured Inquiry</h2>
+        <p data-i18n="contact.formBody">Use this for detailed requests, commissions, or structured ideas.</p>
+        <a class="btn btn-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSeaqvYroscgCERb_7_lZNUIQ5FnYxGriVGeRl4xDgfF8V3geQ/viewform?usp=header" target="_blank" rel="noreferrer" aria-label="Open PluggLAB contact form" data-i18n="contact.formBtn">Open Form</a>
       </article>
-
     </section>
 
+    <section class="reveal">
+      <div class="section-heading">
+        <p class="section-label" data-i18n="contact.quickLabel">Quick Message</p>
+        <h2 data-i18n="contact.quickTitle">Send a note directly</h2>
+        <p class="section-copy" data-i18n="contact.quickCopy">This opens your email client with the message pre-filled — nothing is sent from this page or stored anywhere.</p>
+      </div>
+      <article class="glass-card quick-message-card">
+        <form id="quick-message-form" novalidate>
+          <div class="honeypot-field" aria-hidden="true">
+            <label for="qm-company">Company</label>
+            <input id="qm-company" name="company" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="form-row-2">
+            <div class="form-field">
+              <label for="qm-name" data-i18n="contact.quickName">Name</label>
+              <input id="qm-name" name="name" type="text" required placeholder="Your name" data-i18n-attr="placeholder:contact.quickNamePlaceholder">
+            </div>
+            <div class="form-field">
+              <label for="qm-email" data-i18n="contact.quickEmail">Your email</label>
+              <input id="qm-email" name="email" type="email" required placeholder="you@example.com" data-i18n-attr="placeholder:contact.quickEmailPlaceholder">
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="qm-topic" data-i18n="contact.quickTopic">Topic</label>
+            <select id="qm-topic" name="topic">
+              <option data-i18n="contact.quickTopicSupport">Plugin support</option>
+              <option data-i18n="contact.quickTopicBug">Bug report</option>
+              <option data-i18n="contact.quickTopicIdea">Feature idea</option>
+              <option data-i18n="contact.quickTopicCollab">Collaboration</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="qm-message" data-i18n="contact.quickMessage">Message</label>
+            <textarea id="qm-message" name="message" required placeholder="Tell me what's going on…" data-i18n-attr="placeholder:contact.quickMessagePlaceholder"></textarea>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit" data-i18n="contact.quickSubmit">Open in Email App</button>
+          <p class="form-status" id="quick-message-status" role="status"></p>
+          <p class="form-hint" data-i18n="contact.quickHint">Prefer Discord? Ping the community instead — it's usually faster.</p>
+        </form>
+      </article>
+    </section>
   </main>
 
   <section class="support-embed" aria-label="Support Wilczek on Ko-fi">
     <div class="glass-card">
-      <iframe id="kofiframe" src="https://ko-fi.com/wilczek016/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none;width:100%;padding:4px;background:#f9f9f9;" height="712" title="wilczek016"></iframe>
+      <iframe id="kofiframe" src="https://ko-fi.com/wilczek016/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none;width:100%;padding:4px;background:#f9f9f9;" height="712" title="wilczek016" loading="lazy"></iframe>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="footer-brand">
-      <h2>PluggLab</h2>
-      <p>Contact routes stay open for all project inquiries.</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h2>PluggLAB</h2>
+        <p data-i18n="footer.tagline">Contact routes stay open for all project inquiries.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.ecosystemHeading">Ecosystem</h4>
+        <a href="../memorychain/">MemoryChain</a>
+        <a href="../pulseevents/">PulseEvents</a>
+        <a href="../safetrade/">SafeTrade</a>
+        <a href="../novapixel/">NovaPixel</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.resourcesHeading">Resources</h4>
+        <a href="../changelog/" data-i18n="nav.changelog">Changelog</a>
+        <a href="../download-pending.html" data-i18n="nav.releaseQueue">Release Queue</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.connectHeading">Connect</h4>
+        <a href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener" data-i18n="nav.discord">Discord</a>
+        <a href="../">Home</a>
+      </div>
     </div>
-
-    <div class="footer-links">
-      <a href="../">Home</a>
-      <a href="memorychain/">MemoryChain</a>
-      <a href="pulseevents/">PulseEvents</a>
-      <a href="safetrade/">SafeTrade</a>
-      <a href="novapixel/">NovaPixel</a>
-      <a href="pvpflow/">PvPFlow</a>
+    <div class="footer-bottom">
+      <span class="footer-copy" data-i18n="footer.copy">PluggLAB · built by Wilczek</span>
     </div>
   </footer>
-
 </div>
 
-<script src="../assets/js/nav.js"></script>
-<script src="../assets/js/scroll.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/contact.js"></script>
-<script async="async" data-cfasync="false" src="https://consciousdunkvastly.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
-<div id="container-3d7be051cf59b23d51d6dded9a6578da"></div>
-
 </body>
 </html>

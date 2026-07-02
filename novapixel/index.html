@@ -3,266 +3,227 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO -->
-  <meta name="description" content="NovaPixel is a live PvP-focused texture pack built for clarity, speed, and competitive gameplay.">
-  <meta name="theme-color" content="#07080f">
-  <meta property="og:title" content="NovaPixel | PvP Texture Pack">
-  <meta property="og:description" content="NovaPixel is a live competitive PvP texture pack designed for fast gameplay and clean visuals.">
-
+  <meta name="description" content="NovaPixel is a competitive PvP texture pack built for clarity, performance, and a modern look.">
+  <meta name="theme-color" content="#060009">
+  <meta property="og:title" content="PluggLAB | NovaPixel">
+  <meta property="og:description" content="NovaPixel is a competitive PvP texture pack built for clarity, performance, and a modern look.">
+  <meta property="og:image" content="https://plugglab.github.io/assets/images/og-image.png">
   <title>PluggLAB | NovaPixel</title>
-
-  <link rel="icon" href="../assets/images/novapixel_n.png" sizes="any">
-
-  <!-- Fonts -->
+  <link rel="canonical" href="https://plugglab.github.io/novapixel/">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/images/favicon-32.png" sizes="32x32">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="../assets/css/base.css">
-  <link rel="stylesheet" href="../assets/css/pages.css">
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/project.css">
-  <link rel="stylesheet" href="../assets/css/novapixel.css">
 </head>
-
 <body class="page-project page-novapixel">
+<a class="skip-link" href="#main-content">Skip to content</a>
 <div class="site-shell">
-
-  <!-- NAV -->
   <header class="navbar">
-    <nav class="nav-container">
+    <nav class="nav-container" aria-label="Primary">
       <div class="nav-brandbar">
-        <a class="nav-logo" href="../">PluggLab</a>
-        <p class="nav-status">Project hub for plugins, packs, and experiments</p>
+        <a class="nav-logo" href="../">PluggLAB</a>
+        <p class="nav-status" data-i18n="nav.statusShort">Project hub for plugins, packs, and experiments</p>
       </div>
-
       <div class="nav-menu-row">
         <div class="nav-links" id="site-nav-links">
-          <a href="../">Home</a>
-          <a href="../#projects">Projects</a>
-          <a href="../#featured">Featured</a>
-          <a href="../contact/">Contact</a>
+          <a href="../" data-i18n="nav.home">Home</a>
+          <a href="../#projects" data-i18n="nav.projects">Projects</a>
+          <a href="./" aria-current="page">NovaPixel</a>
+          
+          <a href="../changelog/" data-i18n="nav.changelog">Changelog</a>
+          <a href="../contact/" data-i18n="nav.contact">Contact</a>
         </div>
-        <div class="nav-right"><a class="nav-cta" href="https://plugglabstudio.itch.io/plugglabapp" target="_blank" rel="noopener">↓ App</a><button class="nav-toggle" type="button">
-          <span></span><span></span><span></span>
-        </button></div>
+        <div class="nav-right">
+          <button class="nav-search-btn" type="button" data-open-command aria-label="Quick jump">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <span class="kbd-label">Jump</span><kbd>⌘K</kbd>
+          </button>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
     </nav>
   </header>
-<script async="async" data-cfasync="false" src="https://consciousdunkvastly.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
-<div id="container-3d7be051cf59b23d51d6dded9a6578da"></div>
 
-  <main class="page-main">
+  <script async="async" data-cfasync="false" src="https://pl30098233.effectivecpmnetwork.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
+  <div id="container-3d7be051cf59b23d51d6dded9a6578da" class="ad-slot"></div>
 
-    <!-- HERO -->
-    <section class="page-hero page-hero-cyan">
-      <p class="section-label">PvP Texture Pack</p>
-
-      <h1>NovaPixel</h1>
-
-      <p class="section-copy">
-        A high-contrast PvP texture pack designed for maximum visibility, fast reaction time,
-        and a polished competitive aesthetic.
-      </p>
-
-      <!-- CTA -->
-      <div class="hero-actions">
-        <a class="btn btn-primary"
-           href="https://www.curseforge.com/minecraft/texture-packs/novapixel"
-           target="_blank">
-          Download Pack
-        </a>
-
-        <a class="btn btn-secondary"
-           href="https://discord.gg/ZMje3neEmK"
-           target="_blank">
-          Join Discord
-        </a>
+  <main class="page-main" id="main-content">
+    <section class="project-hero">
+      <div class="project-hero-icon"><img src="../assets/images/novapixel_n.png" alt="NovaPixel icon"></div>
+      <div class="project-hero-meta">
+        <div class="project-hero-tags">
+          <span class="project-tag">Pack · PvP · Texture</span>
+          <span class="signal-pill green">Stable</span>
+          <span class="price-tag" style="font-size:1rem;">Free</span>
+        </div>
+        <h1>NovaPixel</h1>
+        <p class="section-copy">A modern, low-distraction PvP texture pack — sharper hit indicators, clean UI, and consistent lighting for competitive play.</p>
+        <div class="project-hero-actions">
+          <a class="btn btn-primary" href="https://plugglab.github.io/novapixel/NovaPixel.zip">Download Pack</a>
+          <a class="btn btn-secondary" href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener">Discord Support</a>
+        </div>
       </div>
-
-      <div class="hero-highlights">
-        <span class="signal-pill cyan">Live Release</span>
-        <span class="signal-pill blue">v0.3 Stable</span>
-        <span class="signal-pill purple">Competitive Ready</span>
-      </div>
-
-      <p class="hero-extra">NovaPixel is included in the current PluggLAB content refresh, with extra polish for competitive servers.</p>
-      <p class="micro-note">Last updated: March 2026</p>
     </section>
 
-    <!-- PREVIEW (NOWA SEKCJA - KLUCZOWA) -->
-    <section class="preview-section">
+    <section class="reveal">
+      <div class="section-heading">
+        <p class="section-label">Capabilities</p>
+        <h2>What NovaPixel does</h2>
+        <p class="section-copy">NovaPixel strips away visual noise so every fight comes down to reflexes, not rendering.</p>
+      </div>
+      <div class="feature-grid">
+        
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></div>
+          <h3>Clear Hit Indicators</h3>
+          <p>High-contrast damage and hit animations make combat readable even in fast 1v1s and team fights.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M3 7 12 3l9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg></div>
+          <h3>Performance First</h3>
+          <p>Simplified textures and reduced animation frames keep frame rates high on low-end hardware.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+          <h3>Consistent Lighting</h3>
+          <p>Flattened block lighting removes harsh shadows that can hide players in doorways and caves.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M4 4.5A2.5 2.5 0 016.5 2H20v17H6.5A2.5 2.5 0 004 16.5v-12z"/><path d="M4 16.5A2.5 2.5 0 016.5 19H20"/></svg></div>
+          <h3>Clean UI Overlay</h3>
+          <p>Redesigned hotbar, health, and hunger icons stay legible during chaotic fights.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <h3>Fast-Swing Animations</h3>
+          <p>Weapon swing timing is tuned to feel snappier without breaking vanilla combat mechanics.</p>
+        </article>
+        <article class="glass-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
+          <h3>Regularly Updated</h3>
+          <p>Texture tweaks continue based on Discord feedback from active PvP testers.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="rune-divider" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 22 12 12 22 2 12 12 2Z"/><circle cx="12" cy="12" r="2.4"/></svg>
+    </div>
+
+    <section class="reveal">
+      <div class="section-heading">
+        <p class="section-label">Details</p>
+        <h2>Requirements &amp; Links</h2>
+      </div>
+      <div class="meta-grid">
+        
+        <article class="glass-card meta-card">
+          <span class="meta-label">Minecraft Version</span>
+          <strong>1.20 – 1.21</strong>
+        </article>
+        <article class="glass-card meta-card">
+          <span class="meta-label">Resolution</span>
+          <strong>16x</strong>
+        </article>
+        <article class="glass-card meta-card">
+          <span class="meta-label">Pack Type</span>
+          <strong>PvP / Combat</strong>
+        </article>
+        <article class="glass-card meta-card">
+          <span class="meta-label">License</span>
+          <strong>Free &amp; Open</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="reveal">
       <div class="section-heading">
         <p class="section-label">Preview</p>
-        <h2>In-Game Look</h2>
+        <h2>In-game look</h2>
+        <p class="section-copy">Screenshots are added as each build is captured on the live test server — join Discord to see the newest previews first.</p>
       </div>
-
-      <div class="preview-grid">
-        <div class="preview-card glass-card">Combat view sample</div>
-        <div class="preview-card glass-card">Match-ready HUD</div>
-        <div class="preview-card glass-card">Items & inventory clarity</div>
+      <div class="media-strip">
+        <div class="media-frame">Combat HUD preview</div><div class="media-frame">Hotbar comparison</div><div class="media-frame">Lighting comparison</div>
       </div>
     </section>
 
-    <!-- META -->
-    <section class="meta-layout">
+    
 
-      <article class="glass-card status-card color-cyan">
-        <span class="project-tag">Live Pack</span>
-
-        <h2>Available Now</h2>
-
-        <p>
-          NovaPixel is publicly available and actively used as a lightweight PvP pack
-          focused on clarity and performance.
-        </p>
-
-        <div class="progress-track">
-          <div class="progress-bar progress-cyan width-64"></div>
+    <section class="reveal">
+      <article class="glass-card cta-band">
+        <div>
+          <h3>Ready to add NovaPixel to your server?</h3>
+          <p>Drop NovaPixel into your resource pack folder or server pack list — no extra plugin needed.</p>
         </div>
-
-        <div class="action-row">
-          <a class="btn btn-primary"
-             href="https://www.curseforge.com/minecraft/texture-packs/novapixel"
-             target="_blank">
-            Open CurseForge
-          </a>
-
-          <a class="btn btn-secondary"
-             href="https://www.curseforge.com/minecraft/texture-packs/novapixel/files/7744531"
-             target="_blank">
-            Latest Version
-          </a>
+        <div class="cta-band-actions">
+          <a class="btn btn-primary" href="https://plugglab.github.io/novapixel/NovaPixel.zip">Download Pack</a>
+          <a class="btn btn-secondary" href="../contact/">Ask a Question</a>
         </div>
       </article>
-
-      <article class="glass-card meta-card">
-        <h3>Details</h3>
-
-        <dl class="meta-grid">
-          <dt>Status</dt>
-          <dd>Live</dd>
-
-          <dt>Platform</dt>
-          <dd>CurseForge</dd>
-
-          <dt>Release</dt>
-          <dd>v0.3 Stable</dd>
-
-          <dt>Version</dt>
-          <dd>1.21+</dd>
-
-          <dt>Updated</dt>
-          <dd>March 2026</dd>
-
-          <dt>License</dt>
-          <dd>GPLv3</dd>
-        </dl>
-      </article>
-
     </section>
 
-    <!-- FEATURES -->
-    <section class="wip-layout">
-
-      <article class="glass-card notes-card">
-        <h3>Why NovaPixel</h3>
-
-        <ul class="feature-list">
-          <li>Improves target visibility in PvP fights</li>
-          <li>Reduces visual noise for faster reaction time</li>
-          <li>Clean neon aesthetic without clutter</li>
-          <li>Lightweight 16x resolution (minimal FPS impact)</li>
-          <li>Custom low-fire texture for clear sightlines</li>
-          <li>Enhanced sword and tool designs</li>
-          <li>Optimized for BedWars, SkyWars, and duels</li>
-        </ul>
-      </article>
-
-      <article class="glass-card notes-card">
-        <h3>Recent Changes</h3>
-
-        <ul class="status-list">
-          <li>Added custom diamond and netherite sword designs</li>
-          <li>Improved armor visibility and texture clarity</li>
-          <li>Enhanced enchantment glint effects</li>
-          <li>Redesigned bow and crossbow textures</li>
-          <li>Refined block textures for competitive play</li>
-          <li>Optimized particle effects for better visibility</li>
-        </ul>
-      </article>
-
-    </section>
-
-    <!-- QUICK START -->
-    <section class="guide-section">
+    <section class="reveal">
       <div class="section-heading">
-        <p class="section-label">Installation</p>
-        <h2>How to Install</h2>
-        <p class="section-copy">Apply NovaPixel to your Minecraft client in seconds.</p>
+        <p class="section-label">More from PluggLAB</p>
+        <h2>Related Projects</h2>
       </div>
+      <div class="related-grid">
+        
+        <a class="glass-card related-card" href="../pvpflow/">
+          <div class="related-icon"><img src="../assets/images/pvpflow_n.png" alt="PvPFlow icon" loading="lazy"></div>
+          <div><strong>PvPFlow</strong><br><span>Pack · PvP</span></div>
+        </a>
 
-      <div class="guide-steps">
-        <article class="glass-card step-card">
-          <div class="step-number">1</div>
-          <h3>Download Pack</h3>
-          <p>Download the latest .zip file from CurseForge.</p>
-        </article>
+        <a class="glass-card related-card" href="../pulseevents/">
+          <div class="related-icon"><img src="../assets/images/pulseevents_n.png" alt="PulseEvents icon" loading="lazy"></div>
+          <div><strong>PulseEvents</strong><br><span>Plugin · Events</span></div>
+        </a>
 
-        <article class="glass-card step-card">
-          <div class="step-number">2</div>
-          <h3>Open Resource Packs</h3>
-          <p>In Minecraft, go to Options → Resource Packs.</p>
-        </article>
-
-        <article class="glass-card step-card">
-          <div class="step-number">3</div>
-          <h3>Move Pack</h3>
-          <p>Drag NovaPixel.zip into the resource packs folder or use "Open Pack Folder".</p>
-        </article>
-
-        <article class="glass-card step-card">
-          <div class="step-number">4</div>
-          <h3>Activate</h3>
-          <p>Select NovaPixel from the list and click "Done". Enjoy!</p>
-        </article>
-      </div>
-
-      <div class="guide-note glass-card">
-        <h4>Compatibility</h4>
-        <ul class="feature-list">
-          <li>Minecraft 1.21+ (latest version recommended)</li>
-          <li>Works with Optifine and Sodium</li>
-          <li>Compatible with most PvP clients (Lunar, Badlion, Feather)</li>
-          <li>16x resolution - minimal performance impact</li>
-        </ul>
+        <a class="glass-card related-card" href="../safetrade/">
+          <div class="related-icon icon-pad"><img src="../assets/images/icons/icon-safetrade.svg" alt="SafeTrade icon" loading="lazy"></div>
+          <div><strong>SafeTrade</strong><br><span>Plugin · Utility</span></div>
+        </a>
       </div>
     </section>
-
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="footer-brand">
-      <h2>PluggLab</h2>
-      <p>NovaPixel is live and actively available.</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h2>PluggLAB</h2>
+        <p data-i18n="footer.tagline">A focused Minecraft plugin lab — free releases, clear updates, and a shared architecture behind every project.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.ecosystemHeading">Ecosystem</h4>
+        <a href="../memorychain/">MemoryChain</a>
+        <a href="../pulseevents/">PulseEvents</a>
+        <a href="../casinocore/">Casino Core</a>
+        <a href="../safetrade/">SafeTrade</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.resourcesHeading">Resources</h4>
+        <a href="../changelog/" data-i18n="nav.changelog">Changelog</a>
+        <a href="../download-pending.html" data-i18n="nav.releaseQueue">Release Queue</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.connectHeading">Connect</h4>
+        <a href="../contact/" data-i18n="nav.contact">Contact</a>
+        <a href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener" data-i18n="nav.discord">Discord</a>
+      </div>
     </div>
-
-    <div class="footer-links">
-      <a href="../">Home</a>
-      <a href="../contact/">Contact</a>
+    <div class="footer-bottom">
+      <span class="footer-copy" data-i18n="footer.copy">PluggLAB · built by Wilczek</span>
     </div>
   </footer>
-
 </div>
 
+<script src="../assets/js/main.js"></script>
 <script src="../assets/js/i18n.js"></script>
-<script src="../assets/js/nav.js"></script>
-<script src="../assets/js/scroll.js"></script>
-<script src="../assets/js/project.js"></script>
-<script async="async" data-cfasync="false" src="https://consciousdunkvastly.com/3d7be051cf59b23d51d6dded9a6578da/invoke.js"></script>
-<div id="container-3d7be051cf59b23d51d6dded9a6578da"></div>
-
 </body>
 </html>
