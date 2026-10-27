@@ -524,7 +524,7 @@
             <h3>Shadow Stalker</h3>
             <ul class="tags"><li class="hot">Stalked</li><li class="hot">Hunted</li></ul>
             <p>A tall horned shape that watches you from the edge of your sight. In the Hunted phase it chases you through the dark. The first time it catches you in a night, you are left on half a heart. The second time, you die.</p>
-            <p class="counter">Hollow Bell, Flare, Salt Line, Ward Candle. A Stand-In Effigy saves you from the second catch. Driving it off can drop a Shadow Horn.</p>
+            <p class="counter">Hollow Bell, Flare, Salt Line, Ward Candle. While hunting, it shrugs off a bell or flare about a third of the time. A Stand-In Effigy saves you from the second catch. Driving it off sometimes drops a Shadow Horn.</p>
           </article>
           <article class="card monster">
             <h3>Crawler</h3>
@@ -545,6 +545,12 @@
             <p class="counter">Keep the door shut until morning. A Ward Candle by the door helps.</p>
           </article>
           <article class="card monster">
+            <h3>Lurker</h3>
+            <ul class="tags"><li>Paranoia</li><li>Your bed</li></ul>
+            <p>It lives under your bed. Some nights you lie down and hear it breathing: &ldquo;You can&rsquo;t sleep, something is under your bed.&rdquo; Pale fingers reach out from the dark. Get too close without looking and it grabs your ankle.</p>
+            <p class="counter">Look straight at it. It hates being seen and vanishes. Then you can sleep.</p>
+          </article>
+          <article class="card monster">
             <h3>Faceless</h3>
             <ul class="tags"><li class="hot">Stalked</li></ul>
             <p>Very tall, with no face at all. It only moves when you are not looking. Every time you turn away, it is closer. When it reaches you, everything goes dark.</p>
@@ -562,7 +568,8 @@
             <tbody>
               <tr><td><span class="pill p1">Unease</span></td><td>Footsteps behind you, mining in the walls, a door opening, knocking, creaking wood, scratching beside you, footsteps above you, whispers, strange ambience.</td></tr>
               <tr><td><span class="pill p2">Paranoia</span></td><td>Torches burn out, blank signs appear, doors you closed are left open, an item gets renamed, a stranger writes in chat, someone whispers in chat, glass gets tapped, a music box plays near your bed, a door slams far away, a distant scream. The Mimic and the Visitor.</td></tr>
-              <tr><td><span class="pill p3">Stalked</span></td><td>A fake death message, total silence, the Crawler, a figure watching you, the Faceless.</td></tr>
+              <tr><td><span class="pill p2">Paranoia</span></td><td>A whisper right in your ear. Breathing under your bed when you come home at night.</td></tr>
+              <tr><td><span class="pill p3">Stalked</span></td><td>A fake death message, total silence, the Crawler, a figure watching you, the Faceless, and jumpscares in the dark.</td></tr>
             </tbody>
           </table>
         </div>
@@ -570,6 +577,10 @@
           <b>The chosen one</b>
           <p>On a server, the scariest events are saved for one player at a time: whoever has the most Dread and is alone.</p>
         </div>
+        <h3>Jumpscares</h3>
+        <p>When the Shadow Stalker catches you, when the Faceless strikes, during night terrors, and sometimes in the dark, a face fills your screen with a scream. They can be turned off in the settings.</p>
+        <h3>Bad nights</h3>
+        <p>From Paranoia on, beds stop being safe. Something may be under yours when you try to sleep. From Stalked on, night terrors can tear you out of sleep and leave something waiting beside the bed.</p>
         <h3>Talking to it</h3>
         <p>Sometimes, if you ask questions in chat, something answers. Try asking who it is.</p>
       </section>
@@ -580,47 +591,51 @@
         <div class="cards">
           <article class="card">
             <h3>Hollow Bell</h3>
-            <p>Ring it to drive back every directed monster within 24 blocks. 16 uses, 2 minute cooldown.</p>
-            <div class="recipe"><div class="grid3" aria-label="Recipe: string top middle, gold ingot, amethyst shard, gold ingot in the middle row, three gold ingots on the bottom"><span></span><span>String</span><span></span><span>Gold</span><span>Ame&shy;thyst</span><span>Gold</span><span>Gold</span><span>Gold</span><span>Gold</span></div><span class="arrow">&rarr;</span><span class="out">Bell</span></div>
+            <p>Ring it to drive back every directed monster within 24 blocks. 8 uses, 3 minute cooldown.</p>
+            <div class="recipe"><div class="grid3" aria-label="Recipe: iron chain top middle; gold block, echo shard, gold block; gold block, amethyst block, gold block"><span></span><span>Chain</span><span></span><span>Gold block</span><span>Echo shard</span><span>Gold block</span><span>Gold block</span><span>Ame&shy;thyst block</span><span>Gold block</span></div><span class="arrow">&rarr;</span><span class="out">Bell</span></div>
           </article>
           <article class="card">
             <h3>Flare</h3>
             <p>One burning breath of daylight. Drives off every directed monster within 16 blocks, gives night vision and calms you a little.</p>
-            <div class="recipe"><div class="grid3" aria-label="Recipe: gunpowder, redstone, paper in a column"><span></span><span>Gun&shy;powder</span><span></span><span></span><span>Red&shy;stone</span><span></span><span></span><span>Paper</span><span></span></div><span class="arrow">&rarr;</span><span class="out">2 Flares</span></div>
+            <div class="recipe"><div class="grid3" aria-label="Recipe: blaze powder, gunpowder, paper in a column"><span></span><span>Blaze powder</span><span></span><span></span><span>Gun&shy;powder</span><span></span><span></span><span>Paper</span><span></span></div><span class="arrow">&rarr;</span><span class="out">Flare</span></div>
           </article>
           <article class="card">
             <h3>Salt</h3>
             <p>Place it on the floor as a thin Salt Line. A directed monster that steps on it hisses and is driven off, and the line breaks.</p>
-            <p class="recipe shapeless"><span><b>Shapeless</b>Bone Meal + Sugar + White Dye &rarr; 6 Salt</span></p>
+            <p class="recipe shapeless"><span><b>Shapeless</b>Bone Meal + Sugar + White Dye + Glowstone Dust &rarr; 2 Salt</span></p>
           </article>
           <article class="card">
             <h3>Stand-In Effigy</h3>
             <p>When the Shadow Stalker would kill you, the effigy breaks in your place and you survive on two hearts.</p>
-            <div class="recipe"><div class="grid3" aria-label="Recipe: shadow horn top middle, wheat, hay bale, wheat in the middle row, wheat bottom middle"><span></span><span>Horn</span><span></span><span>Wheat</span><span>Hay</span><span>Wheat</span><span></span><span>Wheat</span><span></span></div><span class="arrow">&rarr;</span><span class="out">Effigy</span></div>
+            <div class="recipe"><div class="grid3" aria-label="Recipe: hay bale, shadow horn, hay bale; hay bale, golden apple, hay bale; hay bale, empty, hay bale"><span>Hay</span><span>Horn</span><span>Hay</span><span>Hay</span><span>Golden apple</span><span>Hay</span><span>Hay</span><span></span><span>Hay</span></div><span class="arrow">&rarr;</span><span class="out">Effigy</span></div>
           </article>
           <article class="card">
             <h3>Dreamcatcher</h3>
-            <p>Keep it in your inventory while you sleep. It catches night terrors before they wake you. Breaks after 6.</p>
-            <div class="recipe"><div class="grid3" aria-label="Recipe: three sticks, stick feather stick, feather empty feather"><span>Stick</span><span>Stick</span><span>Stick</span><span>Stick</span><span>Fea&shy;ther</span><span>Stick</span><span>Fea&shy;ther</span><span></span><span>Fea&shy;ther</span></div><span class="arrow">&rarr;</span><span class="out">Catcher</span></div>
+            <p>Keep it in your inventory while you sleep. It catches night terrors before they wake you. Breaks after 4.</p>
+            <div class="recipe"><div class="grid3" aria-label="Recipe: stick, string, stick; stick, phantom membrane, stick; feather, empty, feather"><span>Stick</span><span>String</span><span>Stick</span><span>Stick</span><span>Phan&shy;tom mem&shy;brane</span><span>Stick</span><span>Fea&shy;ther</span><span></span><span>Fea&shy;ther</span></div><span class="arrow">&rarr;</span><span class="out">Catcher</span></div>
           </article>
           <article class="card">
             <h3>Watcher&rsquo;s Eye</h3>
             <p>Use it to sense how close the thing watching you is. Every now and then, the eye lies.</p>
-            <div class="recipe"><div class="grid3" aria-label="Recipe: ender eye surrounded by four spider eyes in a plus shape"><span></span><span>Spider eye</span><span></span><span>Spider eye</span><span>Ender eye</span><span>Spider eye</span><span></span><span>Spider eye</span><span></span></div><span class="arrow">&rarr;</span><span class="out">Eye</span></div>
+            <div class="recipe"><div class="grid3" aria-label="Recipe: ender eye in the centre, spider eyes on the sides, fermented spider eyes in the corners"><span>Fer&shy;mented</span><span>Spider eye</span><span>Fer&shy;mented</span><span>Spider eye</span><span>Ender eye</span><span>Spider eye</span><span>Fer&shy;mented</span><span>Spider eye</span><span>Fer&shy;mented</span></div><span class="arrow">&rarr;</span><span class="out">Eye</span></div>
           </article>
           <article class="card">
             <h3>Calming Tea</h3>
             <p>Drink it to lower your Dread by 15 and heal a little.</p>
-            <p class="recipe shapeless"><span><b>Shapeless</b>Glass Bottle + Sweet Berries + Sugar + Oxeye Daisy</span></p>
+            <p class="recipe shapeless"><span><b>Shapeless</b>Glass Bottle + Sweet Berries + Honey Bottle + Oxeye Daisy + Glow Berries</span></p>
           </article>
           <article class="card">
             <h3>Smelling Salts</h3>
             <p>Clears blindness, darkness and nausea at once and lowers Dread. Useful right after the Faceless strikes.</p>
-            <p class="recipe shapeless"><span><b>Shapeless</b>Glass Bottle + Salt + Fern &rarr; 2</span></p>
+            <p class="recipe shapeless"><span><b>Shapeless</b>Glass Bottle + 2 Salt + Fermented Spider Eye</span></p>
           </article>
           <article class="card">
             <h3>Survivor&rsquo;s Journal</h3>
-            <p>Found in structure chests. Someone was here before you, and wrote down what happened.</p>
+            <p>Found in structure chests. Open it to read a real, page-by-page diary of someone who was here before you. Read it to the end.</p>
+          </article>
+          <article class="card">
+            <h3>Dreadsight</h3>
+            <p>A rare helmet enchantment, only found as an enchanted book in ruin chests. While you wear it, a small eye at the top of your screen shows your Dread and your phase.</p>
           </article>
           <article class="card">
             <h3>Shadow Horn</h3>
@@ -635,7 +650,7 @@
           <article class="card">
             <h3>Ward Candle</h3>
             <p>A pale candle with a soul flame. Within 7 blocks, nothing directed can stay, no events happen and your Dread slowly falls.</p>
-            <p class="recipe shapeless"><span><b>Shapeless</b>Candle + Shadow Horn + Amethyst Shard</span></p>
+            <p class="recipe shapeless"><span><b>Shapeless</b>Candle + 2 Shadow Horns + Amethyst Shard + Soul Torch</span></p>
           </article>
           <article class="card">
             <h3>Bone Chimes</h3>
@@ -666,7 +681,7 @@
 
       <section class="wiki" id="settings" aria-labelledby="settings-h">
         <h2 id="settings-h"><span class="n">08</span>Settings</h2>
-        <p>Open the settings with the <b>red eye button</b> in the top-left corner of the title screen or the pause menu, through <b>Mod Menu</b> on Fabric, or from the <b>Mods</b> list on NeoForge. They are saved in <code>config/thehollowing.json</code>.</p>
+        <p>Open the settings with the <b>red eye button</b> in the top-left corner of the title screen (or the pause menu, for operators), through <b>Mod Menu</b> on Fabric, or from the <b>Mods</b> list on NeoForge. They are saved in <code>config/thehollowing.json</code>.</p>
         <div class="table-wrap">
           <table>
             <thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead>
@@ -677,6 +692,7 @@
               <tr><td>Fake Chat</td><td>Lets strangers who are not there write in chat.</td></tr>
               <tr><td>Monsters Can Kill</td><td>When off, the Shadow Stalker only ever leaves you on half a heart.</td></tr>
               <tr><td>Chase Sting</td><td>Plays a sting when a hunt begins.</td></tr>
+              <tr><td>Jumpscares</td><td>Sudden faces and screams. Turn this off if you are sensitive to flashing or sudden loud sounds.</td></tr>
             </tbody>
           </table>
         </div>
@@ -700,7 +716,7 @@
               <tr><td><code>/thehollowing summon &lt;player&gt;</code></td><td>Starts a hunt.</td></tr>
               <tr><td><code>/thehollowing reload</code></td><td>Reloads both config files.</td></tr>
               <tr><td><code>/thehollowing lootchest set &lt;name&gt;</code></td><td>Gives the chest you look at one of the mod&rsquo;s loot tables.</td></tr>
-              <tr><td><code>/thehollowingdebug</code></td><td>Client-side Dread overlay for testing.</td></tr>
+              <tr><td><code>/thehollowingdebug</code></td><td>Dread overlay for testing. Operators only.</td></tr>
             </tbody>
           </table>
         </div>
@@ -711,6 +727,8 @@
         <dl class="faq">
           <dt>Nothing is happening. Is it broken?</dt>
           <dd>Probably not. The mod starts slowly on purpose. Try playing a night outside without torches. If you want it faster, switch to Intense.</dd>
+          <dt>Something is under my bed and I can&rsquo;t sleep.</dt>
+          <dd>Look at it. Really look. Then try again.</dd>
           <dt>Can I kill the Shadow Stalker?</dt>
           <dd>Not while it is after you. You can only drive it away. Wild ones that are not hunting anyone can be fought.</dd>
           <dt>My torch went out and will not light up again.</dt>
