@@ -1,0 +1,844 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TheHollowing License — PluggLab Studio</title>
+<meta name="description" content="The license for TheHollowing, a closed-source Minecraft horror mod by PluggLab Studio. What you may do, what you may not do without written permission, and how to ask.">
+<meta name="theme-color" content="#0e0a11">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TheHollowing License — PluggLab Studio">
+<meta property="og:description" content="License for the closed-source mod TheHollowing. Read what you may and may not do, and how to ask PluggLab Studio for permission.">
+<meta property="og:url" content="https://plugglab.github.io/license/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' shape-rendering='crispEdges'%3E%3Crect width='16' height='16' fill='%230e0a11'/%3E%3Crect x='4' y='7' width='2' height='2' fill='%23e01b1b'/%3E%3Crect x='10' y='7' width='2' height='2' fill='%23e01b1b'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Silkscreen&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --void: #0e0a11;
+    --dusk: #1d1722;
+    --dusk-2: #251d2b;
+    --line: #3a2f40;
+    --bone: #e6dfcc;
+    --bone-dim: #b3aa98;
+    --bone-faint: #8c8475;
+    --moss: #a9b39a;
+    --blood: #7c0909;
+    --ember: #e05a48;
+    --eye: #ff2a1a;
+
+    --f-display: "IM Fell English", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --f-pixel: "Silkscreen", ui-monospace, "Cascadia Mono", Consolas, monospace;
+    --f-body: "Source Serif 4", "Iowan Old Style", Charter, "Bitstream Charter", Georgia, serif;
+
+    --gutter: clamp(16px, 5vw, 56px);
+    --measure: 68ch;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    background: var(--void);
+    color-scheme: dark;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+      radial-gradient(120% 70% at 30% 0%, #241b2a 0%, transparent 60%),
+      radial-gradient(90% 60% at 85% 100%, #1a1220 0%, transparent 70%),
+      var(--void);
+    color: var(--bone);
+    font-family: var(--f-body);
+    font-size: clamp(1.0625rem, 0.4vw + 0.98rem, 1.1875rem);
+    line-height: 1.65;
+    font-optical-sizing: auto;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 50;
+    background: radial-gradient(ellipse 85% 75% at 50% 45%, transparent 55%, rgba(4, 2, 6, 0.55) 85%, rgba(2, 1, 3, 0.85) 100%);
+    animation: breathe 14s ease-in-out infinite;
+  }
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 51;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.9 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  @keyframes breathe {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.82; }
+  }
+
+  ::selection { background: var(--blood); color: var(--bone); }
+
+  a {
+    color: var(--bone);
+    text-decoration-color: var(--ember);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+    transition: color .2s, text-decoration-color .2s;
+  }
+  a:hover { color: #fff; text-decoration-thickness: 2px; }
+
+  :focus-visible {
+    outline: 2px solid var(--ember);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .skip {
+    position: absolute;
+    left: var(--gutter);
+    top: -100px;
+    z-index: 100;
+    background: var(--bone);
+    color: var(--void);
+    padding: .5rem .9rem;
+    font-family: var(--f-pixel);
+    font-size: .8125rem;
+    text-decoration: none;
+  }
+  .skip:focus { top: 12px; }
+
+  .page {
+    position: relative;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    overflow-x: clip;
+  }
+
+  .masthead {
+    padding: clamp(3rem, 9vw, 7.5rem) 0 clamp(2.5rem, 6vw, 4.5rem);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 1.5rem 2rem;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+  }
+  .masthead::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 72px;
+    height: 3px;
+    background: var(--blood);
+    box-shadow: 0 0 18px rgba(224, 30, 20, 0.35);
+  }
+
+  .studio {
+    font-family: var(--f-pixel);
+    font-size: .8125rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--bone-dim);
+    margin: 0 0 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+  }
+  .studio a { color: var(--bone-dim); text-decoration: none; }
+  .studio a:hover { color: var(--bone); text-decoration: underline; text-decoration-color: var(--ember); }
+  .studio [aria-current] { color: var(--bone); }
+  .studio::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: var(--blood);
+    box-shadow: 0 0 10px rgba(224, 30, 20, .5);
+    flex: none;
+  }
+
+  h1 {
+    margin: 0;
+    font-family: var(--f-display);
+    font-weight: 400;
+    font-size: clamp(3.25rem, 15vw, 10rem);
+    line-height: .82;
+    letter-spacing: -0.02em;
+    color: var(--bone);
+    text-shadow: 0 0 40px rgba(230, 223, 204, 0.06), 0 2px 0 rgba(0,0,0,.6);
+  }
+  h1 .the {
+    display: block;
+    font-style: italic;
+    font-size: .3em;
+    letter-spacing: 0;
+    line-height: 1.1;
+    margin: 0 0 .1em .08em;
+    color: var(--bone-dim);
+  }
+  h1 .hollow-o {
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--bone-dim);
+  }
+
+  .subtitle {
+    margin: 1.25rem 0 0;
+    font-family: var(--f-display);
+    font-style: italic;
+    font-size: clamp(1.375rem, 2.6vw, 2rem);
+    line-height: 1.2;
+    color: var(--bone-dim);
+  }
+
+  .copyright {
+    margin: .9rem 0 0;
+    font-size: .9375rem;
+    color: var(--bone-dim);
+  }
+
+  .notice-stamp {
+    justify-self: end;
+    text-align: right;
+    font-family: var(--f-pixel);
+    font-size: .8125rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--bone-dim);
+    line-height: 2;
+    border: 1px solid var(--line);
+    padding: .9rem 1rem .75rem;
+    transform: rotate(-2deg);
+    margin-bottom: .5rem;
+  }
+  .notice-stamp strong {
+    display: block;
+    color: var(--ember);
+    font-weight: 400;
+    font-size: .8125rem;
+  }
+
+  .intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 1.5rem 3rem;
+    padding: clamp(2.5rem, 6vw, 4rem) 0;
+  }
+  .label {
+    font-family: var(--f-pixel);
+    font-size: .8125rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--bone-dim);
+    margin: .4rem 0 0;
+  }
+  .intro p {
+    margin: 0;
+    max-width: var(--measure);
+    font-size: 1.125em;
+    line-height: 1.6;
+  }
+  .intro p + p { margin-top: 1rem; }
+  .intro em { color: var(--bone); font-style: italic; }
+  .not-open {
+    color: var(--ember);
+    font-style: normal;
+    white-space: nowrap;
+  }
+
+  .glance-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+  .glance-head h2 {
+    margin: 0;
+    font-family: var(--f-display);
+    font-weight: 400;
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    line-height: 1.1;
+  }
+
+  .glance {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0;
+    border: 1px solid var(--line);
+    background: linear-gradient(180deg, rgba(37, 29, 43, 0.55), rgba(29, 23, 34, 0.25));
+    box-shadow: 0 30px 80px -40px rgba(0,0,0,.9), inset 0 1px 0 rgba(230,223,204,.04);
+  }
+  .col {
+    padding: clamp(1.5rem, 3.5vw, 2.5rem);
+    position: relative;
+  }
+  .col + .col { border-left: 1px solid var(--line); }
+  .col.no {
+    background: linear-gradient(180deg, rgba(124, 9, 9, 0.12), rgba(124, 9, 9, 0.03) 60%, transparent);
+  }
+  .col.no::before {
+    content: "";
+    position: absolute;
+    top: -1px; left: -1px; right: -1px;
+    height: 3px;
+    background: var(--blood);
+  }
+
+  .col h3 {
+    margin: 0 0 .35rem;
+    font-family: var(--f-display);
+    font-weight: 400;
+    font-size: clamp(1.5rem, 2.6vw, 1.875rem);
+    line-height: 1.15;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+  }
+  .col .qualifier {
+    margin: 0 0 1.5rem;
+    font-family: var(--f-pixel);
+    font-size: .8125rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--bone-dim);
+  }
+  .col.no .qualifier { color: var(--ember); }
+
+  .mark {
+    flex: none;
+    width: 1.75rem;
+    height: 1.75rem;
+    display: inline-grid;
+    place-items: center;
+    border: 1px solid currentColor;
+  }
+  .yes .mark { color: var(--moss); }
+  .no .mark { color: var(--ember); }
+  .mark svg { width: 14px; height: 14px; display: block; shape-rendering: crispEdges; }
+
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: item;
+  }
+  .list li {
+    counter-increment: item;
+    display: grid;
+    grid-template-columns: 2.25rem minmax(0, 1fr);
+    gap: .25rem;
+    padding: .9rem 0;
+    border-top: 1px dashed rgba(230, 223, 204, 0.12);
+  }
+  .list li:first-child { border-top: 0; padding-top: 0; }
+  .list li::before {
+    content: counter(item, decimal-leading-zero);
+    font-family: var(--f-pixel);
+    font-size: .75rem;
+    line-height: 2.1;
+    color: var(--bone-faint);
+  }
+  .yes .list li::before { color: var(--moss); }
+  .no .list li::before { color: var(--ember); }
+  .list li span { display: block; }
+  .list small {
+    display: block;
+    margin-top: .4rem;
+    font-size: .875rem;
+    line-height: 1.55;
+    color: var(--bone-dim);
+  }
+
+  .ask {
+    margin: clamp(2rem, 5vw, 3rem) 0 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+    gap: 0;
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--blood);
+    background: rgba(14, 10, 17, 0.6);
+  }
+  .ask-text { padding: clamp(1.5rem, 3.5vw, 2.25rem); }
+  .ask-text h3 {
+    margin: 0 0 .75rem;
+    font-family: var(--f-display);
+    font-weight: 400;
+    font-size: clamp(1.5rem, 2.6vw, 1.875rem);
+    line-height: 1.15;
+  }
+  .ask-text p { margin: 0; color: var(--bone-dim); font-size: .9688rem; }
+  .ask-text p strong { color: var(--bone); font-weight: 600; }
+
+  .contacts {
+    margin: 0;
+    padding: clamp(1.5rem, 3.5vw, 2.25rem);
+    border-left: 1px solid var(--line);
+    display: grid;
+    gap: 1.25rem;
+    align-content: center;
+  }
+  .contact { display: grid; gap: .35rem; }
+  .contact dt {
+    font-family: var(--f-pixel);
+    font-size: .8125rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--bone-dim);
+  }
+  .contact dd { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+
+  .invite {
+    font-family: var(--f-body);
+    font-size: clamp(1.0625rem, 2vw, 1.25rem);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    padding: .55rem .95rem .6rem;
+    border: 1px solid var(--bone-dim);
+    background: rgba(230, 223, 204, 0.04);
+    color: var(--bone);
+    word-break: break-all;
+    transition: background .2s, border-color .2s, color .2s;
+  }
+  .invite:hover { background: rgba(230, 223, 204, 0.1); border-color: var(--bone); color: #fff; }
+  .invite:active { transform: translateY(1px); }
+  .invite .arrow { font-family: var(--f-pixel); font-size: .75rem; color: var(--ember); }
+
+  .username {
+    font-family: ui-monospace, "Cascadia Mono", "SFMono-Regular", Consolas, monospace;
+    font-size: clamp(1.0625rem, 2vw, 1.25rem);
+    color: var(--bone);
+    padding: .4rem .7rem;
+    background: var(--void);
+    border: 1px dashed var(--line);
+    user-select: all;
+  }
+
+  .copy {
+    display: none;
+    font-family: var(--f-pixel);
+    font-size: .8125rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--bone);
+    background: transparent;
+    border: 1px solid var(--line);
+    padding: .55rem .75rem;
+    cursor: pointer;
+    transition: border-color .2s, color .2s, background .2s;
+  }
+  .js .copy { display: inline-block; }
+  .copy:hover { border-color: var(--bone-dim); background: rgba(230,223,204,.05); }
+  .copy:active { transform: translateY(1px); }
+  .copy[data-state="done"] { color: var(--moss); border-color: var(--moss); }
+  .copy[data-state="fail"] { color: var(--ember); border-color: var(--ember); }
+  .copy:disabled { opacity: .5; cursor: not-allowed; }
+
+  .full {
+    margin-top: clamp(4rem, 10vw, 7rem);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, var(--measure)) minmax(0, 1fr);
+  }
+  .full > * { grid-column: 2; }
+
+  .full-head {
+    text-align: center;
+    margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  }
+  .full-head h2 {
+    margin: .5rem 0 0;
+    font-family: var(--f-display);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
+  }
+  .full-head .label { margin: 0; }
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin-top: 1.5rem;
+    color: var(--blood);
+  }
+  .divider::before, .divider::after {
+    content: "";
+    height: 1px;
+    width: 60px;
+    background: var(--line);
+  }
+  .divider span { width: 6px; height: 6px; background: currentColor; }
+
+  .clause { scroll-margin-top: 2rem; padding-top: 1rem; }
+  .clause + .clause { margin-top: 2.5rem; }
+  .clause h3 {
+    margin: 0 0 1rem;
+    font-family: var(--f-display);
+    font-weight: 400;
+    font-size: clamp(1.5rem, 3vw, 1.875rem);
+    line-height: 1.2;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: .9rem;
+    align-items: baseline;
+  }
+  .clause h3 .n {
+    font-family: var(--f-pixel);
+    font-size: .875rem;
+    color: var(--ember);
+    letter-spacing: .05em;
+  }
+  .clause h3 a.anchor {
+    color: inherit;
+    text-decoration: none;
+  }
+  .clause h3 a.anchor:hover::after {
+    content: " #";
+    color: var(--bone-faint);
+    font-size: .7em;
+  }
+  .clause p { margin: 0 0 1rem; }
+  .clause > ol {
+    margin: 0 0 1rem;
+    padding-left: 0;
+    list-style: none;
+    counter-reset: sub;
+  }
+  .clause > ol > li {
+    counter-increment: sub;
+    position: relative;
+    padding-left: 2.75rem;
+    margin-bottom: .75rem;
+  }
+  .clause > ol > li::before {
+    content: counter(sub, lower-alpha) ")";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2rem;
+    text-align: right;
+    color: var(--bone-faint);
+    font-style: italic;
+  }
+  .clause ul.sub {
+    margin: .6rem 0 0;
+    padding-left: 1.1rem;
+    color: var(--bone-dim);
+  }
+  .clause ul.sub li { padding-left: .3rem; margin-bottom: .35rem; }
+  .clause ul.sub li::marker { color: var(--bone-faint); }
+  .clause .caps {
+    font-variant: small-caps;
+    letter-spacing: .03em;
+  }
+  .clause .quiet { color: var(--bone-dim); }
+
+  footer {
+    margin-top: clamp(4rem, 10vw, 7rem);
+    padding: 2rem 0 3rem;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1.25rem 2rem;
+    font-size: .875rem;
+    color: var(--bone-dim);
+    position: relative;
+  }
+  footer p { margin: 0; max-width: 60ch; }
+  footer .whisper {
+    font-family: var(--f-pixel);
+    font-size: .8125rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--bone-dim);
+    white-space: nowrap;
+  }
+  .obf {
+    display: inline-block;
+    font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+    color: var(--ember);
+    letter-spacing: 0;
+    min-width: 5ch;
+    text-align: left;
+  }
+
+  .eyes {
+    position: absolute;
+    display: flex;
+    gap: 9px;
+    pointer-events: none;
+    opacity: 0;
+    animation: eyes-wake 3s ease-in 6s forwards, blink 9s steps(1) 9s infinite;
+  }
+  .eyes i {
+    display: block;
+    width: 3px;
+    height: 3px;
+    background: var(--eye);
+    box-shadow: 0 0 6px 1px rgba(255, 42, 26, .55);
+  }
+  .eyes.margin { top: 0; right: max(0px, calc(var(--gutter) / 2 - 8px)); }
+  .eyes.foot { right: 0; top: -1.25rem; display: none; }
+  @keyframes eyes-wake { to { opacity: .85; } }
+  @keyframes blink {
+    0%, 96%, 100% { transform: scaleY(1); }
+    97%, 98% { transform: scaleY(0.1); }
+  }
+
+  .reveal { animation: rise .9s cubic-bezier(.2,.7,.2,1) both; }
+  .d1 { animation-delay: .05s; }
+  .d2 { animation-delay: .2s; }
+  .d3 { animation-delay: .35s; }
+  .d4 { animation-delay: .5s; }
+  .d5 { animation-delay: .65s; }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px); filter: blur(2px); }
+    to { opacity: 1; transform: none; filter: none; }
+  }
+
+  @media (max-width: 860px) {
+    .masthead { grid-template-columns: 1fr; }
+    .notice-stamp { justify-self: start; text-align: left; transform: rotate(-1.5deg); }
+    .intro { grid-template-columns: 1fr; gap: .75rem; }
+    .glance { grid-template-columns: 1fr; }
+    .col + .col { border-left: 0; border-top: 1px solid var(--line); }
+    .ask { grid-template-columns: 1fr; }
+    .contacts { border-left: 0; border-top: 1px solid var(--line); }
+    .full { grid-template-columns: minmax(0, 1fr); }
+    .full > * { grid-column: 1; }
+    .eyes.margin { display: none; }
+    .eyes.foot { display: flex; }
+  }
+  @media (max-width: 420px) {
+    .clause > ol > li { padding-left: 2rem; }
+    .clause > ol > li::before { width: 1.5rem; }
+    .list li { grid-template-columns: 1.9rem minmax(0, 1fr); }
+    .notice-stamp { transform: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation: none !important;
+      transition: none !important;
+      scroll-behavior: auto !important;
+    }
+    .eyes { opacity: .85; }
+  }
+
+  @media print {
+    body::before, body::after, .eyes, .copy, .skip, .notice-stamp { display: none !important; }
+    html, body { background: #fff; color: #000; }
+    * { color: #000 !important; background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
+    h1 .hollow-o { -webkit-text-stroke: 0; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#full">Skip to the full license</a>
+
+<div class="page">
+  <header class="masthead">
+    <div>
+      <nav class="studio reveal d1" aria-label="Site"><a href="../">PluggLab Studio</a><span aria-hidden="true">/</span><a href="../">Wiki</a><span aria-hidden="true">/</span><span aria-current="page">License</span></nav>
+      <h1 class="reveal d2"><span class="the">The</span>H<span class="hollow-o">o</span>llowing</h1>
+      <p class="subtitle reveal d3">License</p>
+      <p class="copyright reveal d3">Copyright &copy; 2026 PluggLab Studio. All rights reserved.</p>
+    </div>
+    <div class="notice-stamp reveal d4" aria-hidden="true">
+      <strong>Notice</strong>
+      Posted 2026<br>
+      Read before use
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="intro reveal d4" aria-labelledby="intro-label">
+      <p class="label" id="intro-label">What this covers</p>
+      <div>
+        <p>This license covers the mod TheHollowing, including its code, models, textures, animations, structures, sounds, text and all other files (together, <em>&ldquo;the Software&rdquo;</em>).</p>
+        <p>The Software is <span class="not-open">closed source</span>. Only the compiled mod files (jars) are released. Being able to download a jar, or to look inside one, does not give you any rights to the code or assets in it.</p>
+      </div>
+    </section>
+
+    <section class="reveal d5" aria-labelledby="glance-title">
+      <div class="glance-head">
+        <h2 id="glance-title">At a glance</h2>
+        <p class="label">The full text below is what counts</p>
+      </div>
+
+      <div class="glance">
+        <div class="col yes">
+          <h3>
+            <span class="mark" aria-hidden="true"><svg viewBox="0 0 14 14"><path fill="currentColor" d="M11 2h2v2h-2zM9 4h2v2H9zM7 6h2v2H7zM5 8h2v2H5zM3 10h2v2H3zM1 6h2v2H1zM3 8h2v2H3z"/></svg></span>
+            You may
+          </h3>
+          <p class="qualifier">Without asking</p>
+          <ol class="list">
+            <li><span>Download official releases from its official Modrinth and CurseForge pages, published by PluggLab Studio, and play with them, on your own computer or a server you run.</span></li>
+            <li><span>Make videos, streams and screenshots.</span></li>
+            <li><span>Include it in a modpack, public or private,
+              <small>as long as it is the unmodified official release, the modpack credits PluggLab Studio as the author of TheHollowing, and the modpack is not sold or paid access. Where the platform supports it (CurseForge, Modrinth), the modpack should download TheHollowing from its official project page rather than bundle a copy.</small></span></li>
+          </ol>
+        </div>
+
+        <div class="col no">
+          <h3>
+            <span class="mark" aria-hidden="true"><svg viewBox="0 0 14 14"><path fill="currentColor" d="M1 1h2v2H1zM3 3h2v2H3zM5 5h4v4H5zM9 3h2v2H9zM11 1h2v2h-2zM3 9h2v2H3zM1 11h2v2H1zM9 9h2v2H9zM11 11h2v2h-2z"/></svg></span>
+            You may not
+          </h3>
+          <p class="qualifier">Without written permission</p>
+          <ol class="list">
+            <li><span>Decompile, disassemble or reverse engineer the Software, or extract its code, models, textures, animations, structures or sounds.
+              <small>Except where the law of your country allows this regardless of this license.</small></span></li>
+            <li><span>Copy, modify, adapt or translate it or any part of it.</span></li>
+            <li><span>Use any part of it in another project.</span></li>
+            <li><span>Redistribute, re-upload, mirror or sell it on its own, original or modified.
+              <small>Modpacks as described under &ldquo;You may&rdquo; are the only exception.</small></span></li>
+            <li><span>Publish modified versions, ports or builds of it.</span></li>
+            <li><span>Remove or change this license or any copyright notice.</span></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="ask" role="region" aria-labelledby="ask-title">
+        <div class="ask-text">
+          <h3 id="ask-title">Want to do something that is not allowed?</h3>
+          <p>Ask first. <strong>Permission only counts if it is given in writing</strong> (a Discord message counts), and it covers only what it explicitly says.</p>
+        </div>
+        <dl class="contacts">
+          <div class="contact">
+            <dt>Discord server</dt>
+            <dd><a class="invite" href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener">discord.gg/ZMje3neEmK <span class="arrow" aria-hidden="true">&#8599;</span><span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">(opens in a new tab)</span></a></dd>
+          </div>
+          <div class="contact">
+            <dt>Discord user</dt>
+            <dd>
+              <code class="username" id="discord-user">wilcz3k16</code>
+              <button type="button" class="copy" data-copy="wilcz3k16" aria-describedby="discord-user">Copy</button>
+              <span class="copy-status" role="status" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap"></span>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <article class="full" id="full" aria-labelledby="full-title">
+      <header class="full-head">
+        <p class="label">The authoritative text</p>
+        <h2 id="full-title">TheHollowing License</h2>
+        <div class="divider" aria-hidden="true"><span></span></div>
+      </header>
+
+      <section class="clause" id="may" aria-labelledby="may-title">
+        <h3 id="may-title"><span class="n">01</span><a class="anchor" href="#may">What you may do without asking</a></h3>
+        <p>Subject to the rest of this license, you may, without asking for permission:</p>
+        <ol>
+          <li>download official releases of the Software from its official Modrinth and CurseForge pages, published by PluggLab Studio, and play with them, on your own computer or a server you run;</li>
+          <li>make videos, streams and screenshots of the Software;</li>
+          <li>include the Software in a modpack, public or private, as long as all of the following are true:
+            <ul class="sub">
+              <li>it is the unmodified official release;</li>
+              <li>the modpack credits PluggLab Studio as the author of TheHollowing;</li>
+              <li>the modpack is not sold or paid access.</li>
+            </ul>
+            Where the platform supports it (for example CurseForge or Modrinth), the modpack should download TheHollowing from its official project page rather than bundle a copy.
+          </li>
+        </ol>
+      </section>
+
+      <section class="clause" id="may-not" aria-labelledby="may-not-title">
+        <h3 id="may-not-title"><span class="n">02</span><a class="anchor" href="#may-not">What you may NOT do without written permission</a></h3>
+        <p>Unless PluggLab Studio has given you written permission, you may not:</p>
+        <ol>
+          <li>decompile, disassemble or reverse engineer the Software, or extract its code, models, textures, animations, structures or sounds, except where the law of your country allows this regardless of this license;</li>
+          <li>copy, modify, adapt or translate the Software or any part of it;</li>
+          <li>use any part of the Software in another project;</li>
+          <li>redistribute, re-upload, mirror or sell the Software on its own, original or modified. Modpacks as described in section 1(c) are the only exception;</li>
+          <li>publish modified versions, ports or builds of the Software;</li>
+          <li>remove or change this license or any copyright notice.</li>
+        </ol>
+        <p class="quiet">Anything not expressly allowed in section 1 is reserved by PluggLab Studio.</p>
+      </section>
+
+      <section class="clause" id="permission" aria-labelledby="permission-title">
+        <h3 id="permission-title"><span class="n">03</span><a class="anchor" href="#permission">Asking for permission</a></h3>
+        <p>To ask for permission, contact PluggLab Studio on the Discord server at <a href="https://discord.gg/ZMje3neEmK" target="_blank" rel="noopener">discord.gg/ZMje3neEmK</a> or message the Discord user <strong>wilcz3k16</strong>.</p>
+        <p>Permission only counts if it is given in writing (a Discord message counts), and it covers only what it explicitly says.</p>
+      </section>
+
+      <section class="clause" id="warranty" aria-labelledby="warranty-title">
+        <h3 id="warranty-title"><span class="n">04</span><a class="anchor" href="#warranty">No warranty</a></h3>
+        <p class="caps">The Software is provided &ldquo;as is&rdquo;, without warranty of any kind. In no event shall PluggLab Studio be liable for any claim, damages or other liability arising from the Software or its use.</p>
+      </section>
+    </article>
+  </main>
+
+  <div class="eyes margin" aria-hidden="true" style="top: 58vh"><i></i><i></i></div>
+
+  <footer>
+    <p>Minecraft is a trademark of Mojang Studios. TheHollowing is not an official Minecraft product and is not approved by or associated with Mojang or Microsoft.</p>
+    <p class="whisper">&copy; 2026 PluggLab Studio <span class="obf" aria-hidden="true">#@?%&amp;</span></p>
+    <div class="eyes foot" aria-hidden="true"><i></i><i></i></div>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    document.documentElement.classList.add('js');
+
+    var btn = document.querySelector('.copy');
+    var status = document.querySelector('.copy-status');
+    if (btn) {
+      if (!(navigator.clipboard && window.isSecureContext)) {
+        btn.style.display = 'none';
+      } else {
+        var timer;
+        btn.addEventListener('click', function () {
+          navigator.clipboard.writeText(btn.getAttribute('data-copy')).then(function () {
+            btn.textContent = 'Copied';
+            btn.setAttribute('data-state', 'done');
+            status.textContent = 'Username copied to clipboard';
+          }, function () {
+            btn.textContent = 'Select it';
+            btn.setAttribute('data-state', 'fail');
+            status.textContent = 'Could not copy. Select the username manually.';
+          });
+          clearTimeout(timer);
+          timer = setTimeout(function () {
+            btn.textContent = 'Copy';
+            btn.removeAttribute('data-state');
+            status.textContent = '';
+          }, 2000);
+        });
+      }
+    }
+
+    var obf = document.querySelector('.obf');
+    var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (obf && !still) {
+      var glyphs = 'ABCDEFGHJKLMNPQRSTUVWXYZ0123456789#$%&?@*+=<>{}[]';
+      var len = obf.textContent.length;
+      setInterval(function () {
+        var s = '';
+        for (var i = 0; i < len; i++) s += glyphs.charAt(Math.floor(Math.random() * glyphs.length));
+        obf.textContent = s;
+      }, 70);
+    }
+  })();
+</script>
+</body>
+</html>
