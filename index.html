@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#0e0a11">
 <meta property="og:type" content="website">
 <meta property="og:title" content="TheHollowing Wiki — PluggLab Studio">
-<meta property="og:description" content="Everything about TheHollowing: Dread and its phases, the monsters, the events, items, blocks, structures and settings.">
+<meta property="og:description" content="Everything about TheHollowing 0.1.0: Dread and its phases, the monsters, the events, the Hollow, items, blocks, structures and settings.">
 <meta property="og:url" content="https://plugglab.github.io/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' shape-rendering='crispEdges'%3E%3Crect width='16' height='16' fill='%230e0a11'/%3E%3Crect x='4' y='7' width='2' height='2' fill='%23e01b1b'/%3E%3Crect x='10' y='7' width='2' height='2' fill='%23e01b1b'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -436,6 +436,7 @@
     <h1><span class="the">The</span>H<span class="hollow-o">o</span>llowing</h1>
     <p class="tagline">Something has noticed you. The longer you survive, the closer it gets.</p>
     <ul class="facts">
+      <li><b>Version</b> 0.1.0 beta</li>
       <li><b>Minecraft</b> 26.2</li>
       <li><b>Fabric</b> &amp; <b>NeoForge</b></li>
       <li>Needs <b>GeckoLib</b></li>
@@ -451,6 +452,7 @@
         <li><a href="#dread">Dread &amp; phases</a></li>
         <li><a href="#monsters">Monsters</a></li>
         <li><a href="#events">Events</a></li>
+        <li><a href="#hollow">The Hollow</a></li>
         <li><a href="#items">Items</a></li>
         <li><a href="#blocks">Blocks</a></li>
         <li><a href="#structures">Structures</a></li>
@@ -470,6 +472,10 @@
           <li>Drop the TheHollowing jar into your <code>mods</code> folder and start a world.</li>
         </ol>
         <p>On the first night, listen carefully. Something will let you know it is there.</p>
+        <div class="callout">
+          <b>Version 0.1.0</b>
+          <p>This wiki covers 0.1.0, the first beta, which is the version on CurseForge and Modrinth right now. Things from the next update are not listed here yet.</p>
+        </div>
         <div class="callout">
           <b>Tip</b>
           <p>Playing with friends halves how fast your Dread grows while they are within 16 blocks. Being alone is always worse.</p>
@@ -523,7 +529,7 @@
           <article class="card monster">
             <h3>Shadow Stalker</h3>
             <ul class="tags"><li class="hot">Stalked</li><li class="hot">Hunted</li></ul>
-            <p>A tall horned shape that watches you from the edge of your sight. In the Hunted phase it chases you through the dark. The first time it catches you in a night, you are left on half a heart. The second time, you die.</p>
+            <p>A tall horned shape that watches you from the edge of your sight. In the Hunted phase it chases you through the dark. The first time it catches you in a night, you are left on half a heart. The second time, it takes you to <a href="#hollow">the Hollow</a>.</p>
             <p class="counter">Hollow Bell, Flare, Salt Line, Ward Candle. While hunting, it shrugs off a bell or flare about a third of the time. A Stand-In Effigy saves you from the second catch. Driving it off sometimes drops a Shadow Horn.</p>
           </article>
           <article class="card monster">
@@ -597,8 +603,26 @@
         <p>Sometimes, if you ask questions in chat, something answers. Try asking who it is.</p>
       </section>
 
+      <section class="wiki" id="hollow" aria-labelledby="hollow-h">
+        <h2 id="hollow-h"><span class="n">05</span>The Hollow</h2>
+        <p class="lead">When one of its monsters kills you, you do not respawn. You wake up in the Hollow.</p>
+        <p>The Hollow is a grey, foggy dimension of dead land. You arrive weak, with your Dread climbing fast, and the message <em>&ldquo;You were not allowed to die.&rdquo;</em></p>
+        <h3>Getting out</h3>
+        <ul>
+          <li>Somewhere in the fog, a bell is ringing. Follow the sound.</li>
+          <li>It leads to a doorway. Reach it to get back to your world.</li>
+          <li>You are not alone in there. The closer you get to the way out, the closer something else gets too.</li>
+          <li>Beds do not work in the Hollow.</li>
+        </ul>
+        <div class="callout">
+          <b>For real this time</b>
+          <p>If you die in the Hollow, you die for real. Escaping does not make you safe either: it remembers the way to you now.</p>
+        </div>
+        <p>Being taken and getting out each give a hidden advancement. If you would rather just die and respawn, turn off <b>The Hollow</b> in the <a href="#settings">settings</a>.</p>
+      </section>
+
       <section class="wiki" id="items" aria-labelledby="items-h">
-        <h2 id="items-h"><span class="n">05</span>Items</h2>
+        <h2 id="items-h"><span class="n">06</span>Items</h2>
         <p>All items are in the <b>TheHollowing</b> creative tab.</p>
         <div class="cards">
           <article class="card">
@@ -667,7 +691,7 @@
       </section>
 
       <section class="wiki" id="blocks" aria-labelledby="blocks-h">
-        <h2 id="blocks-h"><span class="n">06</span>Blocks</h2>
+        <h2 id="blocks-h"><span class="n">07</span>Blocks</h2>
         <div class="cards">
           <article class="card">
             <h3>Ward Candle</h3>
@@ -692,7 +716,7 @@
       </section>
 
       <section class="wiki" id="structures" aria-labelledby="structures-h">
-        <h2 id="structures-h"><span class="n">07</span>Structures</h2>
+        <h2 id="structures-h"><span class="n">08</span>Structures</h2>
         <p>Three kinds of ruins are scattered around the world. Their chests hold journals, flares, salt and other supplies left behind by those who came before.</p>
         <div class="cards">
           <article class="card"><h3>Abandoned Camp</h3><p>A camp someone left in a hurry.</p></article>
@@ -702,7 +726,7 @@
       </section>
 
       <section class="wiki" id="settings" aria-labelledby="settings-h">
-        <h2 id="settings-h"><span class="n">08</span>Settings</h2>
+        <h2 id="settings-h"><span class="n">09</span>Settings</h2>
         <p>Open the settings with the <b>red eye button</b> in the top-left corner of the title screen (or the pause menu, for operators), through <b>Mod Menu</b> on Fabric, or from the <b>Mods</b> list on NeoForge. They are saved in <code>config/thehollowing.json</code>.</p>
         <div class="table-wrap">
           <table>
@@ -714,6 +738,7 @@
               <tr><td>Fake Chat</td><td>Lets strangers who are not there write in chat.</td></tr>
               <tr><td>Monsters Can Kill</td><td>When off, the Shadow Stalker only ever leaves you on half a heart.</td></tr>
               <tr><td>Chase Sting</td><td>Plays a sting when a hunt begins.</td></tr>
+              <tr><td>The Hollow</td><td>When on, a Hollow monster that kills you drags you into the Hollow instead. Find the way out or die there for real. On by default.</td></tr>
               <tr><td>Jumpscares</td><td>Sudden faces and screams. Turn this off if you are sensitive to flashing or sudden loud sounds.</td></tr>
             </tbody>
           </table>
@@ -726,7 +751,7 @@
       </section>
 
       <section class="wiki" id="commands" aria-labelledby="commands-h">
-        <h2 id="commands-h"><span class="n">09</span>Commands</h2>
+        <h2 id="commands-h"><span class="n">10</span>Commands</h2>
         <p>All commands need operator permission.</p>
         <div class="table-wrap">
           <table>
@@ -745,7 +770,7 @@
       </section>
 
       <section class="wiki" id="faq" aria-labelledby="faq-h">
-        <h2 id="faq-h"><span class="n">10</span>FAQ</h2>
+        <h2 id="faq-h"><span class="n">11</span>FAQ</h2>
         <dl class="faq">
           <dt>Nothing is happening. Is it broken?</dt>
           <dd>Probably not. The mod starts slowly on purpose. Try playing a night outside without torches. If you want it faster, switch to Intense.</dd>
